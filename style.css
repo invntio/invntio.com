@@ -50,8 +50,16 @@ html, body {
 }
 
 .logo-wrapper {
+    display: flex;
+    justify-content: center;
     position: absolute;
     filter: blur(10px) brightness(0.5);
+}
+
+.logo {
+    max-width: 70%;
+    height: 400px;
+    pointer-events: none;
 }
 
 footer {
