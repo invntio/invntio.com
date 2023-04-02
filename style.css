@@ -51,7 +51,7 @@ html, body {
 
 .logo-wrapper {
     position: absolute;
-    filter: blur(10px);
+    filter: blur(10px) brightness(0.5);
 }
 
 footer {
