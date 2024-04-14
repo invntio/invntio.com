@@ -2,10 +2,10 @@
 import Container from "../components/Container.astro";
 ---
 
-<section id="contact-us" class="relative">
+<div id="contact-us" class="relative">
     <div
         aria-hidden="true"
-        class="absolute inset-0 grid grid-cols-2 -space-x-96 opacity-40 dark:opacity-20"
+        class="absolute -z-10 inset-0 grid grid-cols-2 -space-x-96 opacity-40 dark:opacity-20"
     >
         <div
             class="blur-[106px] h-56 bg-gradient-to-br from-primary dark:to-purple-400 dark:from-blue-700"
@@ -94,7 +94,7 @@ import Container from "../components/Container.astro";
                             First Name
                         </label>
                         <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            class="appearance-none block w-full placeholder:text-gray-400 bg-gray-200 text-gray-700 border rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                             id="grid-first-name"
                             type="text"
                             name="first_name"
@@ -110,7 +110,7 @@ import Container from "../components/Container.astro";
                             Last Name
                         </label>
                         <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             id="grid-last-name"
                             type="text"
                             name="last_name"
@@ -165,10 +165,11 @@ import Container from "../components/Container.astro";
                         placeholder="Tell us how to help you"></textarea>
                 </div>
 
-                <!-- hCaptcha Spam Protection -->
-                <div class="h-captcha" data-captcha="true"></div>
+
 
                 <div class="flex flex-wrap justify-center gap-6">
+                     <!-- hCaptcha Spam Protection -->
+                    <div class="h-captcha mb-6" data-captcha="true"></div>
                     <button
                         type="submit"
                         class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
@@ -178,20 +179,11 @@ import Container from "../components/Container.astro";
                             >Submit</span
                         >
                     </button>
-                    <a
-                        href="#"
-                        class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
-                    >
-                        <span
-                            class="relative text-base font-semibold text-primary dark:text-white"
-                            >More about</span
-                        >
-                    </a>
                 </div>
             </form>
         </div>
     </Container>
-</section>
+</div>
 
 <!-- Required for hCaptcha -->
 <script src="https://web3forms.com/client/script.js" async defer></script>
