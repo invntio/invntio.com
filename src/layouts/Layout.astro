@@ -1,11 +1,14 @@
 ---
 import AppFooter from "../components/AppFooter.astro";
 import AppHeader from "../components/AppHeader.astro"
+
+import { getLang } from '../i18n/utils';
+const lang = getLang();
 ---
 
 
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang={lang} class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />

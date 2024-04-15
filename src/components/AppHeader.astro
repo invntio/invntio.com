@@ -1,6 +1,10 @@
 ---
 import Container from "./Container.astro";
 
+import { getLang, useTranslations } from '../i18n/utils';
+
+const lang = getLang();
+const t = useTranslations(lang);
 ---
 
 <header>
@@ -11,14 +15,8 @@ import Container from "./Container.astro";
                 <div class="relative z-20 w-full flex justify-between lg:w-max md:px-0">
                     <div class="h-5 w-5 mr-6 sm:hidden"></div>
                     <a href="#home" aria-label="logo" class="flex space-x-2 items-center">
-                        <!-- <div aria-hidden="true" class="flex space-x-1">
-                            <div class="h-4 w- rounded-full bg-gray-900 dark:bg-white"></div>
-                            <div class="h-6 w-2 bg-primary"></div>
-                        </div>
-                        <span class="text-2xl font-bold text-gray-900 dark:text-white">Astrolus</span> -->
                         <embed src="./images/dark-logo.svg" class="max-h-6 md:max-h-7 w-full dark:flex hidden">
                         <embed src="./images/logo.svg" class="max-h-6 md:max-h-7 w-full dark:hidden flex">
-
                     </a>
                     
                     <div class="relative flex items-center lg:hidden max-h-10">
@@ -38,17 +36,17 @@ import Container from "./Container.astro";
                         <ul class="tracking-wide font-medium lg:text-sm flex-col flex lg:flex-row gap-6 lg:gap-0">
                             <li>
                                 <a href="#services" class="block md:px-4 transition hover:text-primary">
-                                    <span>Services</span>
+                                    <span>{t('nav.services')}</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#about" class="block md:px-4 transition hover:text-primary">
-                                    <span>About</span>
+                                    <span>{t('nav.about')}</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://github.com/invntio" class="block md:px-4 transition hover:text-primary">
-                                    <span>Our GitHub</span>
+                                    <span>GitHub</span>
                                 </a>
                             </li>
                             <!-- <li>

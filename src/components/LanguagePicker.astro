@@ -1,0 +1,14 @@
+---
+import { languages } from '../i18n/ui';
+---
+
+<div>
+    <p class="text-gray-600 dark:text-gray-400 mb-1">Change language?</p>
+    <ul class="flex">
+    {Object.entries(languages).map(([lang, label]) => (
+        <li class="mb-1 mr-3">
+            <a href={`/${lang}/`} class="text-gray-600 dark:text-white hover:text-primary transition duration-300">{label}</a>
+        </li>
+    ))}
+    </ul>
+</div>
