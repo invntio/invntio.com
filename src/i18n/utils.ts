@@ -7,7 +7,7 @@ import { ui, defaultLang } from './ui';
 // }
 
 export function getLangFromBrowser() {
-    const lang = "us";
+    const lang = "en";
      if (lang in ui) return lang as keyof typeof ui;
     return defaultLang;
 }
