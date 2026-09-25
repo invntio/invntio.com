@@ -33,8 +33,8 @@ const t = useTranslations(lang);
                 {t.register.items.map((item) => (
                     <li>
                         <a class="row" href={item.url} target="_blank" rel="noopener">
-                            <span class="name"><Mark kind="live" label={t.register.live} />{item.name}</span>
-                            <span class="kind">{item.kind === "own" ? t.register.ownProduct : t.register.client}</span>
+                            <span class="dot"><Mark kind="live" label={t.register.live} /></span>
+                            <span class="name">{item.name} <span class="kind">{item.kind === "own" ? t.register.ownProduct : t.register.client}</span></span>
                             <span class="what">{item.what}</span>
                             <span class="domain">
                                 {item.domain}
@@ -133,31 +133,38 @@ const t = useTranslations(lang);
         border-bottom: 1px solid var(--rule);
     }
     .row {
+        position: relative;
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: minmax(0, 1fr) auto;
         gap: 0.25rem 1rem;
-        padding: 1.125rem 0.75rem;
+        padding: 1.125rem 0.75rem 1.125rem 2.35rem;
         margin-inline: -0.75rem;
         text-decoration: none;
         border-radius: var(--radius);
         transition: background-color 200ms var(--ease-out);
     }
-    .name {
-        display: inline-flex;
+    .dot {
+        position: absolute;
+        left: 0.75rem;
+        top: 1.125rem;
+        height: 1.75rem;
+        display: flex;
         align-items: center;
-        gap: 0.6rem;
+    }
+    .name {
+        grid-column: 1 / -1;
         font-size: var(--step-1);
         font-weight: 650;
         letter-spacing: -0.01em;
     }
     .kind {
-        justify-self: end;
-        align-self: center;
+        margin-left: 0.5rem;
         font-size: 0.8125rem;
+        font-weight: 400;
+        letter-spacing: 0;
         color: var(--ink-3);
     }
     .what {
-        padding-left: 1.6rem;
         color: var(--ink-2);
         font-size: var(--step--1);
     }
@@ -201,12 +208,8 @@ const t = useTranslations(lang);
         .row {
             grid-template-columns: 1fr;
         }
-        .kind,
         .domain {
             justify-self: start;
-        }
-        .kind {
-            order: 3;
         }
     }
 </style>
