@@ -38,7 +38,7 @@ If documents conflict, this order applies: first the accepted proposal, then the
 
 ## 5. Fees and payment
 
-- **Fixed-price projects.** You pay according to the schedule in the proposal. Small projects, such as websites and landing pages, are paid in full upfront.
+- **Fixed-price projects.** You pay according to the schedule in the proposal. Small projects, such as websites and landing pages, are paid in full upfront. When a payment is tied to a milestone, we invoice it once that milestone is accepted (see section 9). The final payment is due before launch or handover of the deliverables, whichever comes first.
 - **Hourly work.** You prepay a minimum block of hours at the rate agreed in the proposal. We tell you when 80% of the block has been used. Hours beyond the block need your written approval and are added to your next invoice. The proposal states how long a prepaid block stays valid.
 - **Hosting and maintenance plans.** These are billed monthly or annually in advance and renew automatically until cancelled (see section 8).
 - **Third-party costs.** Domains, app store developer accounts, software licenses, paid plugins, AI model usage and infrastructure costs are billed to you, or paid by you directly to the provider.
@@ -85,7 +85,7 @@ A plan does **not** include new features, pages or integrations, redesigns, issu
 
 ## 9. Revisions and acceptance
 
-The proposal sets the number of revision rounds included. Further rounds are billed as changes. A deliverable is accepted when you approve it in writing, when you start using it in production, or 10 business days after delivery if you have not reported any defect.
+The proposal sets the number of revision rounds included. Further rounds are billed as changes. A deliverable is accepted when you approve it in writing, when you start using it in production, or 10 business days after delivery if you have not reported any defect. Acceptance of a milestone makes the payment tied to it due. If you put a deliverable into production before paying for it, it is accepted and the related payment is due.
 
 ## 10. Intellectual property
 

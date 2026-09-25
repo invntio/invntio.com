@@ -17,7 +17,7 @@ Nuestra política es simple: **los pagos no son reembolsables una vez realizados
 
 ## 1. Proyectos de precio fijo
 
-La propuesta fija el calendario de pagos. Los proyectos pequeños, como sitios web, se pagan por completo por adelantado. Los proyectos más grandes pueden dividirse en pagos ligados a hitos.
+La propuesta fija el calendario de pagos. Los proyectos pequeños, como sitios web, se pagan por completo por adelantado. Los proyectos más grandes pueden dividirse en pagos ligados a hitos: cada uno se factura cuando se acepta su hito, y el pago final vence antes del lanzamiento o de la entrega.
 
 Una vez realizado, un pago no es reembolsable, porque reserva tiempo en nuestra agenda y cubre trabajo en curso. Si cancelas un proyecto:
 

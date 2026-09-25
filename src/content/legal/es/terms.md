@@ -38,7 +38,7 @@ Si los documentos se contradicen, se aplica este orden: primero la propuesta ace
 
 ## 5. Precios y pagos
 
-- **Proyectos de precio fijo.** Pagas según el calendario de la propuesta. Los proyectos pequeños, como sitios web y landing pages, se pagan por completo por adelantado.
+- **Proyectos de precio fijo.** Pagas según el calendario de la propuesta. Los proyectos pequeños, como sitios web y landing pages, se pagan por completo por adelantado. Cuando un pago está ligado a un hito, lo facturamos una vez aceptado ese hito (ver sección 9). El pago final vence antes del lanzamiento o de la entrega de los entregables, lo que ocurra primero.
 - **Trabajo por horas.** Pagas por adelantado un bloque mínimo de horas a la tarifa acordada en la propuesta. Te avisamos cuando se ha usado el 80% del bloque. Las horas adicionales requieren tu aprobación por escrito y se suman a tu siguiente factura. La propuesta indica cuánto tiempo es válido cada bloque prepagado.
 - **Planes de hosting y mantenimiento.** Se facturan por adelantado, cada mes o cada año, y se renuevan automáticamente hasta que los canceles (ver sección 8).
 - **Costos de terceros.** Dominios, cuentas de desarrollador en tiendas de apps, licencias, plugins de pago, uso de modelos de IA e infraestructura se te facturan a ti o los pagas directamente al proveedor.
@@ -85,7 +85,7 @@ Un plan **no** incluye funcionalidades, páginas o integraciones nuevas, redise�
 
 ## 9. Revisiones y aceptación
 
-La propuesta fija las rondas de revisión incluidas. Las rondas adicionales se facturan como cambios. Un entregable se considera aceptado cuando lo apruebas por escrito, cuando empiezas a usarlo en producción o 10 días hábiles después de la entrega si no has reportado ningún defecto.
+La propuesta fija las rondas de revisión incluidas. Las rondas adicionales se facturan como cambios. Un entregable se considera aceptado cuando lo apruebas por escrito, cuando empiezas a usarlo en producción o 10 días hábiles después de la entrega si no has reportado ningún defecto. La aceptación de un hito hace exigible el pago ligado a él. Si pones un entregable en producción antes de pagarlo, queda aceptado y el pago correspondiente vence.
 
 ## 10. Propiedad intelectual
 

@@ -17,7 +17,7 @@ Our policy is simple: **payments are non-refundable once made**, except in the c
 
 ## 1. Fixed-price projects
 
-The proposal sets the payment schedule. Small projects, such as websites, are paid in full upfront. Larger projects may be split into payments tied to milestones.
+The proposal sets the payment schedule. Small projects, such as websites, are paid in full upfront. Larger projects may be split into payments tied to milestones: each one is invoiced when its milestone is accepted, and the final payment is due before launch or handover.
 
 Once a payment is made it is non-refundable, because it reserves time in our schedule and pays for work in progress. If you cancel a project:
 
