@@ -35,6 +35,7 @@ const version = `v${builtAt.toISOString().slice(0, 10).replaceAll("-", ".")}`;
                 <li><a href={localizePath("/refunds", lang)}>{t.footer.refunds}</a></li>
                 <li><a href={localizePath("/privacy", lang)}>{t.footer.privacy}</a></li>
                 {site.posthogKey && <li><a href="#" data-consent-open>{t.consent.settings}</a></li>}
+                <li><a class="status-link" href={site.statusPage} target="_blank" rel="noopener"><span class="build-dot" aria-hidden="true"></span>{t.footer.status}</a></li>
             </ul>
         </nav>
 
@@ -133,6 +134,11 @@ const version = `v${builtAt.toISOString().slice(0, 10).replaceAll("-", ".")}`;
     .build code {
         font-family: ui-monospace, "SF Mono", Menlo, monospace;
         font-size: 0.8125rem;
+    }
+    .status-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
     }
     .build-dot {
         width: 6px;

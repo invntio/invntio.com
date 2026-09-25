@@ -4,6 +4,8 @@ export const site = {
     name: "Invntio",
     url: "https://invntio.com",
     email: "hello@invntio.com",
+    // Public uptime page (UptimeRobot), linked from the footer.
+    statusPage: "https://stats.uptimerobot.com/qTywKXcFaK",
     // Google Search Console HTML-tag token (content="…"); empty when verified by DNS.
     googleSiteVerification: "",
     location: { en: "Pennsylvania, United States", es: "Pensilvania, Estados Unidos" },

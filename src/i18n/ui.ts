@@ -213,6 +213,7 @@ const en = {
         privacy: "Privacy Policy",
         rights: "All rights reserved.",
         deployed: "Deployed",
+        status: "System status",
     },
     consent: {
         label: "Cookie preferences",
@@ -440,6 +441,7 @@ const es: Dict = {
         privacy: "Política de Privacidad",
         rights: "Todos los derechos reservados.",
         deployed: "Publicado",
+        status: "Estado del sistema",
     },
     consent: {
         label: "Preferencias de cookies",
