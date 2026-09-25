@@ -34,7 +34,7 @@ const switchHref = localizePath(Astro.url.pathname, other);
                 {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
             </ul>
             <div class="nav-end">
-                <a class="lang" href={switchHref} hreflang={other} lang={other}>
+                <a class="lang" href={switchHref} hreflang={other} lang={other} data-lang-choice={other}>
                     <span class="sr-only">{t.nav.language}: </span>
                     <span aria-current={lang === "en" ? "true" : undefined} class:list={{ on: lang === "en" }}>EN</span>
                     <span aria-hidden="true" class="sep">/</span>
@@ -61,6 +61,17 @@ const switchHref = localizePath(Astro.url.pathname, other);
 <script>
     const header = document.querySelector<HTMLElement>("[data-header]");
     const toggle = document.querySelector<HTMLButtonElement>("[data-menu-toggle]");
+    // Remember an explicit language choice so the automatic redirect never overrides it.
+    document.querySelectorAll<HTMLAnchorElement>("[data-lang-choice]").forEach((link) =>
+        link.addEventListener("click", () => {
+            try {
+                localStorage.setItem("invntio-lang", link.dataset.langChoice!);
+            } catch {
+                /* no storage: the redirect may apply again next visit */
+            }
+        }),
+    );
+
     // On the home page the logo scrolls back to the top instead of reloading.
     document.querySelectorAll<HTMLAnchorElement>("a.brand").forEach((link) =>
         link.addEventListener("click", (event) => {

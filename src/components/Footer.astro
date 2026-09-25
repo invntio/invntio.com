@@ -46,7 +46,7 @@ const year = new Date().getFullYear();
     </div>
     <div class="wrap base">
         <p>© <span data-year>{year}</span> Invntio. {t.footer.rights}</p>
-        <a href={localizePath(Astro.url.pathname, lang === "en" ? "es" : "en")} hreflang={lang === "en" ? "es" : "en"}>
+        <a href={localizePath(Astro.url.pathname, lang === "en" ? "es" : "en")} hreflang={lang === "en" ? "es" : "en"} data-lang-choice={lang === "en" ? "es" : "en"}>
             {lang === "en" ? "Español" : "English"}
         </a>
     </div>

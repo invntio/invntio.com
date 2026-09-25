@@ -39,6 +39,30 @@ const ogImage = new URL("/og.png", site.url).href;
         <meta name="theme-color" content="#f6f7f5" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#0f1214" media="(prefers-color-scheme: dark)" />
         <script is:inline>
+            // First visit to the English home: send Spanish speakers to /es/.
+            // Signals, in order: an explicit choice (stored), the browser language, then the visitor's country.
+            (() => {
+                if (location.pathname !== "/") return;
+                let pref = null;
+                try { pref = localStorage.getItem("invntio-lang"); } catch {}
+                if (pref) return;
+                const go = () => location.replace("/es/" + location.hash);
+                const langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""];
+                const first = (langs[0] || "").toLowerCase();
+                if (first.startsWith("es")) return go();
+                const hispanic = ["AR","BO","CL","CO","CR","CU","DO","EC","ES","GQ","GT","HN","MX","NI","PA","PE","PR","PY","SV","UY","VE"];
+                const ctrl = new AbortController();
+                setTimeout(() => ctrl.abort(), 1200);
+                fetch("/cdn-cgi/trace", { signal: ctrl.signal })
+                    .then((r) => (r.ok ? r.text() : ""))
+                    .then((text) => {
+                        const loc = (text.match(/^loc=(\w+)/m) || [])[1];
+                        if (loc && hispanic.includes(loc)) go();
+                    })
+                    .catch(() => {});
+            })();
+        </script>
+        <script is:inline>
             (() => {
                 let t = null;
                 try { t = localStorage.getItem("invntio-theme"); } catch {}
