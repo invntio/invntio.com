@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-25T16:58:27+00:00",
+  "title": "Design System: Invntio",
+  "extensions": {
+    "colorMeta": {
+      "green": {
+        "role": "primary",
+        "displayName": "Live Green",
+        "canonical": "oklch(66.4% 0.132 162)",
+        "tonalRamp": [
+          "#001700",
+          "#00360f",
+          "#00562b",
+          "#00774a",
+          "#039a6a",
+          "#44be8c",
+          "#6ee4b0",
+          "#95ffd4"
+        ],
+        "cssVar": "--green"
+      },
+      "green-deep": {
+        "role": "primary",
+        "displayName": "Release Green",
+        "canonical": "oklch(42.4% 0.083 162)",
+        "tonalRamp": [
+          "#001402",
+          "#003118",
+          "#004f34",
+          "#2d7053",
+          "#509273",
+          "#73b695",
+          "#97dbb9",
+          "#bcffde"
+        ],
+        "cssVar": "--green-deep"
+      },
+      "green-deeper": {
+        "role": "primary",
+        "displayName": "Deep Release Green",
+        "canonical": "oklch(36.5% 0.072 162)",
+        "tonalRamp": [
+          "#001303",
+          "#002f1a",
+          "#144e36",
+          "#376e55",
+          "#599076",
+          "#7bb398",
+          "#9fd8bb",
+          "#c4fee0"
+        ]
+      },
+      "green-ink": {
+        "role": "primary",
+        "displayName": "Signal Ink Green",
+        "canonical": "oklch(51.7% 0.104 162)",
+        "tonalRamp": [
+          "#001500",
+          "#003314",
+          "#005230",
+          "#10734e",
+          "#3e956f",
+          "#63b991",
+          "#88dfb4",
+          "#aeffd9"
+        ],
+        "cssVar": "--green-ink"
+      },
+      "green-wash": {
+        "role": "primary",
+        "displayName": "Green Wash",
+        "canonical": "oklch(95.5% 0.017 168)",
+        "tonalRamp": [
+          "#050d0a",
+          "#1d2824",
+          "#3a4540",
+          "#58645f",
+          "#798680",
+          "#9ba9a3",
+          "#bfcdc7",
+          "#e4f2ec"
+        ],
+        "cssVar": "--green-wash"
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Ground",
+        "canonical": "oklch(97.5% 0.003 128)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#252524",
+          "#414241",
+          "#616160",
+          "#828381",
+          "#a4a5a3",
+          "#c8c9c7",
+          "#eeefed"
+        ],
+        "cssVar": "--ground"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface White",
+        "canonical": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ],
+        "cssVar": "--surface"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(20.8% 0.009 256)",
+        "tonalRamp": [
+          "#090b0f",
+          "#22252a",
+          "#3f4247",
+          "#5e6266",
+          "#7f8388",
+          "#a1a5ab",
+          "#c5c9cf",
+          "#eaeff5"
+        ],
+        "cssVar": "--ink"
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "oklch(42.6% 0.015 260)",
+        "tonalRamp": [
+          "#080b11",
+          "#21252c",
+          "#3d424a",
+          "#5c626a",
+          "#7d838b",
+          "#a0a5af",
+          "#c4cad3",
+          "#e9eff9"
+        ],
+        "cssVar": "--ink-2"
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "oklch(53.3% 0.014 260)",
+        "tonalRamp": [
+          "#080b11",
+          "#21252c",
+          "#3e424a",
+          "#5d6269",
+          "#7d838b",
+          "#a0a5ae",
+          "#c4c9d2",
+          "#e9eff8"
+        ],
+        "cssVar": "--ink-3"
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(91.6% 0.006 129)",
+        "tonalRamp": [
+          "#0a0c09",
+          "#242623",
+          "#41433f",
+          "#60625e",
+          "#81837f",
+          "#a4a6a2",
+          "#c8cac6",
+          "#edefeb"
+        ],
+        "cssVar": "--rule"
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "oklch(84.1% 0.009 129)",
+        "tonalRamp": [
+          "#0a0c08",
+          "#242621",
+          "#40433e",
+          "#60625d",
+          "#81837e",
+          "#a3a6a0",
+          "#c7cac4",
+          "#edf0e9"
+        ],
+        "cssVar": "--rule-strong"
+      },
+      "danger": {
+        "role": "error",
+        "displayName": "Danger",
+        "canonical": "oklch(50.1% 0.178 29)",
+        "tonalRamp": [
+          "#3a0000",
+          "#610000",
+          "#880000",
+          "#b0221b",
+          "#d84c3f",
+          "#ff7161",
+          "#ff9784",
+          "#ffbda8"
+        ],
+        "cssVar": "--danger"
+      },
+      "danger-wash": {
+        "role": "error",
+        "displayName": "Danger Wash",
+        "canonical": "oklch(95.5% 0.016 22)",
+        "tonalRamp": [
+          "#110808",
+          "#2d2221",
+          "#4a3f3e",
+          "#6a5e5d",
+          "#8c7f7e",
+          "#afa1a0",
+          "#d4c5c4",
+          "#f9eae9"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline and legal-page titles only; capped at 14-18ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles in the left column of a section head."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service names, plans heading, legal section headings."
+      },
+      "title-small": {
+        "displayName": "Title Small",
+        "purpose": "Process stage names and live register product names."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Section-head descriptions (38ch), hero lede (50ch), about statements (54ch); Ink 2."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text; legal prose at 68ch in Ink 2."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels, plan column heads, footer heads (600); nav links (500); captions and metadata (400, Ink 3). Sentence case."
+      }
+    },
+    "shadows": [
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 3px var(--green-wash)",
+        "purpose": "Form field focus only, paired with a green-ink border."
+      },
+      {
+        "name": "node-unlit",
+        "value": "inset 0 0 0 1px var(--rule-strong)",
+        "purpose": "Starting keyframe of a process node before the rail lights it; never a resting style."
+      }
+    ],
+    "focus": {
+      "outline": "2px solid var(--green-ink)",
+      "outlineOffset": "3px",
+      "radius": "2px"
+    },
+    "header": {
+      "background": "color-mix(in srgb, var(--ground) 92%, transparent)",
+      "backdropFilter": "saturate(1.4) blur(10px)",
+      "scrolledBorder": "1px solid var(--rule)"
+    },
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Easing for every state transition."
+      },
+      {
+        "name": "state-fast",
+        "value": "150ms",
+        "purpose": "Link colour, input border."
+      },
+      {
+        "name": "state-base",
+        "value": "180-220ms",
+        "purpose": "Button fill and press nudge, register row fill and arrow shift, header border, mobile menu."
+      },
+      {
+        "name": "rail-fill",
+        "value": "view-timeline --rail block; segment range entry calc(20% + i*12%) cover calc(40% + i*12%); node range entry calc(10% + i*12%) cover calc(30% + i*12%)",
+        "purpose": "The one authored motion: the process rail fills stage by stage while scrolling. Under reduced motion or without support, the rail is shown already filled."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "480px",
+        "purpose": "Register rows stack."
+      },
+      {
+        "name": "sm",
+        "value": "640px",
+        "purpose": "Form and plan columns go two-up."
+      },
+      {
+        "name": "nav",
+        "value": "860px",
+        "purpose": "Menu toggle below; inline nav at and above."
+      },
+      {
+        "name": "md",
+        "value": "900px",
+        "purpose": "Section heads, services, plans, process, about, contact and footer split."
+      },
+      {
+        "name": "lg",
+        "value": "1000px",
+        "purpose": "Hero 7/5 split; legal sticky TOC."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one filled action: Release Green with white text, for Start a project and Send.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Start a project <svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 10h12M11 5l5 5-5 5\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.625rem; min-height: 3rem; padding: 0.75rem 1.375rem; border: 1px solid transparent; border-radius: 6px; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); font-weight: 600; font-size: 1rem; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--green-ink, #1c7a55); outline-offset: 3px; } .ds-btn svg { width: 1.125rem; height: 1.125rem; flex: none; } .ds-btn-primary { background: var(--green-deep, #155c40); color: #fff; } .ds-btn-primary:hover { background: #0f4a33; }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Secondary action on a white fill with a strong hairline border.",
+      "html": "<a class=\"ds-btn ds-btn-quiet\" href=\"#\">Message on WhatsApp</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.625rem; min-height: 3rem; padding: 0.75rem 1.375rem; border: 1px solid transparent; border-radius: 6px; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); font-weight: 600; font-size: 1rem; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--green-ink, #1c7a55); outline-offset: 3px; } .ds-btn svg { width: 1.125rem; height: 1.125rem; flex: none; } .ds-btn-quiet { background: var(--surface, #fff); color: var(--ink, #15181c); border-color: var(--rule-strong, #c9ccc6); } .ds-btn-quiet:hover { border-color: var(--ink, #15181c); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled field with a white fill; focus is a green-ink border plus a green-wash halo.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-email\">Email</label><input id=\"ds-email\" type=\"email\" placeholder=\"you@company.com\"></div>",
+      "css": ".ds-field { display: grid; gap: 0.4rem; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); color: var(--ink, #15181c); } .ds-field label { font-size: 0.875rem; font-weight: 600; } .ds-field input { width: 100%; min-height: 3rem; padding: 0.7rem 0.875rem; background: var(--surface, #fff); border: 1px solid var(--rule-strong, #c9ccc6); border-radius: 6px; font: inherit; font-size: 1rem; color: inherit; caret-color: var(--green-ink, #1c7a55); transition: border-color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-field input::placeholder { color: var(--ink-3, #686d75); } .ds-field input:hover { border-color: var(--ink-3, #686d75); } .ds-field input:focus { outline: none; border-color: var(--green-ink, #1c7a55); box-shadow: 0 0 0 3px var(--green-wash, #e6f4ee); }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky translucent bar: wordmark left, Ink 2 links, EN/ES switch and a compact primary CTA right.",
+      "html": "<header class=\"ds-header\"><span class=\"ds-brand\">invntio</span><nav class=\"ds-nav\"><a href=\"#\">Services</a><a href=\"#\">Work</a><a href=\"#\">Process</a><a href=\"#\">Contact</a><span class=\"ds-lang\"><b>EN</b> / ES</span><a class=\"ds-cta\" href=\"#\">Start a project</a></nav></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 4.25rem; padding-inline: 1.5rem; background: color-mix(in srgb, var(--ground, #f6f7f5) 92%, transparent); border-bottom: 1px solid var(--rule, #e2e4e0); font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); } .ds-brand { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.03em; color: var(--ink, #15181c); } .ds-nav { display: flex; align-items: center; gap: 1.75rem; font-size: 0.875rem; } .ds-nav a { color: var(--ink-2, #4a4f57); font-weight: 500; text-decoration: none; transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav a:hover { color: var(--ink, #15181c); } .ds-nav a:focus-visible { outline: 2px solid var(--green-ink, #1c7a55); outline-offset: 3px; border-radius: 2px; } .ds-lang { color: var(--ink-3, #686d75); } .ds-lang b { color: var(--ink, #15181c); font-weight: 600; } .ds-nav a.ds-cta { display: inline-flex; align-items: center; min-height: 2.5rem; padding: 0.5rem 1rem; border-radius: 6px; background: var(--green-deep, #155c40); color: #fff; font-weight: 600; } .ds-nav a.ds-cta:hover { background: #0f4a33; color: #fff; }"
+    },
+    {
+      "name": "State Marks",
+      "kind": "custom",
+      "refersTo": "state-marks",
+      "description": "The whole state vocabulary: live (static green dot with halo), included (check), excluded (open ring).",
+      "html": "<ul class=\"ds-marks\"><li><svg class=\"ds-mark ds-mark-live\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle class=\"halo\" cx=\"8\" cy=\"8\" r=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"4\"/></svg> Live</li><li><svg class=\"ds-mark ds-mark-included\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3.5 8.5l3 3 6-7\" fill=\"none\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Included</li><li><svg class=\"ds-mark ds-mark-excluded\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"4.25\" fill=\"none\" stroke-width=\"1.5\"/></svg> Not included</li></ul>",
+      "css": ".ds-marks { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.625rem; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); font-size: 0.875rem; color: var(--ink, #15181c); } .ds-marks li { display: flex; align-items: center; gap: 0.75rem; } .ds-mark { width: 1em; height: 1em; flex: none; } .ds-mark-live circle { fill: var(--green, #2cac7b); } .ds-mark-live .halo { opacity: 0.2; } .ds-mark-included path { stroke: var(--green-ink, #1c7a55); } .ds-mark-excluded circle { stroke: var(--ink-3, #686d75); }"
+    },
+    {
+      "name": "Live Register",
+      "kind": "custom",
+      "refersTo": "live-register",
+      "description": "Signature ruled list of live products: ink top rule, hairline rows, domain reveals on hover and focus.",
+      "html": "<div class=\"ds-register\"><div class=\"ds-register-head\"><h2><svg class=\"ds-mark ds-mark-live\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle class=\"halo\" cx=\"8\" cy=\"8\" r=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"4\"/></svg> Live now</h2><p>In production today</p></div><a class=\"ds-row\" href=\"#\"><svg class=\"ds-mark ds-mark-live\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle class=\"halo\" cx=\"8\" cy=\"8\" r=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"4\"/></svg><span class=\"ds-name\">Bohío <span class=\"ds-kind\">Own product</span></span><span class=\"ds-what\">Condominium management SaaS</span><span class=\"ds-domain\">bohio.app <svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 11l6-6M6 5h5v5\"/></svg></span></a><a class=\"ds-row\" href=\"#\"><svg class=\"ds-mark ds-mark-live\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle class=\"halo\" cx=\"8\" cy=\"8\" r=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"4\"/></svg><span class=\"ds-name\">Beavo <span class=\"ds-kind\">Own product</span></span><span class=\"ds-what\">iOS habit tracker</span><span class=\"ds-domain\">beavo.me <svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 11l6-6M6 5h5v5\"/></svg></span></a></div>",
+      "css": ".ds-register { border-top: 1px solid var(--ink, #15181c); font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); color: var(--ink, #15181c); max-width: 28rem; } .ds-register-head { display: flex; justify-content: space-between; align-items: baseline; padding-block: 0.875rem; border-bottom: 1px solid var(--rule, #e2e4e0); } .ds-register-head h2 { display: inline-flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 1rem; font-weight: 650; } .ds-register-head p { margin: 0; font-size: 0.875rem; color: var(--ink-3, #686d75); } .ds-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.25rem 1rem; padding: 1.125rem 0.75rem 1.125rem 2.35rem; border-bottom: 1px solid var(--rule, #e2e4e0); color: inherit; text-decoration: none; border-radius: 6px; transition: background-color 200ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-row > .ds-mark { position: absolute; left: 0.75rem; top: 1.5rem; } .ds-name { grid-column: 1 / -1; font-size: 1.125rem; font-weight: 650; letter-spacing: -0.01em; } .ds-kind { margin-left: 0.5rem; font-size: 0.8125rem; font-weight: 400; color: var(--ink-3, #686d75); } .ds-what { font-size: 0.875rem; color: var(--ink-2, #4a4f57); } .ds-domain { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.875rem; font-weight: 500; color: var(--ink-3, #686d75); transition: color 200ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-domain svg { width: 0.875rem; height: 0.875rem; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-row:hover, .ds-row:focus-visible { background: var(--surface, #fff); outline: none; } .ds-row:hover .ds-domain, .ds-row:focus-visible .ds-domain { color: var(--green-ink, #1c7a55); } .ds-row:hover .ds-domain svg, .ds-row:focus-visible .ds-domain svg { transform: translate(2px, -2px); } .ds-mark { width: 1em; height: 1em; } .ds-mark-live circle { fill: var(--green, #2cac7b); } .ds-mark-live .halo { opacity: 0.2; }"
+    },
+    {
+      "name": "Process Rail",
+      "kind": "custom",
+      "refersTo": "process-node",
+      "description": "Signature four-stage rail: Release Green nodes joined by a hairline with a 2px Live Green fill (shown filled here; scroll-driven on site).",
+      "html": "<ol class=\"ds-rail\"><li><span class=\"ds-node\">1</span><h3>Discovery call</h3></li><li><span class=\"ds-node\">2</span><h3>Proposal</h3></li><li><span class=\"ds-node\">3</span><h3>Build &amp; review</h3></li><li><span class=\"ds-node\">4</span><h3>Launch</h3></li></ol>",
+      "css": ".ds-rail { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 2rem; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); color: var(--ink, #15181c); } .ds-rail li { position: relative; } .ds-rail li:not(:last-child)::after { content: \"\"; position: absolute; top: calc(1.125rem - 1px); left: 2.25rem; right: -2rem; height: 2px; background: var(--green, #2cac7b); } .ds-node { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; margin-bottom: 1rem; border-radius: 50%; background: var(--green-deep, #155c40); color: #fff; font-weight: 650; font-size: 0.875rem; font-variant-numeric: tabular-nums; } .ds-rail h3 { margin: 0; font-size: 1.125rem; font-weight: 650; letter-spacing: -0.01em; line-height: 1.08; }"
+    },
+    {
+      "name": "Ruled Checklist",
+      "kind": "custom",
+      "refersTo": "ruled-list",
+      "description": "The no-card panel: ink rule head, hairline rows, state marks as markers.",
+      "html": "<div class=\"ds-plan\"><h4>Included</h4><ul><li><svg class=\"ds-mark ds-mark-included\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3.5 8.5l3 3 6-7\" fill=\"none\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Hosting and SSL</li><li><svg class=\"ds-mark ds-mark-included\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3.5 8.5l3 3 6-7\" fill=\"none\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Daily backups</li></ul><h4>On request</h4><ul class=\"muted\"><li><svg class=\"ds-mark ds-mark-excluded\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"4.25\" fill=\"none\" stroke-width=\"1.5\"/></svg>New features</li></ul></div>",
+      "css": ".ds-plan { font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); color: var(--ink, #15181c); max-width: 22rem; } .ds-plan h4 { margin: 0 0 0.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--ink, #15181c); font-size: 0.875rem; font-weight: 600; } .ds-plan ul { list-style: none; padding: 0; margin: 0 0 1.5rem; } .ds-plan li { display: flex; gap: 0.75rem; align-items: center; padding-block: 0.625rem; border-bottom: 1px solid var(--rule, #e2e4e0); font-size: 0.875rem; } .ds-plan ul.muted li { color: var(--ink-2, #4a4f57); } .ds-mark { width: 1em; height: 1em; flex: none; } .ds-mark-included path { stroke: var(--green-ink, #1c7a55); } .ds-mark-excluded circle { stroke: var(--ink-3, #686d75); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Release Record",
+    "overview": "Invntio reads like a changelog and a deploy status board, not a pitch. Every surface is a ledger: an ink rule opens a panel, hairlines separate its rows, and a small set of authored marks says what state each row is in. The page is near-white and flat. One family of type sets everything, flush left on a 7/5 split grid, and a single committed jump in scale (the display headline) carries the hierarchy.\n\nDensity is moderate and the tone is matter-of-fact. Content is laid out as registers and ruled lists (live products, services, what a plan includes, the four engagement stages, contact details) so that a visitor can scan what is real without decoration getting in the way. The brand green is scarce because it is a signal. When it appears, something is live or something is moving along the process rail.\n\nThe world rejects the centered gradient hero, blurred colour blobs and the icon-card grid. Depth, containers and emphasis come from rules and type, never from boxes or shadows.",
+    "keyCharacteristics": [
+      "Near-white ground with ink text and hairline rules; no cards and no drop shadows.",
+      "Panels open with a 1px ink top rule; rows are divided by 1px hairlines.",
+      "Schibsted Grotesk only, with a large display step and quiet everything else.",
+      "Three authored SVG state marks (live, included, excluded) as the whole state vocabulary.",
+      "Brand green is limited to the live mark, the process rail and text selection.",
+      "One authored motion: the process rail fills as it scrolls into view."
+    ],
+    "rules": [
+      {
+        "name": "The Live Signal Rule",
+        "body": "Live Green (#2cac7b) marks only three things: live state, progress along the process rail, and selected text. If it appears anywhere else, it is decoration and must go.",
+        "section": "colors"
+      },
+      {
+        "name": "The AA Action Rule",
+        "body": "Anything the visitor presses is filled with Release Green (green-deep) and has white text. Live Green never carries text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Icon Rule",
+        "body": "Icons and list markers are Ink or Ink 3. Green belongs to marks and the rail, not to pictograms.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Schibsted Grotesk sets every word. Hierarchy comes from weight, size and ink level, never from a second typeface.",
+        "section": "typography"
+      },
+      {
+        "name": "The Committed Scale Rule",
+        "body": "Display is the only oversized step. Everything below Headline stays within 0.875 to 1.75rem, so the jump to the headline reads as a decision.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Labels, headings and buttons use sentence case with normal tracking. There are no uppercase tracked labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled Panel Rule",
+        "body": "There are no cards. A panel is an ink top rule and hairline row dividers on the page ground, with no fill, border box or shadow. Form inputs are the one white fill, because a field has to look like a field.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Flat-Hover Rule",
+        "body": "Hover states change fill, border or ink colour. Nothing lifts or casts a shadow. The only movement on press is the 1px nudge of a button.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** open every panel with a 1px Ink top rule and divide its rows with 1px Hairline (#e2e4e0) on the page ground.",
+      "**Do** use Release Green (#155c40) with white text for every primary action.",
+      "**Do** express state with the three authored marks (live, included, excluded) and keep their meanings fixed across surfaces.",
+      "**Do** keep icons and list markers in Ink or Ink 3.",
+      "**Do** set every level in Schibsted Grotesk, and let the fluid display step (700, -0.035em) be the only oversized type.",
+      "**Do** build layouts on the asymmetric 7/5 split, flush left, and collapse to one column at 900 to 1000px.",
+      "**Do** keep the live mark static and let the process rail fill be the one authored motion, shown filled under reduced motion."
+    ],
+    "donts": [
+      "**Don't** use cards: no filled, bordered or shadowed containers for content. Inputs and quiet buttons are the only white fills.",
+      "**Don't** use Live Green (#2cac7b) for text, buttons, icons, backgrounds or decoration. It is reserved for the live mark, the process rail and selection.",
+      "**Don't** add drop shadows or hover lifts. The only shadows allowed are the input focus halo and the unlit node outline.",
+      "**Don't** substitute Unicode glyphs (●, ✓, ○) or icon-font characters for the authored state marks.",
+      "**Don't** animate the live mark or add entrance animations. Hover and focus transitions (150 to 220ms, ease-out) are state feedback, not motion design.",
+      "**Don't** build a centred gradient hero, blurred blob backgrounds or an icon-card grid.",
+      "**Don't** use uppercase tracked labels or small kicker text above headings."
+    ]
+  }
+}
