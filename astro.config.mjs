@@ -46,6 +46,7 @@ export default defineConfig({
                 defaultLocale: "en",
                 locales: { en: "en-US", es: "es" },
             },
+            lastmod: new Date(),
             // Unlaunched pages and the Spanish 404 stay out of the sitemap.
             filter: (page) => !/\/(es\/)?(work|404)\/?$/.test(page),
         }),

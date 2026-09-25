@@ -20,9 +20,10 @@ type RegisterItem = {
 
 const en = {
     meta: {
-        title: "Invntio — Software design, development and hosting",
+        title: "Invntio — Custom software, apps and websites",
         description:
-            "Invntio designs, builds and maintains web apps, mobile apps and websites for small businesses and startups, with monthly hosting and maintenance plans.",
+            "Custom software, mobile apps, websites, automation and integrations for businesses in the US and Latin America. Built, hosted and maintained by one studio.",
+        ogAlt: "Invntio. Your ideas, shipped and running. Web and mobile apps, websites, automation and hosting.",
     },
     nav: {
         services: "Services",
@@ -246,9 +247,10 @@ type Dict = typeof en;
 
 const es: Dict = {
     meta: {
-        title: "Invntio — Diseño, desarrollo y hosting de software",
+        title: "Invntio — Software a medida, apps y sitios web",
         description:
-            "Invntio diseña, construye y mantiene aplicaciones web, apps móviles y sitios web para pymes y startups, con planes mensuales de hosting y mantenimiento.",
+            "Software a medida, apps móviles, sitios web, automatización e integraciones para empresas en Latinoamérica y EE. UU. Lo construimos, alojamos y mantenemos.",
+        ogAlt: "Invntio. Tus ideas, hechas realidad. Apps web y móviles, sitios web, automatización y hosting.",
     },
     nav: {
         services: "Servicios",

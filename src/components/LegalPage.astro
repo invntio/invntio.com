@@ -30,7 +30,7 @@ const siblings = (["terms", "refunds", "privacy"] as const).map((slug) => ({
 }));
 ---
 
-<Layout title={entry.data.title} description={entry.data.description}>
+<Layout title={entry.data.title} description={entry.data.description} updated={entry.data.updated}>
     <article class="wrap legal">
         <header class="legal-head">
             <nav class="docs" aria-label={t.footer.legal}>

@@ -1,0 +1,85 @@
+---
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
+import { site } from "../config/site";
+
+// JSON-LD for search engines: the business and its services on the home page,
+// breadcrumbs on inner pages.
+interface Props {
+    kind: "home" | "page";
+    title?: string;
+    updated?: Date;
+}
+
+const { kind, title, updated } = Astro.props;
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+const home = new URL(localizePath("/", lang), site.url).href;
+const url = new URL(Astro.url.pathname, site.url).href;
+const orgId = `${site.url}/#organization`;
+
+const organization = {
+    "@type": "ProfessionalService",
+    "@id": orgId,
+    name: "Invntio",
+    url: site.url,
+    logo: `${site.url}/icon-512.png`,
+    image: `${site.url}/${lang === "es" ? "og-es.png" : "og.png"}`,
+    email: site.email,
+    slogan: lang === "es" ? "Desata el potencial de tu negocio" : "Unleash your business potential",
+    description: t.meta.description,
+    address: { "@type": "PostalAddress", addressRegion: "PA", addressCountry: "US" },
+    areaServed: ["US", "Latin America"],
+    knowsLanguage: ["en", "es"],
+    contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: site.email,
+        availableLanguage: ["English", "Spanish"],
+    },
+    hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: t.services.title,
+        itemListElement: t.services.items.map((s) => ({
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: s.name, description: s.body },
+        })),
+    },
+};
+
+const graph =
+    kind === "home"
+        ? [
+              organization,
+              {
+                  "@type": "WebSite",
+                  "@id": `${site.url}/#website`,
+                  url: home,
+                  name: "Invntio",
+                  inLanguage: lang,
+                  publisher: { "@id": orgId },
+              },
+          ]
+        : [
+              {
+                  "@type": "WebPage",
+                  "@id": url,
+                  url,
+                  name: title,
+                  inLanguage: lang,
+                  isPartOf: { "@id": `${site.url}/#website` },
+                  publisher: { "@id": orgId },
+                  ...(updated && { dateModified: updated.toISOString().slice(0, 10) }),
+              },
+              {
+                  "@type": "BreadcrumbList",
+                  itemListElement: [
+                      { "@type": "ListItem", position: 1, name: "Invntio", item: home },
+                      { "@type": "ListItem", position: 2, name: title, item: url },
+                  ],
+              },
+          ];
+
+const json = JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c");
+---
+
+<script type="application/ld+json" set:html={json} />

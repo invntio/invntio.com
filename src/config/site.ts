@@ -4,6 +4,8 @@ export const site = {
     name: "Invntio",
     url: "https://invntio.com",
     email: "hello@invntio.com",
+    // Google Search Console HTML-tag token (content="…"); empty when verified by DNS.
+    googleSiteVerification: "",
     location: { en: "Pennsylvania, United States", es: "Pensilvania, Estados Unidos" },
     // Shown on the legal pages only.
     operator: "Víctor Velázquez Cid",

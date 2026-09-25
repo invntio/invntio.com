@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Consent from "../components/Consent.astro";
+import StructuredData from "../components/StructuredData.astro";
 import { getLang, localizePath, useTranslations } from "../i18n/ui";
 import { site } from "../config/site";
 
@@ -11,6 +12,8 @@ interface Props {
     description?: string;
     // Keep a page out of search engines (used for pages not launched yet).
     noindex?: boolean;
+    // Last content change, for structured data on inner pages.
+    updated?: Date;
 }
 
 const lang = getLang(Astro.url);
@@ -20,7 +23,8 @@ const description = Astro.props.description ?? t.meta.description;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const enHref = new URL(localizePath(Astro.url.pathname, "en"), site.url).href;
 const esHref = new URL(localizePath(Astro.url.pathname, "es"), site.url).href;
-const ogImage = new URL("/og.png", site.url).href;
+const ogImage = new URL(lang === "es" ? "/og-es.png" : "/og.png", site.url).href;
+const isHome = localizePath(Astro.url.pathname, "en") === "/";
 ---
 
 <!doctype html>
@@ -87,11 +91,17 @@ const ogImage = new URL("/og.png", site.url).href;
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={t.meta.ogAlt} />
         <meta property="og:locale" content={lang === "es" ? "es_419" : "en_US"} />
+        <meta property="og:locale:alternate" content={lang === "es" ? "en_US" : "es_419"} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content={t.meta.ogAlt} />
+        <link rel="manifest" href="/site.webmanifest" />
+        {site.googleSiteVerification && <meta name="google-site-verification" content={site.googleSiteVerification} />}
+        {!Astro.props.noindex && <StructuredData kind={isHome ? "home" : "page"} title={Astro.props.title} updated={Astro.props.updated} />}
         <meta name="generator" content={Astro.generator} />
     </head>
     <body>
