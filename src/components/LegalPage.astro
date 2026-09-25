@@ -82,7 +82,7 @@ const siblings = (["terms", "refunds", "privacy"] as const).map((slug) => ({
     .docs a[aria-current="page"] {
         color: var(--ink);
         font-weight: 600;
-        border-bottom-color: var(--green);
+        border-bottom-color: var(--ink);
     }
     h1 {
         font-size: var(--step-4);
@@ -96,12 +96,13 @@ const siblings = (["terms", "refunds", "privacy"] as const).map((slug) => ({
     }
     .legal-body {
         display: grid;
+        grid-template-columns: minmax(0, 1fr);
         gap: 2.5rem;
         padding-top: 2.5rem;
     }
     @media (min-width: 1000px) {
         .legal-body {
-            grid-template-columns: 3fr 8fr;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 8fr);
             column-gap: 4rem;
         }
         .toc {
@@ -136,10 +137,9 @@ const siblings = (["terms", "refunds", "privacy"] as const).map((slug) => ({
     }
     @media (max-width: 999px) {
         .toc {
-            padding: 1.25rem;
-            background: var(--surface);
-            border: 1px solid var(--rule);
-            border-radius: var(--radius);
+            padding-block: 1rem;
+            border-top: 1px solid var(--ink);
+            border-bottom: 1px solid var(--rule);
         }
     }
 
@@ -174,7 +174,7 @@ const siblings = (["terms", "refunds", "privacy"] as const).map((slug) => ({
         padding-left: 0.25rem;
     }
     .prose :global(li::marker) {
-        color: var(--green-ink);
+        color: var(--ink-3);
     }
     .prose :global(strong) {
         color: var(--ink);

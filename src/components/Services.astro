@@ -20,7 +20,7 @@ const t = useTranslations(lang);
                     <ServiceIcon id={s.id} />
                     <h3>{s.name}</h3>
                     <p class="body">{s.body}</p>
-                    <p class="stack"><span class="sr-only">{t.services.stackLabel}: </span>{s.stack}</p>
+                    <p class="stack"><span class="sr-only">{t.services.stackLabel}: </span>{s.stack.split(" · ").map((item, i, all) => <>{i > 0 && " "}<span class="tech">{item}{i < all.length - 1 && <span aria-hidden="true"> ·</span>}</span></>)}</p>
                 </li>
             ))}
         </ul>
@@ -56,7 +56,7 @@ const t = useTranslations(lang);
     }
     .service {
         display: grid;
-        grid-template-columns: 1.5rem 1fr;
+        grid-template-columns: 1.5rem minmax(0, 1fr);
         column-gap: 1.25rem;
         row-gap: 0.5rem;
         padding-block: 1.75rem;
@@ -82,6 +82,9 @@ const t = useTranslations(lang);
         font-size: var(--step--1);
         color: var(--ink-3);
     }
+    .tech {
+        white-space: nowrap;
+    }
     @media (min-width: 900px) {
         .service {
             grid-template-columns: 1.5rem 4fr 5fr 3fr;
@@ -106,10 +109,8 @@ const t = useTranslations(lang);
         margin-top: clamp(3.5rem, 2.5rem + 4vw, 6rem);
         display: grid;
         gap: 2.5rem;
-        padding: clamp(1.5rem, 1rem + 2.5vw, 3rem);
-        background: var(--surface);
-        border: 1px solid var(--rule);
-        border-radius: var(--radius);
+        padding-top: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
+        border-top: 1px solid var(--ink);
     }
     @media (min-width: 900px) {
         .plans {

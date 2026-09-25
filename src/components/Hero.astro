@@ -33,7 +33,7 @@ const t = useTranslations(lang);
                 {t.register.items.map((item) => (
                     <li>
                         <a class="row" href={item.url} target="_blank" rel="noopener">
-                            <span class="name">{item.name}</span>
+                            <span class="name"><Mark kind="live" label={t.register.live} />{item.name}</span>
                             <span class="kind">{item.kind === "own" ? t.register.ownProduct : t.register.client}</span>
                             <span class="what">{item.what}</span>
                             <span class="domain">
@@ -143,6 +143,9 @@ const t = useTranslations(lang);
         transition: background-color 200ms var(--ease-out);
     }
     .name {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
         font-size: var(--step-1);
         font-weight: 650;
         letter-spacing: -0.01em;
@@ -154,6 +157,7 @@ const t = useTranslations(lang);
         color: var(--ink-3);
     }
     .what {
+        padding-left: 1.6rem;
         color: var(--ink-2);
         font-size: var(--step--1);
     }
