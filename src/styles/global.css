@@ -320,3 +320,70 @@ html.reveal [data-reveal].is-in {
     opacity: 1;
     transform: none;
 }
+
+/* Print: always black ink on white paper, whatever the screen theme. */
+@media print {
+    :root,
+    :root[data-theme="dark"] {
+        color-scheme: light;
+        --ground: #ffffff;
+        --surface: #ffffff;
+        --ink: #000000;
+        --ink-2: #1f2328;
+        --ink-3: #4a4f57;
+        --rule: #d0d3cd;
+        --rule-strong: #9ea39b;
+        --green: #1c7a55;
+        --green-ink: #155c40;
+        --grid-line: transparent;
+    }
+    @page {
+        margin: 18mm 16mm 20mm;
+    }
+    body {
+        background: #fff !important;
+        font-size: 10.5pt;
+        line-height: 1.5;
+    }
+    .skip-link,
+    .site-header nav,
+    .site-header button,
+    .consent,
+    .toc,
+    .docs,
+    .site-footer nav,
+    .site-footer .base a,
+    [data-consent-open] {
+        display: none !important;
+    }
+    .site-header {
+        position: static !important;
+        backdrop-filter: none !important;
+        border-bottom: 1px solid #000 !important;
+    }
+    html.reveal [data-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    h1,
+    h2,
+    h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+    p,
+    li,
+    tr {
+        break-inside: avoid;
+        orphans: 3;
+        widows: 3;
+    }
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+    .i-dot {
+        color: inherit;
+        background: none;
+    }
+}
