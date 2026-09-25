@@ -23,3 +23,8 @@ pnpm-debug.log*
 .astro
 
 .wrangler
+# impeccable scratch
+.impeccable/review/
+.impeccable/tmp/
+.impeccable/config.local.json
+.impeccable/direction-payload.json

@@ -1,26 +1,37 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-
 import cloudflare from "@astrojs/cloudflare";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-    integrations: [tailwind()],
+    site: "https://invntio.com",
     output: "static",
+    trailingSlash: "ignore",
     adapter: cloudflare({
         platformProxy: {
             enabled: true,
         },
     }),
-    site: "https://bohio.app",
-    vite: {
-        server: {
-            allowedHosts: [
-                "localweb.bohio.app",
-                "bohio.app",
-                "www.bohio.app",
-                "localhost",
-            ],
+    i18n: {
+        defaultLocale: "en",
+        locales: ["en", "es"],
+        routing: {
+            prefixDefaultLocale: false,
         },
     },
+    redirects: {
+        "/terms-of-use": "/terms",
+        "/privacy-policy": "/privacy",
+    },
+    integrations: [
+        sitemap({
+            i18n: {
+                defaultLocale: "en",
+                locales: { en: "en-US", es: "es" },
+            },
+            filter: (page) =>
+                !page.endsWith("/terms-of-use/") &&
+                !page.endsWith("/privacy-policy/"),
+        }),
+    ],
 });
