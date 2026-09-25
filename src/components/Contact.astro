@@ -1,4 +1,5 @@
 ---
+import Dotted from "./Dotted.astro";
 import { getLang, localizePath, useTranslations } from "../i18n/ui";
 import { site } from "../config/site";
 
@@ -9,13 +10,13 @@ const f = t.contact.form;
 
 <section class="section" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
-        <div class="section-head">
-            <h2 id="contact-title">{t.contact.title}</h2>
+        <div class="section-head" data-reveal>
+            <h2 id="contact-title"><Dotted text={t.contact.title} period /></h2>
             <p>{t.contact.lede}</p>
         </div>
 
         <div class="contact">
-            <dl class="details">
+            <dl class="details" data-reveal>
                 <div>
                     <dt>{t.contact.email}</dt>
                     <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
@@ -26,7 +27,7 @@ const f = t.contact.form;
                 </div>
             </dl>
 
-            <form class="form" action="https://api.web3forms.com/submit" method="POST" data-contact-form novalidate>
+            <form class="form" data-reveal style="--stagger:2" action="https://api.web3forms.com/submit" method="POST" data-contact-form novalidate>
                 <input type="hidden" name="access_key" value={site.formAccessKey} />
                 <input type="hidden" name="subject" value={f.subject} />
                 <input type="hidden" name="from_name" value="invntio.com" />

@@ -1,0 +1,12 @@
+---
+// Renders text with the wordmark's green dot on every "i" (the real tittle, recoloured).
+// With `period`, the title closes on the green full stop, like "Invntio.".
+interface Props {
+    text: string;
+    period?: boolean;
+}
+const { text, period = false } = Astro.props;
+const parts = text.replace(/\.$/, "").split(/(i)/);
+---
+
+{parts.map((part) => (part === "i" ? <span class="i-dot">i</span> : part))}{period && <span class="end-dot">.</span>}

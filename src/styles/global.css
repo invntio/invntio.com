@@ -292,3 +292,31 @@ select {
     animation: none;
     mix-blend-mode: normal;
 }
+
+/* Colour only the tittle: the split sits in the gap between dot and stem
+   (measured for Schibsted Grotesk: dot 15–31%, stem from 36% of the line box). */
+.i-dot {
+    color: transparent;
+    background: linear-gradient(to bottom, var(--green) 33.5%, var(--ink) 33.5%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.end-dot {
+    color: var(--green);
+}
+
+/* Scroll reveal: rows print in once, like entries in a log. Only active when
+   JS adds html.reveal (motion allowed); otherwise everything is visible. */
+html.reveal [data-reveal] {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+        opacity 700ms var(--ease-out),
+        transform 700ms var(--ease-out);
+    transition-delay: calc(var(--stagger, 0) * 70ms);
+}
+html.reveal [data-reveal].is-in {
+    opacity: 1;
+    transform: none;
+}

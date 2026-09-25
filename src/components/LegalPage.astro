@@ -1,4 +1,5 @@
 ---
+import Dotted from "./Dotted.astro";
 import { getEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import { getLang, localizePath, useTranslations } from "../i18n/ui";
@@ -37,7 +38,7 @@ const siblings = (["terms", "refunds", "privacy"] as const).map((slug) => ({
                     <a href={s.href} aria-current={s.slug === Astro.props.slug ? "page" : undefined}>{s.label}</a>
                 ))}
             </nav>
-            <h1>{entry.data.title}</h1>
+            <h1><Dotted text={entry.data.title} /></h1>
             <p class="updated">{t.legal.updated}: <time datetime={entry.data.updated.toISOString().slice(0, 10)}>{updated}</time></p>
         </header>
 

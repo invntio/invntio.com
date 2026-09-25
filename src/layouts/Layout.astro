@@ -44,6 +44,11 @@ const ogImage = new URL("/og.png", site.url).href;
                 try { t = localStorage.getItem("invntio-theme"); } catch {}
                 if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
                 document.documentElement.dataset.theme = t;
+                if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    document.documentElement.classList.add("reveal");
+                    // Safety net: never leave content hidden if the reveal script fails to run.
+                    setTimeout(() => { if (!window.__revealReady) document.documentElement.classList.remove("reveal"); }, 2500);
+                }
             })();
         </script>
 
@@ -70,5 +75,22 @@ const ogImage = new URL("/og.png", site.url).href;
         </main>
         <Footer />
         <Consent />
+        <script>
+            const targets = document.querySelectorAll<HTMLElement>("[data-reveal]");
+            if (document.documentElement.classList.contains("reveal")) {
+                (window as unknown as { __revealReady: boolean }).__revealReady = true;
+                const io = new IntersectionObserver(
+                    (entries) => {
+                        for (const entry of entries) {
+                            if (!entry.isIntersecting) continue;
+                            entry.target.classList.add("is-in");
+                            io.unobserve(entry.target);
+                        }
+                    },
+                    { rootMargin: "0px 0px -8% 0px", threshold: 0.15 },
+                );
+                targets.forEach((el) => io.observe(el));
+            }
+        </script>
     </body>
 </html>

@@ -1,4 +1,5 @@
 ---
+import Dotted from "./Dotted.astro";
 import { getLang, useTranslations } from "../i18n/ui";
 
 const lang = getLang(Astro.url);
@@ -7,9 +8,9 @@ const t = useTranslations(lang);
 
 <section class="section" id="about" aria-labelledby="about-title">
     <div class="wrap">
-        <div class="about">
+        <div class="about" data-reveal>
         <div class="statement">
-            <h2 id="about-title">{t.about.title}</h2>
+            <h2 id="about-title"><Dotted text={t.about.title} period /></h2>
             {t.about.body.map((p) => <p>{p}</p>)}
         </div>
         <dl class="points">

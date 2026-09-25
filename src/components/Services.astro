@@ -1,4 +1,5 @@
 ---
+import Dotted from "./Dotted.astro";
 import Mark from "./Mark.astro";
 import ServiceIcon from "./ServiceIcon.astro";
 import { getLang, useTranslations } from "../i18n/ui";
@@ -9,14 +10,14 @@ const t = useTranslations(lang);
 
 <section class="section" id="services" aria-labelledby="services-title">
     <div class="wrap">
-        <div class="section-head">
-            <h2 id="services-title">{t.services.title}</h2>
+        <div class="section-head" data-reveal>
+            <h2 id="services-title"><Dotted text={t.services.title} period /></h2>
             <p>{t.services.lede}</p>
         </div>
 
         <ul class="services">
-            {t.services.items.map((s) => (
-                <li class="service" id={`service-${s.id}`}>
+            {t.services.items.map((s, i) => (
+                <li class="service" id={`service-${s.id}`} data-reveal style={`--stagger:${i % 2}`}>
                     <ServiceIcon id={s.id} />
                     <h3>{s.name}</h3>
                     <p class="body">{s.body}</p>
@@ -25,9 +26,9 @@ const t = useTranslations(lang);
             ))}
         </ul>
 
-        <div class="plans" aria-labelledby="plans-title">
+        <div class="plans" aria-labelledby="plans-title" data-reveal>
             <div class="plans-intro">
-                <h3 id="plans-title">{t.plans.title}</h3>
+                <h3 id="plans-title"><Dotted text={t.plans.title} /></h3>
                 <p>{t.plans.lede}</p>
             </div>
             <div class="plan-cols">
