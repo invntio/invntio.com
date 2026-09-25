@@ -19,7 +19,6 @@
     --on-accent: #ffffff;
     --accent-bg: var(--green-deep);
     --accent-bg-hover: #0f4a33;
-    --shadow: rgb(21 24 28 / 0.18);
     /* Faint blueprint grid used on the dark theme only. */
     --grid-line: transparent;
 
@@ -58,7 +57,6 @@
     --on-accent: #07120d;
     --accent-bg: #2cac7b;
     --accent-bg-hover: #3cc28e;
-    --shadow: rgb(0 0 0 / 0.5);
     --grid-line: rgb(233 236 230 / 0.035);
 }
 

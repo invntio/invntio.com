@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-25T16:58:27+00:00",
+  "generatedAt": "2026-09-25T18:52:23+00:00",
   "title": "Design System: Invntio",
   "extensions": {
     "colorMeta": {
@@ -34,7 +34,8 @@
           "#97dbb9",
           "#bcffde"
         ],
-        "cssVar": "--green-deep"
+        "cssVar": "--green-deep",
+        "note": "Also --accent-bg by day. At night --green-deep and --accent-bg both resolve to Live Green (#2cac7b)."
       },
       "green-deeper": {
         "role": "primary",
@@ -49,7 +50,8 @@
           "#7bb398",
           "#9fd8bb",
           "#c4fee0"
-        ]
+        ],
+        "cssVar": "--accent-bg-hover"
       },
       "green-ink": {
         "role": "primary",
@@ -101,7 +103,7 @@
       },
       "surface": {
         "role": "neutral",
-        "displayName": "Surface White",
+        "displayName": "Surface",
         "canonical": "oklch(100.0% 0.000 90)",
         "tonalRamp": [
           "#0b0b0b",
@@ -113,7 +115,8 @@
           "#c9c9c9",
           "#eeeeee"
         ],
-        "cssVar": "--surface"
+        "cssVar": "--surface",
+        "note": "Also --on-accent (#ffffff) by day."
       },
       "ink": {
         "role": "neutral",
@@ -225,16 +228,254 @@
           "#d4c5c4",
           "#f9eae9"
         ]
+      },
+      "ground-dark": {
+        "role": "neutral",
+        "displayName": "Night Ground",
+        "canonical": "oklch(18.0% 0.006 237)",
+        "tonalRamp": [
+          "#090c0d",
+          "#222628",
+          "#3f4345",
+          "#5e6264",
+          "#7f8386",
+          "#a1a6a8",
+          "#c5cacd",
+          "#ebeff2"
+        ],
+        "cssVar": "--ground",
+        "theme": "dark"
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Night Surface",
+        "canonical": "oklch(21.9% 0.008 240)",
+        "tonalRamp": [
+          "#080c0e",
+          "#212629",
+          "#3e4346",
+          "#5d6266",
+          "#7e8387",
+          "#a0a6aa",
+          "#c4cace",
+          "#eaeff4"
+        ],
+        "cssVar": "--surface",
+        "theme": "dark"
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "oklch(93.9% 0.009 129)",
+        "tonalRamp": [
+          "#0a0c08",
+          "#242621",
+          "#41433e",
+          "#60625d",
+          "#81837e",
+          "#a3a6a0",
+          "#c7cac4",
+          "#edf0ea"
+        ],
+        "cssVar": "--ink",
+        "theme": "dark"
+      },
+      "ink-2-dark": {
+        "role": "neutral",
+        "displayName": "Night Ink 2",
+        "canonical": "oklch(77.9% 0.013 138)",
+        "tonalRamp": [
+          "#090c07",
+          "#222720",
+          "#3f443d",
+          "#5e635c",
+          "#7f847d",
+          "#a1a79f",
+          "#c5cbc3",
+          "#eaf1e8"
+        ],
+        "cssVar": "--ink-2",
+        "theme": "dark"
+      },
+      "ink-3-dark": {
+        "role": "neutral",
+        "displayName": "Night Ink 3",
+        "canonical": "oklch(65.5% 0.014 142)",
+        "tonalRamp": [
+          "#080d07",
+          "#212720",
+          "#3e443d",
+          "#5d635c",
+          "#7e857d",
+          "#a0a79f",
+          "#c4ccc3",
+          "#e9f1e8"
+        ],
+        "cssVar": "--ink-3",
+        "theme": "dark"
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Night Hairline",
+        "canonical": "oklch(28.6% 0.010 242)",
+        "tonalRamp": [
+          "#080c0f",
+          "#21262a",
+          "#3d4347",
+          "#5c6267",
+          "#7d8388",
+          "#a0a6ab",
+          "#c4cacf",
+          "#e9eff5"
+        ],
+        "cssVar": "--rule",
+        "theme": "dark"
+      },
+      "rule-strong-dark": {
+        "role": "neutral",
+        "displayName": "Night Strong Hairline",
+        "canonical": "oklch(36.8% 0.012 243)",
+        "tonalRamp": [
+          "#070c10",
+          "#20262a",
+          "#3d4348",
+          "#5c6268",
+          "#7d8389",
+          "#9fa6ac",
+          "#c3cad0",
+          "#e8f0f6"
+        ],
+        "cssVar": "--rule-strong",
+        "theme": "dark"
+      },
+      "green-ink-dark": {
+        "role": "primary",
+        "displayName": "Night Signal Green",
+        "canonical": "oklch(75.4% 0.131 164)",
+        "tonalRamp": [
+          "#000f07",
+          "#002d1d",
+          "#004f36",
+          "#017350",
+          "#009a6c",
+          "#42be8e",
+          "#6ce4b1",
+          "#c1ffe1"
+        ],
+        "cssVar": "--green-ink",
+        "theme": "dark"
+      },
+      "green-wash-dark": {
+        "role": "primary",
+        "displayName": "Night Green Wash",
+        "canonical": "oklch(28.1% 0.047 156)",
+        "tonalRamp": [
+          "#001005",
+          "#0f2c1b",
+          "#2c4a37",
+          "#4b6a56",
+          "#6c8b76",
+          "#8eae99",
+          "#b1d3bc",
+          "#d6f9e1"
+        ],
+        "cssVar": "--green-wash",
+        "theme": "dark"
+      },
+      "green-hover-dark": {
+        "role": "primary",
+        "displayName": "Night Hover Green",
+        "canonical": "oklch(72.9% 0.138 163)",
+        "tonalRamp": [
+          "#000f07",
+          "#002d1d",
+          "#014f35",
+          "#00734f",
+          "#039a6b",
+          "#39c08c",
+          "#65e5af",
+          "#c1ffe0"
+        ],
+        "cssVar": "--accent-bg-hover",
+        "theme": "dark"
+      },
+      "on-accent-dark": {
+        "role": "primary",
+        "displayName": "Night Label",
+        "canonical": "oklch(16.9% 0.020 164)",
+        "tonalRamp": [
+          "#040e09",
+          "#1c2823",
+          "#39453f",
+          "#57655e",
+          "#78867f",
+          "#9aa9a2",
+          "#becdc6",
+          "#e3f3eb"
+        ],
+        "cssVar": "--on-accent",
+        "theme": "dark"
+      },
+      "danger-dark": {
+        "role": "error",
+        "displayName": "Night Danger",
+        "canonical": "oklch(75.9% 0.144 26)",
+        "tonalRamp": [
+          "#1f0001",
+          "#4d0004",
+          "#7d0e13",
+          "#a33733",
+          "#ca5b53",
+          "#f27e75",
+          "#ffb3aa",
+          "#ffe9e6"
+        ],
+        "cssVar": "--danger",
+        "theme": "dark"
+      },
+      "danger-wash-dark": {
+        "role": "error",
+        "displayName": "Night Danger Wash",
+        "canonical": "oklch(25.5% 0.058 25)",
+        "tonalRamp": [
+          "#1e0101",
+          "#3d1816",
+          "#5d3532",
+          "#7f5450",
+          "#a27571",
+          "#c79893",
+          "#edbbb6",
+          "#ffe9e6"
+        ],
+        "cssVar": "--danger-wash",
+        "theme": "dark"
+      },
+      "grid-line-dark": {
+        "role": "neutral",
+        "displayName": "Blueprint Grid",
+        "canonical": "oklch(93.9% 0.009 129 / 0.035)",
+        "tonalRamp": [
+          "#0a0c08",
+          "#242621",
+          "#41433e",
+          "#60625d",
+          "#81837e",
+          "#a3a6a0",
+          "#c7cac4",
+          "#edf0ea"
+        ],
+        "cssVar": "--grid-line",
+        "theme": "dark"
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero headline and legal-page titles only; capped at 14-18ch."
+        "purpose": "Hero headline, legal-page titles and the 404 title only; capped at 14-18ch. Every 'i' carries the green tittle."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section titles in the left column of a section head."
+        "purpose": "Section titles in the left column of a section head; green tittles and a green closing period."
       },
       "title": {
         "displayName": "Title",
@@ -255,6 +496,10 @@
       "label": {
         "displayName": "Label",
         "purpose": "Form labels, plan column heads, footer heads (600); nav links (500); captions and metadata (400, Ink 3). Sentence case."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Literal code only: the footer commit hash (0.8125rem) and inline code in legal prose (0.85em). The one exception to the one-family rule."
       }
     },
     "shadows": [
@@ -266,7 +511,7 @@
       {
         "name": "node-unlit",
         "value": "inset 0 0 0 1px var(--rule-strong)",
-        "purpose": "Starting keyframe of a process node before the rail lights it; never a resting style."
+        "purpose": "Unlit process node before the rail enters view (only when reveal is active); never a resting style."
       }
     ],
     "focus": {
@@ -283,22 +528,47 @@
       {
         "name": "ease-out",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Easing for every state transition."
+        "purpose": "Easing for every state transition, the reveal, the theme reveal and the sparkle."
       },
       {
         "name": "state-fast",
         "value": "150ms",
-        "purpose": "Link colour, input border."
+        "purpose": "Link colour, input border, theme toggle colour."
       },
       {
         "name": "state-base",
-        "value": "180-220ms",
-        "purpose": "Button fill and press nudge, register row fill and arrow shift, header border, mobile menu."
+        "value": "180-250ms",
+        "purpose": "Button fill and press nudge, register row fill and arrow shift, tooltip, header border, mobile menu, table-of-contents dot."
+      },
+      {
+        "name": "scroll-reveal",
+        "value": "opacity 0 -> 1, translateY(14px) -> none, 700ms ease-out, delay var(--stagger) * 70ms; IntersectionObserver threshold 0.15, rootMargin 0 0 -8% 0, one-shot",
+        "purpose": "Rows print in once like log entries. Enabled only through html.reveal (IO present, motion allowed); a 2.5s safety net removes it if the script fails."
       },
       {
         "name": "rail-fill",
-        "value": "view-timeline --rail block; segment range entry calc(20% + i*12%) cover calc(40% + i*12%); node range entry calc(10% + i*12%) cover calc(30% + i*12%)",
-        "purpose": "The one authored motion: the process rail fills stage by stage while scrolling. Under reduced motion or without support, the rail is shown already filled."
+        "value": "scale(0) -> scale(1) along one continuous track, 1400ms cubic-bezier(0.65, 0, 0.35, 1), 150ms delay; nodes 350ms, delay 150ms + i * 420ms",
+        "purpose": "Time-based, one-shot fill of the process rail when it enters view; nodes light in sequence. Shown filled without reveal."
+      },
+      {
+        "name": "theme-reveal",
+        "value": "View Transition; clip-path circle(0 -> farthest corner) from the toggle centre on ::view-transition-new(root), 650ms ease-out",
+        "purpose": "The new theme spreads from the button. Skipped (instant swap) without support or with reduced motion."
+      },
+      {
+        "name": "orb-morph",
+        "value": "transform 500ms, opacity 300ms, ease-out",
+        "purpose": "Sun to moon: mask bite slides in, disc scales 1.55, rays rotate -45deg, scale 0.4 and fade."
+      },
+      {
+        "name": "spark-burst",
+        "value": "12 four-point stars, 1.6s ease-out, staggered delays 0-0.99s, 2 iterations; hover replay throttled to 1.8s",
+        "purpose": "Burst from the hero's closing dot on load and hover. Only under prefers-reduced-motion: no-preference."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation and transition durations 0.01ms; smooth scroll off",
+        "purpose": "Global floor: every authored motion collapses to its end state."
       }
     ],
     "breakpoints": [
@@ -311,6 +581,11 @@
         "name": "sm",
         "value": "640px",
         "purpose": "Form and plan columns go two-up."
+      },
+      {
+        "name": "table",
+        "value": "700px",
+        "purpose": "Legal tables stack below."
       },
       {
         "name": "nav",
@@ -327,22 +602,83 @@
         "value": "1000px",
         "purpose": "Hero 7/5 split; legal sticky TOC."
       }
-    ]
+    ],
+    "themes": {
+      "strategy": ":root[data-theme=\"light\"|\"dark\"], resolved before first paint from localStorage 'invntio-theme', else prefers-color-scheme. theme-color meta: #f6f7f5 light, #0f1214 dark.",
+      "dark": {
+        "name": "Technical sheet at night",
+        "colorScheme": "dark",
+        "vars": {
+          "--ground": "#0f1214",
+          "--surface": "#171b1e",
+          "--ink": "#e9ece6",
+          "--ink-2": "#b3b9b1",
+          "--ink-3": "#8c938b",
+          "--rule": "#262b2f",
+          "--rule-strong": "#3a4045",
+          "--green": "#2cac7b",
+          "--green-ink": "#4fc998",
+          "--green-deep": "#2cac7b",
+          "--green-wash": "#13301f",
+          "--danger": "#ff8a80",
+          "--danger-wash": "#3a1614",
+          "--on-accent": "#07120d",
+          "--accent-bg": "#2cac7b",
+          "--accent-bg-hover": "#3cc28e",
+          "--grid-line": "rgb(233 236 230 / 0.035)"
+        },
+        "blueprintGrid": "body { background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px); background-size: 24px 24px; } /* --grid-line is transparent by day */"
+      }
+    },
+    "print": {
+      "purpose": "Black ink on white paper in any theme, site chrome hidden.",
+      "vars": {
+        "--ground": "#ffffff",
+        "--surface": "#ffffff",
+        "--ink": "#000000",
+        "--ink-2": "#1f2328",
+        "--ink-3": "#4a4f57",
+        "--rule": "#d0d3cd",
+        "--rule-strong": "#9ea39b",
+        "--green": "#1c7a55",
+        "--green-ink": "#155c40",
+        "--grid-line": "transparent"
+      },
+      "page": "@page { margin: 18mm 16mm 20mm; } body 10.5pt/1.5",
+      "hidden": [
+        "skip link",
+        "header nav and buttons",
+        "consent bar",
+        "legal tabs and table of contents",
+        "footer navigation",
+        "footer base links"
+      ],
+      "notes": "Header static with a 1px black bottom rule; reveals forced visible; tittle reverts to plain ink; links print as plain text; headings avoid breaking after, paragraphs/list items/rows avoid breaking inside."
+    },
+    "tooltip": {
+      "background": "var(--ink)",
+      "color": "var(--ground)",
+      "font": "500 0.75rem/1.35",
+      "radius": "6px",
+      "padding": "0.4rem 0.6rem",
+      "maxWidth": "17rem",
+      "enter": "opacity + translateY(4px) 180ms ease-out, 350ms delay"
+    }
   },
   "components": [
     {
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The one filled action: Release Green with white text, for Start a project and Send.",
+      "description": "The one filled action: the accent fill (Release Green with white text by day, Live Green with near-black text at night), for Start a project, Send and Accept.",
       "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Start a project <svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 10h12M11 5l5 5-5 5\"/></svg></a>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.625rem; min-height: 3rem; padding: 0.75rem 1.375rem; border: 1px solid transparent; border-radius: 6px; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); font-weight: 600; font-size: 1rem; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--green-ink, #1c7a55); outline-offset: 3px; } .ds-btn svg { width: 1.125rem; height: 1.125rem; flex: none; } .ds-btn-primary { background: var(--green-deep, #155c40); color: #fff; } .ds-btn-primary:hover { background: #0f4a33; }"
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.625rem; min-height: 3rem; padding: 0.75rem 1.375rem; border: 1px solid transparent; border-radius: 6px; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); font-weight: 600; font-size: 1rem; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--green-ink, #1c7a55); outline-offset: 3px; } .ds-btn svg { width: 1.125rem; height: 1.125rem; flex: none; } .ds-btn-primary { background: var(--accent-bg, #155c40); color: var(--on-accent, #fff); } .ds-btn-primary:hover { background: var(--accent-bg-hover, #0f4a33); }"
     },
     {
       "name": "Quiet Button",
       "kind": "button",
       "refersTo": "button-quiet",
-      "description": "Secondary action on a white fill with a strong hairline border.",
+      "description": "Secondary action on a surface fill with a strong hairline border (WhatsApp, Decline, the 404 Spanish link).",
       "html": "<a class=\"ds-btn ds-btn-quiet\" href=\"#\">Message on WhatsApp</a>",
       "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.625rem; min-height: 3rem; padding: 0.75rem 1.375rem; border: 1px solid transparent; border-radius: 6px; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); font-weight: 600; font-size: 1rem; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--green-ink, #1c7a55); outline-offset: 3px; } .ds-btn svg { width: 1.125rem; height: 1.125rem; flex: none; } .ds-btn-quiet { background: var(--surface, #fff); color: var(--ink, #15181c); border-color: var(--rule-strong, #c9ccc6); } .ds-btn-quiet:hover { border-color: var(--ink, #15181c); }"
     },
@@ -358,33 +694,33 @@
       "name": "Header Navigation",
       "kind": "nav",
       "refersTo": "nav-link",
-      "description": "Sticky translucent bar: wordmark left, Ink 2 links, EN/ES switch and a compact primary CTA right.",
-      "html": "<header class=\"ds-header\"><span class=\"ds-brand\">invntio</span><nav class=\"ds-nav\"><a href=\"#\">Services</a><a href=\"#\">Work</a><a href=\"#\">Process</a><a href=\"#\">Contact</a><span class=\"ds-lang\"><b>EN</b> / ES</span><a class=\"ds-cta\" href=\"#\">Start a project</a></nav></header>",
-      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 4.25rem; padding-inline: 1.5rem; background: color-mix(in srgb, var(--ground, #f6f7f5) 92%, transparent); border-bottom: 1px solid var(--rule, #e2e4e0); font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); } .ds-brand { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.03em; color: var(--ink, #15181c); } .ds-nav { display: flex; align-items: center; gap: 1.75rem; font-size: 0.875rem; } .ds-nav a { color: var(--ink-2, #4a4f57); font-weight: 500; text-decoration: none; transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav a:hover { color: var(--ink, #15181c); } .ds-nav a:focus-visible { outline: 2px solid var(--green-ink, #1c7a55); outline-offset: 3px; border-radius: 2px; } .ds-lang { color: var(--ink-3, #686d75); } .ds-lang b { color: var(--ink, #15181c); font-weight: 600; } .ds-nav a.ds-cta { display: inline-flex; align-items: center; min-height: 2.5rem; padding: 0.5rem 1rem; border-radius: 6px; background: var(--green-deep, #155c40); color: #fff; font-weight: 600; } .ds-nav a.ds-cta:hover { background: #0f4a33; color: #fff; }"
+      "description": "Sticky translucent bar: wordmark left, Ink 2 links, EN/ES switch, the sun/moon theme toggle and a compact primary CTA right. (Preview: hovering the toggle shows the sun-to-moon morph that the site plays on theme change.)",
+      "html": "<header class=\"ds-header\"><span class=\"ds-brand\">invntio</span><nav class=\"ds-nav\"><a href=\"#\">Services</a><a href=\"#\">Work</a><a href=\"#\">Process</a><a href=\"#\">Contact</a><span class=\"ds-lang\"><b>EN</b> / ES</span><button class=\"ds-theme\" type=\"button\" aria-label=\"Toggle theme\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><mask id=\"ds-cut\"><rect width=\"20\" height=\"20\" fill=\"#fff\"/><circle class=\"cut\" cx=\"15\" cy=\"5\" r=\"4.5\" fill=\"#000\"/></mask><circle class=\"body\" cx=\"10\" cy=\"10\" r=\"4\" fill=\"currentColor\" mask=\"url(#ds-cut)\"/><g class=\"rays\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"><path d=\"M10 1.75v1.5M10 16.75v1.5M1.75 10h1.5M16.75 10h1.5M4.2 4.2l1.05 1.05M14.75 14.75l1.05 1.05M4.2 15.8l1.05-1.05M14.75 5.25l1.05-1.05\"/></g></svg></button><a class=\"ds-cta\" href=\"#\">Start a project</a></nav></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 4.25rem; padding-inline: 1.5rem; background: color-mix(in srgb, var(--ground, #f6f7f5) 92%, transparent); border-bottom: 1px solid var(--rule, #e2e4e0); font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); } .ds-brand { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.03em; color: var(--ink, #15181c); } .ds-nav { display: flex; align-items: center; gap: 1.75rem; font-size: 0.875rem; } .ds-nav a { color: var(--ink-2, #4a4f57); font-weight: 500; text-decoration: none; transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav a:hover { color: var(--ink, #15181c); } .ds-nav a:focus-visible { outline: 2px solid var(--green-ink, #1c7a55); outline-offset: 3px; border-radius: 2px; } .ds-lang { color: var(--ink-3, #686d75); } .ds-lang b { color: var(--ink, #15181c); font-weight: 600; } .ds-nav a.ds-cta { display: inline-flex; align-items: center; min-height: 2.5rem; padding: 0.5rem 1rem; border-radius: 6px; background: var(--accent-bg, #155c40); color: var(--on-accent, #fff); font-weight: 600; } .ds-nav a.ds-cta:hover { background: var(--accent-bg-hover, #0f4a33); color: var(--on-accent, #fff); } .ds-theme { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border: 1px solid var(--rule-strong, #c9ccc6); border-radius: 6px; background: transparent; color: var(--ink-2, #4a4f57); cursor: pointer; transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1), border-color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-theme:hover { color: var(--ink, #15181c); border-color: var(--ink, #15181c); } .ds-theme:focus-visible { outline: 2px solid var(--green-ink, #1c7a55); outline-offset: 3px; } .ds-theme svg { width: 1.25rem; height: 1.25rem; overflow: visible; } .ds-theme .body, .ds-theme .cut, .ds-theme .rays { transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1), opacity 300ms cubic-bezier(0.16, 1, 0.3, 1); transform-origin: 10px 10px; } .ds-theme .cut { transform: translate(8px, -8px); } .ds-theme:hover .body { transform: scale(1.55); } .ds-theme:hover .cut { transform: translate(-1px, 1px); } .ds-theme:hover .rays { transform: rotate(-45deg) scale(0.4); opacity: 0; }"
     },
     {
       "name": "State Marks",
       "kind": "custom",
       "refersTo": "state-marks",
-      "description": "The whole state vocabulary: live (static green dot with halo), included (check), excluded (open ring).",
+      "description": "The whole state vocabulary: live (static green dot with halo), included (ink check), excluded (open ink-3 ring; also 'did not answer' and 'not live').",
       "html": "<ul class=\"ds-marks\"><li><svg class=\"ds-mark ds-mark-live\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle class=\"halo\" cx=\"8\" cy=\"8\" r=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"4\"/></svg> Live</li><li><svg class=\"ds-mark ds-mark-included\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3.5 8.5l3 3 6-7\" fill=\"none\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg> Included</li><li><svg class=\"ds-mark ds-mark-excluded\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"4.25\" fill=\"none\" stroke-width=\"1.5\"/></svg> Not included</li></ul>",
-      "css": ".ds-marks { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.625rem; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); font-size: 0.875rem; color: var(--ink, #15181c); } .ds-marks li { display: flex; align-items: center; gap: 0.75rem; } .ds-mark { width: 1em; height: 1em; flex: none; } .ds-mark-live circle { fill: var(--green, #2cac7b); } .ds-mark-live .halo { opacity: 0.2; } .ds-mark-included path { stroke: var(--green-ink, #1c7a55); } .ds-mark-excluded circle { stroke: var(--ink-3, #686d75); }"
+      "css": ".ds-marks { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.625rem; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); font-size: 0.875rem; color: var(--ink, #15181c); } .ds-marks li { display: flex; align-items: center; gap: 0.75rem; } .ds-mark { width: 1em; height: 1em; flex: none; } .ds-mark-live circle { fill: var(--green, #2cac7b); } .ds-mark-live .halo { opacity: 0.2; } .ds-mark-included path { stroke: var(--ink, #15181c); } .ds-mark-excluded circle { stroke: var(--ink-3, #686d75); }"
     },
     {
       "name": "Live Register",
       "kind": "custom",
       "refersTo": "live-register",
-      "description": "Signature ruled list of live products: ink top rule, hairline rows, domain reveals on hover and focus.",
-      "html": "<div class=\"ds-register\"><div class=\"ds-register-head\"><h2><svg class=\"ds-mark ds-mark-live\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle class=\"halo\" cx=\"8\" cy=\"8\" r=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"4\"/></svg> Live now</h2><p>In production today</p></div><a class=\"ds-row\" href=\"#\"><svg class=\"ds-mark ds-mark-live\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle class=\"halo\" cx=\"8\" cy=\"8\" r=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"4\"/></svg><span class=\"ds-name\">Bohío <span class=\"ds-kind\">Own product</span></span><span class=\"ds-what\">Condominium management SaaS</span><span class=\"ds-domain\">bohio.app <svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 11l6-6M6 5h5v5\"/></svg></span></a><a class=\"ds-row\" href=\"#\"><svg class=\"ds-mark ds-mark-live\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle class=\"halo\" cx=\"8\" cy=\"8\" r=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"4\"/></svg><span class=\"ds-name\">Beavo <span class=\"ds-kind\">Own product</span></span><span class=\"ds-what\">iOS habit tracker</span><span class=\"ds-domain\">beavo.me <svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 11l6-6M6 5h5v5\"/></svg></span></a></div>",
-      "css": ".ds-register { border-top: 1px solid var(--ink, #15181c); font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); color: var(--ink, #15181c); max-width: 28rem; } .ds-register-head { display: flex; justify-content: space-between; align-items: baseline; padding-block: 0.875rem; border-bottom: 1px solid var(--rule, #e2e4e0); } .ds-register-head h2 { display: inline-flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 1rem; font-weight: 650; } .ds-register-head p { margin: 0; font-size: 0.875rem; color: var(--ink-3, #686d75); } .ds-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.25rem 1rem; padding: 1.125rem 0.75rem 1.125rem 2.35rem; border-bottom: 1px solid var(--rule, #e2e4e0); color: inherit; text-decoration: none; border-radius: 6px; transition: background-color 200ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-row > .ds-mark { position: absolute; left: 0.75rem; top: 1.5rem; } .ds-name { grid-column: 1 / -1; font-size: 1.125rem; font-weight: 650; letter-spacing: -0.01em; } .ds-kind { margin-left: 0.5rem; font-size: 0.8125rem; font-weight: 400; color: var(--ink-3, #686d75); } .ds-what { font-size: 0.875rem; color: var(--ink-2, #4a4f57); } .ds-domain { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.875rem; font-weight: 500; color: var(--ink-3, #686d75); transition: color 200ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-domain svg { width: 0.875rem; height: 0.875rem; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-row:hover, .ds-row:focus-visible { background: var(--surface, #fff); outline: none; } .ds-row:hover .ds-domain, .ds-row:focus-visible .ds-domain { color: var(--green-ink, #1c7a55); } .ds-row:hover .ds-domain svg, .ds-row:focus-visible .ds-domain svg { transform: translate(2px, -2px); } .ds-mark { width: 1em; height: 1em; } .ds-mark-live circle { fill: var(--green, #2cac7b); } .ds-mark-live .halo { opacity: 0.2; }"
+      "description": "Signature ruled list: ink top rule, hairline rows, a deploy-time status mark per row (live if the site answered at build, excluded ring if not) with an ink tooltip, domain reveals on hover and focus.",
+      "html": "<div class=\"ds-register\"><div class=\"ds-register-head\"><h2><svg class=\"ds-mark ds-mark-live\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle class=\"halo\" cx=\"8\" cy=\"8\" r=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"4\"/></svg> Live now</h2><p>In production today</p></div><a class=\"ds-row\" href=\"#\"><span class=\"ds-dot\" data-tip=\"Answered HTTP 200 at deploy, Sep 25, 2026\"><svg class=\"ds-mark ds-mark-live\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle class=\"halo\" cx=\"8\" cy=\"8\" r=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"4\"/></svg></span><span class=\"ds-name\">Bohío <span class=\"ds-kind\">Own product</span></span><span class=\"ds-what\">Condominium management SaaS</span><span class=\"ds-domain\">bohio.app <svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 11l6-6M6 5h5v5\"/></svg></span></a><a class=\"ds-row\" href=\"#\"><span class=\"ds-dot\" data-tip=\"Did not answer at deploy, Sep 25, 2026\"><svg class=\"ds-mark ds-mark-excluded\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"4.25\" fill=\"none\" stroke-width=\"1.5\"/></svg></span><span class=\"ds-name\">Beavo <span class=\"ds-kind\">Own product</span></span><span class=\"ds-what\">iOS habit tracker</span><span class=\"ds-domain\">beavo.me <svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 11l6-6M6 5h5v5\"/></svg></span></a></div>",
+      "css": ".ds-register { border-top: 1px solid var(--ink, #15181c); font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); color: var(--ink, #15181c); max-width: 28rem; } .ds-register-head { display: flex; justify-content: space-between; align-items: baseline; padding-block: 0.875rem; border-bottom: 1px solid var(--rule, #e2e4e0); } .ds-register-head h2 { display: inline-flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 1rem; font-weight: 650; } .ds-register-head p { margin: 0; font-size: 0.875rem; color: var(--ink-3, #686d75); } .ds-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.25rem 1rem; padding: 1.125rem 0.75rem 1.125rem 2.35rem; border-bottom: 1px solid var(--rule, #e2e4e0); color: inherit; text-decoration: none; border-radius: 6px; transition: background-color 200ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-dot { position: absolute; left: 0.75rem; top: 1.125rem; height: 1.75rem; display: flex; align-items: center; } .ds-dot::after { content: attr(data-tip); position: absolute; left: -0.25rem; bottom: calc(100% + 0.5rem); width: max-content; max-width: 17rem; padding: 0.4rem 0.6rem; border-radius: 6px; background: var(--ink, #15181c); color: var(--ground, #f6f7f5); font-size: 0.75rem; line-height: 1.35; font-weight: 500; pointer-events: none; opacity: 0; transform: translateY(4px); transition: opacity 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-row:hover .ds-dot::after, .ds-row:focus-visible .ds-dot::after { opacity: 1; transform: none; transition-delay: 350ms; } .ds-name { grid-column: 1 / -1; font-size: 1.125rem; font-weight: 650; letter-spacing: -0.01em; } .ds-kind { margin-left: 0.5rem; font-size: 0.8125rem; font-weight: 400; color: var(--ink-3, #686d75); } .ds-what { font-size: 0.875rem; color: var(--ink-2, #4a4f57); } .ds-domain { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.875rem; font-weight: 500; color: var(--ink-3, #686d75); transition: color 200ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-domain svg { width: 0.875rem; height: 0.875rem; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-row:hover, .ds-row:focus-visible { background: var(--surface, #fff); outline: none; } .ds-row:hover .ds-domain, .ds-row:focus-visible .ds-domain { color: var(--green-ink, #1c7a55); } .ds-row:hover .ds-domain svg, .ds-row:focus-visible .ds-domain svg { transform: translate(2px, -2px); } .ds-mark { width: 1em; height: 1em; } .ds-mark-live circle { fill: var(--green, #2cac7b); } .ds-mark-live .halo { opacity: 0.2; } .ds-mark-excluded circle { stroke: var(--ink-3, #686d75); } .ds-register { padding-top: 0; margin-top: 3rem; }"
     },
     {
       "name": "Process Rail",
       "kind": "custom",
       "refersTo": "process-node",
-      "description": "Signature four-stage rail: Release Green nodes joined by a hairline with a 2px Live Green fill (shown filled here; scroll-driven on site).",
+      "description": "Signature four-stage rail: accent-filled nodes on one continuous hairline track with a 2px Live Green fill (shown filled here; on site it fills once, time-based, when the rail enters view, and nodes light in sequence).",
       "html": "<ol class=\"ds-rail\"><li><span class=\"ds-node\">1</span><h3>Discovery call</h3></li><li><span class=\"ds-node\">2</span><h3>Proposal</h3></li><li><span class=\"ds-node\">3</span><h3>Build &amp; review</h3></li><li><span class=\"ds-node\">4</span><h3>Launch</h3></li></ol>",
-      "css": ".ds-rail { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 2rem; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); color: var(--ink, #15181c); } .ds-rail li { position: relative; } .ds-rail li:not(:last-child)::after { content: \"\"; position: absolute; top: calc(1.125rem - 1px); left: 2.25rem; right: -2rem; height: 2px; background: var(--green, #2cac7b); } .ds-node { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; margin-bottom: 1rem; border-radius: 50%; background: var(--green-deep, #155c40); color: #fff; font-weight: 650; font-size: 0.875rem; font-variant-numeric: tabular-nums; } .ds-rail h3 { margin: 0; font-size: 1.125rem; font-weight: 650; letter-spacing: -0.01em; line-height: 1.08; }"
+      "css": ".ds-rail { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 2rem; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); color: var(--ink, #15181c); } .ds-rail li { position: relative; } .ds-rail { position: relative; } .ds-rail::before, .ds-rail::after { content: \"\"; position: absolute; left: 1.125rem; top: 1.125rem; width: calc(75% + 1.5rem); height: 1px; background: var(--rule-strong, #c9ccc6); } .ds-rail::after { height: 2px; margin-top: -0.5px; background: var(--green, #2cac7b); } .ds-rail li { z-index: 1; } .ds-node { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; margin-bottom: 1rem; border-radius: 50%; background: var(--accent-bg, #155c40); color: var(--on-accent, #fff); font-weight: 650; font-size: 0.875rem; font-variant-numeric: tabular-nums; } .ds-rail h3 { margin: 0; font-size: 1.125rem; font-weight: 650; letter-spacing: -0.01em; line-height: 1.08; }"
     },
     {
       "name": "Ruled Checklist",
@@ -392,44 +728,65 @@
       "refersTo": "ruled-list",
       "description": "The no-card panel: ink rule head, hairline rows, state marks as markers.",
       "html": "<div class=\"ds-plan\"><h4>Included</h4><ul><li><svg class=\"ds-mark ds-mark-included\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3.5 8.5l3 3 6-7\" fill=\"none\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Hosting and SSL</li><li><svg class=\"ds-mark ds-mark-included\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3.5 8.5l3 3 6-7\" fill=\"none\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Daily backups</li></ul><h4>On request</h4><ul class=\"muted\"><li><svg class=\"ds-mark ds-mark-excluded\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"4.25\" fill=\"none\" stroke-width=\"1.5\"/></svg>New features</li></ul></div>",
-      "css": ".ds-plan { font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); color: var(--ink, #15181c); max-width: 22rem; } .ds-plan h4 { margin: 0 0 0.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--ink, #15181c); font-size: 0.875rem; font-weight: 600; } .ds-plan ul { list-style: none; padding: 0; margin: 0 0 1.5rem; } .ds-plan li { display: flex; gap: 0.75rem; align-items: center; padding-block: 0.625rem; border-bottom: 1px solid var(--rule, #e2e4e0); font-size: 0.875rem; } .ds-plan ul.muted li { color: var(--ink-2, #4a4f57); } .ds-mark { width: 1em; height: 1em; flex: none; } .ds-mark-included path { stroke: var(--green-ink, #1c7a55); } .ds-mark-excluded circle { stroke: var(--ink-3, #686d75); }"
+      "css": ".ds-plan { font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); color: var(--ink, #15181c); max-width: 22rem; } .ds-plan h4 { margin: 0 0 0.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--ink, #15181c); font-size: 0.875rem; font-weight: 600; } .ds-plan ul { list-style: none; padding: 0; margin: 0 0 1.5rem; } .ds-plan li { display: flex; gap: 0.75rem; align-items: center; padding-block: 0.625rem; border-bottom: 1px solid var(--rule, #e2e4e0); font-size: 0.875rem; } .ds-plan ul.muted li { color: var(--ink-2, #4a4f57); } .ds-mark { width: 1em; height: 1em; flex: none; } .ds-mark-included path { stroke: var(--ink, #15181c); } .ds-mark-excluded circle { stroke: var(--ink-3, #686d75); }"
+    },
+    {
+      "name": "Dotted Heading",
+      "kind": "custom",
+      "refersTo": "tittle",
+      "description": "Signature: every 'i' in a display or headline heading carries the wordmark's green tittle (hard two-tone fill split at 33.5% of the line box; not gradient text), and section titles close on a green period.",
+      "html": "<h2 class=\"ds-dotted\">What we bu<span class=\"ds-i\">i</span>ld<span class=\"ds-end\">.</span></h2><h2 class=\"ds-dotted\">Serv<span class=\"ds-i\">i</span>ces<span class=\"ds-end\">.</span></h2>",
+      "css": ".ds-dotted { margin: 0 0 0.5rem; font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); font-size: clamp(1.875rem, 1.4rem + 1.8vw, 2.75rem); font-weight: 650; line-height: 1.08; letter-spacing: -0.025em; color: var(--ink, #15181c); } .ds-i { color: transparent; background: linear-gradient(to bottom, var(--green, #2cac7b) 33.5%, var(--ink, #15181c) 33.5%); -webkit-background-clip: text; background-clip: text; } .ds-end { color: var(--green, #2cac7b); }"
+    },
+    {
+      "name": "Consent Bar",
+      "kind": "custom",
+      "refersTo": "consent-bar",
+      "description": "Fixed bottom bar on the page ground with an ink top rule; quiet Decline and primary Accept at 2.75rem. Analytics load only after Accept.",
+      "html": "<section class=\"ds-consent\" aria-label=\"Cookie preferences\"><p>We use analytics cookies (PostHog) to understand how this site is used. They are only set if you accept. <a href=\"#\">Privacy Policy</a>.</p><div class=\"ds-consent-actions\"><button type=\"button\" class=\"ds-cbtn ds-cbtn-quiet\">Decline</button><button type=\"button\" class=\"ds-cbtn ds-cbtn-primary\">Accept</button></div></section>",
+      "css": ".ds-consent { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding: 1.125rem 1.5rem; background: var(--ground, #f6f7f5); border-top: 1px solid var(--ink, #15181c); font-family: var(--font, \"Schibsted Grotesk Variable\", ui-sans-serif, system-ui, sans-serif); } .ds-consent p { margin: 0; max-width: 62ch; font-size: 0.875rem; line-height: 1.6; color: var(--ink-2, #4a4f57); } .ds-consent a { color: inherit; text-underline-offset: 0.2em; } .ds-consent-actions { display: flex; gap: 0.75rem; } .ds-cbtn { min-height: 2.75rem; padding: 0.5rem 1.125rem; border: 1px solid transparent; border-radius: 6px; font: inherit; font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-cbtn:active { transform: translateY(1px); } .ds-cbtn:focus-visible { outline: 2px solid var(--green-ink, #1c7a55); outline-offset: 3px; } .ds-cbtn-quiet { background: var(--surface, #fff); color: var(--ink, #15181c); border-color: var(--rule-strong, #c9ccc6); } .ds-cbtn-quiet:hover { border-color: var(--ink, #15181c); } .ds-cbtn-primary { background: var(--accent-bg, #155c40); color: var(--on-accent, #fff); } .ds-cbtn-primary:hover { background: var(--accent-bg-hover, #0f4a33); }"
     }
   ],
   "narrative": {
     "northStar": "The Release Record",
-    "overview": "Invntio reads like a changelog and a deploy status board, not a pitch. Every surface is a ledger: an ink rule opens a panel, hairlines separate its rows, and a small set of authored marks says what state each row is in. The page is near-white and flat. One family of type sets everything, flush left on a 7/5 split grid, and a single committed jump in scale (the display headline) carries the hierarchy.\n\nDensity is moderate and the tone is matter-of-fact. Content is laid out as registers and ruled lists (live products, services, what a plan includes, the four engagement stages, contact details) so that a visitor can scan what is real without decoration getting in the way. The brand green is scarce because it is a signal. When it appears, something is live or something is moving along the process rail.\n\nThe world rejects the centered gradient hero, blurred colour blobs and the icon-card grid. Depth, containers and emphasis come from rules and type, never from boxes or shadows.",
+    "overview": "Invntio reads like a changelog and a deploy status board, not a pitch. Every surface is a ledger: an ink rule opens a panel, hairlines separate its rows, and a small set of authored marks says what state each row is in. The page is flat. One family of type sets everything, flush left on a 7/5 split grid, and a single committed jump in scale (the display headline) carries the hierarchy.\n\nDensity is moderate and the tone is matter-of-fact. Content is laid out as registers and ruled lists (live products, services, what a plan includes, the four engagement stages, contact details) so that a visitor can scan what is real without decoration getting in the way. The brand green is scarce because it is a signal. It is the dot of the wordmark, carried into the type as the tittle on every \"i\" in a heading and the period that closes a section title, and it is the live state: a product that answered at deploy time, progress along the process rail, the build that is running now.\n\nThe record has two printings. By day it is a near-white technical sheet. At night (\"technical sheet at night\") it is the same sheet as a blueprint: a dark ground with a faint 24px grid, light ink, and the same rules, marks and layout. The theme follows the system preference until the visitor chooses, and the choice is remembered. On paper it is always black ink on white.\n\nThe world rejects the centered gradient hero, blurred colour blobs and the icon-card grid. Depth, containers and emphasis come from rules and type, never from boxes or shadows.",
     "keyCharacteristics": [
-      "Near-white ground with ink text and hairline rules; no cards and no drop shadows.",
+      "A flat ground (near-white by day, near-black blueprint by night) with ink text and hairline rules; no cards and no drop shadows.",
       "Panels open with a 1px ink top rule; rows are divided by 1px hairlines.",
       "Schibsted Grotesk only, with a large display step and quiet everything else.",
       "Three authored SVG state marks (live, included, excluded) as the whole state vocabulary.",
-      "Brand green is limited to the live mark, the process rail and text selection.",
-      "One authored motion: the process rail fills as it scrolls into view."
+      "Brand green is the wordmark's dot and the live signal: tittles, closing periods, the live mark, the rail, the build dot.",
+      "Motion is sparse and one-shot: rows print in once, the rail fills once, the hero's closing dot bursts once. All of it is removed under reduced motion."
     ],
     "rules": [
       {
         "name": "The Live Signal Rule",
-        "body": "Live Green (#2cac7b) marks only three things: live state, progress along the process rail, and selected text. If it appears anywhere else, it is decoration and must go.",
+        "body": "Live Green is a dot or a line: the wordmark's dot as it recurs in type (tittles, closing periods, the hero sparkle), a live or current state (live mark, build dot, active table-of-contents dot), rail progress, and selection. At night it also fills the primary action. It is never a background wash, a border, an icon colour or running text.",
         "section": "colors"
       },
       {
-        "name": "The AA Action Rule",
-        "body": "Anything the visitor presses is filled with Release Green (green-deep) and has white text. Live Green never carries text.",
+        "name": "The Accent Action Rule",
+        "body": "Anything the visitor presses as a primary action takes the accent fill: Release Green with white text by day, Live Green with Night Label text at night. Both pairings pass WCAG AA; never pair Live Green with white text.",
         "section": "colors"
       },
       {
         "name": "The Ink Icon Rule",
-        "body": "Icons and list markers are Ink or Ink 3. Green belongs to marks and the rail, not to pictograms.",
+        "body": "Pictograms, the included mark and list bullets are Ink or Ink 3. Green dots appear only where they mean live or current.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Printings Rule",
+        "body": "Dark is the same sheet, not a different design. Every role has a night value; layout, rules, marks, type and motion do not change between themes. The blueprint grid is the only thing the night adds.",
         "section": "colors"
       },
       {
         "name": "The One Family Rule",
-        "body": "Schibsted Grotesk sets every word. Hierarchy comes from weight, size and ink level, never from a second typeface.",
+        "body": "Schibsted Grotesk sets every word. Hierarchy comes from weight, size and ink level, never from a second typeface. The only exception is literal code (a commit hash, an inline identifier), which is set in the system monospace because it is code, not voice.",
         "section": "typography"
       },
       {
         "name": "The Committed Scale Rule",
-        "body": "Display is the only oversized step. Everything below Headline stays within 0.875 to 1.75rem, so the jump to the headline reads as a decision.",
+        "body": "Display is the only oversized step. Everything below Headline stays within 0.875 to 1.75rem, so the jump to the headline reads as a decision. The micro sizes (0.75 to 0.8125rem) are reserved for the status tooltip, register kind tags and code.",
         "section": "typography"
       },
       {
@@ -438,31 +795,46 @@
         "section": "typography"
       },
       {
+        "name": "The Tittle Rule",
+        "body": "Every \"i\" in a display or headline heading (and the plans title) carries a green tittle. The real glyph is recoloured with a hard two-tone text fill: Live Green above 33.5% of the line box and Ink below, measured to fall in Schibsted Grotesk's gap between dot and stem. The stop is hard, so it reads as a coloured dot, never as gradient text. Section titles also close on a green period. In print the tittle reverts to plain ink. Do not reuse the technique for any other effect.",
+        "section": "typography"
+      },
+      {
         "name": "The Ruled Panel Rule",
-        "body": "There are no cards. A panel is an ink top rule and hairline row dividers on the page ground, with no fill, border box or shadow. Form inputs are the one white fill, because a field has to look like a field.",
+        "body": "There are no cards. A panel is an ink top rule and hairline row dividers on the page ground, with no fill, border box or shadow. Form inputs and quiet buttons are the one surface fill, because a field has to look like a field. The consent bar follows the same rule: ground fill, ink top rule.",
         "section": "elevation"
       },
       {
         "name": "The Flat-Hover Rule",
         "body": "Hover states change fill, border or ink colour. Nothing lifts or casts a shadow. The only movement on press is the 1px nudge of a button.",
         "section": "elevation"
+      },
+      {
+        "name": "The Paper Rule",
+        "body": "Print is always black ink on white paper, whatever the screen theme. Site chrome (nav, theme and menu buttons, consent bar, legal tabs and table of contents, footer navigation and links) is hidden, the header becomes static with a black rule under the wordmark, and every reveal is shown. Green marks print in Signal Ink Green so they survive on paper.",
+        "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** open every panel with a 1px Ink top rule and divide its rows with 1px Hairline (#e2e4e0) on the page ground.",
-      "**Do** use Release Green (#155c40) with white text for every primary action.",
+      "**Do** open every panel with a 1px Ink top rule and divide its rows with 1px Hairline on the page ground, in both themes.",
+      "**Do** use the accent fill for every primary action: Release Green (#155c40) with white text by day, Live Green with Night Label text at night.",
       "**Do** express state with the three authored marks (live, included, excluded) and keep their meanings fixed across surfaces.",
+      "**Do** give every role a night value and keep layout, type, rules and marks identical between themes.",
+      "**Do** set the green tittle on every \"i\" of display and headline headings with the hard 33.5% split, and close section titles with a green period.",
       "**Do** keep icons and list markers in Ink or Ink 3.",
       "**Do** set every level in Schibsted Grotesk, and let the fluid display step (700, -0.035em) be the only oversized type.",
       "**Do** build layouts on the asymmetric 7/5 split, flush left, and collapse to one column at 900 to 1000px.",
-      "**Do** keep the live mark static and let the process rail fill be the one authored motion, shown filled under reduced motion."
+      "**Do** make motion one-shot and remove it under reduced motion: reveal once, fill the rail once, burst the hero dot on load and hover only.",
+      "**Do** print black ink on white with the chrome hidden, whatever the screen theme."
     ],
     "donts": [
-      "**Don't** use cards: no filled, bordered or shadowed containers for content. Inputs and quiet buttons are the only white fills.",
-      "**Don't** use Live Green (#2cac7b) for text, buttons, icons, backgrounds or decoration. It is reserved for the live mark, the process rail and selection.",
+      "**Don't** use cards: no filled, bordered or shadowed containers for content. Inputs and quiet buttons are the only surface fills; the tooltip is the only ink chip.",
+      "**Don't** use Live Green as a background wash, border, icon colour or running text, and never put white text on it.",
       "**Don't** add drop shadows or hover lifts. The only shadows allowed are the input focus halo and the unlit node outline.",
-      "**Don't** substitute Unicode glyphs (●, ✓, ○) or icon-font characters for the authored state marks.",
-      "**Don't** animate the live mark or add entrance animations. Hover and focus transitions (150 to 220ms, ease-out) are state feedback, not motion design.",
+      "**Don't** use gradient text. The tittle's hard two-tone split is the one sanctioned text fill, and only for the \"i\" dot.",
+      "**Don't** substitute Unicode glyphs (●, ✓, ○, ↗) or icon-font characters for the authored state marks and arrows.",
+      "**Don't** animate the live mark, loop any animation, or tie motion to scroll position. Hover and focus transitions (150 to 220ms, ease-out) are state feedback, not motion design.",
+      "**Don't** show the blueprint grid by day or add other textures to the ground.",
       "**Don't** build a centred gradient hero, blurred blob backgrounds or an icon-card grid.",
       "**Don't** use uppercase tracked labels or small kicker text above headings."
     ]

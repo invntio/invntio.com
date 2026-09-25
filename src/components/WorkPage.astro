@@ -3,11 +3,19 @@ import Layout from "../layouts/Layout.astro";
 import Dotted from "./Dotted.astro";
 import Mark from "./Mark.astro";
 import { getLang, useTranslations } from "../i18n/ui";
+import { liveStatus } from "../lib/build-info";
 
 // Not linked from navigation yet: it goes live once the client list grows (OBJURI, CGD).
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
-const visible = t.register.items.filter((item) => !item.hidden);
+const visible = await Promise.all(
+    t.register.items
+        .filter((item) => !item.hidden)
+        .map(async (item) => {
+            const status = await liveStatus(item.url);
+            return { ...item, up: status !== null && status < 400 };
+        }),
+);
 const groups = [
     { title: t.work.own, items: visible.filter((i) => i.kind === "own") },
     { title: t.work.clients, items: visible.filter((i) => i.kind === "client") },
@@ -27,10 +35,10 @@ const groups = [
                     {g.items.map((item) => (
                         <li>
                             <a href={item.url} target="_blank" rel="noopener">
-                                <Mark kind="live" label={t.register.live} />
+                                <Mark kind={item.up ? "live" : "excluded"} label={t.register.live} />
                                 <span class="name">{item.name}</span>
                                 <span class="what">{item.what}</span>
-                                <span class="domain">{item.domain} ↗</span>
+                                <span class="domain">{item.domain}<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5" /></svg></span>
                             </a>
                         </li>
                     ))}
@@ -82,8 +90,15 @@ const groups = [
         color: var(--ink-2);
     }
     .domain {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
         font-size: var(--step--1);
         color: var(--green-ink);
+    }
+    .domain svg {
+        width: 0.875rem;
+        height: 0.875rem;
     }
     @media (min-width: 900px) {
         a {

@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Mark from "../components/Mark.astro";
+import Dotted from "../components/Dotted.astro";
 import { ui } from "../i18n/ui";
 
 const en = ui.en;
@@ -10,7 +11,7 @@ const es = ui.es;
 <Layout title={en.notFound.title}>
     <section class="wrap nf">
         <p class="status"><Mark kind="excluded" /> 404 · <span>Not live</span></p>
-        <h1>This page isn't live<span class="end-dot">.</span></h1>
+        <h1><Dotted text="This page isn't live" period /></h1>
         <p class="body">{en.notFound.body}</p>
         <p class="body" lang="es">{es.notFound.body}</p>
         <div class="actions">
