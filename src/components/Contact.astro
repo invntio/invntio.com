@@ -1,13 +1,10 @@
 ---
 import { getLang, localizePath, useTranslations } from "../i18n/ui";
-import { site, isPlaceholder } from "../config/site";
+import { site } from "../config/site";
 
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
 const f = t.contact.form;
-const digits = site.whatsapp.replace(/\D/g, "");
-const waHref = `https://wa.me/${digits}`;
-const telHref = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+\d]/g, "")}`;
 ---
 
 <section class="section" id="contact" aria-labelledby="contact-title">
@@ -22,19 +19,6 @@ const telHref = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+
                 <div>
                     <dt>{t.contact.email}</dt>
                     <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
-                </div>
-                <div>
-                    <dt>{t.contact.phone}</dt>
-                    <dd><a href={telHref}>{site.phone}</a></dd>
-                </div>
-                <div>
-                    <dt>{t.contact.whatsapp}</dt>
-                    <dd>
-                        {isPlaceholder(site.whatsapp) ? <span>{site.whatsapp}</span> : <a class="btn btn-quiet wa" href={waHref} target="_blank" rel="noopener">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 004.74 1.2c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15a8.2 8.2 0 01-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z" /></svg>
-                            {t.contact.whatsappCta}
-                        </a>}
-                    </dd>
                 </div>
                 <div>
                     <dt>{t.contact.location}</dt>
@@ -77,6 +61,10 @@ const telHref = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+
                     <textarea id="cf-message" name="message" rows="5" placeholder={f.messagePlaceholder} required></textarea>
                 </div>
 
+                <div class="captcha full">
+                    <div class="h-captcha" data-captcha="true"></div>
+                </div>
+
                 <div class="submit full">
                     <p class="consent">
                         {f.consentPre} <a href={localizePath("/privacy", lang)}>{f.consentLink}</a>.
@@ -85,11 +73,14 @@ const telHref = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+
                 </div>
                 <p class="status full" role="status" aria-live="polite" data-status hidden></p>
                 <template data-success>{f.success}</template>
+                <template data-captcha-missing>{f.captcha}</template>
                 <template data-error>{f.error} <a href={`mailto:${site.email}`}>{site.email}</a>.</template>
             </form>
         </div>
     </div>
 </section>
+
+<script is:inline src="https://web3forms.com/client/script.js" async defer></script>
 
 <script>
     const form = document.querySelector<HTMLFormElement>("[data-contact-form]");
@@ -98,7 +89,7 @@ const telHref = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+
         const button = form.querySelector<HTMLButtonElement>("button[type=submit]")!;
         const tpl = (name: string) => (form.querySelector(`template[data-${name}]`) as HTMLTemplateElement).innerHTML;
 
-        const show = (kind: "success" | "error") => {
+        const show = (kind: "success" | "error" | "captcha-missing") => {
             status.hidden = false;
             status.dataset.kind = kind;
             status.innerHTML = tpl(kind);
@@ -112,6 +103,11 @@ const telHref = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+
                 form.querySelector<HTMLElement>(":invalid")?.focus();
                 return;
             }
+            const token = form.querySelector<HTMLTextAreaElement>("[name='h-captcha-response']")?.value;
+            if (!token) {
+                show("captcha-missing");
+                return;
+            }
             button.disabled = true;
             button.textContent = button.dataset.sending ?? "";
             try {
@@ -123,6 +119,7 @@ const telHref = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+
                 const result = await response.json().catch(() => ({}));
                 if (!response.ok || !result.success) throw new Error(result.message ?? "Request failed");
                 form.reset();
+                (window as unknown as { hcaptcha?: { reset: () => void } }).hcaptcha?.reset();
                 form.classList.remove("was-validated");
                 show("success");
             } catch {
@@ -173,13 +170,6 @@ const telHref = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+
     }
     dd a:not(.btn):hover {
         text-decoration-color: currentColor;
-    }
-    .wa {
-        margin-top: 0.25rem;
-        font-size: var(--step--1);
-    }
-    .wa svg {
-        color: var(--ink);
     }
 
     .form {
@@ -291,7 +281,11 @@ const telHref = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+
         background: var(--green-wash);
         color: var(--green-deep);
     }
-    .status[data-kind="error"] {
+    .captcha {
+        min-height: 78px;
+    }
+    .status[data-kind="error"],
+    .status[data-kind="captcha-missing"] {
         background: #fbeceb;
         color: var(--danger);
     }

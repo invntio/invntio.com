@@ -1,13 +1,12 @@
 ---
 import Wordmark from "./Wordmark.astro";
 import { getLang, localizePath, useTranslations } from "../i18n/ui";
-import { site, isPlaceholder } from "../config/site";
+import { site } from "../config/site";
 
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
 const home = localizePath("/", lang);
 const year = new Date().getFullYear();
-const tel = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+\d]/g, "")}`;
 ---
 
 <footer class="site-footer">
@@ -41,7 +40,6 @@ const tel = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+\d]/
             <h2>{t.footer.contact}</h2>
             <ul>
                 <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
-                <li><a href={tel}>{site.phone}</a></li>
             </ul>
         </div>
     </div>
