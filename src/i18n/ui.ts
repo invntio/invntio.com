@@ -27,8 +27,8 @@ const en = {
         theme: "Switch between light and dark theme",
     },
     hero: {
-        title: "Build what your business is capable of.",
-        lede: "We design, build and run the software behind it: web and mobile apps, websites, automation and hosting. From the first call through years of maintenance, handled directly by the engineer who builds it.",
+        title: "Your ideas, shipped and running.",
+        lede: "We design, build and run the software behind them: web and mobile apps, websites, automation and hosting. From the first call through years of maintenance, handled directly by the engineer who builds it.",
         cta: "Start a project",
         orEmail: "or write to",
         location: "Pennsylvania, US · Serving clients in the Americas",
@@ -400,7 +400,7 @@ const es: Dict = {
         },
     },
     footer: {
-        tagline: "Libera el potencial de tu negocio",
+        tagline: "Desata el potencial de tu negocio",
         legal: "Legal",
         site: "Sitio",
         contact: "Contacto",
