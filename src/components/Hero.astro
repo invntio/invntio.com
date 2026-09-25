@@ -6,6 +6,9 @@ import { site } from "../config/site";
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
 
+// Every "i" in the headline gets the green dot from the wordmark.
+const words = t.hero.title.replace(/\.$/, "").split(/(i)/);
+
 // Sparkles burst from the headline's closing dot: a nod to the old "Unleash" sparkle and to the dot in the wordmark.
 const sparks = Array.from({ length: 12 }, (_, i) => {
     const angle = (-160 + i * (140 / 11)) * (Math.PI / 180);
@@ -23,7 +26,7 @@ const sparks = Array.from({ length: 12 }, (_, i) => {
     <div class="wrap hero-grid">
         <div class="pitch">
             <h1 data-spark-title>
-                {t.hero.title.replace(/\.$/, "")}<span class="spark-dot">.<span class="sparks" aria-hidden="true">
+                {words.map((part) => (part === "i" ? <span class="i-dot">i</span> : part))}<span class="spark-dot">.<span class="sparks" aria-hidden="true">
                     {sparks.map((p) => (
                         <svg style={`--x:${p.x}em;--y:${p.y}em;--s:${p.s};--d:${p.d}s`} viewBox="0 0 10 10"><path d="M5 0l1.1 3.9L10 5 6.1 6.1 5 10 3.9 6.1 0 5l3.9-1.1z" /></svg>
                     ))}
@@ -127,6 +130,14 @@ const sparks = Array.from({ length: 12 }, (_, i) => {
         color: var(--ink);
         font-weight: 500;
         overflow-wrap: anywhere;
+    }
+    /* Colour only the tittle: the split sits in the gap between dot and stem
+       (measured for Schibsted Grotesk: dot 15–31%, stem from 36% of the line box). */
+    .i-dot {
+        color: transparent;
+        background: linear-gradient(to bottom, var(--green) 33.5%, var(--ink) 33.5%);
+        -webkit-background-clip: text;
+        background-clip: text;
     }
     .spark-dot {
         position: relative;
