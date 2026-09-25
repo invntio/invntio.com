@@ -1,17 +1,11 @@
-import { execSync } from "node:child_process";
-
 // Facts gathered once per build: which commit is deployed, and whether each product responds.
+// __BUILD_COMMIT__ and __BUILD_TIME__ are injected by astro.config.mjs.
 
-const fromGit = () => {
-    try {
-        return execSync("git rev-parse --short HEAD", { stdio: ["ignore", "pipe", "ignore"] }).toString().trim();
-    } catch {
-        return "";
-    }
-};
+declare const __BUILD_COMMIT__: string;
+declare const __BUILD_TIME__: string;
 
-export const commit = (process.env.WORKERS_CI_COMMIT_SHA || process.env.CF_PAGES_COMMIT_SHA || fromGit()).slice(0, 7);
-export const builtAt = new Date();
+export const commit = __BUILD_COMMIT__;
+export const builtAt = new Date(__BUILD_TIME__);
 
 const checks = new Map<string, Promise<number | null>>();
 

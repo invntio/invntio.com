@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "invntio-website",
   // Update to today's date
-  "compatibility_date": "2025-07-16",
+  "compatibility_date": "2026-09-01",
   "assets": {
     "directory": "./dist",
     // Serve the nearest 404.html: /es/* gets the Spanish one.
