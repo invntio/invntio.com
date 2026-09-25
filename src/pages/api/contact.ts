@@ -22,7 +22,7 @@ type ContactEnv = {
     TURNSTILE_SECRET_KEY?: string;
 };
 
-// Cloudflare's always-pass test secret, used until a real TURNSTILE_SECRET_KEY secret is set.
+// Cloudflare's always-pass test secret, used only in local development.
 const TEST_SECRET = "1x0000000000000000000000000000000AA";
 
 const LIMITS = { name: 120, email: 200, company: 160, service: 120, message: 5000 };
@@ -75,7 +75,12 @@ export const POST: APIRoute = async ({ request }) => {
     if (!name || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return done(false, "invalid_fields");
 
     const cf = env as unknown as ContactEnv;
-    const secret = cf.TURNSTILE_SECRET_KEY || TEST_SECRET;
+    // In production the real secret is required; the test secret only covers local development.
+    const secret = cf.TURNSTILE_SECRET_KEY || (import.meta.env.DEV ? TEST_SECRET : "");
+    if (!secret) {
+        console.error("contact: TURNSTILE_SECRET_KEY is not set");
+        return done(false, "captcha_unavailable", 503);
+    }
     const token = String(form.get("cf-turnstile-response") ?? "");
     const human = token && (await verifyTurnstile(token, secret, request.headers.get("CF-Connecting-IP")));
     if (!human) return done(false, "captcha_failed", 403);

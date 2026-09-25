@@ -11,8 +11,7 @@ export const site = {
     posthogKey: "phc_kvZZbXFCUjvaoqxb5LX4EZbLfbqsPwfr9guBjLMXQUpa",
     posthogHost: "https://us.i.posthog.com",
     // Contact form: Cloudflare Turnstile (public site key) + Cloudflare Email Service.
-    // "1x00000000000000000000AA" is Cloudflare's always-pass test key; replace with the real one.
-    turnstileSiteKey: "1x00000000000000000000AA",
+    turnstileSiteKey: "0x4AAAAAAFDr_3SwAB8C4k2H",
     formFrom: { email: "forms@invntio.com", name: "invntio.com" },
     legalUpdated: "2026-09-25",
 } as const;
