@@ -235,6 +235,8 @@ const en = {
     },
     notFound: {
         title: "Page not found",
+        heading: "This page isn't live",
+        status: "Not live",
         body: "The page you're looking for doesn't exist or has moved.",
         cta: "Go to the home page",
     },
@@ -459,6 +461,8 @@ const es: Dict = {
     },
     notFound: {
         title: "Página no encontrada",
+        heading: "Esta página no está en línea",
+        status: "Fuera de línea",
         body: "La página que buscas no existe o cambió de lugar.",
         cta: "Ir a la página de inicio",
     },

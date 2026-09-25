@@ -29,8 +29,8 @@ export default defineConfig({
                 defaultLocale: "en",
                 locales: { en: "en-US", es: "es" },
             },
-            // Unlaunched pages stay out of the sitemap.
-            filter: (page) => !/\/(es\/)?work\/?$/.test(page),
+            // Unlaunched pages and the Spanish 404 stay out of the sitemap.
+            filter: (page) => !/\/(es\/)?(work|404)\/?$/.test(page),
         }),
     ],
 });

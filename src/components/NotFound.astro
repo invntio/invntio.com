@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Mark from "./Mark.astro";
+import Dotted from "./Dotted.astro";
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t.notFound.title}>
+    <section class="wrap nf">
+        <p class="status"><Mark kind="excluded" /> 404 · {t.notFound.status}</p>
+        <h1><Dotted text={t.notFound.heading} period /></h1>
+        <p class="body">{t.notFound.body}</p>
+        <a class="btn btn-primary" href={localizePath("/", lang)}>{t.notFound.cta}</a>
+    </section>
+</Layout>
+
+<style>
+    .nf {
+        padding-block: clamp(4rem, 3rem + 6vw, 9rem);
+        display: grid;
+        gap: 1rem;
+        justify-items: start;
+    }
+    .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: var(--step--1);
+        color: var(--ink-3);
+        font-variant-numeric: tabular-nums;
+    }
+    h1 {
+        font-size: var(--step-4);
+        letter-spacing: -0.035em;
+        max-width: 16ch;
+    }
+    .body {
+        color: var(--ink-2);
+        font-size: var(--step-1);
+    }
+    .btn {
+        margin-top: 1rem;
+    }
+</style>
