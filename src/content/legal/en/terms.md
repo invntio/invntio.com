@@ -93,7 +93,8 @@ Unless the proposal says otherwise, for 30 days after acceptance we fix, at no c
 
 - **Your materials.** The content, data, trademarks and other materials you give us remain yours.
 - **Your deliverables.** Once you have paid in full, you own the final deliverables we create specifically for you, such as the design, the content we produce and the project-specific code. Until then, you may use them only to review them.
-- **Accounts.** Domains, app store listings, hosting and other accounts we set up for your project are registered in your name when the provider allows it. Otherwise we transfer them to you once every amount due has been paid.
+- **Third-party accounts.** Domains, app store listings, external hosting and other third-party accounts we set up for your project are registered in your name when the provider allows it. Otherwise we transfer them to you once every amount due has been paid.
+- **Our hosting.** When we host your project on our own infrastructure under a hosting plan, that infrastructure remains ours. You get administrator access to your site or app (for example, its content manager), and when the plan ends we hand over your files and data as described in section 8.
 - **Our tools.** We keep ownership of our pre-existing and reusable code, components, libraries, templates, tools and know-how. You receive a non-exclusive, perpetual, royalty-free license to use them as part of your deliverables.
 - **Third-party assets.** Fonts, stock images, plugins and other licensed assets stay under their own licenses. Some may need to be purchased in your name.
 - **Open-source software** stays under its own license.

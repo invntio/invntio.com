@@ -93,7 +93,8 @@ Salvo que la propuesta diga otra cosa, durante los 30 días siguientes a la acep
 
 - **Tus materiales.** El contenido, los datos, las marcas y demás materiales que nos entregas siguen siendo tuyos.
 - **Tus entregables.** Una vez pagado todo, eres dueño de los entregables finales que creamos específicamente para ti, como el diseño, el contenido que producimos y el código propio del proyecto. Hasta entonces, solo puedes usarlos para revisarlos.
-- **Cuentas.** Los dominios, fichas en tiendas de apps, hosting y demás cuentas que configuramos para tu proyecto se registran a tu nombre cuando el proveedor lo permite. Si no, te las transferimos una vez pagado todo lo adeudado.
+- **Cuentas de terceros.** Los dominios, fichas en tiendas de apps, hosting externo y demás cuentas de terceros que configuramos para tu proyecto se registran a tu nombre cuando el proveedor lo permite. Si no, te las transferimos una vez pagado todo lo adeudado.
+- **Nuestro hosting.** Cuando alojamos tu proyecto en nuestra propia infraestructura con un plan de hosting, esa infraestructura sigue siendo nuestra. Recibes acceso de administrador a tu sitio o app (por ejemplo, a su gestor de contenido) y, al terminar el plan, te entregamos tus archivos y datos como indica la sección 8.
 - **Nuestras herramientas.** Conservamos la propiedad de nuestro código, componentes, librerías, plantillas, herramientas y conocimiento preexistentes o reutilizables. Recibes una licencia no exclusiva, perpetua y sin regalías para usarlos como parte de tus entregables.
 - **Recursos de terceros.** Tipografías, imágenes de stock, plugins y otros recursos con licencia siguen bajo sus propias licencias. Algunos pueden tener que comprarse a tu nombre.
 - **El software de código abierto** sigue bajo su propia licencia.
