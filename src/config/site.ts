@@ -11,7 +11,7 @@ export const site = {
     posthogKey: "phc_kvZZbXFCUjvaoqxb5LX4EZbLfbqsPwfr9guBjLMXQUpa",
     posthogHost: "https://us.i.posthog.com",
     // Web3Forms access key for the contact form.
-    formAccessKey: "50248df4-7ae0-46bb-9a9d-47b24d889d3f",
+    formAccessKey: "e5b00ac6-2ecf-4676-9f34-46349f17ee46",
     legalUpdated: "2026-09-25",
 } as const;
 
