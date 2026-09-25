@@ -109,6 +109,14 @@ const f = t.contact.form;
                 show("captcha-missing");
                 return;
             }
+            // Subject line that tells inquiries apart in the inbox: "… — Name (Service)".
+            const data = new FormData(form);
+            const subject = form.querySelector<HTMLInputElement>("input[name=subject]");
+            if (subject) {
+                const base = subject.dataset.base ?? subject.value;
+                subject.dataset.base = base;
+                subject.value = `${base} — ${data.get("name")} (${data.get("service")})`;
+            }
             button.disabled = true;
             button.textContent = button.dataset.sending ?? "";
             try {
