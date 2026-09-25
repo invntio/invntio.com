@@ -1,0 +1,14 @@
+/* TEAM */
+Studio: Invntio
+Contact: hello [at] invntio.com
+From: Pennsylvania, United States
+
+/* SITE */
+Built with: Astro, TypeScript, hand-written CSS
+Type: Schibsted Grotesk
+Hosting: Cloudflare Workers
+Analytics: PostHog (only with consent)
+Languages: English, Spanish
+
+/* THANKS */
+To everyone who opens this file: if you build things too, say hello.

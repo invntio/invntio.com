@@ -100,6 +100,8 @@ const isHome = localizePath(Astro.url.pathname, "en") === "/";
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:image:alt" content={t.meta.ogAlt} />
         <link rel="manifest" href="/site.webmanifest" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary" />
+        <link rel="author" href="/humans.txt" />
         {site.googleSiteVerification && <meta name="google-site-verification" content={site.googleSiteVerification} />}
         {!Astro.props.noindex && <StructuredData kind={isHome ? "home" : "page"} title={Astro.props.title} updated={Astro.props.updated} />}
         <meta name="generator" content={Astro.generator} />
