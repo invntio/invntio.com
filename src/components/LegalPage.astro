@@ -243,6 +243,15 @@ const siblings = (["terms", "refunds", "privacy"] as const).map((slug) => ({
     .prose :global(a) {
         color: var(--green-ink);
     }
+    .prose :global(code) {
+        font-family: ui-monospace, "SF Mono", Menlo, monospace;
+        font-size: 0.85em;
+        padding: 0.1em 0.35em;
+        border: 1px solid var(--rule);
+        border-radius: 4px;
+        color: var(--ink);
+        white-space: nowrap;
+    }
     .prose :global(table) {
         width: 100%;
         margin-block: 1.5rem 2.5rem;

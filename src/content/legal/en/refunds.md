@@ -32,6 +32,7 @@ Plans are billed monthly or annually in advance and renew automatically.
 - You can cancel **at any time before the next renewal date**. The cancellation takes effect at the end of the current billing period, and the service stays active until then.
 - There are **no refunds** for past periods, partial periods or the unused part of an annual plan.
 - When a plan ends, we give you your site or app files and data, provided every invoice has been paid. After that we may take the hosted service offline.
+- **Changing plans.** Moving to a higher plan takes effect right away and you pay the prorated difference for the current period. Moving to a lower plan takes effect at the next renewal.
 
 ## 3. Hourly work
 
@@ -45,7 +46,9 @@ Costs paid to other providers on your behalf are not refundable by us. These inc
 
 - **If we cancel.** If we end a project or plan for a reason that is not your non-payment or conduct, we refund the part of your payments that covers work or service not yet delivered.
 - **If we cannot deliver.** If we fail to deliver what a payment covered, we refund the part that covers what was not delivered.
-- **Billing errors.** Duplicate or incorrect charges are refunded in full.
+- **Billing errors.** Duplicate or incorrect charges are refunded in full. Please report them within 60 days of the charge.
+
+Refunds are not given because of a change of mind or dissatisfaction with work that matches the accepted proposal. If something does not match what was agreed, tell us: fixing it through the revision process comes first.
 
 ## 6. Delays and inactive projects
 
@@ -59,10 +62,14 @@ Email **{{email}}** from the address associated with your account and include:
 - the project or plan you want to cancel;
 - for a refund request, the charge concerned and the reason.
 
-We reply within **2 business days**. Approved refunds go back to the original payment method through Stripe. Depending on your bank, they usually appear within 5 to 10 business days.
+We reply within **2 business days**. Approved refunds go back to the original payment method through Stripe, in the currency of the original charge. Depending on your bank, they usually appear within 5 to 10 business days. We are not responsible for currency conversion differences or fees charged by your bank.
 
 ## 8. Disputes
 
-If something is wrong with a charge, please contact us first at {{email}}. We will work with you to fix it. Most issues are resolved faster directly than through a bank dispute.
+If something is wrong with a charge, please contact us first at {{email}}. We will work with you to fix it. Most issues are resolved faster directly than through a bank dispute. If a charge is disputed with your bank without contacting us, we may pause work and suspend services until the dispute is resolved.
+
+## 9. Your legal rights
+
+Nothing in this policy limits any rights you have under consumer protection laws that cannot be waived.
 
 This policy is part of our [Terms of Service](/terms).

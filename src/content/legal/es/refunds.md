@@ -32,6 +32,7 @@ Los planes se facturan por adelantado, cada mes o cada año, y se renuevan autom
 - Puedes cancelar **en cualquier momento antes de la fecha de renovación**. La cancelación entra en vigor al final del periodo en curso, y el servicio sigue activo hasta entonces.
 - **No hay reembolsos** por periodos pasados, periodos parciales ni la parte no usada de un plan anual.
 - Al terminar un plan te entregamos los archivos y datos de tu sitio o app, siempre que todas las facturas estén pagadas. Después podemos desactivar el servicio alojado.
+- **Cambios de plan.** Pasar a un plan superior tiene efecto inmediato y pagas la diferencia prorrateada del periodo en curso. Pasar a un plan inferior tiene efecto en la siguiente renovación.
 
 ## 3. Trabajo por horas
 
@@ -45,7 +46,9 @@ No reembolsamos los costos pagados a otros proveedores en tu nombre. Entre ellos
 
 - **Si cancelamos nosotros.** Si terminamos un proyecto o plan por un motivo que no sea tu falta de pago o tu conducta, reembolsamos la parte de tus pagos que cubre trabajo o servicio aún no entregado.
 - **Si no podemos entregar.** Si no entregamos lo que cubría un pago, reembolsamos la parte correspondiente a lo no entregado.
-- **Errores de cobro.** Los cargos duplicados o incorrectos se reembolsan por completo.
+- **Errores de cobro.** Los cargos duplicados o incorrectos se reembolsan por completo. Repórtalos dentro de los 60 días siguientes al cargo.
+
+No hay reembolsos por cambio de opinión ni por insatisfacción con un trabajo que coincide con la propuesta aceptada. Si algo no coincide con lo acordado, avísanos: primero lo corregimos mediante el proceso de revisiones.
 
 ## 6. Retrasos y proyectos inactivos
 
@@ -59,10 +62,14 @@ Escribe a **{{email}}** desde el correo asociado a tu cuenta e incluye:
 - el proyecto o plan que quieres cancelar;
 - si pides un reembolso, el cargo en cuestión y el motivo.
 
-Respondemos en **2 días hábiles**. Los reembolsos aprobados se devuelven al método de pago original a través de Stripe. Según tu banco, suelen verse reflejados en 5 a 10 días hábiles.
+Respondemos en **2 días hábiles**. Los reembolsos aprobados se devuelven al método de pago original a través de Stripe, en la moneda del cargo original. Según tu banco, suelen verse reflejados en 5 a 10 días hábiles. No respondemos por diferencias de tipo de cambio ni por comisiones que cobre tu banco.
 
 ## 8. Disputas
 
-Si hay un problema con un cargo, contáctanos primero en {{email}} y lo resolvemos juntos. La mayoría de los casos se solucionan más rápido directamente que mediante una disputa con el banco.
+Si hay un problema con un cargo, contáctanos primero en {{email}} y lo resolvemos juntos. La mayoría de los casos se solucionan más rápido directamente que mediante una disputa con el banco. Si un cargo se disputa con tu banco sin habernos contactado, podemos pausar el trabajo y suspender los servicios hasta que la disputa se resuelva.
+
+## 9. Tus derechos legales
+
+Nada de esta política limita los derechos irrenunciables que te otorguen las leyes de protección al consumidor.
 
 Esta política forma parte de nuestros [Términos del Servicio](/es/terms).
