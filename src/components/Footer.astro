@@ -2,11 +2,13 @@
 import Wordmark from "./Wordmark.astro";
 import { getLang, localizePath, useTranslations } from "../i18n/ui";
 import { site } from "../config/site";
+import { builtAt, commit } from "../lib/build-info";
 
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
 const home = localizePath("/", lang);
 const year = new Date().getFullYear();
+const version = `v${builtAt.toISOString().slice(0, 10).replaceAll("-", ".")}`;
 ---
 
 <footer class="site-footer">
@@ -45,6 +47,10 @@ const year = new Date().getFullYear();
     </div>
     <div class="wrap base">
         <p>© <span data-year>{year}</span> Invntio. {t.footer.rights}</p>
+        <p class="build" title={`${t.footer.deployed} ${builtAt.toISOString()}`}>
+            <span class="build-dot" aria-hidden="true"></span>
+            {version}{commit && <> · <code>{commit}</code></>}
+        </p>
         <a href={localizePath(Astro.url.pathname, lang === "en" ? "es" : "en")} hreflang={lang === "en" ? "es" : "en"} data-lang-choice={lang === "en" ? "es" : "en"}>
             {lang === "en" ? "Español" : "English"}
         </a>
@@ -117,6 +123,22 @@ const year = new Date().getFullYear();
     .muted,
     .base {
         color: var(--ink-3);
+    }
+    .build {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-variant-numeric: tabular-nums;
+    }
+    .build code {
+        font-family: ui-monospace, "SF Mono", Menlo, monospace;
+        font-size: 0.8125rem;
+    }
+    .build-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--green);
     }
     .base {
         display: flex;

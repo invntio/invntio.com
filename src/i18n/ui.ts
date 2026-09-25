@@ -50,6 +50,8 @@ const en = {
         ownProduct: "Own product",
         client: "Client",
         live: "Live",
+        checked: "Responded {status} at the last deploy, {date}",
+        down: "Did not respond at the last deploy, {date}",
         items: <RegisterItem[]>[
             {
                 name: "Global Merchants Group",
@@ -209,6 +211,7 @@ const en = {
         refunds: "Refund & Cancellation Policy",
         privacy: "Privacy Policy",
         rights: "All rights reserved.",
+        deployed: "Deployed",
     },
     consent: {
         label: "Cookie preferences",
@@ -271,6 +274,8 @@ const es: Dict = {
         ownProduct: "Producto propio",
         client: "Cliente",
         live: "En línea",
+        checked: "Respondió {status} en el último despliegue, {date}",
+        down: "No respondió en el último despliegue, {date}",
         items: [
             {
                 name: "Global Merchants Group",
@@ -430,6 +435,7 @@ const es: Dict = {
         refunds: "Política de Reembolsos y Cancelaciones",
         privacy: "Política de Privacidad",
         rights: "Todos los derechos reservados.",
+        deployed: "Publicado",
     },
     consent: {
         label: "Preferencias de cookies",

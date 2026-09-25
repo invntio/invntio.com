@@ -3,9 +3,23 @@ import Mark from "./Mark.astro";
 import Dotted from "./Dotted.astro";
 import { getLang, useTranslations } from "../i18n/ui";
 import { site } from "../config/site";
+import { builtAt, liveStatus } from "../lib/build-info";
 
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
+
+// Each product's dot reflects whether its site answered when this page was built.
+const date = new Intl.DateTimeFormat(lang === "es" ? "es" : "en-US", { dateStyle: "medium", timeZone: "UTC" }).format(builtAt);
+const rows = await Promise.all(
+    t.register.items
+        .filter((item) => !item.hidden)
+        .map(async (item) => {
+            const status = await liveStatus(item.url);
+            const up = status !== null && status < 400;
+            const tip = (up ? t.register.checked : t.register.down).replace("{status}", `HTTP ${status}`).replace("{date}", date);
+            return { ...item, up, tip };
+        }),
+);
 
 // Sparkles burst from the headline's closing dot: a nod to the old "Unleash" sparkle and to the dot in the wordmark.
 const sparks = Array.from({ length: 12 }, (_, i) => {
@@ -48,10 +62,10 @@ const sparks = Array.from({ length: 12 }, (_, i) => {
                 <p>{t.register.caption}</p>
             </div>
             <ol class="rows">
-                {t.register.items.filter((item) => !item.hidden).map((item, i) => (
+                {rows.map((item, i) => (
                     <li data-reveal style={`--stagger:${i + 1}`}>
                         <a class="row" href={item.url} target="_blank" rel="noopener">
-                            <span class="dot"><Mark kind="live" label={t.register.live} /></span>
+                            <span class="dot" data-tip={item.tip}><Mark kind={item.up ? "live" : "excluded"} label={item.tip} /></span>
                             <span class="name">{item.name} <span class="kind">{item.kind === "own" ? t.register.ownProduct : t.register.client}</span></span>
                             <span class="what">{item.what}</span>
                             <span class="domain">
@@ -221,6 +235,34 @@ const sparks = Array.from({ length: 12 }, (_, i) => {
         height: 1.75rem;
         display: flex;
         align-items: center;
+    }
+    /* Deploy-time status, shown when the row is engaged. */
+    .dot::after {
+        content: attr(data-tip);
+        position: absolute;
+        left: -0.25rem;
+        bottom: calc(100% + 0.5rem);
+        width: max-content;
+        max-width: 17rem;
+        padding: 0.4rem 0.6rem;
+        border-radius: var(--radius);
+        background: var(--ink);
+        color: var(--ground);
+        font-size: 0.75rem;
+        line-height: 1.35;
+        font-weight: 500;
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(4px);
+        transition:
+            opacity 180ms var(--ease-out),
+            transform 180ms var(--ease-out);
+    }
+    .row:hover .dot::after,
+    .row:focus-visible .dot::after {
+        opacity: 1;
+        transform: none;
+        transition-delay: 350ms;
     }
     .name {
         grid-column: 1 / -1;

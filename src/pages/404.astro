@@ -1,16 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Mark from "../components/Mark.astro";
 import { ui } from "../i18n/ui";
 
-const t = ui.en;
+const en = ui.en;
+const es = ui.es;
 ---
 
-<Layout title={t.notFound.title}>
+<Layout title={en.notFound.title}>
     <section class="wrap nf">
-        <h1>{t.notFound.title}</h1>
-        <p>{t.notFound.body}</p>
-        <p lang="es">{ui.es.notFound.body}</p>
-        <a class="btn btn-primary" href="/">{t.notFound.cta}</a>
+        <p class="status"><Mark kind="excluded" /> 404 · <span>Not live</span></p>
+        <h1>This page isn't live<span class="end-dot">.</span></h1>
+        <p class="body">{en.notFound.body}</p>
+        <p class="body" lang="es">{es.notFound.body}</p>
+        <div class="actions">
+            <a class="btn btn-primary" href="/">{en.notFound.cta}</a>
+            <a class="btn btn-quiet" href="/es/" lang="es">{es.notFound.cta}</a>
+        </div>
     </section>
 </Layout>
 
@@ -21,14 +27,27 @@ const t = ui.en;
         gap: 1rem;
         justify-items: start;
     }
+    .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: var(--step--1);
+        color: var(--ink-3);
+        font-variant-numeric: tabular-nums;
+    }
     h1 {
         font-size: var(--step-4);
+        letter-spacing: -0.035em;
+        max-width: 14ch;
     }
-    p {
+    .body {
         color: var(--ink-2);
         font-size: var(--step-1);
     }
-    .btn {
+    .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
         margin-top: 1rem;
     }
 </style>
