@@ -12,7 +12,7 @@ Our policy is simple: **payments are non-refundable once made**, except in the c
 | --- | --- | --- |
 | Fixed-price projects | Websites, landing pages, web apps, platforms and SaaS, mobile apps | Each payment is non-refundable once made. If you cancel, we deliver the work completed up to that point. |
 | Recurring plans | Hosting & maintenance, support, content management (monthly or annual) | Cancel any time before the next renewal. No refunds for past or partial periods. |
-| Hourly work | Consulting, support outside a plan | Prepaid blocks of hours are non-refundable. |
+| Hourly work | Consulting, support outside a plan | Prepaid blocks of hours are non-refundable and valid for 90 days unless the proposal says otherwise. |
 | Third-party costs | Domains, app store fees, licenses, infrastructure | Never refundable by us. The provider's own policy applies. |
 
 ## 1. Fixed-price projects
@@ -29,14 +29,14 @@ Once a payment is made it is non-refundable, because it reserves time in our sch
 
 Plans are billed monthly or annually in advance and renew automatically.
 
-- You can cancel **at any time before the next renewal date**. The cancellation takes effect at the end of the current billing period, and the service stays active until then.
+- You can cancel **at any time before the next renewal date**, by email or through the billing link in your Stripe receipts. The cancellation takes effect at the end of the current billing period, and the service stays active until then.
 - There are **no refunds** for past periods, partial periods or the unused part of an annual plan.
 - When a plan ends, we give you your site or app files and data, provided every invoice has been paid. After that we may take the hosted service offline.
 - **Changing plans.** Moving to a higher plan takes effect right away and you pay the prorated difference for the current period. Moving to a lower plan takes effect at the next renewal.
 
 ## 3. Hourly work
 
-Consulting and support outside a plan are billed hourly at the rate in the proposal. A prepaid minimum block of hours is required, and it is **non-refundable**. We notify you when 80% of a block has been used. Any extra hours need your written approval and are added to your next invoice.
+Consulting and support outside a plan are billed hourly at the rate in the proposal. A prepaid minimum block of hours is required, and it is **non-refundable**. Unless the proposal says otherwise, a block is valid for 90 days from payment; unused hours then expire. We notify you when 80% of a block has been used. Any extra hours need your written approval and are added to your next invoice.
 
 ## 4. Third-party costs
 
@@ -48,7 +48,7 @@ Costs paid to other providers on your behalf are not refundable by us. These inc
 - **If we cannot deliver.** If we fail to deliver what a payment covered, we refund the part that covers what was not delivered.
 - **Billing errors.** Duplicate or incorrect charges are refunded in full. Please report them within 60 days of the charge.
 
-Refunds are not given because of a change of mind or dissatisfaction with work that matches the accepted proposal. If something does not match what was agreed, tell us: fixing it through the revision process comes first.
+Refunds are not given because of a change of mind or dissatisfaction with work that matches the accepted proposal. If something does not match what was agreed, tell us: fixing it through the revision process comes first. Errors found in delivered code within the 30-day warranty are fixed at no cost, as described in our [Terms of Service](/terms).
 
 ## 6. Delays and inactive projects
 

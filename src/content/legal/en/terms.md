@@ -12,7 +12,7 @@ Invntio is a business name used by {{operator}}, an individual based in {{locati
 
 ## 2. Accepting these terms
 
-You accept these terms when you accept a proposal, pay an invoice or use our services. If you accept them for a company, you confirm that you are at least 18 years old and allowed to bind that company. Acceptance by email, by electronic signature or through an online checkout is valid.
+You accept these terms when you accept a proposal, pay an invoice or use our services. You must be at least 18 years old. If you accept them for a company, you confirm that you are allowed to bind that company. Acceptance by email, by electronic signature or through an online checkout is valid.
 
 ## 3. Services
 
@@ -30,7 +30,7 @@ We rely on third-party providers such as hosting, cloud, payment and software to
 
 ## 4. Proposals and scope
 
-Every project starts with a written proposal. It sets out the scope, the deliverables, the price, the timeline, the payment schedule, the number of revision rounds included and, where applicable, any warranty period or service level. Accepting a proposal and making the first payment creates an agreement between us under these terms.
+Every project starts with a written proposal. It sets out the scope, the deliverables, the price, the timeline, the payment schedule, the number of revision rounds included and, where applicable, any warranty period or service level. A proposal is valid for 30 days from the date it is sent, unless it says otherwise. Accepting a proposal and making the first payment creates an agreement between us under these terms.
 
 Work that the proposal does not cover is a change. We will quote each change in writing and do it only after you approve it. Changes may affect the price and the timeline.
 
@@ -39,7 +39,7 @@ If documents conflict, this order applies: first the accepted proposal, then the
 ## 5. Fees and payment
 
 - **Fixed-price projects.** You pay according to the schedule in the proposal. Small projects, such as websites and landing pages, are paid in full upfront. When a payment is tied to a milestone, we invoice it once that milestone is accepted (see section 9). The final payment is due before launch or handover of the deliverables, whichever comes first.
-- **Hourly work.** You prepay a minimum block of hours at the rate agreed in the proposal. We tell you when 80% of the block has been used. Hours beyond the block need your written approval and are added to your next invoice. The proposal states how long a prepaid block stays valid.
+- **Hourly work.** You prepay a minimum block of hours at the rate agreed in the proposal. We tell you when 80% of the block has been used. Hours beyond the block need your written approval and are added to your next invoice. Unless the proposal says otherwise, a prepaid block is valid for 90 days from payment; hours not used within that period expire.
 - **Hosting and maintenance plans.** These are billed monthly or annually in advance and renew automatically until cancelled (see section 8).
 - **Third-party costs.** Domains, app store developer accounts, software licenses, paid plugins, AI model usage and infrastructure costs are billed to you, or paid by you directly to the provider.
 
@@ -83,13 +83,17 @@ A plan does **not** include new features, pages or integrations, redesigns, issu
 - **Renewal and cancellation.** Plans renew automatically at the end of each billing period. You can cancel at any time before the next renewal, and the plan stays active until the end of the period you have paid for. We will give you at least 30 days' notice before changing a plan's price.
 - **When a plan ends.** Once every invoice is paid, we hand over your files and data in a standard format. We delete them from our systems 30 days after the plan ends, unless you ask us to do so earlier or the law requires us to keep them.
 
-## 9. Revisions and acceptance
+## 9. Revisions, acceptance and warranty
 
 The proposal sets the number of revision rounds included. Further rounds are billed as changes. A deliverable is accepted when you approve it in writing, when you start using it in production, or 10 business days after delivery if you have not reported any defect. Acceptance of a milestone makes the payment tied to it due. If you put a deliverable into production before paying for it, it is accepted and the related payment is due.
 
+Unless the proposal says otherwise, for 30 days after acceptance we fix, at no cost, errors in the code we delivered. This warranty does not cover changes of scope, issues caused by third parties or by changes someone else made, or failures of external services.
+
 ## 10. Intellectual property
 
+- **Your materials.** The content, data, trademarks and other materials you give us remain yours.
 - **Your deliverables.** Once you have paid in full, you own the final deliverables we create specifically for you, such as the design, the content we produce and the project-specific code. Until then, you may use them only to review them.
+- **Accounts.** Domains, app store listings, hosting and other accounts we set up for your project are registered in your name when the provider allows it. Otherwise we transfer them to you once every amount due has been paid.
 - **Our tools.** We keep ownership of our pre-existing and reusable code, components, libraries, templates, tools and know-how. You receive a non-exclusive, perpetual, royalty-free license to use them as part of your deliverables.
 - **Third-party assets.** Fonts, stock images, plugins and other licensed assets stay under their own licenses. Some may need to be purchased in your name.
 - **Open-source software** stays under its own license.
@@ -115,7 +119,7 @@ Our work often relies on third parties such as hosting and cloud providers, app 
 
 ## 15. Warranties and limitation of liability
 
-We perform our services with reasonable skill and care. Apart from any warranty stated in the proposal, the services and this website are provided "as is", without other warranties, to the extent the law allows.
+We perform our services with reasonable skill and care. Apart from the warranty in section 9 and any warranty stated in the proposal, the services and this website are provided "as is", without other warranties, to the extent the law allows.
 
 To the extent the law allows, we are not liable for indirect or consequential losses, lost profits, lost data or business interruption. Our total liability for any claim is limited to the amount you paid us for the service in question during the 12 months before the claim. These limits do not apply to losses caused by fraud, gross negligence or willful misconduct, or where the law does not allow them.
 
@@ -125,7 +129,7 @@ Neither of us is responsible for delays or failures caused by events outside rea
 
 ## 17. Ending the agreement
 
-Either of us can end an agreement by written notice. If you end it, you pay for the work done up to that date, and our [Refund & Cancellation Policy](/refunds) applies. We may end an agreement for non-payment (section 6), for abusive conduct, for a breach of the acceptable use rules (section 8), or if a project would require illegal activity. If we end an agreement for any other reason, we will refund the part of your payments that covers work not yet delivered.
+Either of us can end an agreement by written notice. If you end it, you pay for the work done up to that date, and our [Refund & Cancellation Policy](/refunds) applies. We may end an agreement for non-payment (section 6), for abusive conduct, for a breach of the acceptable use rules (section 8), or if a project would require illegal activity. If we end an agreement for any other reason, we will refund the part of your payments that covers work not yet delivered. Ending a hosting or maintenance plan works as a cancellation under section 8.
 
 Sections that by their nature should continue after the agreement ends (payment, intellectual property, confidentiality, personal data, limitation of liability and governing law) remain in effect.
 
@@ -141,6 +145,7 @@ These terms are available in English and Spanish. If the versions differ, the En
 - **Severability.** If a court finds part of these terms unenforceable, the rest remains in effect.
 - **No waiver.** Not enforcing a right right away does not mean we give it up.
 - **Assignment.** Neither of us may transfer an agreement to someone else without the other's written consent, except to a successor of the whole business.
+- **Written communication.** "In writing" includes email and messaging apps, such as approvals sent by message.
 - **Notices.** We send notices by email to the address you gave us. You send them to {{email}}.
 
 ## 20. Use of this website

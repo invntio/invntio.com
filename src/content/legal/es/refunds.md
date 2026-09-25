@@ -12,7 +12,7 @@ Nuestra política es simple: **los pagos no son reembolsables una vez realizados
 | --- | --- | --- |
 | Proyectos de precio fijo | Sitios web, landing pages, aplicaciones web, plataformas y SaaS, apps móviles | Cada pago deja de ser reembolsable al realizarse. Si cancelas, te entregamos el trabajo completado hasta ese momento. |
 | Planes recurrentes | Hosting y mantenimiento, soporte, gestión de contenido (mensual o anual) | Cancela cuando quieras antes de la próxima renovación. No se reembolsan periodos pasados ni parciales. |
-| Trabajo por horas | Consultoría, soporte fuera de un plan | Los bloques de horas prepagados no son reembolsables. |
+| Trabajo por horas | Consultoría, soporte fuera de un plan | Los bloques de horas prepagados no son reembolsables y valen 90 días, salvo que la propuesta diga otra cosa. |
 | Costos de terceros | Dominios, tiendas de apps, licencias, infraestructura | Nunca los reembolsamos nosotros. Aplica la política del proveedor. |
 
 ## 1. Proyectos de precio fijo
@@ -29,14 +29,14 @@ Una vez realizado, un pago no es reembolsable, porque reserva tiempo en nuestra 
 
 Los planes se facturan por adelantado, cada mes o cada año, y se renuevan automáticamente.
 
-- Puedes cancelar **en cualquier momento antes de la fecha de renovación**. La cancelación entra en vigor al final del periodo en curso, y el servicio sigue activo hasta entonces.
+- Puedes cancelar **en cualquier momento antes de la fecha de renovación**, por correo o desde el enlace de facturación de tus recibos de Stripe. La cancelación entra en vigor al final del periodo en curso, y el servicio sigue activo hasta entonces.
 - **No hay reembolsos** por periodos pasados, periodos parciales ni la parte no usada de un plan anual.
 - Al terminar un plan te entregamos los archivos y datos de tu sitio o app, siempre que todas las facturas estén pagadas. Después podemos desactivar el servicio alojado.
 - **Cambios de plan.** Pasar a un plan superior tiene efecto inmediato y pagas la diferencia prorrateada del periodo en curso. Pasar a un plan inferior tiene efecto en la siguiente renovación.
 
 ## 3. Trabajo por horas
 
-La consultoría y el soporte fuera de un plan se facturan por horas, a la tarifa de la propuesta. Se requiere un bloque mínimo de horas prepagado, que **no es reembolsable**. Te avisamos cuando se ha usado el 80% del bloque. Las horas adicionales requieren tu aprobación por escrito y se suman a tu siguiente factura.
+La consultoría y el soporte fuera de un plan se facturan por horas, a la tarifa de la propuesta. Se requiere un bloque mínimo de horas prepagado, que **no es reembolsable**. Salvo que la propuesta diga otra cosa, un bloque vale 90 días desde el pago; después, las horas no usadas vencen. Te avisamos cuando se ha usado el 80% del bloque. Las horas adicionales requieren tu aprobación por escrito y se suman a tu siguiente factura.
 
 ## 4. Costos de terceros
 
@@ -48,7 +48,7 @@ No reembolsamos los costos pagados a otros proveedores en tu nombre. Entre ellos
 - **Si no podemos entregar.** Si no entregamos lo que cubría un pago, reembolsamos la parte correspondiente a lo no entregado.
 - **Errores de cobro.** Los cargos duplicados o incorrectos se reembolsan por completo. Repórtalos dentro de los 60 días siguientes al cargo.
 
-No hay reembolsos por cambio de opinión ni por insatisfacción con un trabajo que coincide con la propuesta aceptada. Si algo no coincide con lo acordado, avísanos: primero lo corregimos mediante el proceso de revisiones.
+No hay reembolsos por cambio de opinión ni por insatisfacción con un trabajo que coincide con la propuesta aceptada. Si algo no coincide con lo acordado, avísanos: primero lo corregimos mediante el proceso de revisiones. Los errores en el código entregado que aparezcan durante la garantía de 30 días se corrigen sin costo, como indican nuestros [Términos del Servicio](/es/terms).
 
 ## 6. Retrasos y proyectos inactivos
 

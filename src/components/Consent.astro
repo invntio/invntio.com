@@ -66,7 +66,9 @@ const enabled = site.posthogKey.length > 0;
     };
 
     if (banner && config) {
-        const current = read();
+        // A Global Privacy Control signal counts as declining analytics, without asking.
+        const gpc = (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl === true;
+        const current = read() ?? (gpc ? "denied" : null);
         if (current) apply(current);
         else banner.hidden = false;
 

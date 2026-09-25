@@ -12,7 +12,7 @@ Invntio es el nombre comercial que usa {{operator}}, una persona física con sed
 
 ## 2. Aceptación de estos términos
 
-Aceptas estos términos cuando aceptas una propuesta, pagas una factura o usas nuestros servicios. Si los aceptas en nombre de una empresa, confirmas que tienes al menos 18 años y que puedes obligar a esa empresa. La aceptación por correo electrónico, por firma electrónica o a través de un pago en línea es válida.
+Aceptas estos términos cuando aceptas una propuesta, pagas una factura o usas nuestros servicios. Debes tener al menos 18 años. Si los aceptas en nombre de una empresa, confirmas que puedes obligar a esa empresa. La aceptación por correo electrónico, por firma electrónica o a través de un pago en línea es válida.
 
 ## 3. Servicios
 
@@ -30,7 +30,7 @@ Nos apoyamos en proveedores externos, como servicios de hosting, nube, pagos y h
 
 ## 4. Propuestas y alcance
 
-Todo proyecto empieza con una propuesta escrita. En ella figuran el alcance, los entregables, el precio, los plazos, el calendario de pagos, las rondas de revisión incluidas y, si aplica, el periodo de garantía o el nivel de servicio. Cuando aceptas una propuesta y haces el primer pago, se forma un acuerdo entre nosotros bajo estos términos.
+Todo proyecto empieza con una propuesta escrita. En ella figuran el alcance, los entregables, el precio, los plazos, el calendario de pagos, las rondas de revisión incluidas y, si aplica, el periodo de garantía o el nivel de servicio. Una propuesta es válida por 30 días desde su envío, salvo que indique otra cosa. Cuando aceptas una propuesta y haces el primer pago, se forma un acuerdo entre nosotros bajo estos términos.
 
 Todo trabajo que la propuesta no incluya es un cambio. Cotizamos cada cambio por escrito y solo lo hacemos cuando lo apruebas. Los cambios pueden modificar el precio y los plazos.
 
@@ -39,7 +39,7 @@ Si los documentos se contradicen, se aplica este orden: primero la propuesta ace
 ## 5. Precios y pagos
 
 - **Proyectos de precio fijo.** Pagas según el calendario de la propuesta. Los proyectos pequeños, como sitios web y landing pages, se pagan por completo por adelantado. Cuando un pago está ligado a un hito, lo facturamos una vez aceptado ese hito (ver sección 9). El pago final vence antes del lanzamiento o de la entrega de los entregables, lo que ocurra primero.
-- **Trabajo por horas.** Pagas por adelantado un bloque mínimo de horas a la tarifa acordada en la propuesta. Te avisamos cuando se ha usado el 80% del bloque. Las horas adicionales requieren tu aprobación por escrito y se suman a tu siguiente factura. La propuesta indica cuánto tiempo es válido cada bloque prepagado.
+- **Trabajo por horas.** Pagas por adelantado un bloque mínimo de horas a la tarifa acordada en la propuesta. Te avisamos cuando se ha usado el 80% del bloque. Las horas adicionales requieren tu aprobación por escrito y se suman a tu siguiente factura. Salvo que la propuesta diga otra cosa, un bloque prepagado es válido por 90 días desde el pago; las horas no usadas en ese plazo vencen.
 - **Planes de hosting y mantenimiento.** Se facturan por adelantado, cada mes o cada año, y se renuevan automáticamente hasta que los canceles (ver sección 8).
 - **Costos de terceros.** Dominios, cuentas de desarrollador en tiendas de apps, licencias, plugins de pago, uso de modelos de IA e infraestructura se te facturan a ti o los pagas directamente al proveedor.
 
@@ -83,13 +83,17 @@ Un plan **no** incluye funcionalidades, páginas o integraciones nuevas, redise�
 - **Renovación y cancelación.** Los planes se renuevan automáticamente al final de cada periodo. Puedes cancelar en cualquier momento antes de la siguiente renovación, y el plan sigue activo hasta el final del periodo pagado. Te avisaremos con al menos 30 días de anticipación antes de cambiar el precio de un plan.
 - **Al terminar un plan.** Con todas las facturas pagadas, te entregamos tus archivos y datos en un formato estándar. Los eliminamos de nuestros sistemas 30 días después de que termina el plan, salvo que nos pidas hacerlo antes o que la ley nos obligue a conservarlos.
 
-## 9. Revisiones y aceptación
+## 9. Revisiones, aceptación y garantía
 
 La propuesta fija las rondas de revisión incluidas. Las rondas adicionales se facturan como cambios. Un entregable se considera aceptado cuando lo apruebas por escrito, cuando empiezas a usarlo en producción o 10 días hábiles después de la entrega si no has reportado ningún defecto. La aceptación de un hito hace exigible el pago ligado a él. Si pones un entregable en producción antes de pagarlo, queda aceptado y el pago correspondiente vence.
 
+Salvo que la propuesta diga otra cosa, durante los 30 días siguientes a la aceptación corregimos sin costo los errores en el código que entregamos. Esta garantía no cubre cambios de alcance, problemas causados por terceros o por modificaciones hechas por otros, ni fallas de servicios externos.
+
 ## 10. Propiedad intelectual
 
+- **Tus materiales.** El contenido, los datos, las marcas y demás materiales que nos entregas siguen siendo tuyos.
 - **Tus entregables.** Una vez pagado todo, eres dueño de los entregables finales que creamos específicamente para ti, como el diseño, el contenido que producimos y el código propio del proyecto. Hasta entonces, solo puedes usarlos para revisarlos.
+- **Cuentas.** Los dominios, fichas en tiendas de apps, hosting y demás cuentas que configuramos para tu proyecto se registran a tu nombre cuando el proveedor lo permite. Si no, te las transferimos una vez pagado todo lo adeudado.
 - **Nuestras herramientas.** Conservamos la propiedad de nuestro código, componentes, librerías, plantillas, herramientas y conocimiento preexistentes o reutilizables. Recibes una licencia no exclusiva, perpetua y sin regalías para usarlos como parte de tus entregables.
 - **Recursos de terceros.** Tipografías, imágenes de stock, plugins y otros recursos con licencia siguen bajo sus propias licencias. Algunos pueden tener que comprarse a tu nombre.
 - **El software de código abierto** sigue bajo su propia licencia.
@@ -115,7 +119,7 @@ Nuestro trabajo suele depender de terceros, como proveedores de hosting y nube, 
 
 ## 15. Garantías y limitación de responsabilidad
 
-Prestamos nuestros servicios con la habilidad y el cuidado razonables. Salvo la garantía que indique la propuesta, los servicios y este sitio se ofrecen "tal cual", sin otras garantías, en la medida en que la ley lo permita.
+Prestamos nuestros servicios con la habilidad y el cuidado razonables. Salvo la garantía de la sección 9 y la que indique la propuesta, los servicios y este sitio se ofrecen "tal cual", sin otras garantías, en la medida en que la ley lo permita.
 
 En la medida en que la ley lo permita, no respondemos por daños indirectos o consecuentes, lucro cesante, pérdida de datos ni interrupción del negocio. Nuestra responsabilidad total por cualquier reclamo se limita a lo que nos pagaste por el servicio en cuestión durante los 12 meses anteriores al reclamo. Estos límites no aplican a daños causados por fraude, negligencia grave o dolo, ni donde la ley no los permita.
 
@@ -125,7 +129,7 @@ Ninguna de las partes responde por retrasos o incumplimientos causados por hecho
 
 ## 17. Terminación
 
-Cualquiera de las partes puede terminar un acuerdo mediante aviso por escrito. Si lo terminas tú, pagas el trabajo realizado hasta esa fecha, y aplica nuestra [Política de Reembolsos y Cancelaciones](/es/refunds). Podemos terminar un acuerdo por falta de pago (sección 6), por conducta abusiva, por incumplir las reglas de uso aceptable (sección 8) o si un proyecto requiere una actividad ilegal. Si lo terminamos por cualquier otro motivo, te reembolsamos la parte de tus pagos que cubre trabajo aún no entregado.
+Cualquiera de las partes puede terminar un acuerdo mediante aviso por escrito. Si lo terminas tú, pagas el trabajo realizado hasta esa fecha, y aplica nuestra [Política de Reembolsos y Cancelaciones](/es/refunds). Podemos terminar un acuerdo por falta de pago (sección 6), por conducta abusiva, por incumplir las reglas de uso aceptable (sección 8) o si un proyecto requiere una actividad ilegal. Si lo terminamos por cualquier otro motivo, te reembolsamos la parte de tus pagos que cubre trabajo aún no entregado. Terminar un plan de hosting o mantenimiento equivale a cancelarlo según la sección 8.
 
 Las secciones que por su naturaleza deben seguir vigentes después de terminar el acuerdo (pagos, propiedad intelectual, confidencialidad, datos personales, limitación de responsabilidad y ley aplicable) siguen en vigor.
 
@@ -141,6 +145,7 @@ Estos términos están disponibles en inglés y en español. Si las versiones di
 - **Divisibilidad.** Si un tribunal considera inaplicable una parte de estos términos, el resto sigue vigente.
 - **No renuncia.** No ejercer un derecho de inmediato no significa renunciar a él.
 - **Cesión.** Ninguna de las partes puede ceder un acuerdo a otra persona sin el consentimiento por escrito de la otra, salvo a quien suceda en la totalidad del negocio.
+- **Comunicación por escrito.** "Por escrito" incluye el correo electrónico y las apps de mensajería, como una aprobación enviada por mensaje.
 - **Notificaciones.** Enviamos las notificaciones por correo a la dirección que nos diste. Tú las envías a {{email}}.
 
 ## 20. Uso de este sitio

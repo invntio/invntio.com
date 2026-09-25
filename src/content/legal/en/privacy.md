@@ -17,7 +17,7 @@ This policy covers this website and our dealings with prospective and current cl
 - **Contact form.** When you use the form on this site, we receive your name, email address, company (if you give it), the service you are interested in and your message. The form is delivered to our inbox through Web3Forms, a form-processing service, and protected against spam by hCaptcha, which may process your IP address and browser data to tell people from bots.
 - **Messages you send us.** If you email us, we receive the details you choose to share and your email address.
 - **Client information.** When you hire us, we keep the business contact details, project information and access credentials we need to deliver the work.
-- **Payments.** Payments are processed by Stripe. **We never see or store your full card number.** Stripe shares with us limited details such as your name, email, billing country, the card brand and its last four digits, and the payment status. Stripe handles your payment data under its own [privacy policy](https://stripe.com/privacy).
+- **Payments.** Payments are processed by Stripe. **We never see or store your full card number.** Stripe shares with us limited details such as your name, email, billing address, the card brand and its last four digits, and the payment status. Stripe handles your payment data under its own [privacy policy](https://stripe.com/privacy).
 - **Technical data.** Our hosting provider (Cloudflare) processes technical data such as IP addresses and browser information, to deliver the site and protect it against abuse.
 - **Analytics (only with your consent).** If you click "Accept" in the cookie banner, we use PostHog to measure how the site is used: pages visited, clicks, approximate location from your IP address, device and browser type, and the referring site. If you decline, PostHog is not loaded.
 
@@ -33,7 +33,7 @@ We do not use advertising cookies, and we do not track you across other websites
 | hCaptcha | Tells people from bots on the contact form | Cookies, security | When the form loads |
 | `ph_*` (PostHog) | Measures site usage | Cookie and local storage, analytics | Only if you accept |
 
-You can change your analytics choice at any time through "Cookie settings" in the footer, or clear these items in your browser settings.
+You can change your analytics choice at any time through "Cookie settings" in the footer, or clear these items in your browser settings. If your browser sends a Global Privacy Control signal, we treat it as declining analytics and do not load PostHog.
 
 ## 4. How we use it, and why
 
@@ -50,7 +50,7 @@ We do not use your information for automated decisions that have legal or simila
 
 ## 5. Who we share it with
 
-We share information only with the service providers we need in order to operate: Web3Forms (the contact form), hCaptcha (spam protection), PostHog (analytics, only with your consent), Stripe (payments), Cloudflare (hosting and security) and our email provider. They may use it only to provide their service to us. We may also disclose information when the law requires it, or to a successor if the business is ever transferred.
+We share information only with the service providers we need in order to operate: Web3Forms (the contact form), hCaptcha (spam protection), PostHog (analytics, only with your consent), Stripe (payments), Cloudflare (hosting and security) and Zoho Mail (email). They may use it only to provide their service to us. We may also disclose information when the law requires it, or to a successor if the business is ever transferred.
 
 We do not sell personal information, and we do not share it for cross-context behavioral advertising.
 
@@ -58,7 +58,7 @@ Some of these providers are located in the United States, and they may process i
 
 ## 6. How long we keep it
 
-- Inquiries that do not lead to a project: up to 2 years, then deleted.
+- Inquiries that do not lead to a project: up to 2 years, then deleted. Web3Forms also keeps a copy of each form submission for up to 30 days.
 - Client and billing records: for as long as tax and accounting laws require.
 - Project credentials: until the project or plan ends, then deleted or returned to you.
 - Analytics data: up to 12 months in PostHog.
