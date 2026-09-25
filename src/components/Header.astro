@@ -40,6 +40,18 @@ const switchHref = localizePath(Astro.url.pathname, other);
                     <span aria-hidden="true" class="sep">/</span>
                     <span aria-current={lang === "es" ? "true" : undefined} class:list={{ on: lang === "es" }}>ES</span>
                 </a>
+                <button class="theme" type="button" data-theme-toggle aria-label={t.nav.theme} title={t.nav.theme}>
+                    <svg class="orb" viewBox="0 0 20 20" aria-hidden="true">
+                        <mask id="theme-cut">
+                            <rect width="20" height="20" fill="#fff" />
+                            <circle class="cut" cx="15" cy="5" r="4.5" fill="#000" />
+                        </mask>
+                        <circle class="body" cx="10" cy="10" r="4" fill="currentColor" mask="url(#theme-cut)" />
+                        <g class="rays" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                            <path d="M10 1.75v1.5M10 16.75v1.5M1.75 10h1.5M16.75 10h1.5M4.2 4.2l1.05 1.05M14.75 14.75l1.05 1.05M4.2 15.8l1.05-1.05M14.75 5.25l1.05-1.05" />
+                        </g>
+                    </svg>
+                </button>
                 <a class="btn btn-primary cta" href={`${home}#contact`}>{t.nav.cta}</a>
             </div>
         </nav>
@@ -49,6 +61,36 @@ const switchHref = localizePath(Astro.url.pathname, other);
 <script>
     const header = document.querySelector<HTMLElement>("[data-header]");
     const toggle = document.querySelector<HTMLButtonElement>("[data-menu-toggle]");
+    const themeToggle = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
+    themeToggle?.addEventListener("click", () => {
+        const root = document.documentElement;
+        const next = root.dataset.theme === "dark" ? "light" : "dark";
+        const apply = () => {
+            root.dataset.theme = next;
+            try {
+                localStorage.setItem("invntio-theme", next);
+            } catch {
+                /* choice lasts for this page view only */
+            }
+        };
+        const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!document.startViewTransition || reduce) return apply();
+
+        // The new theme spreads as a circle from the button, like ink over the sheet.
+        const r = themeToggle.getBoundingClientRect();
+        const x = r.left + r.width / 2;
+        const y = r.top + r.height / 2;
+        const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+        const transition = document.startViewTransition(apply);
+        transition.finished.catch(() => {});
+        transition.ready.then(() => {
+            root.animate(
+                { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
+                { duration: 650, easing: "cubic-bezier(0.16, 1, 0.3, 1)", pseudoElement: "::view-transition-new(root)" },
+            );
+        }).catch(() => {});
+    });
+
     if (header && toggle) {
         const setOpen = (open: boolean) => {
             toggle.setAttribute("aria-expanded", String(open));
@@ -140,6 +182,51 @@ const switchHref = localizePath(Astro.url.pathname, other);
     .lang:hover span:not(.on):not(.sep) {
         color: var(--ink);
         text-decoration: underline;
+    }
+    .theme {
+        display: grid;
+        place-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid var(--rule-strong);
+        border-radius: var(--radius);
+        background: transparent;
+        color: var(--ink-2);
+        cursor: pointer;
+        transition:
+            color 150ms var(--ease-out),
+            border-color 150ms var(--ease-out);
+    }
+    .theme:hover {
+        color: var(--ink);
+        border-color: var(--ink);
+    }
+    .theme svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        overflow: visible;
+    }
+    /* Sun in light, moon in dark: the bite slides in and the rays fold away. */
+    .orb .body,
+    .orb .cut,
+    .orb .rays {
+        transition:
+            transform 500ms var(--ease-out),
+            opacity 300ms var(--ease-out);
+        transform-origin: 10px 10px;
+    }
+    .orb .cut {
+        transform: translate(8px, -8px);
+    }
+    :global([data-theme="dark"]) .orb .body {
+        transform: scale(1.55);
+    }
+    :global([data-theme="dark"]) .orb .cut {
+        transform: translate(-1px, 1px);
+    }
+    :global([data-theme="dark"]) .orb .rays {
+        transform: rotate(-45deg) scale(0.4);
+        opacity: 0;
     }
     .cta {
         min-height: 2.5rem;

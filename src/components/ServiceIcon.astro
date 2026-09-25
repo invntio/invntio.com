@@ -19,6 +19,18 @@ const { id } = Astro.props;
         <circle cx="12" cy="12" r="8.75" />
         <path d="M3.25 12h17.5M12 3.25c2.4 2.4 3.6 5.3 3.6 8.75S14.4 18.35 12 20.75C9.6 18.35 8.4 15.45 8.4 12S9.6 5.65 12 3.25z" />
     </>}
+    {id === "integration" && <>
+        <rect x="2.75" y="4" width="7" height="6" rx="1.5" />
+        <rect x="14.25" y="14" width="7" height="6" rx="1.5" />
+        <path d="M6.25 10v3.5a2 2 0 002 2h6M17.75 14v-3.5a2 2 0 00-2-2h-6" />
+    </>}
+    {id === "automation" && <>
+        <path d="M4 12a8 8 0 0113.7-5.6L20 8.75" />
+        <path d="M20 4.5v4.25h-4.25" />
+        <path d="M20 12a8 8 0 01-13.7 5.6L4 15.25" />
+        <path d="M4 19.5v-4.25h4.25" />
+        <path d="M12 9v3l2 1.5" />
+    </>}
     {id === "hosting" && <>
         <rect x="3.5" y="4" width="17" height="6.5" rx="1.5" />
         <rect x="3.5" y="13.5" width="17" height="6.5" rx="1.5" />

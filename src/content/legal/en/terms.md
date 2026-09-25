@@ -14,9 +14,11 @@ Invntio is a business name used by {{operator}}, an individual based in {{locati
 
 We offer:
 
-- **Custom software development:** web applications, internal tools, SaaS products and APIs.
+- **Custom software development:** web applications, internal tools and SaaS products.
 - **Mobile apps:** native iOS apps and cross-platform apps.
 - **Website design and development:** institutional sites, landing pages, catalogs and blogs, including a content manager.
+- **Systems integration and APIs:** APIs and services that connect business systems.
+- **Process automation:** automated workflows and AI agents.
 - **Hosting and maintenance:** monthly or annual plans.
 - **Technical consulting:** architecture, DevOps and CI/CD, and security reviews.
 

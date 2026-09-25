@@ -14,9 +14,11 @@ Invntio es el nombre comercial que usa {{operator}}, una persona física con sed
 
 Ofrecemos:
 
-- **Desarrollo de software a medida:** aplicaciones web, herramientas internas, productos SaaS y APIs.
+- **Desarrollo de software a medida:** aplicaciones web, herramientas internas y productos SaaS.
 - **Apps móviles:** apps nativas de iOS y apps multiplataforma.
 - **Diseño y desarrollo de sitios web:** sitios institucionales, landing pages, catálogos y blogs con gestor de contenido.
+- **Integración de sistemas y APIs:** APIs y servicios que conectan sistemas de negocio.
+- **Automatización de procesos:** flujos de trabajo automatizados y agentes de IA.
 - **Hosting y mantenimiento:** planes mensuales o anuales.
 - **Consultoría técnica:** arquitectura, DevOps y CI/CD, y revisiones de seguridad.
 

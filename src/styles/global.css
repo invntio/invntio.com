@@ -15,6 +15,13 @@
     --green-deep: #155c40;
     --green-wash: #e6f4ee;
     --danger: #b3261e;
+    --danger-wash: #fbeceb;
+    --on-accent: #ffffff;
+    --accent-bg: var(--green-deep);
+    --accent-bg-hover: #0f4a33;
+    --shadow: rgb(21 24 28 / 0.18);
+    /* Faint blueprint grid used on the dark theme only. */
+    --grid-line: transparent;
 
     --font: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
@@ -30,6 +37,29 @@
     --section: clamp(5rem, 3.5rem + 6vw, 9rem);
     --radius: 6px;
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark: the same technical sheet, printed as a blueprint at night. */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #0f1214;
+    --surface: #171b1e;
+    --ink: #e9ece6;
+    --ink-2: #b3b9b1;
+    --ink-3: #8c938b;
+    --rule: #262b2f;
+    --rule-strong: #3a4045;
+    --green: #2cac7b;
+    --green-ink: #4fc998;
+    --green-deep: #2cac7b;
+    --green-wash: #13301f;
+    --danger: #ff8a80;
+    --danger-wash: #3a1614;
+    --on-accent: #07120d;
+    --accent-bg: #2cac7b;
+    --accent-bg-hover: #3cc28e;
+    --shadow: rgb(0 0 0 / 0.5);
+    --grid-line: rgb(233 236 230 / 0.035);
 }
 
 *,
@@ -58,7 +88,11 @@ html {
 
 body {
     margin: 0;
-    background: var(--ground);
+    background-color: var(--ground);
+    background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 24px 24px;
     color: var(--ink);
     font-family: var(--font);
     font-size: var(--step-0);
@@ -108,7 +142,7 @@ a {
 
 ::selection {
     background: var(--green);
-    color: #fff;
+    color: var(--on-accent);
 }
 
 :focus-visible {
@@ -196,12 +230,12 @@ select {
 }
 
 .btn-primary {
-    background: var(--green-deep);
-    color: #fff;
+    background: var(--accent-bg);
+    color: var(--on-accent);
 }
 
 .btn-primary:hover {
-    background: #0f4a33;
+    background: var(--accent-bg-hover);
 }
 
 .btn-quiet {
@@ -243,11 +277,18 @@ select {
     z-index: 100;
     padding: 0.75rem 1rem;
     background: var(--ink);
-    color: #fff;
+    color: var(--ground);
     border-radius: var(--radius);
     text-decoration: none;
 }
 
 .skip-link:focus {
     top: 1rem;
+}
+
+/* Theme switch: the root transition is driven by a clip-path reveal in Header.astro. */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }

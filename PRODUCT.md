@@ -19,7 +19,7 @@ A secondary reader is the **payment-processor reviewer** (Stripe). They check th
 Invntio is a one-person software studio run by Víctor Velázquez Cid. The site exists to:
 
 1. explain exactly what Invntio sells and how an engagement works;
-2. let a prospective client get in touch (email, phone/WhatsApp, form);
+2. let a prospective client get in touch (email or the contact form);
 3. publish the Terms of Service, the Refund & Cancellation Policy and the Privacy Policy in plain language.
 
 Success means a visitor understands the offer within seconds and contacts Invntio, and a Stripe reviewer finds every required disclosure without searching.
@@ -34,11 +34,13 @@ Success means a visitor understands the offer within seconds and contacts Invnti
 ## Capabilities and Constraints
 
 Services sold:
-1. Custom Software Development: web apps, internal tools, SaaS, APIs.
-2. Mobile Apps: native iOS (Swift/SwiftUI) and cross-platform (Flutter).
+1. Custom Software Development: web apps, internal tools, SaaS.
+2. Mobile Apps: native iOS (SwiftUI) and cross-platform (Flutter, React Native).
 3. Website Design & Development: institutional sites, landing pages, catalogs, and blogs with a CMS the client can edit.
-4. Hosting & Maintenance: monthly or annual plans covering hosting, security, backups, updates, support and optional content management.
-5. Technical Consulting: architecture, DevOps and CI/CD, security review.
+4. Systems Integration & APIs: NestJS, Quarkus, REST/GraphQL, webhooks.
+5. Process Automation: n8n, Make, AI agents (Hermes Agent, OpenClaw, Claude API).
+6. Hosting & Maintenance: monthly or annual plans covering hosting, security, backups, updates, support and optional content management.
+7. Technical Consulting: architecture, DevOps and CI/CD, security review.
 
 Engagement flow: Discovery call → Proposal & upfront payment → Build & review → Launch, handoff & ongoing support.
 
@@ -50,7 +52,8 @@ Commercial terms (confirmed September 2026):
 - Client delays: more than 10 business days without a response moves the timeline. After 60 days the project is closed and a restart needs a new proposal.
 - Legal entity: **none shown**. The brand is "Invntio". The operator's name appears only on the legal pages.
 - Location: Pennsylvania, United States. No street address is published.
-- Contact email and phone: **pending** (placeholders `[CONTACT_EMAIL]`, `[PHONE]`).
+- Contact: hello@invntio.com (email only; no phone published).
+- Analytics: PostHog (project `invntio.com`), loaded only after cookie consent.
 - Languages: English (`/`) and Spanish (`/es/`).
 - Stack: Astro 5, static output, deployed on Cloudflare (wrangler). The contact form posts to Web3Forms.
 
