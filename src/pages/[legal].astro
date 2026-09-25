@@ -1,0 +1,11 @@
+---
+import LegalPage from "../components/LegalPage.astro";
+
+export function getStaticPaths() {
+    return ["terms", "refunds", "privacy"].map((legal) => ({ params: { legal } }));
+}
+
+const { legal } = Astro.params as { legal: "terms" | "refunds" | "privacy" };
+---
+
+<LegalPage slug={legal} />
