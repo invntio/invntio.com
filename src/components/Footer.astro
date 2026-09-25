@@ -1,0 +1,128 @@
+---
+import Wordmark from "./Wordmark.astro";
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
+import { site, isPlaceholder } from "../config/site";
+
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+const home = localizePath("/", lang);
+const year = new Date().getFullYear();
+const tel = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+\d]/g, "")}`;
+---
+
+<footer class="site-footer">
+    <div class="wrap grid">
+        <div class="id">
+            <a href={home} class="brand" aria-label={t.nav.home}><Wordmark class="wordmark" /></a>
+            <p>{t.footer.tagline}</p>
+            <p class="muted">{site.location[lang]}</p>
+        </div>
+
+        <nav aria-label={t.footer.site}>
+            <h2>{t.footer.site}</h2>
+            <ul>
+                <li><a href={`${home}#services`}>{t.nav.services}</a></li>
+                <li><a href={`${home}#work`}>{t.nav.work}</a></li>
+                <li><a href={`${home}#process`}>{t.nav.process}</a></li>
+                <li><a href={`${home}#contact`}>{t.nav.contact}</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label={t.footer.legal}>
+            <h2>{t.footer.legal}</h2>
+            <ul>
+                <li><a href={localizePath("/terms", lang)}>{t.footer.terms}</a></li>
+                <li><a href={localizePath("/refunds", lang)}>{t.footer.refunds}</a></li>
+                <li><a href={localizePath("/privacy", lang)}>{t.footer.privacy}</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <h2>{t.footer.contact}</h2>
+            <ul>
+                <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+                <li><a href={tel}>{site.phone}</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap base">
+        <p>© <span data-year>{year}</span> Invntio. {t.footer.rights}</p>
+        <a href={localizePath(Astro.url.pathname, lang === "en" ? "es" : "en")} hreflang={lang === "en" ? "es" : "en"}>
+            {lang === "en" ? "Español" : "English"}
+        </a>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = String(new Date().getFullYear())));
+</script>
+
+<style>
+    .site-footer {
+        margin-top: var(--section);
+        border-top: 1px solid var(--ink);
+        font-size: var(--step--1);
+    }
+    .grid {
+        display: grid;
+        gap: 2.5rem 2rem;
+        padding-block: 3rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .id {
+        grid-column: 1 / -1;
+        display: grid;
+        gap: 0.5rem;
+        align-content: start;
+    }
+    @media (min-width: 900px) {
+        .grid {
+            grid-template-columns: 5fr 2fr 3fr 2fr;
+        }
+        .id {
+            grid-column: auto;
+        }
+    }
+    .brand {
+        display: inline-flex;
+        color: var(--ink);
+        margin-bottom: 0.5rem;
+    }
+    .brand :global(.wordmark) {
+        height: 1.25rem;
+        width: auto;
+    }
+    h2 {
+        font-size: var(--step--1);
+        font-weight: 600;
+        letter-spacing: 0;
+        margin-bottom: 0.875rem;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        gap: 0.5rem;
+    }
+    a {
+        color: var(--ink-2);
+        text-decoration: none;
+        overflow-wrap: anywhere;
+    }
+    a:hover {
+        color: var(--ink);
+        text-decoration: underline;
+    }
+    .muted,
+    .base {
+        color: var(--ink-3);
+    }
+    .base {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-block: 1.25rem 2rem;
+        background: linear-gradient(var(--rule), var(--rule)) center top / calc(100% - 2 * var(--gutter)) 1px no-repeat;
+    }
+</style>

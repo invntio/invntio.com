@@ -1,0 +1,177 @@
+---
+import { getLang, useTranslations } from "../i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="section" id="process" aria-labelledby="process-title">
+    <div class="wrap">
+        <div class="section-head">
+            <h2 id="process-title">{t.process.title}</h2>
+            <p>{t.process.lede}</p>
+        </div>
+
+        <ol class="rail">
+            {t.process.steps.map((step, i) => (
+                <li class="stage" style={`--i:${i}`}>
+                    <span class="node" aria-hidden="true"><span>{i + 1}</span></span>
+                    <h3><span class="sr-only">{i + 1}. </span>{step.name}</h3>
+                    <p>{step.body}</p>
+                </li>
+            ))}
+        </ol>
+        <p class="payments">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" /><path d="M5.5 7V5a2.5 2.5 0 015 0v2" /></svg>
+            {t.process.payments}
+        </p>
+    </div>
+</section>
+
+<style>
+    .rail {
+        --node: 2.25rem;
+        list-style: none;
+        padding: 0;
+        margin-top: 2.5rem;
+        display: grid;
+        gap: 0;
+        position: relative;
+    }
+    .stage {
+        position: relative;
+        display: grid;
+        grid-template-columns: var(--node) 1fr;
+        column-gap: 1.25rem;
+        row-gap: 0.5rem;
+        padding-bottom: 2.25rem;
+    }
+    /* The rail segment leading to the next stage. */
+    .stage:not(:last-child)::before,
+    .stage:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left: calc(var(--node) / 2 - 0.5px);
+        top: var(--node);
+        bottom: 0;
+        width: 1px;
+        background: var(--rule-strong);
+    }
+    .stage:not(:last-child)::after {
+        background: var(--green);
+        width: 2px;
+        left: calc(var(--node) / 2 - 1px);
+        transform-origin: top;
+    }
+    .node {
+        grid-row: span 2;
+        display: grid;
+        place-items: center;
+        width: var(--node);
+        height: var(--node);
+        border-radius: 50%;
+        background: var(--green-deep);
+        color: #fff;
+        font-weight: 650;
+        font-size: var(--step--1);
+    }
+    h3 {
+        font-size: var(--step-1);
+        font-weight: 650;
+        letter-spacing: -0.01em;
+        padding-top: 0.35rem;
+    }
+    .stage p {
+        color: var(--ink-2);
+        font-size: var(--step--1);
+        max-width: 46ch;
+    }
+
+    @media (min-width: 900px) {
+        .rail {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            column-gap: 2rem;
+        }
+        .stage {
+            grid-template-columns: 1fr;
+            padding-bottom: 0;
+            padding-right: 0.5rem;
+        }
+        .node {
+            grid-row: auto;
+            margin-bottom: 1rem;
+        }
+        .stage:not(:last-child)::before,
+        .stage:not(:last-child)::after {
+            top: calc(var(--node) / 2 - 0.5px);
+            left: var(--node);
+            right: -2rem;
+            bottom: auto;
+            width: auto;
+            height: 1px;
+        }
+        .stage:not(:last-child)::after {
+            height: 2px;
+            top: calc(var(--node) / 2 - 1px);
+            transform-origin: left;
+        }
+        h3 {
+            padding-top: 0;
+        }
+    }
+
+    /* Signature motion: the rail fills stage by stage as it enters view.
+       Without scroll-driven animation support the rail simply shows filled. */
+    @supports (animation-timeline: view()) {
+        @media (prefers-reduced-motion: no-preference) {
+            .rail {
+                view-timeline: --rail block;
+            }
+            .stage:not(:last-child)::after {
+                animation: fill-y linear both;
+                animation-timeline: --rail;
+                animation-range: entry calc(20% + var(--i) * 12%) cover calc(40% + var(--i) * 12%);
+            }
+            .node {
+                animation: node-on linear both;
+                animation-timeline: --rail;
+                animation-range: entry calc(10% + var(--i) * 12%) cover calc(30% + var(--i) * 12%);
+            }
+            @media (min-width: 900px) {
+                .stage:not(:last-child)::after {
+                    animation-name: fill-x;
+                }
+            }
+        }
+    }
+    @keyframes fill-y {
+        from {
+            transform: scaleY(0);
+        }
+    }
+    @keyframes fill-x {
+        from {
+            transform: scaleX(0);
+        }
+    }
+    @keyframes node-on {
+        from {
+            background: var(--surface);
+            color: var(--ink-3);
+            box-shadow: inset 0 0 0 1px var(--rule-strong);
+        }
+    }
+
+    .payments {
+        margin-top: 2.5rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: var(--step--1);
+        color: var(--ink-3);
+    }
+    .payments svg {
+        width: 1rem;
+        height: 1rem;
+    }
+</style>

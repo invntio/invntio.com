@@ -1,0 +1,301 @@
+---
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
+import { site, isPlaceholder } from "../config/site";
+
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+const f = t.contact.form;
+const digits = site.whatsapp.replace(/\D/g, "");
+const waHref = isPlaceholder(site.whatsapp) ? "#" : `https://wa.me/${digits}`;
+const telHref = isPlaceholder(site.phone) ? "#" : `tel:${site.phone.replace(/[^+\d]/g, "")}`;
+---
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+        <div class="section-head">
+            <h2 id="contact-title">{t.contact.title}</h2>
+            <p>{t.contact.lede}</p>
+        </div>
+
+        <div class="contact">
+            <dl class="details">
+                <div>
+                    <dt>{t.contact.email}</dt>
+                    <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
+                </div>
+                <div>
+                    <dt>{t.contact.phone}</dt>
+                    <dd><a href={telHref}>{site.phone}</a></dd>
+                </div>
+                <div>
+                    <dt>{t.contact.whatsapp}</dt>
+                    <dd>
+                        <a class="btn btn-quiet wa" href={waHref} target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 004.74 1.2c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15a8.2 8.2 0 01-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z" /></svg>
+                            {t.contact.whatsappCta}
+                        </a>
+                    </dd>
+                </div>
+                <div>
+                    <dt>{t.contact.location}</dt>
+                    <dd>{site.location[lang]}</dd>
+                </div>
+            </dl>
+
+            <form class="form" action="https://api.web3forms.com/submit" method="POST" data-contact-form novalidate>
+                <input type="hidden" name="access_key" value={site.formAccessKey} />
+                <input type="hidden" name="subject" value={f.subject} />
+                <input type="hidden" name="from_name" value="invntio.com" />
+                <input type="hidden" name="language" value={lang} />
+                <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+                <div class="field">
+                    <label for="cf-name">{f.name}</label>
+                    <input id="cf-name" name="name" type="text" autocomplete="name" required />
+                </div>
+                <div class="field">
+                    <label for="cf-email">{f.email}</label>
+                    <input id="cf-email" name="email" type="email" autocomplete="email" required />
+                </div>
+                <div class="field">
+                    <label for="cf-company">{f.company} <span class="opt">({f.optional})</span></label>
+                    <input id="cf-company" name="company" type="text" autocomplete="organization" />
+                </div>
+                <div class="field">
+                    <label for="cf-service">{f.service}</label>
+                    <div class="select">
+                        <select id="cf-service" name="service" required>
+                            <option value="" disabled selected>{f.servicePlaceholder}</option>
+                            {t.services.items.map((s) => <option value={s.name}>{s.name}</option>)}
+                            <option value={f.other}>{f.other}</option>
+                        </select>
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg>
+                    </div>
+                </div>
+                <div class="field full">
+                    <label for="cf-message">{f.message}</label>
+                    <textarea id="cf-message" name="message" rows="5" placeholder={f.messagePlaceholder} required></textarea>
+                </div>
+
+                <div class="submit full">
+                    <p class="consent">
+                        {f.consentPre} <a href={localizePath("/privacy", lang)}>{f.consentLink}</a>.
+                    </p>
+                    <button class="btn btn-primary" type="submit" data-label={f.submit} data-sending={f.sending}>{f.submit}</button>
+                </div>
+                <p class="status full" role="status" aria-live="polite" data-status hidden></p>
+                <template data-success>{f.success}</template>
+                <template data-error>{f.error} <a href={`mailto:${site.email}`}>{site.email}</a>.</template>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    const form = document.querySelector<HTMLFormElement>("[data-contact-form]");
+    if (form) {
+        const status = form.querySelector<HTMLElement>("[data-status]")!;
+        const button = form.querySelector<HTMLButtonElement>("button[type=submit]")!;
+        const tpl = (name: string) => (form.querySelector(`template[data-${name}]`) as HTMLTemplateElement).innerHTML;
+
+        const show = (kind: "success" | "error") => {
+            status.hidden = false;
+            status.dataset.kind = kind;
+            status.innerHTML = tpl(kind);
+        };
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            status.hidden = true;
+            if (!form.checkValidity()) {
+                form.classList.add("was-validated");
+                form.querySelector<HTMLElement>(":invalid")?.focus();
+                return;
+            }
+            button.disabled = true;
+            button.textContent = button.dataset.sending ?? "";
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    headers: { Accept: "application/json" },
+                    body: new FormData(form),
+                });
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || !result.success) throw new Error(result.message ?? "Request failed");
+                form.reset();
+                form.classList.remove("was-validated");
+                show("success");
+            } catch {
+                show("error");
+            } finally {
+                button.disabled = false;
+                button.textContent = button.dataset.label ?? "";
+            }
+        });
+    }
+</script>
+
+<style>
+    .contact {
+        display: grid;
+        gap: 3rem;
+        margin-top: 2.5rem;
+    }
+    @media (min-width: 900px) {
+        .contact {
+            grid-template-columns: 4fr 8fr;
+            column-gap: 4rem;
+        }
+    }
+    .details {
+        display: grid;
+        align-content: start;
+    }
+    .details div {
+        padding-block: 1rem;
+        border-bottom: 1px solid var(--rule);
+    }
+    .details div:first-child {
+        padding-top: 0;
+    }
+    dt {
+        font-size: var(--step--1);
+        color: var(--ink-3);
+    }
+    dd {
+        margin-top: 0.25rem;
+        font-size: var(--step-1);
+        font-weight: 500;
+        overflow-wrap: anywhere;
+    }
+    dd a:not(.btn) {
+        text-decoration-color: var(--rule-strong);
+    }
+    dd a:not(.btn):hover {
+        text-decoration-color: currentColor;
+    }
+    .wa {
+        margin-top: 0.25rem;
+        font-size: var(--step--1);
+    }
+    .wa svg {
+        color: var(--green-ink);
+    }
+
+    .form {
+        display: grid;
+        gap: 1.25rem 1.5rem;
+        padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+        background: var(--surface);
+        border: 1px solid var(--rule);
+        border-radius: var(--radius);
+    }
+    @media (min-width: 640px) {
+        .form {
+            grid-template-columns: 1fr 1fr;
+        }
+        .full {
+            grid-column: 1 / -1;
+        }
+    }
+    .hp {
+        position: absolute;
+        left: -9999px;
+    }
+    .field {
+        display: grid;
+        gap: 0.4rem;
+    }
+    label {
+        font-size: var(--step--1);
+        font-weight: 600;
+    }
+    .opt {
+        font-weight: 400;
+        color: var(--ink-3);
+    }
+    input,
+    select,
+    textarea {
+        width: 100%;
+        min-height: 3rem;
+        padding: 0.7rem 0.875rem;
+        background: var(--ground);
+        border: 1px solid var(--rule-strong);
+        border-radius: var(--radius);
+        font-size: var(--step-0);
+        transition:
+            border-color 150ms var(--ease-out),
+            background-color 150ms var(--ease-out);
+    }
+    textarea {
+        resize: vertical;
+        min-height: 8rem;
+    }
+    ::placeholder {
+        color: var(--ink-3);
+        opacity: 1;
+    }
+    input:hover,
+    select:hover,
+    textarea:hover {
+        border-color: var(--ink-3);
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: var(--green-ink);
+        background: var(--surface);
+        box-shadow: 0 0 0 3px var(--green-wash);
+    }
+    .was-validated :invalid {
+        border-color: var(--danger);
+    }
+    .select {
+        position: relative;
+    }
+    select {
+        appearance: none;
+        padding-right: 2.5rem;
+    }
+    select:invalid {
+        color: var(--ink-3);
+    }
+    .select svg {
+        position: absolute;
+        right: 0.875rem;
+        top: 50%;
+        width: 1rem;
+        height: 1rem;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: var(--ink-3);
+    }
+    .submit {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem 1.5rem;
+        padding-top: 0.5rem;
+    }
+    .consent {
+        font-size: var(--step--1);
+        color: var(--ink-3);
+        max-width: 40ch;
+    }
+    .status {
+        padding: 0.875rem 1rem;
+        border-radius: var(--radius);
+        font-size: var(--step--1);
+    }
+    .status[data-kind="success"] {
+        background: var(--green-wash);
+        color: var(--green-deep);
+    }
+    .status[data-kind="error"] {
+        background: #fbeceb;
+        color: var(--danger);
+    }
+</style>

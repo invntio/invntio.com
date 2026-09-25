@@ -1,0 +1,39 @@
+---
+interface Props {
+    id: string;
+}
+const { id } = Astro.props;
+---
+
+<svg class="service-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    {id === "software" && <>
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <path d="M3 8.5h18" />
+        <path d="M9.5 12.5L7.5 14.5l2 2M14.5 12.5l2 2-2 2" />
+    </>}
+    {id === "mobile" && <>
+        <rect x="6.5" y="2.75" width="11" height="18.5" rx="2.5" />
+        <path d="M10.5 18h3" />
+    </>}
+    {id === "web" && <>
+        <circle cx="12" cy="12" r="8.75" />
+        <path d="M3.25 12h17.5M12 3.25c2.4 2.4 3.6 5.3 3.6 8.75S14.4 18.35 12 20.75C9.6 18.35 8.4 15.45 8.4 12S9.6 5.65 12 3.25z" />
+    </>}
+    {id === "hosting" && <>
+        <rect x="3.5" y="4" width="17" height="6.5" rx="1.5" />
+        <rect x="3.5" y="13.5" width="17" height="6.5" rx="1.5" />
+        <path d="M7 7.25h.01M7 16.75h.01M11 7.25h6M11 16.75h6" />
+    </>}
+    {id === "consulting" && <>
+        <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+        <circle cx="16" cy="9.5" r="1.5" />
+    </>}
+</svg>
+
+<style>
+    .service-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--green-ink);
+    }
+</style>

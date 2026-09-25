@@ -1,0 +1,212 @@
+---
+import Wordmark from "./Wordmark.astro";
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+const home = localizePath("/", lang);
+const links = [
+    { href: `${home}#services`, label: t.nav.services },
+    { href: `${home}#work`, label: t.nav.work },
+    { href: `${home}#process`, label: t.nav.process },
+    { href: `${home}#contact`, label: t.nav.contact },
+];
+const other = lang === "en" ? "es" : "en";
+const switchHref = localizePath(Astro.url.pathname, other);
+---
+
+<header class="site-header" data-header>
+    <div class="wrap bar">
+        <a class="brand" href={home} aria-label={t.nav.home}>
+            <Wordmark class="wordmark" />
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+            <span class="sr-only">{t.nav.menu}</span>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <path class="l1" d="M4 8h16" />
+                <path class="l2" d="M4 16h16" />
+            </svg>
+        </button>
+
+        <nav id="site-nav" class="nav" aria-label="Main">
+            <ul>
+                {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+            </ul>
+            <div class="nav-end">
+                <a class="lang" href={switchHref} hreflang={other} lang={other}>
+                    <span class="sr-only">{t.nav.language}: </span>
+                    <span aria-current={lang === "en" ? "true" : undefined} class:list={{ on: lang === "en" }}>EN</span>
+                    <span aria-hidden="true" class="sep">/</span>
+                    <span aria-current={lang === "es" ? "true" : undefined} class:list={{ on: lang === "es" }}>ES</span>
+                </a>
+                <a class="btn btn-primary cta" href={`${home}#contact`}>{t.nav.cta}</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<script>
+    const header = document.querySelector<HTMLElement>("[data-header]");
+    const toggle = document.querySelector<HTMLButtonElement>("[data-menu-toggle]");
+    if (header && toggle) {
+        const setOpen = (open: boolean) => {
+            toggle.setAttribute("aria-expanded", String(open));
+            header.classList.toggle("is-open", open);
+        };
+        toggle.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
+        header.querySelectorAll(".nav a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && header.classList.contains("is-open")) {
+                setOpen(false);
+                toggle.focus();
+            }
+        });
+        const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+    }
+</script>
+
+<style>
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: color-mix(in srgb, var(--ground) 92%, transparent);
+        backdrop-filter: saturate(1.4) blur(10px);
+        border-bottom: 1px solid transparent;
+        transition: border-color 200ms var(--ease-out);
+    }
+    .site-header.is-scrolled,
+    .site-header.is-open {
+        border-bottom-color: var(--rule);
+    }
+    .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        min-height: 4.25rem;
+    }
+    .brand {
+        display: inline-flex;
+        color: var(--ink);
+        padding-block: 0.5rem;
+    }
+    .brand :global(.wordmark) {
+        height: 1.375rem;
+        width: auto;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .nav ul {
+        display: flex;
+        gap: 1.75rem;
+        padding: 0;
+        list-style: none;
+    }
+    .nav ul a {
+        color: var(--ink-2);
+        text-decoration: none;
+        font-size: var(--step--1);
+        font-weight: 500;
+        padding-block: 0.5rem;
+        transition: color 150ms var(--ease-out);
+    }
+    .nav ul a:hover {
+        color: var(--ink);
+    }
+    .nav-end {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .lang {
+        display: inline-flex;
+        gap: 0.3rem;
+        font-size: var(--step--1);
+        color: var(--ink-3);
+        text-decoration: none;
+        padding: 0.5rem 0.25rem;
+    }
+    .lang .on {
+        color: var(--ink);
+        font-weight: 600;
+    }
+    .lang:hover span:not(.on):not(.sep) {
+        color: var(--ink);
+        text-decoration: underline;
+    }
+    .cta {
+        min-height: 2.5rem;
+        padding: 0.5rem 1rem;
+        font-size: var(--step--1);
+    }
+    .menu-toggle {
+        display: none;
+        border: 0;
+        background: none;
+        padding: 0.625rem;
+        margin-right: -0.625rem;
+        cursor: pointer;
+    }
+    .menu-toggle path {
+        transition: transform 220ms var(--ease-out);
+        transform-origin: center;
+    }
+    .is-open .menu-toggle .l1 {
+        transform: translateY(4px) rotate(45deg);
+    }
+    .is-open .menu-toggle .l2 {
+        transform: translateY(-4px) rotate(-45deg);
+    }
+
+    @media (max-width: 859px) {
+        .menu-toggle {
+            display: block;
+        }
+        .nav {
+            position: absolute;
+            inset: 100% 0 auto 0;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 1.5rem;
+            padding: 1rem var(--gutter) 1.75rem;
+            background: var(--ground);
+            border-bottom: 1px solid var(--rule);
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-0.5rem);
+            transition:
+                opacity 200ms var(--ease-out),
+                transform 200ms var(--ease-out),
+                visibility 0s linear 200ms;
+        }
+        .is-open .nav {
+            visibility: visible;
+            opacity: 1;
+            transform: none;
+            transition:
+                opacity 200ms var(--ease-out),
+                transform 200ms var(--ease-out);
+        }
+        .nav ul {
+            flex-direction: column;
+            gap: 0;
+        }
+        .nav ul a {
+            display: block;
+            padding-block: 0.875rem;
+            border-bottom: 1px solid var(--rule);
+            font-size: var(--step-1);
+            color: var(--ink);
+        }
+        .nav-end {
+            justify-content: space-between;
+        }
+    }
+</style>

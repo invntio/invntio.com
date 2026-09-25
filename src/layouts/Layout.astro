@@ -1,72 +1,63 @@
 ---
-import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro"
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
+import { site } from "../config/site";
 
-import { getLang } from '../i18n/utils';
-const lang = getLang();
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+const title = Astro.props.title ? `${Astro.props.title} — Invntio` : t.meta.title;
+const description = Astro.props.description ?? t.meta.description;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const enHref = new URL(localizePath(Astro.url.pathname, "en"), site.url).href;
+const esHref = new URL(localizePath(Astro.url.pathname, "es"), site.url).href;
+const ogImage = new URL("/og.png", site.url).href;
 ---
 
+<!doctype html>
+<html lang={lang}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonical} />
+        <link rel="alternate" hreflang="en" href={enHref} />
+        <link rel="alternate" hreflang="es" href={esHref} />
+        <link rel="alternate" hreflang="x-default" href={enHref} />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <meta name="theme-color" content="#f6f7f5" />
 
-<!DOCTYPE html>
-<html lang={lang} class="dark">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<link rel="apple-touch-icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-
-		<!-- HTML Meta Tags -->
-		<title>Invntio - Unleash your business potential</title>
-		<meta name="description" content="Unlock new possibilities and achieve extraordinary results with software designed to empower your team and fuel your growth" />
-
-		<!-- Facebook Meta Tags -->
-		<meta property="og:url" content="https://invntio.com" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Invntio - Unleash your business potential" />
-		<meta property="og:description" content="Unlock new possibilities and achieve extraordinary results with software designed to empower your team and fuel your growth" />
-		<!--
-		You can generate this image URL dynamically: https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v4/{site_text}/{title_text}/{image_url}/og.png
-		Replace the variables in the brackets with your own values and use this URL in the image tag below this comment. Ensure values are URL encoded.
-		For more information, read: https://www.opengraph.xyz/blog/how-to-implement-dynamic-open-graph-images
-		-->
-		<meta property="og:image" content="https://invntio.com/images/preview.png" />
-
-		<!-- Twitter Meta Tags -->
-		<meta name="twitter:card" content="https://invntio.com/images/preview.png" />
-		<meta property="twitter:domain" content="invntio.com" />
-		<meta property="twitter:url" content="https://invntio.com" />
-		<meta name="twitter:title" content="Invntio - Unleash your business potential" />
-		<meta name="twitter:description" content="Unlock new possibilities and achieve extraordinary results with software designed to empower your team and fuel your growth" />
-		<meta name="twitter:image" content="https://invntio.com/images/preview.png" />
-
-		<!-- Meta Tags Generated via https://www.opengraph.xyz -->
-
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="language" content="English">
-		<meta name="keywords" content="invntio, business, startup, software, project, consulting, potential">
-		<meta name="robots" content="index, follow">
-		<meta name="copyright" content="Invntio" />
-
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-	</head>
-	<body class="bg-white dark:bg-black">
-		<AppHeader/>
-		<slot />
-		<AppFooter/>
-	</body>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Invntio" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content={lang === "es" ? "es_419" : "en_US"} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="generator" content={Astro.generator} />
+    </head>
+    <body>
+        <a class="skip-link" href="#main">{t.nav.skip}</a>
+        <Header />
+        <main id="main">
+            <slot />
+        </main>
+        <Footer />
+    </body>
 </html>
-<style>
-	html {
-		font-family: Poppins, sans-serif;
-		scroll-behavior: smooth;
-	}
-
-	body {
-		margin: 0;
-	}
-</style>
