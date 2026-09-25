@@ -20,7 +20,7 @@ We offer:
 - **Systems integration and APIs:** APIs and services that connect business systems.
 - **Process automation:** automated workflows and AI agents.
 - **Hosting and maintenance:** monthly or annual plans.
-- **Technical consulting:** architecture, DevOps and CI/CD, and security reviews.
+- **Technical consulting:** architecture, DevOps and DevSecOps, CI/CD, and security reviews.
 
 ## 3. Proposals and scope
 

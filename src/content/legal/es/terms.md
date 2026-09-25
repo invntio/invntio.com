@@ -20,7 +20,7 @@ Ofrecemos:
 - **Integración de sistemas y APIs:** APIs y servicios que conectan sistemas de negocio.
 - **Automatización de procesos:** flujos de trabajo automatizados y agentes de IA.
 - **Hosting y mantenimiento:** planes mensuales o anuales.
-- **Consultoría técnica:** arquitectura, DevOps y CI/CD, y revisiones de seguridad.
+- **Consultoría técnica:** arquitectura, DevOps y DevSecOps, CI/CD y revisiones de seguridad.
 
 ## 3. Propuestas y alcance
 

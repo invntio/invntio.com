@@ -56,6 +56,45 @@ const siblings = (["terms", "refunds", "privacy"] as const).map((slug) => ({
     </article>
 </Layout>
 
+<script>
+    // Highlight the section being read in the table of contents.
+    const links = new Map<string, HTMLAnchorElement>();
+    document.querySelectorAll<HTMLAnchorElement>(".toc a").forEach((a) => links.set(decodeURIComponent(a.hash.slice(1)), a));
+    const headings = [...document.querySelectorAll<HTMLElement>(".prose h2[id]")];
+    if (links.size && headings.length) {
+        const setActive = (id: string) =>
+            links.forEach((a, key) => (key === id ? a.setAttribute("aria-current", "true") : a.removeAttribute("aria-current")));
+        const update = () => {
+            // The active section is the last heading above a line 30% down the viewport.
+            const line = window.innerHeight * 0.3;
+            let current = headings[0];
+            for (const h of headings) {
+                if (h.getBoundingClientRect().top <= line) current = h;
+                else break;
+            }
+            // At the very bottom, the last section wins even if its heading never reaches the line.
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = headings[headings.length - 1];
+            setActive(current.id);
+        };
+        let ticking = false;
+        window.addEventListener(
+            "scroll",
+            () => {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(() => {
+                    update();
+                    ticking = false;
+                });
+            },
+            { passive: true },
+        );
+        update();
+        window.addEventListener("load", update);
+        window.addEventListener("hashchange", () => requestAnimationFrame(update));
+    }
+</script>
+
 <style>
     .legal {
         padding-top: clamp(2.5rem, 2rem + 3vw, 5rem);
@@ -128,10 +167,31 @@ const siblings = (["terms", "refunds", "privacy"] as const).map((slug) => ({
         font-size: var(--step--1);
     }
     .toc a {
+        position: relative;
         display: block;
-        padding-block: 0.3rem;
+        padding: 0.3rem 0 0.3rem 1rem;
         color: var(--ink-3);
         text-decoration: none;
+        transition: color 200ms var(--ease-out);
+    }
+    .toc a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.85em;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--green);
+        transform: scale(0);
+        transition: transform 250ms var(--ease-out);
+    }
+    .toc a[aria-current="true"] {
+        color: var(--ink);
+        font-weight: 500;
+    }
+    .toc a[aria-current="true"]::before {
+        transform: scale(1);
     }
     .toc a:hover {
         color: var(--ink);

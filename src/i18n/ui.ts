@@ -91,8 +91,8 @@ const en = {
             {
                 id: "consulting",
                 name: "Technical consulting",
-                body: "Architecture reviews, DevOps and CI/CD setup, and security reviews for teams that already run software.",
-                stack: "Docker · GitHub Actions · AWS",
+                body: "Architecture reviews, DevOps and DevSecOps, CI/CD setup, and security reviews for teams that already run software.",
+                stack: "Docker · GitHub Actions · AWS · Snyk · SonarCloud · tfsec",
             },
             {
                 id: "hosting",
@@ -115,6 +115,7 @@ const en = {
             "Uptime monitoring",
             "Fixes for bugs in code we delivered",
             "Small content changes, as listed in your plan",
+            "Quick how-to help for your team",
             "Response within 2 business days",
         ],
         excluded: [
@@ -145,7 +146,7 @@ const en = {
             },
             {
                 name: "Launch, handoff & support",
-                body: "We launch, hand over access and documentation, and keep things running on a maintenance plan if you choose one.",
+                body: "We launch, hand over access and documentation, train your team to use it, and keep things running on a maintenance plan if you choose one.",
             },
         ],
         payments: "Payments are processed securely by Stripe.",
@@ -239,8 +240,8 @@ const es: Dict = {
         theme: "Cambiar entre tema claro y oscuro",
     },
     hero: {
-        title: "Construye todo lo que tu negocio puede ser.",
-        lede: "Diseñamos, construimos y operamos el software que lo hace posible: apps web y móviles, sitios web, automatizaciones y hosting. Desde la primera llamada hasta años de mantenimiento, con trato directo con el ingeniero que lo construye.",
+        title: "Tus ideas, hechas realidad.",
+        lede: "Diseñamos, construimos y operamos el software que las hace posibles: apps web y móviles, sitios web, automatizaciones y hosting. Desde la primera llamada hasta años de mantenimiento, con trato directo con el ingeniero que lo construye.",
         cta: "Empezar un proyecto",
         orEmail: "o escribe a",
         location: "Pensilvania, EE. UU. · Clientes en toda América",
@@ -303,8 +304,8 @@ const es: Dict = {
             {
                 id: "consulting",
                 name: "Consultoría técnica",
-                body: "Revisión de arquitectura, configuración de DevOps y CI/CD, y revisiones de seguridad para equipos que ya operan software.",
-                stack: "Docker · GitHub Actions · AWS",
+                body: "Revisión de arquitectura, DevOps y DevSecOps, configuración de CI/CD y revisiones de seguridad para equipos que ya operan software.",
+                stack: "Docker · GitHub Actions · AWS · Snyk · SonarCloud · tfsec",
             },
             {
                 id: "hosting",
@@ -327,6 +328,7 @@ const es: Dict = {
             "Monitoreo de disponibilidad",
             "Corrección de errores en el código que entregamos",
             "Cambios pequeños de contenido, según tu plan",
+            "Ayuda puntual para que tu equipo use el sistema",
             "Respuesta en 2 días hábiles",
         ],
         excluded: [
@@ -357,7 +359,7 @@ const es: Dict = {
             },
             {
                 name: "Lanzamiento, entrega y soporte",
-                body: "Lanzamos, entregamos accesos y documentación, y lo mantenemos funcionando con un plan de mantenimiento si lo eliges.",
+                body: "Lanzamos, entregamos accesos y documentación, capacitamos a tu equipo para usarlo y lo mantenemos funcionando con un plan de mantenimiento si lo eliges.",
             },
         ],
         payments: "Los pagos se procesan de forma segura con Stripe.",
