@@ -21,12 +21,13 @@ const t = useTranslations(lang);
                     <ServiceIcon id={s.id} />
                     <h3>{s.name}</h3>
                     <p class="body">{s.body}</p>
+                    {s.id === "hosting" && <a class="plan-link" href="#plans">{t.plans.link}<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" /></svg></a>}
                     <p class="stack"><span class="sr-only">{t.services.stackLabel}: </span>{s.stack.split(" · ").map((item, i, all) => <>{i > 0 && " "}<span class="tech">{item}{i < all.length - 1 && <span aria-hidden="true"> ·</span>}</span></>)}</p>
                 </li>
             ))}
         </ul>
 
-        <div class="plans" aria-labelledby="plans-title" data-reveal>
+        <div class="plans" id="plans" aria-labelledby="plans-title" data-reveal>
             <div class="plans-intro">
                 <h3 id="plans-title"><Dotted text={t.plans.title} /></h3>
                 <p>{t.plans.lede}</p>
@@ -72,8 +73,33 @@ const t = useTranslations(lang);
         font-weight: 600;
     }
     .body,
-    .stack {
+    .stack,
+    .plan-link {
         grid-column: 2;
+    }
+    .plan-link {
+        justify-self: start;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: var(--step--1);
+        font-weight: 500;
+        color: var(--green-ink);
+        text-decoration: none;
+    }
+    .plan-link:hover {
+        text-decoration: underline;
+    }
+    .plan-link svg {
+        width: 0.875rem;
+        height: 0.875rem;
+        transition: transform 200ms var(--ease-out);
+    }
+    .plan-link:hover svg {
+        transform: translateY(2px);
+    }
+    .plans {
+        scroll-margin-top: 6rem;
     }
     .body {
         color: var(--ink-2);
@@ -103,6 +129,11 @@ const t = useTranslations(lang);
         }
         .stack {
             text-align: right;
+        }
+        .plan-link {
+            grid-column: 3;
+            grid-row: 2;
+            margin-top: 0.25rem;
         }
     }
 

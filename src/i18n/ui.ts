@@ -73,7 +73,7 @@ const en = {
             {
                 id: "web",
                 name: "Website design & development",
-                body: "Institutional sites, landing pages, catalogs and blogs, with a content manager your team can edit on its own.",
+                body: "Institutional sites, landing pages, catalogs and blogs, with a content manager your team can edit on its own and technical SEO set up from day one.",
                 stack: "Astro · Next.js · Payload CMS",
             },
             {
@@ -89,22 +89,23 @@ const en = {
                 stack: "n8n · Make · Hermes Agent · OpenClaw · Claude API",
             },
             {
-                id: "hosting",
-                name: "Hosting & maintenance",
-                body: "Monthly or annual plans that keep your site or app online, backed up, secure and up to date, with optional content management.",
-                stack: "Cloudflare · Vercel · AWS",
-            },
-            {
                 id: "consulting",
                 name: "Technical consulting",
                 body: "Architecture reviews, DevOps and CI/CD setup, and security reviews for teams that already run software.",
                 stack: "Docker · GitHub Actions · AWS",
             },
+            {
+                id: "hosting",
+                name: "Hosting & maintenance",
+                body: "Monthly or annual plans that keep your site or app online, backed up, secure and up to date, with optional content management.",
+                stack: "Cloudflare · Vercel · AWS",
+            },
         ],
     },
     plans: {
-        title: "Maintenance plans, in writing",
-        lede: "What a hosting & maintenance plan covers, and what is quoted separately. Billed monthly or annually; cancel before the next renewal.",
+        title: "Hosting & maintenance plan: what's included",
+        lede: "Applies to any site or app we host and maintain for you, whatever it was built with. Billed monthly or annually; cancel before the next renewal.",
+        link: "What's included",
         includedTitle: "Included",
         excludedTitle: "Not included, quoted separately",
         included: [
@@ -121,7 +122,7 @@ const en = {
             "Redesigns",
             "Issues caused by third parties or changes made by others",
             "After-hours or emergency support",
-            "Content writing, SEO and marketing",
+            "Ongoing SEO, content writing and marketing",
             "Extended training",
         ],
         note: "Work outside the plan is quoted separately or billed hourly from a prepaid block.",
@@ -284,7 +285,7 @@ const es: Dict = {
             {
                 id: "web",
                 name: "Diseño y desarrollo de sitios web",
-                body: "Sitios institucionales, landing pages, catálogos y blogs, con un gestor de contenido que tu equipo puede editar por su cuenta.",
+                body: "Sitios institucionales, landing pages, catálogos y blogs, con un gestor de contenido que tu equipo puede editar por su cuenta y SEO técnico configurado desde el primer día.",
                 stack: "Astro · Next.js · Payload CMS",
             },
             {
@@ -300,22 +301,23 @@ const es: Dict = {
                 stack: "n8n · Make · Hermes Agent · OpenClaw · Claude API",
             },
             {
-                id: "hosting",
-                name: "Hosting y mantenimiento",
-                body: "Planes mensuales o anuales que mantienen tu sitio o app en línea, respaldado, seguro y actualizado, con gestión de contenido opcional.",
-                stack: "Cloudflare · Vercel · AWS",
-            },
-            {
                 id: "consulting",
                 name: "Consultoría técnica",
                 body: "Revisión de arquitectura, configuración de DevOps y CI/CD, y revisiones de seguridad para equipos que ya operan software.",
                 stack: "Docker · GitHub Actions · AWS",
             },
+            {
+                id: "hosting",
+                name: "Hosting y mantenimiento",
+                body: "Planes mensuales o anuales que mantienen tu sitio o app en línea, respaldado, seguro y actualizado, con gestión de contenido opcional.",
+                stack: "Cloudflare · Vercel · AWS",
+            },
         ],
     },
     plans: {
-        title: "Planes de mantenimiento, por escrito",
-        lede: "Qué cubre un plan de hosting y mantenimiento, y qué se cotiza aparte. Facturación mensual o anual; se cancela antes de la próxima renovación.",
+        title: "Plan de hosting y mantenimiento: qué incluye",
+        lede: "Aplica a cualquier sitio o app que alojemos y mantengamos por ti, sin importar con qué se construyó. Facturación mensual o anual; se cancela antes de la próxima renovación.",
+        link: "Qué incluye",
         includedTitle: "Incluido",
         excludedTitle: "No incluido, se cotiza aparte",
         included: [
@@ -332,7 +334,7 @@ const es: Dict = {
             "Rediseños",
             "Problemas causados por terceros o por cambios hechos por otros",
             "Soporte fuera de horario o de emergencia",
-            "Redacción de contenido, SEO y marketing",
+            "SEO continuo, redacción de contenido y marketing",
             "Capacitación extensa",
         ],
         note: "El trabajo fuera del plan se cotiza aparte o se factura por horas desde un bloque prepagado.",
