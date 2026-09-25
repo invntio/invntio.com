@@ -3,7 +3,7 @@
 export const site = {
     name: "Invntio",
     url: "https://invntio.com",
-    email: "hello@invntio.com",
+    email: "info@invntio.com",
     location: { en: "Pennsylvania, United States", es: "Pensilvania, Estados Unidos" },
     // Shown on the legal pages only.
     operator: "Víctor Velázquez Cid",

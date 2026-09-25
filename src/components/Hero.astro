@@ -48,7 +48,7 @@ const sparks = Array.from({ length: 12 }, (_, i) => {
                 <p>{t.register.caption}</p>
             </div>
             <ol class="rows">
-                {t.register.items.map((item, i) => (
+                {t.register.items.filter((item) => !item.hidden).map((item, i) => (
                     <li data-reveal style={`--stagger:${i + 1}`}>
                         <a class="row" href={item.url} target="_blank" rel="noopener">
                             <span class="dot"><Mark kind="live" label={t.register.live} /></span>

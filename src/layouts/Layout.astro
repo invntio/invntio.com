@@ -9,6 +9,8 @@ import { site } from "../config/site";
 interface Props {
     title?: string;
     description?: string;
+    // Keep a page out of search engines (used for pages not launched yet).
+    noindex?: boolean;
 }
 
 const lang = getLang(Astro.url);
@@ -29,6 +31,7 @@ const ogImage = new URL("/og.png", site.url).href;
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={canonical} />
+        {Astro.props.noindex && <meta name="robots" content="noindex, nofollow" />}
         <link rel="alternate" hreflang="en" href={enHref} />
         <link rel="alternate" hreflang="es" href={esHref} />
         <link rel="alternate" hreflang="x-default" href={enHref} />

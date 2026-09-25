@@ -8,6 +8,16 @@ export const defaultLang: Lang = "en";
 
 export type Mark = "live" | "included" | "excluded";
 
+type RegisterItem = {
+    name: string;
+    what: string;
+    url: string;
+    domain: string;
+    kind: "own" | "client";
+    // Hidden items are kept ready but not shown until the project is live.
+    hidden?: boolean;
+};
+
 const en = {
     meta: {
         title: "Invntio — Software design, development and hosting",
@@ -40,7 +50,7 @@ const en = {
         ownProduct: "Own product",
         client: "Client",
         live: "Live",
-        items: [
+        items: <RegisterItem[]>[
             {
                 name: "Global Merchants Group",
                 what: "B2B wholesale catalog",
@@ -51,6 +61,8 @@ const en = {
             { name: "Beavo", what: "Private habit tracker for iPhone", url: "https://beavo.me", domain: "beavo.me", kind: "own" },
             { name: "Axen", what: "Training app for iOS", url: "https://getaxen.com", domain: "getaxen.com", kind: "own" },
             { name: "Bohío", what: "Condominium management SaaS", url: "https://bohio.app", domain: "bohio.app", kind: "own" },
+            { name: "OBJURI", what: "Global legal sciences observatory", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
+            { name: "CGD", what: "Cambio Global para el Desarrollo", url: "https://cambioglobalcgd.com", domain: "cambioglobalcgd.com", kind: "client", hidden: true },
         ],
     },
     services: {
@@ -212,6 +224,12 @@ const en = {
         onThisPage: "On this page",
         questions: "Questions about this policy? Write to",
     },
+    work: {
+        title: "Products and clients",
+        lede: "Everything we have built and still run: our own products, and work for clients.",
+        own: "Our products",
+        clients: "Client work",
+    },
     notFound: {
         title: "Page not found",
         body: "The page you're looking for doesn't exist or has moved.",
@@ -264,6 +282,8 @@ const es: Dict = {
             { name: "Beavo", what: "Habit tracker privado para iPhone", url: "https://beavo.me", domain: "beavo.me", kind: "own" },
             { name: "Axen", what: "App de entrenamiento para iOS", url: "https://getaxen.com", domain: "getaxen.com", kind: "own" },
             { name: "Bohío", what: "SaaS de administración de condominios", url: "https://bohio.app", domain: "bohio.app", kind: "own" },
+            { name: "OBJURI", what: "Observatorio Global de Ciencias Jurídicas", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
+            { name: "CGD", what: "Cambio Global para el Desarrollo", url: "https://cambioglobalcgd.com", domain: "cambioglobalcgd.com", kind: "client", hidden: true },
         ],
     },
     services: {
@@ -424,6 +444,12 @@ const es: Dict = {
         back: "Volver al inicio",
         onThisPage: "En esta página",
         questions: "¿Preguntas sobre esta política? Escribe a",
+    },
+    work: {
+        title: "Productos y clientes",
+        lede: "Todo lo que hemos construido y seguimos operando: nuestros productos y el trabajo para clientes.",
+        own: "Nuestros productos",
+        clients: "Trabajo para clientes",
     },
     notFound: {
         title: "Página no encontrada",

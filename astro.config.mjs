@@ -29,9 +29,8 @@ export default defineConfig({
                 defaultLocale: "en",
                 locales: { en: "en-US", es: "es" },
             },
-            filter: (page) =>
-                !page.endsWith("/terms-of-use/") &&
-                !page.endsWith("/privacy-policy/"),
+            // Unlaunched pages stay out of the sitemap.
+            filter: (page) => !/\/(es\/)?work\/?$/.test(page),
         }),
     ],
 });

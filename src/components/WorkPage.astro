@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Dotted from "./Dotted.astro";
+import Mark from "./Mark.astro";
+import { getLang, useTranslations } from "../i18n/ui";
+
+// Not linked from navigation yet: it goes live once the client list grows (OBJURI, CGD).
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+const visible = t.register.items.filter((item) => !item.hidden);
+const groups = [
+    { title: t.work.own, items: visible.filter((i) => i.kind === "own") },
+    { title: t.work.clients, items: visible.filter((i) => i.kind === "client") },
+];
+---
+
+<Layout title={t.work.title} description={t.work.lede} noindex>
+    <section class="wrap work">
+        <div class="section-head">
+            <h1><Dotted text={t.work.title} period /></h1>
+            <p>{t.work.lede}</p>
+        </div>
+        {groups.map((g) => (
+            <div class="group">
+                <h2>{g.title}</h2>
+                <ul>
+                    {g.items.map((item) => (
+                        <li>
+                            <a href={item.url} target="_blank" rel="noopener">
+                                <Mark kind="live" label={t.register.live} />
+                                <span class="name">{item.name}</span>
+                                <span class="what">{item.what}</span>
+                                <span class="domain">{item.domain} ↗</span>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ))}
+    </section>
+</Layout>
+
+<style>
+    .work {
+        padding-top: clamp(2.5rem, 2rem + 3vw, 5rem);
+    }
+    h1 {
+        font-size: var(--step-4);
+        letter-spacing: -0.035em;
+    }
+    .group {
+        margin-top: clamp(2.5rem, 2rem + 2vw, 4rem);
+    }
+    h2 {
+        font-size: var(--step-1);
+        font-weight: 650;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--ink);
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        border-bottom: 1px solid var(--rule);
+    }
+    a {
+        display: grid;
+        grid-template-columns: 1rem minmax(0, 1fr);
+        gap: 0.25rem 1rem;
+        align-items: center;
+        padding-block: 1.25rem;
+        text-decoration: none;
+    }
+    .name {
+        font-size: var(--step-2);
+        font-weight: 650;
+    }
+    .what,
+    .domain {
+        grid-column: 2;
+        color: var(--ink-2);
+    }
+    .domain {
+        font-size: var(--step--1);
+        color: var(--green-ink);
+    }
+    @media (min-width: 900px) {
+        a {
+            grid-template-columns: 1rem 4fr 5fr 3fr;
+        }
+        .what,
+        .domain {
+            grid-column: auto;
+        }
+        .domain {
+            text-align: right;
+        }
+    }
+    a:hover .name {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.15em;
+    }
+</style>

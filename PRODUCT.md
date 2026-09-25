@@ -52,7 +52,7 @@ Commercial terms (confirmed September 2026):
 - Client delays: more than 10 business days without a response moves the timeline. After 60 days the project is closed and a restart needs a new proposal.
 - Legal entity: **none shown**. The brand is "Invntio". The operator's name appears only on the legal pages.
 - Location: Pennsylvania, United States. No street address is published.
-- Contact: hello@invntio.com (email only; no phone published).
+- Contact: info@invntio.com (email only; no phone published).
 - Analytics: PostHog (project `invntio.com`), loaded only after cookie consent.
 - Languages: English (`/`) and Spanish (`/es/`).
 - Stack: Astro 5, static output, deployed on Cloudflare (wrangler). The contact form posts to Web3Forms.
