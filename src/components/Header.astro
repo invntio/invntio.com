@@ -61,6 +61,17 @@ const switchHref = localizePath(Astro.url.pathname, other);
 <script>
     const header = document.querySelector<HTMLElement>("[data-header]");
     const toggle = document.querySelector<HTMLButtonElement>("[data-menu-toggle]");
+    // On the home page the logo scrolls back to the top instead of reloading.
+    document.querySelectorAll<HTMLAnchorElement>("a.brand").forEach((link) =>
+        link.addEventListener("click", (event) => {
+            const target = new URL(link.href);
+            if (target.pathname.replace(/\/$/, "") !== location.pathname.replace(/\/$/, "")) return;
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            history.replaceState(null, "", target.pathname);
+        }),
+    );
+
     const themeToggle = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
     themeToggle?.addEventListener("click", () => {
         const root = document.documentElement;
