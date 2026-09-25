@@ -27,10 +27,7 @@ const f = t.contact.form;
                 </div>
             </dl>
 
-            <form class="form" data-reveal style="--stagger:2" action="https://api.web3forms.com/submit" method="POST" data-contact-form novalidate>
-                <input type="hidden" name="access_key" value={site.formAccessKey} />
-                <input type="hidden" name="subject" value={f.subject} />
-                <input type="hidden" name="from_name" value="invntio.com" />
+            <form class="form" data-reveal style="--stagger:2" action="/api/contact" method="POST" data-contact-form novalidate>
                 <input type="hidden" name="language" value={lang} />
                 <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
@@ -63,7 +60,7 @@ const f = t.contact.form;
                 </div>
 
                 <div class="captcha full">
-                    <div class="h-captcha" data-captcha="true"></div>
+                    <div class="cf-turnstile" data-sitekey={site.turnstileSiteKey} data-language={lang} data-theme="auto" data-size="flexible"></div>
                 </div>
 
                 <div class="submit full">
@@ -81,7 +78,7 @@ const f = t.contact.form;
     </div>
 </section>
 
-<script is:inline src="https://web3forms.com/client/script.js" async defer></script>
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <script>
     const form = document.querySelector<HTMLFormElement>("[data-contact-form]");
@@ -96,6 +93,13 @@ const f = t.contact.form;
             status.innerHTML = tpl(kind);
         };
 
+        // Coming back from a submission made without JavaScript (?sent=1 or ?sent=0).
+        const sent = new URLSearchParams(location.search).get("sent");
+        if (sent === "1" || sent === "0") {
+            show(sent === "1" ? "success" : "error");
+            history.replaceState(null, "", location.pathname + location.hash);
+        }
+
         form.addEventListener("submit", async (event) => {
             event.preventDefault();
             status.hidden = true;
@@ -104,7 +108,7 @@ const f = t.contact.form;
                 form.querySelector<HTMLElement>(":invalid")?.focus();
                 return;
             }
-            const token = form.querySelector<HTMLTextAreaElement>("[name='h-captcha-response']")?.value;
+            const token = form.querySelector<HTMLInputElement>("[name='cf-turnstile-response']")?.value;
             if (!token) {
                 show("captcha-missing");
                 return;
@@ -117,16 +121,17 @@ const f = t.contact.form;
                     headers: { Accept: "application/json" },
                     body: new FormData(form),
                 });
-                const result = await response.json().catch(() => ({}));
-                if (!response.ok || !result.success) throw new Error(result.message ?? "Request failed");
+                const result = (await response.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+                if (!response.ok || !result.ok) throw new Error(result.error ?? "Request failed");
                 (window as unknown as { posthog?: { capture: (e: string, p?: object) => void } }).posthog?.capture("contact_form_submitted", {
-                    service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+                    service: (form.elements.namedItem("service") as HTMLSelectElement | null)?.value,
                 });
                 form.reset();
-                (window as unknown as { hcaptcha?: { reset: () => void } }).hcaptcha?.reset();
+                (window as unknown as { turnstile?: { reset: () => void } }).turnstile?.reset();
                 form.classList.remove("was-validated");
                 show("success");
             } catch {
+                (window as unknown as { turnstile?: { reset: () => void } }).turnstile?.reset();
                 show("error");
             } finally {
                 button.disabled = false;

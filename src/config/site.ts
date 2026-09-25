@@ -10,8 +10,10 @@ export const site = {
     // PostHog project API key (public, starts with "phc_"). Empty = analytics and cookie banner off.
     posthogKey: "phc_kvZZbXFCUjvaoqxb5LX4EZbLfbqsPwfr9guBjLMXQUpa",
     posthogHost: "https://us.i.posthog.com",
-    // Web3Forms access key for the contact form.
-    formAccessKey: "50248df4-7ae0-46bb-9a9d-47b24d889d3f",
+    // Contact form: Cloudflare Turnstile (public site key) + Cloudflare Email Service.
+    // "1x00000000000000000000AA" is Cloudflare's always-pass test key; replace with the real one.
+    turnstileSiteKey: "1x00000000000000000000AA",
+    formFrom: { email: "forms@invntio.com", name: "invntio.com" },
     legalUpdated: "2026-09-25",
 } as const;
 

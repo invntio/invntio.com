@@ -3,6 +3,14 @@
   "name": "invntio-website",
   // Update to today's date
   "compatibility_date": "2026-09-01",
+  // Contact form email: Cloudflare Email Service, locked to the studio inbox and sender.
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "info@invntio.com",
+      "allowed_sender_addresses": ["forms@invntio.com"]
+    }
+  ],
   "assets": {
     "directory": "./dist",
     // Serve the nearest 404.html: /es/* gets the Spanish one.

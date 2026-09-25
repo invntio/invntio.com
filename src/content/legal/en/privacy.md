@@ -14,7 +14,7 @@ This policy covers this website and our dealings with prospective and current cl
 
 ## 2. What we collect
 
-- **Contact form.** When you use the form on this site, we receive your name, email address, company (if you give it), the service you are interested in and your message. The form is delivered to our inbox through Web3Forms, a form-processing service, and protected against spam by hCaptcha, which may process your IP address and browser data to tell people from bots.
+- **Contact form.** When you use the form on this site, we receive your name, email address, company (if you give it), the service you are interested in and your message. The form is delivered to our inbox by Cloudflare Email Service and protected against spam by Cloudflare Turnstile, which may process your IP address and browser data to tell people from bots.
 - **Messages you send us.** If you email us, we receive the details you choose to share and your email address.
 - **Client information.** When you hire us, we keep the business contact details, project information and access credentials we need to deliver the work.
 - **Payments.** Payments are processed by Stripe. **We never see or store your full card number.** Stripe shares with us limited details such as your name, email, billing country, the card brand and its last four digits, and the payment status. Stripe handles your payment data under its own [privacy policy](https://stripe.com/privacy).
@@ -30,7 +30,7 @@ We do not use advertising cookies, and we do not track you across other websites
 | `invntio-consent` | Remembers your cookie choice | Local storage, necessary | Always |
 | `invntio-theme` | Remembers light or dark theme | Local storage, preference | When you switch theme |
 | `invntio-lang` | Remembers your language choice | Local storage, preference | When you switch language |
-| hCaptcha | Tells people from bots on the contact form | Cookies, security | When the form loads |
+| Cloudflare Turnstile | Tells people from bots on the contact form | Security check, no advertising cookies | When the form loads |
 | `ph_*` (PostHog) | Measures site usage | Cookie and local storage, analytics | Only if you accept |
 
 You can change your analytics choice at any time through "Cookie settings" in the footer, or clear these items in your browser settings.
@@ -50,7 +50,7 @@ We do not use your information for automated decisions that have legal or simila
 
 ## 5. Who we share it with
 
-We share information only with the service providers we need in order to operate: Web3Forms (the contact form), hCaptcha (spam protection), PostHog (analytics, only with your consent), Stripe (payments), Cloudflare (hosting and security) and our email provider. They may use it only to provide their service to us. We may also disclose information when the law requires it, or to a successor if the business is ever transferred.
+We share information only with the service providers we need in order to operate: Cloudflare (hosting, security, spam protection and delivery of the contact form), PostHog (analytics, only with your consent), Stripe (payments) and our email provider. They may use it only to provide their service to us. We may also disclose information when the law requires it, or to a successor if the business is ever transferred.
 
 We do not sell personal information, and we do not share it for cross-context behavioral advertising.
 

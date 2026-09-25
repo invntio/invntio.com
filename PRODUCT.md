@@ -55,7 +55,7 @@ Commercial terms (confirmed September 2026):
 - Contact: info@invntio.com (email only; no phone published).
 - Analytics: PostHog (project `invntio.com`), loaded only after cookie consent.
 - Languages: English (`/`) and Spanish (`/es/`).
-- Stack: Astro 5, static output, deployed on Cloudflare (wrangler). The contact form posts to Web3Forms.
+- Stack: Astro 7, static pages plus one on-demand route (/api/contact), deployed on Cloudflare Workers on push to main. The contact form posts to /api/contact (Cloudflare Turnstile + Cloudflare Email Service).
 
 ## Brand Commitments
 

@@ -14,7 +14,7 @@ Esta política cubre este sitio y nuestra relación con clientes actuales y pote
 
 ## 2. Qué recogemos
 
-- **Formulario de contacto.** Cuando usas el formulario de este sitio recibimos tu nombre, correo, empresa (si la indicas), el servicio que te interesa y tu mensaje. El formulario llega a nuestro correo a través de Web3Forms, un servicio de procesamiento de formularios, y está protegido contra spam con hCaptcha, que puede procesar tu dirección IP y datos del navegador para distinguir personas de bots.
+- **Formulario de contacto.** Cuando usas el formulario de este sitio recibimos tu nombre, correo, empresa (si la indicas), el servicio que te interesa y tu mensaje. El formulario llega a nuestro correo mediante Cloudflare Email Service y está protegido contra spam con Cloudflare Turnstile, que puede procesar tu dirección IP y datos del navegador para distinguir personas de bots.
 - **Mensajes que nos envías.** Si nos escribes por correo, recibimos lo que decidas compartir y tu dirección de correo.
 - **Información de clientes.** Cuando nos contratas, guardamos los datos de contacto de tu empresa, la información del proyecto y las credenciales de acceso necesarias para hacer el trabajo.
 - **Pagos.** Los pagos se procesan con Stripe. **Nunca vemos ni guardamos el número completo de tu tarjeta.** Stripe nos comparte datos limitados, como tu nombre, correo, país de facturación, la marca de la tarjeta y sus últimos cuatro dígitos, y el estado del pago. Stripe trata tus datos de pago según su propia [política de privacidad](https://stripe.com/privacy).
@@ -30,7 +30,7 @@ No usamos cookies de publicidad ni te rastreamos en otros sitios web.
 | `invntio-consent` | Recuerda tu elección sobre cookies | Almacenamiento local, necesario | Siempre |
 | `invntio-theme` | Recuerda el tema claro u oscuro | Almacenamiento local, preferencia | Al cambiar de tema |
 | `invntio-lang` | Recuerda el idioma que elegiste | Almacenamiento local, preferencia | Al cambiar de idioma |
-| hCaptcha | Distingue personas de bots en el formulario | Cookies, seguridad | Al cargar el formulario |
+| Cloudflare Turnstile | Distingue personas de bots en el formulario | Verificación de seguridad, sin cookies de publicidad | Al cargar el formulario |
 | `ph_*` (PostHog) | Mide el uso del sitio | Cookie y almacenamiento local, analítica | Solo si aceptas |
 
 Puedes cambiar tu elección de analítica en cualquier momento desde "Configurar cookies" en el pie de página, o borrar estos elementos en la configuración de tu navegador.
@@ -50,7 +50,7 @@ No usamos tu información para decisiones automatizadas con efectos legales o ig
 
 ## 5. Con quién la compartimos
 
-Solo la compartimos con los proveedores que necesitamos para operar: Web3Forms (formulario de contacto), hCaptcha (protección contra spam), PostHog (analítica, solo con tu consentimiento), Stripe (pagos), Cloudflare (hosting y seguridad) y nuestro proveedor de correo. Solo pueden usarla para prestarnos su servicio. También podemos revelarla cuando la ley lo exija, o a un sucesor si algún día se transfiere el negocio.
+Solo la compartimos con los proveedores que necesitamos para operar: Cloudflare (hosting, seguridad, protección contra spam y envío del formulario de contacto), PostHog (analítica, solo con tu consentimiento), Stripe (pagos) y nuestro proveedor de correo. Solo pueden usarla para prestarnos su servicio. También podemos revelarla cuando la ley lo exija, o a un sucesor si algún día se transfiere el negocio.
 
 No vendemos información personal ni la compartimos para publicidad basada en tu actividad en otros sitios.
 
