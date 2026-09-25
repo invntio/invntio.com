@@ -118,6 +118,9 @@ const f = t.contact.form;
                 });
                 const result = await response.json().catch(() => ({}));
                 if (!response.ok || !result.success) throw new Error(result.message ?? "Request failed");
+                (window as unknown as { posthog?: { capture: (e: string, p?: object) => void } }).posthog?.capture("contact_form_submitted", {
+                    service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+                });
                 form.reset();
                 (window as unknown as { hcaptcha?: { reset: () => void } }).hcaptcha?.reset();
                 form.classList.remove("was-validated");

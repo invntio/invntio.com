@@ -1,0 +1,126 @@
+---
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
+import { site } from "../config/site";
+
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+const enabled = site.posthogKey.length > 0;
+---
+
+{enabled && (
+    <section class="consent" role="region" aria-label={t.consent.label} data-consent hidden>
+        <div class="wrap inner">
+            <p>
+                {t.consent.body} <a href={localizePath("/privacy", lang)}>{t.consent.more}</a>.
+            </p>
+            <div class="actions">
+                <button type="button" class="btn btn-quiet" data-consent-choice="denied">{t.consent.decline}</button>
+                <button type="button" class="btn btn-primary" data-consent-choice="granted">{t.consent.accept}</button>
+            </div>
+        </div>
+    </section>
+    <div data-posthog data-key={site.posthogKey} data-host={site.posthogHost} hidden></div>
+)}
+
+<script>
+    const KEY = "invntio-consent";
+    const banner = document.querySelector<HTMLElement>("[data-consent]");
+    const config = document.querySelector<HTMLElement>("[data-posthog]");
+
+    const read = (): string | null => {
+        try {
+            return localStorage.getItem(KEY);
+        } catch {
+            return null;
+        }
+    };
+    const write = (value: string) => {
+        try {
+            localStorage.setItem(KEY, value);
+        } catch {
+            /* storage blocked: the choice lasts for this page view only */
+        }
+    };
+
+    let started = false;
+    const startAnalytics = async () => {
+        if (started || !config) return;
+        started = true;
+        const { default: posthog } = await import("posthog-js");
+        posthog.init(config.dataset.key!, {
+            api_host: config.dataset.host,
+            defaults: "2025-05-24",
+            person_profiles: "identified_only",
+            persistence: "localStorage+cookie",
+        });
+        (window as unknown as { posthog?: typeof posthog }).posthog = posthog;
+    };
+    const stopAnalytics = () => {
+        const ph = (window as unknown as { posthog?: { opt_out_capturing: () => void } }).posthog;
+        ph?.opt_out_capturing();
+    };
+
+    const apply = (value: string | null) => {
+        if (value === "granted") startAnalytics();
+        if (value === "denied") stopAnalytics();
+    };
+
+    if (banner && config) {
+        const current = read();
+        if (current) apply(current);
+        else banner.hidden = false;
+
+        banner.querySelectorAll<HTMLButtonElement>("[data-consent-choice]").forEach((button) =>
+            button.addEventListener("click", () => {
+                const value = button.dataset.consentChoice!;
+                write(value);
+                apply(value);
+                banner.hidden = true;
+            }),
+        );
+
+        document.querySelectorAll("[data-consent-open]").forEach((link) =>
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                banner.hidden = false;
+                banner.querySelector<HTMLButtonElement>("[data-consent-choice='granted']")?.focus();
+            }),
+        );
+    }
+</script>
+
+<style>
+    .consent {
+        position: fixed;
+        inset: auto 0 0 0;
+        z-index: 60;
+        background: var(--ground);
+        border-top: 1px solid var(--ink);
+        box-shadow: 0 -8px 24px -12px rgb(21 24 28 / 0.18);
+    }
+    .consent[hidden] {
+        display: none;
+    }
+    .inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem 2rem;
+        padding-block: 1.125rem;
+    }
+    p {
+        max-width: 62ch;
+        font-size: var(--step--1);
+        color: var(--ink-2);
+    }
+    .actions {
+        display: flex;
+        gap: 0.75rem;
+    }
+    .actions .btn {
+        min-height: 2.75rem;
+        padding: 0.5rem 1.125rem;
+        font-size: var(--step--1);
+    }
+</style>

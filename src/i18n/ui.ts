@@ -183,6 +183,14 @@ const en = {
         privacy: "Privacy Policy",
         rights: "All rights reserved.",
     },
+    consent: {
+        label: "Cookie preferences",
+        body: "We use analytics cookies (PostHog) to understand how this site is used. They are only set if you accept.",
+        more: "Privacy Policy",
+        accept: "Accept",
+        decline: "Decline",
+        settings: "Cookie settings",
+    },
     legal: {
         updated: "Last updated",
         back: "Back to home",
@@ -372,6 +380,14 @@ const es: Dict = {
         refunds: "Política de Reembolsos y Cancelaciones",
         privacy: "Política de Privacidad",
         rights: "Todos los derechos reservados.",
+    },
+    consent: {
+        label: "Preferencias de cookies",
+        body: "Usamos cookies de analítica (PostHog) para entender cómo se usa este sitio. Solo se activan si las aceptas.",
+        more: "Política de Privacidad",
+        accept: "Aceptar",
+        decline: "Rechazar",
+        settings: "Configurar cookies",
     },
     legal: {
         updated: "Última actualización",

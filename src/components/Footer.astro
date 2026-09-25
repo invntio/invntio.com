@@ -33,6 +33,7 @@ const year = new Date().getFullYear();
                 <li><a href={localizePath("/terms", lang)}>{t.footer.terms}</a></li>
                 <li><a href={localizePath("/refunds", lang)}>{t.footer.refunds}</a></li>
                 <li><a href={localizePath("/privacy", lang)}>{t.footer.privacy}</a></li>
+                {site.posthogKey && <li><a href="#" data-consent-open>{t.consent.settings}</a></li>}
             </ul>
         </nav>
 
