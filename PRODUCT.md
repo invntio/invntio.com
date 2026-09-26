@@ -67,7 +67,7 @@ Commercial terms (confirmed September 2026):
 
 - Own products: Beavo (iOS habit tracker, https://beavo.me), Axen (iOS training app, https://getaxen.com), Bohío (condominium management SaaS, https://bohio.app).
 - Client work: The Global Merchants Group (https://www.theglobalmerchantsgroup.com/en/default-channel).
-- OBJURI and CGD are client sites still in progress; show them only once they are live.
+- OBJURI and AJMG (Asociación de Jueces y Magistrados de Guatemala) are client sites on the Invntio platform, not yet live on their own domains; show them only once they are (AJMG also needs the owner's OK). CGD was dropped. See docs/tasks/launch-client-sites.md.
 - There are **no testimonials, client logos, metrics or partner relationships**. Do not invent any. The technology logos are tools Invntio uses, not partners.
 - Social accounts (GitHub, LinkedIn, Instagram) exist but are inactive, so they are not linked for now.
 

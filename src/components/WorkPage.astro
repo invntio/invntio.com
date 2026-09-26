@@ -5,7 +5,7 @@ import Mark from "./Mark.astro";
 import { getLang, useTranslations } from "../i18n/ui";
 import { liveStatus } from "../lib/build-info";
 
-// Not linked from navigation yet: it goes live once the client list grows (OBJURI, CGD).
+// Not linked from navigation yet: it goes live once the client list grows (OBJURI, AJMG).
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
 const visible = await Promise.all(

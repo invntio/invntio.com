@@ -11,4 +11,4 @@ Business website for Invntio (Astro 7 on Cloudflare Workers). English at `/`, Sp
 
 ## Pending tasks
 
-- [Launch OBJURI and CGD, and publish the /work page](docs/tasks/launch-objuri-cgd.md): when both client sites are live.
+- [Show the client sites OBJURI and AJMG, and publish /work](docs/tasks/launch-client-sites.md): each one once it is live on its own domain (AJMG also needs the owner's OK to be listed). CGD was dropped.

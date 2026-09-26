@@ -64,8 +64,10 @@ const en = {
             { name: "Beavo", what: "Private habit tracker for iPhone", url: "https://beavo.me", domain: "beavo.me", kind: "own" },
             { name: "Axen", what: "Training app for iOS", url: "https://getaxen.com", domain: "getaxen.com", kind: "own" },
             { name: "Bohío", what: "Condominium management SaaS", url: "https://bohio.app", domain: "bohio.app", kind: "own" },
-            { name: "OBJURI", what: "Global legal sciences observatory", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
-            { name: "CGD", what: "Cambio Global para el Desarrollo", url: "https://cambioglobalcgd.com", domain: "cambioglobalcgd.com", kind: "client", hidden: true },
+            // Client sites on the Invntio platform. Keep hidden until each has its own live domain
+            // (see docs/tasks/launch-client-sites.md). url/domain are the planned values.
+            { name: "OBJURI", what: "Legal-research observatory: congresses, news, articles and alliances", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
+            { name: "AJMG", what: "Guatemala's association of judges and magistrates", url: "", domain: "", kind: "client", hidden: true },
         ],
     },
     services: {
@@ -292,8 +294,8 @@ const es: Dict = {
             { name: "Beavo", what: "Habit tracker privado para iPhone", url: "https://beavo.me", domain: "beavo.me", kind: "own" },
             { name: "Axen", what: "App de entrenamiento para iOS", url: "https://getaxen.com", domain: "getaxen.com", kind: "own" },
             { name: "Bohío", what: "SaaS de administración de condominios", url: "https://bohio.app", domain: "bohio.app", kind: "own" },
-            { name: "OBJURI", what: "Observatorio Global de Ciencias Jurídicas", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
-            { name: "CGD", what: "Cambio Global para el Desarrollo", url: "https://cambioglobalcgd.com", domain: "cambioglobalcgd.com", kind: "client", hidden: true },
+            { name: "OBJURI", what: "Observatorio de ciencias jurídicas: congresos, noticias, artículos y alianzas", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
+            { name: "AJMG", what: "Asociación de Jueces y Magistrados de Guatemala", url: "", domain: "", kind: "client", hidden: true },
         ],
     },
     services: {
