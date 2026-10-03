@@ -8,6 +8,7 @@ import { site } from "../config/site";
 const fill = (text: string, lang: "en" | "es") =>
     text
         .replaceAll("{{email}}", site.email)
+        .replaceAll("{{phone}}", site.phone.display)
         .replaceAll("{{operator}}", site.operator)
         .replaceAll("{{location}}", site.location[lang])
         .replace(/\]\((\/[^)]*)\)/g, `](${site.url}$1)`);
@@ -21,7 +22,7 @@ export function summary() {
 
 Invntio is an independent software studio based in ${site.location.en}. Clients work directly with the engineer who designs, builds, hosts and maintains their project. Every engagement starts with a written proposal; payments are processed by Stripe. The site is available in English (${site.url}/) and Spanish (${site.url}/es/).
 
-Contact: ${site.email}
+Contact: ${site.email} · ${site.phone.display}
 
 ## Services
 

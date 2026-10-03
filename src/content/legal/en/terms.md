@@ -162,3 +162,5 @@ We may update these terms. The date at the top shows the latest version. Changes
 Invntio · {{operator}} · {{location}}
 
 Email: {{email}}
+
+Phone: {{phone}}

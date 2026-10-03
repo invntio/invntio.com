@@ -16,6 +16,7 @@ if (!entry) throw new Error(`Missing legal page ${lang}/${Astro.props.slug}`);
 
 const tokens: Record<string, string> = {
     email: `<a href="mailto:${site.email}">${site.email}</a>`,
+    phone: `<a href="tel:${site.phone.tel}">${site.phone.display}</a>`,
     operator: site.operator,
     location: site.location[lang],
 };

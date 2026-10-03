@@ -4,6 +4,8 @@ export const site = {
     name: "Invntio",
     url: "https://invntio.com",
     email: "hello@invntio.com",
+    // Same format everywhere (site, Google Business Profile, LinkedIn) so search engines match them.
+    phone: { display: "+1 (267) 800-7744", tel: "+12678007744", schema: "+1-267-800-7744" },
     // Public uptime page (UptimeRobot), linked from the footer.
     statusPage: "https://stats.uptimerobot.com/qTywKXcFaK",
     // Google Search Console HTML-tag token (content="…"); empty when verified by DNS.

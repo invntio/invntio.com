@@ -25,6 +25,7 @@ const organization = {
     logo: `${site.url}/icon-512.png`,
     image: `${site.url}/${lang === "es" ? "og-es.png" : "og.png"}`,
     email: site.email,
+    telephone: site.phone.schema,
     slogan: lang === "es" ? "Desata el potencial de tu negocio" : "Unleash your business potential",
     description: t.meta.description,
     address: { "@type": "PostalAddress", addressRegion: "PA", addressCountry: "US" },
@@ -34,6 +35,7 @@ const organization = {
         "@type": "ContactPoint",
         contactType: "sales",
         email: site.email,
+        telephone: site.phone.schema,
         availableLanguage: ["English", "Spanish"],
     },
     hasOfferCatalog: {

@@ -184,6 +184,7 @@ const en = {
         title: "Start a project",
         lede: "Tell us what you need. We reply within 2 business days.",
         email: "Email",
+        phone: "Phone",
         location: "Location",
         form: {
             name: "Name",
@@ -412,6 +413,7 @@ const es: Dict = {
         title: "Empezar un proyecto",
         lede: "Cuéntanos qué necesitas. Respondemos en 2 días hábiles.",
         email: "Correo",
+        phone: "Teléfono",
         location: "Ubicación",
         form: {
             name: "Nombre",

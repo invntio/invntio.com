@@ -162,3 +162,5 @@ Podemos actualizar estos términos. La fecha al inicio indica la versión más r
 Invntio · {{operator}} · {{location}}
 
 Correo: {{email}}
+
+Teléfono: {{phone}}

@@ -96,3 +96,5 @@ Podemos actualizar esta política. La fecha al inicio indica la versión más re
 Invntio · {{operator}} · {{location}}
 
 Correo: {{email}}
+
+Teléfono: {{phone}}
