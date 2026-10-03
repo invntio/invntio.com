@@ -1,6 +1,5 @@
 ---
 import Dotted from "./Dotted.astro";
-import Mark from "./Mark.astro";
 import { getLang, localizePath, useTranslations } from "../i18n/ui";
 import { site } from "../config/site";
 
@@ -20,22 +19,16 @@ const d = t.contact.diagnostic;
         <div class="diagnostic" aria-labelledby="diagnostic-title" role="group" data-reveal>
             <div class="diagnostic-intro">
                 <h3 id="diagnostic-title"><Dotted text={d.title} /></h3>
-                <p>{d.note}</p>
-            </div>
-            <div class="diagnostic-body">
                 <p class="value">{d.body}</p>
-                <ul class="terms">
-                    {d.terms.map((term) => <li><Mark kind="included" />{term}</li>)}
-                </ul>
-                <div class="book">
-                    <a class="btn btn-primary" href={site.diagnostic.url} target="_blank" rel="noopener" data-book-diagnostic>
-                        {d.cta}<span class="sr-only"> {d.newTab}</span>
-                        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5" /></svg>
-                    </a>
-                    <p class="guarantee">
-                        {d.guarantee} <a href={localizePath("/refunds", lang) + d.anchor}>{d.policy}</a>
-                    </p>
-                </div>
+            </div>
+            <div class="book">
+                <a class="btn btn-primary" href={site.diagnostic.url} target="_blank" rel="noopener" data-book-diagnostic>
+                    {d.cta}<span class="sr-only"> {d.newTab}</span>
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5" /></svg>
+                </a>
+                <p class="guarantee">
+                    {d.guarantee} <a href={localizePath("/refunds", lang) + d.anchor}>{d.policy}</a>
+                </p>
             </div>
         </div>
 
@@ -183,13 +176,14 @@ const d = t.contact.diagnostic;
 <style>
     .diagnostic {
         display: grid;
-        gap: 1.5rem;
+        gap: 1.75rem;
         padding-block: 2.5rem;
         border-bottom: 1px solid var(--rule);
     }
     @media (min-width: 900px) {
         .diagnostic {
-            grid-template-columns: 4fr 8fr;
+            grid-template-columns: minmax(0, 1fr) auto;
+            align-items: end;
             column-gap: 4rem;
         }
     }
@@ -197,54 +191,19 @@ const d = t.contact.diagnostic;
         font-size: var(--step-2);
         font-weight: 600;
     }
-    .diagnostic-intro p {
-        margin-top: 0.5rem;
-        font-size: var(--step--1);
-        color: var(--ink-3);
-    }
     .value {
+        margin-top: 0.75rem;
         font-size: var(--step-1);
         color: var(--ink-2);
-        max-width: 54ch;
+        max-width: 52ch;
     }
-    .terms {
-        list-style: none;
-        padding: 0;
-        margin-top: 1.25rem;
-        display: grid;
-        gap: 0.5rem 1.5rem;
-        max-width: 40rem;
-        font-size: var(--step--1);
-        font-weight: 500;
-    }
-    @media (min-width: 640px) {
-        .terms {
-            grid-template-columns: 1fr 1fr;
-        }
-        /* The credit line is the longest term; it gets the full row. */
-        .terms li:last-child {
-            grid-column: 1 / -1;
-        }
-    }
-    .terms li {
-        display: flex;
-        gap: 0.5rem;
-        align-items: baseline;
-    }
-    .terms :global(.mark) {
-        position: relative;
-        top: 0.15em;
-    }
+    /* The button and its refund line read as one unit, aligned to the end of the intro. */
     .book {
-        margin-top: 1.75rem;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 1rem 1.5rem;
+        display: grid;
+        justify-items: start;
+        gap: 0.75rem;
     }
     .guarantee {
-        flex: 1 1 18rem;
-        max-width: 46ch;
         font-size: var(--step--1);
         color: var(--ink-2);
     }
