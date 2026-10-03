@@ -6,6 +6,8 @@ export const site = {
     email: "hello@invntio.com",
     // Same format everywhere (site, Google Business Profile, LinkedIn) so search engines match them.
     phone: { display: "+1 (267) 800-7744", tel: "+12678007744", schema: "+1-267-800-7744" },
+    // Official profiles, listed as sameAs in the JSON-LD so search engines tie them to this site.
+    profiles: ["https://www.linkedin.com/company/invntio", "https://github.com/invntio"],
     // Public uptime page (UptimeRobot), linked from the footer.
     statusPage: "https://stats.uptimerobot.com/qTywKXcFaK",
     // Google Search Console HTML-tag token (content="…"); empty when verified by DNS.

@@ -29,7 +29,19 @@ const organization = {
     slogan: lang === "es" ? "Desata el potencial de tu negocio" : "Unleash your business potential",
     description: t.meta.description,
     address: { "@type": "PostalAddress", addressRegion: "PA", addressCountry: "US" },
+    sameAs: site.profiles,
     areaServed: ["US", "Latin America"],
+    knowsAbout: [
+        "Custom software development",
+        "iOS and Android app development",
+        "Web development",
+        "API and systems integration",
+        "Business process automation",
+        "AI automation",
+        "Technical SEO",
+        "DevOps and DevSecOps",
+        "Web hosting and maintenance",
+    ],
     knowsLanguage: ["en", "es"],
     contactPoint: {
         "@type": "ContactPoint",
@@ -48,10 +60,31 @@ const organization = {
     },
 };
 
+// Our own products, so search engines and AI answers know Invntio makes them.
+const kinds: Record<string, { type: string; os?: string; category: string }> = {
+    Beavo: { type: "MobileApplication", os: "iOS", category: "HealthApplication" },
+    Axen: { type: "MobileApplication", os: "iOS", category: "HealthApplication" },
+    "Bohío": { type: "WebApplication", category: "BusinessApplication" },
+};
+const products = t.register.items
+    .filter((item) => item.kind === "own" && !item.hidden && kinds[item.name])
+    .map((item) => ({
+        "@type": kinds[item.name].type,
+        "@id": `${item.url}/#app`,
+        name: item.name,
+        url: item.url,
+        description: item.what,
+        applicationCategory: kinds[item.name].category,
+        ...(kinds[item.name].os && { operatingSystem: kinds[item.name].os }),
+        creator: { "@id": orgId },
+        publisher: { "@id": orgId },
+    }));
+
 const graph =
     kind === "home"
         ? [
-              organization,
+              { ...organization, owns: products.map((p) => ({ "@id": p["@id"] })) },
+              ...products,
               {
                   "@type": "WebSite",
                   "@id": `${site.url}/#website`,
