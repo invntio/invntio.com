@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Dotted from "./Dotted.astro";
 import Mark from "./Mark.astro";
-import { getLang, useTranslations } from "../i18n/ui";
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
 import { liveStatus } from "../lib/build-info";
 
 // Not linked from navigation yet: it goes live once the client list grows (OBJURI, AJMG).
@@ -27,6 +27,21 @@ const groups = [
         <div class="section-head">
             <h1><Dotted text={t.work.title} period /></h1>
             <p>{t.work.lede}</p>
+        </div>
+        <div class="group">
+            <h2>{t.work.cases}</h2>
+            <ul>
+                {t.cases.items.map((c) => (
+                    <li>
+                        <a href={localizePath(`/work/${c.slug}`, lang)}>
+                            <span aria-hidden="true"></span>
+                            <span class="name">{c.name}</span>
+                            <span class="what">{c.outcome}</span>
+                            <span class="domain read">{t.cases.read}<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></span>
+                        </a>
+                    </li>
+                ))}
+            </ul>
         </div>
         {groups.map((g) => (
             <div class="group">
@@ -99,6 +114,10 @@ const groups = [
     .domain svg {
         width: 0.875rem;
         height: 0.875rem;
+    }
+    .read {
+        color: var(--ink);
+        font-weight: 500;
     }
     @media (min-width: 900px) {
         a {

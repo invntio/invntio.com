@@ -1,7 +1,7 @@
 ---
 import Mark from "./Mark.astro";
 import Dotted from "./Dotted.astro";
-import { getLang, useTranslations } from "../i18n/ui";
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
 import { site } from "../config/site";
 import { builtAt, liveStatus } from "../lib/build-info";
 
@@ -64,15 +64,36 @@ const sparks = Array.from({ length: 12 }, (_, i) => {
             <ol class="rows">
                 {rows.map((item, i) => (
                     <li data-reveal style={`--stagger:${i + 1}`}>
-                        <a class="row" href={item.url} target="_blank" rel="noopener">
-                            <span class="dot" data-tip={item.tip}><Mark kind={item.up ? "live" : "excluded"} label={item.tip} /></span>
-                            <span class="name">{item.name} <span class="kind">{item.kind === "own" ? t.register.ownProduct : t.register.client}</span></span>
-                            <span class="what">{item.what}</span>
-                            <span class="domain">
-                                {item.domain}
-                                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5" /></svg>
-                            </span>
-                        </a>
+                        {item.case ? (
+                            /* With a case study, the row opens it and the domain stays its own link to the live site. */
+                            <div class="row has-case">
+                                <span class="dot" data-tip={item.tip}><Mark kind={item.up ? "live" : "excluded"} label={item.tip} /></span>
+                                <span class="head">
+                                    <a class="name case-link" href={localizePath(`/work/${item.case}`, lang)}>
+                                        {item.name} <span class="kind">{item.kind === "own" ? t.register.ownProduct : t.register.client}</span><span class="sr-only">, {t.cases.caseStudy}</span>
+                                    </a>
+                                    <span class="case-cue" aria-hidden="true">
+                                        {t.cases.caseStudy}
+                                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
+                                    </span>
+                                </span>
+                                <span class="what">{item.what}</span>
+                                <a class="domain" href={item.url} target="_blank" rel="noopener">
+                                    {item.domain}
+                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5" /></svg>
+                                </a>
+                            </div>
+                        ) : (
+                            <a class="row" href={item.url} target="_blank" rel="noopener">
+                                <span class="dot" data-tip={item.tip}><Mark kind={item.up ? "live" : "excluded"} label={item.tip} /></span>
+                                <span class="name">{item.name} <span class="kind">{item.kind === "own" ? t.register.ownProduct : t.register.client}</span></span>
+                                <span class="what">{item.what}</span>
+                                <span class="domain">
+                                    {item.domain}
+                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5" /></svg>
+                                </span>
+                            </a>
+                        )}
                     </li>
                 ))}
             </ol>
@@ -259,7 +280,8 @@ const sparks = Array.from({ length: 12 }, (_, i) => {
             transform 180ms var(--ease-out);
     }
     .row:hover .dot::after,
-    .row:focus-visible .dot::after {
+    .row:focus-visible .dot::after,
+    .row:focus-within .dot::after {
         opacity: 1;
         transform: none;
         transition-delay: 350ms;
@@ -297,11 +319,73 @@ const sparks = Array.from({ length: 12 }, (_, i) => {
         transition: transform 220ms var(--ease-out);
     }
     .row:hover,
-    .row:focus-visible {
+    .row:focus-visible,
+    .row:focus-within {
         background: var(--surface);
     }
     .row:hover .domain svg,
     .row:focus-visible .domain svg {
+        transform: translate(2px, -2px);
+    }
+
+    /* Rows with a case study: the name's link covers the row, the domain sits above it. */
+    .case-link {
+        text-decoration: none;
+    }
+    .case-link::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius);
+    }
+    .case-link:focus-visible {
+        outline: none;
+    }
+    .case-link:focus-visible::after {
+        outline: 2px solid var(--green-ink);
+        outline-offset: 2px;
+    }
+    .head {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 0 1rem;
+    }
+    .case-cue {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: var(--step--1);
+        font-weight: 500;
+        letter-spacing: 0;
+        color: var(--ink-2);
+        white-space: nowrap;
+    }
+    .case-cue svg {
+        width: 0.875rem;
+        height: 0.875rem;
+        transition: transform 220ms var(--ease-out);
+    }
+    .has-case:hover .case-cue,
+    .has-case:focus-within .case-cue {
+        color: var(--ink);
+    }
+    .has-case:hover .case-cue svg,
+    .has-case:focus-within .case-cue svg {
+        transform: translateX(2px);
+    }
+    .has-case .domain {
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+    }
+    .has-case .domain:hover {
+        text-decoration: underline;
+    }
+    .has-case .domain:hover svg,
+    .has-case .domain:focus-visible svg {
         transform: translate(2px, -2px);
     }
 
@@ -312,7 +396,8 @@ const sparks = Array.from({ length: 12 }, (_, i) => {
             transition: color 200ms var(--ease-out);
         }
         .row:hover .domain,
-        .row:focus-visible .domain {
+        .row:focus-visible .domain,
+        .row:focus-within .domain {
             color: var(--green-ink);
         }
     }
