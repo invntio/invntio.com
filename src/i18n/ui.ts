@@ -219,7 +219,7 @@ const en = {
             body: "30 minutes on your project, then a written plan with scope, risks, timeline and price range. USD\u00a095, credited if you hire us within 60 days.",
             cta: "Book a diagnostic",
             newTab: "(opens Cal.com in a new tab)",
-            guarantee: "Not useful? Full refund within 7 days.",
+            guarantee: "Session not useful? Full refund within 7 days.",
             policy: "Refund terms",
             anchor: "#4-project-diagnostic",
         },
@@ -315,8 +315,8 @@ const en = {
                 built: "Website and product catalog with a CMS",
                 when: { label: "timeline", text: "One week, July 21–27, 2026" },
                 challenge: [
-                    "GMG needed a website that makes its wholesale offer clear at a glance (inspected lots, bulk supply, worldwide shipping) and gives serious buyers a direct way to ask for a quote.",
-                    "The product list had to stay current, and the team needed to update it on its own, without calling a developer for every change.",
+                    "GMG had started its website on the site builder that came with its business-formation package. After months of work it still wasn't where they wanted it: the builder was hard to use and wouldn't let them shape the site around their wholesale offer.",
+                    "They needed a site that makes the offer clear at a glance (inspected lots, bulk supply, worldwide shipping), a direct way for serious buyers to ask for a quote, and a product list the team could keep current on its own.",
                 ],
                 items: [
                     "A website built around the wholesale offer: inspected lots, bulk supply and worldwide shipping.",
@@ -567,7 +567,7 @@ const es: Dict = {
             body: "30 minutos sobre tu proyecto y, después, un plan escrito con alcance, riesgos, plazos y rango de precio. USD\u00a095, que se descuentan si nos contratas en los 60 días siguientes.",
             cta: "Reservar diagnóstico",
             newTab: "(abre Cal.com en una pestaña nueva)",
-            guarantee: "¿No te sirvió? Reembolso completo en 7 días.",
+            guarantee: "¿La sesión no te sirvió? Reembolso completo en 7 días.",
             policy: "Condiciones de reembolso",
             anchor: "#4-diagnóstico-del-proyecto",
         },
@@ -663,8 +663,8 @@ const es: Dict = {
                 built: "Sitio web y catálogo de productos con CMS",
                 when: { label: "timeline", text: "Una semana, del 21 al 27 de julio de 2026" },
                 challenge: [
-                    "GMG necesitaba un sitio que dejara clara su oferta mayorista de un vistazo (lotes inspeccionados, suministro por volumen, envíos a todo el mundo) y que diera a los compradores serios una forma directa de pedir una cotización.",
-                    "El catálogo tenía que mantenerse al día, y el equipo necesitaba actualizarlo por su cuenta, sin llamar a un programador para cada cambio.",
+                    "GMG había empezado su sitio en el constructor web que venía con el paquete con el que formó su empresa. Tras meses de trabajo seguía sin quedar como querían: el constructor era difícil de usar y no les dejaba adaptar el sitio a su oferta mayorista.",
+                    "Necesitaban un sitio que dejara clara la oferta de un vistazo (lotes inspeccionados, suministro por volumen, envíos a todo el mundo), una forma directa de pedir cotización para los compradores serios y un catálogo que el equipo pudiera mantener al día por su cuenta.",
                 ],
                 items: [
                     "Un sitio pensado para la oferta mayorista: lotes inspeccionados, suministro por volumen y envíos a todo el mundo.",
