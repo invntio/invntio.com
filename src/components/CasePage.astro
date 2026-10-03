@@ -1,0 +1,509 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Dotted from "./Dotted.astro";
+import Mark from "./Mark.astro";
+import { getLang, localizePath, useTranslations, type CaseSlug } from "../i18n/ui";
+import { site } from "../config/site";
+import { liveStatus } from "../lib/build-info";
+
+interface Props {
+    slug: CaseSlug;
+}
+
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+const c = t.cases.items.find((item) => item.slug === Astro.props.slug);
+if (!c) throw new Error(`Missing case study ${lang}/${Astro.props.slug}`);
+const other = t.cases.items.find((item) => item.slug !== c.slug)!;
+const home = localizePath("/", lang);
+
+// Same deploy-time check as the live register: the mark says whether the site answered.
+const status = await liveStatus(c.url);
+const up = status !== null && status < 400;
+
+// What the page is about: our own app (same @id as on the home page), or the site built for a client.
+const orgId = `${site.url}/#organization`;
+const subject =
+    c.kind === "own"
+        ? {
+              "@type": "WebApplication",
+              "@id": `${c.url}/#app`,
+              name: c.name,
+              url: c.url,
+              applicationCategory: "BusinessApplication",
+              creator: { "@id": orgId },
+              publisher: { "@id": orgId },
+          }
+        : {
+              "@type": "WebSite",
+              "@id": `${new URL(Astro.url.pathname, site.url).href}#work`,
+              name: c.name,
+              url: c.url,
+              description: c.outcome,
+              creator: { "@id": orgId },
+              publisher: { "@type": "Organization", name: c.name, url: c.url },
+          };
+
+const facts = [
+    { label: t.cases.industry, text: c.industry },
+    { label: t.cases.built, text: c.built },
+    { label: t.cases[c.when.label], text: c.when.text },
+];
+---
+
+<Layout title={c.title} description={c.description} updated={new Date(c.updated)} subject={subject}>
+    <article class="case">
+        <header class="wrap case-head">
+            <div class="pitch">
+                <a class="back" href={`${home}#work`}>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" /></svg>
+                    {t.cases.back}
+                </a>
+                <h1><Dotted text={c.name} period /></h1>
+                <p class="outcome">{c.outcome}</p>
+                <p class="lede">{c.lede}</p>
+            </div>
+
+            <div class="facts" data-reveal>
+                <p class="facts-head">
+                    <span>{t.cases.caseStudy}</span>
+                    <span>{c.kind === "own" ? t.register.ownProduct : t.register.client}</span>
+                </p>
+                <dl>
+                    {facts.map((f) => (
+                        <div>
+                            <dt>{f.label}</dt>
+                            <dd>{f.text}</dd>
+                        </div>
+                    ))}
+                    <div>
+                        <dt>{t.cases.site}</dt>
+                        <dd>
+                            <a class="site" href={c.url} target="_blank" rel="noopener">
+                                <Mark kind={up ? "live" : "excluded"} label={up ? t.register.live : undefined} />
+                                {c.domain}
+                                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5" /></svg>
+                            </a>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </header>
+
+        <section class="wrap block" aria-labelledby="challenge-title">
+            <div class="split" data-reveal>
+                <h2 id="challenge-title"><Dotted text={t.cases.challenge} period /></h2>
+                <div class="text">
+                    {c.challenge.map((p) => <p>{p}</p>)}
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap block" aria-labelledby="built-title">
+            <div class="split" data-reveal>
+                <h2 id="built-title"><Dotted text={t.cases.built} period /></h2>
+                <div>
+                    <ul class="checks">
+                        {c.items.map((item) => (
+                            <li><Mark kind="included" />{item}</li>
+                        ))}
+                    </ul>
+                    <p class="stack">{t.cases.stackLabel}: {c.stack}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap block" aria-labelledby="flow-title">
+            <div class="section-head" data-reveal>
+                <h2 id="flow-title"><Dotted text={c.flow.title} period /></h2>
+                <p>{c.flow.lede}</p>
+            </div>
+            <ol class="flow" aria-labelledby="flow-title">
+                {c.flow.steps.map((step, i) => (
+                    <li class="step" data-reveal style={`--stagger:${i + 1}`}>
+                        <span class="track" aria-hidden="true">
+                            <span class="node">{i + 1}</span>
+                            {i < c.flow.steps.length - 1 && (
+                                <span class="link"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1l4 3-4 3" /></svg></span>
+                            )}
+                        </span>
+                        <h3>{step.name}</h3>
+                        <p>{step.body}</p>
+                    </li>
+                ))}
+            </ol>
+        </section>
+
+        <section class="wrap block" aria-labelledby="result-title">
+            <div class="split" data-reveal>
+                <h2 id="result-title"><Dotted text={t.cases.result} period /></h2>
+                <dl class="results">
+                    {c.results.map((r) => (
+                        <div>
+                            <dt>{r.title}</dt>
+                            <dd>{r.body}</dd>
+                        </div>
+                    ))}
+                </dl>
+            </div>
+        </section>
+
+        <section class="wrap block" aria-labelledby="cta-title">
+            <div class="split cta" data-reveal>
+                <h2 id="cta-title"><Dotted text={t.cases.ctaTitle} /></h2>
+                <div>
+                    <p>{t.cases.ctaBody}</p>
+                    <a class="btn btn-primary" href={`${home}#contact`}>
+                        {t.cases.cta}
+                        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <nav class="wrap block" aria-labelledby="next-title">
+            <div class="next" data-reveal>
+                <h2 id="next-title">{t.cases.other}</h2>
+                <a class="next-row" href={localizePath(`/work/${other.slug}`, lang)}>
+                    <span class="name">{other.name}</span>
+                    <span class="what">{other.outcome}</span>
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+                </a>
+            </div>
+        </nav>
+    </article>
+</Layout>
+
+<style>
+    .case-head {
+        display: grid;
+        gap: 3rem;
+        padding-top: clamp(2.5rem, 2rem + 3vw, 5rem);
+    }
+    @media (min-width: 1000px) {
+        .case-head {
+            grid-template-columns: 7fr 5fr;
+            gap: 4rem;
+            align-items: end;
+        }
+    }
+    .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        margin-bottom: 2rem;
+        font-size: var(--step--1);
+        color: var(--ink-3);
+        text-decoration: none;
+        padding-block: 0.25rem;
+    }
+    .back svg {
+        width: 1rem;
+        height: 1rem;
+        transition: transform 200ms var(--ease-out);
+    }
+    .back:hover {
+        color: var(--ink);
+    }
+    .back:hover svg {
+        transform: translateX(-2px);
+    }
+    h1 {
+        font-size: var(--step-4);
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        line-height: 1.02;
+        max-width: 16ch;
+    }
+    .outcome {
+        margin-top: 1.5rem;
+        font-size: var(--step-2);
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: -0.015em;
+        max-width: 30ch;
+    }
+    .lede {
+        margin-top: 1.25rem;
+        font-size: var(--step-1);
+        color: var(--ink-2);
+        max-width: 50ch;
+    }
+
+    /* Key facts: a small ruled register, like the one on the home page. */
+    .facts {
+        border-top: 1px solid var(--ink);
+    }
+    .facts-head {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.25rem 1rem;
+        padding-block: 0.875rem;
+        border-bottom: 1px solid var(--rule);
+        font-size: var(--step--1);
+        color: var(--ink-3);
+    }
+    .facts-head span:first-child {
+        font-size: var(--step-0);
+        font-weight: 650;
+        color: var(--ink);
+    }
+    .facts dl div {
+        display: grid;
+        grid-template-columns: 7rem minmax(0, 1fr);
+        gap: 1rem;
+        padding-block: 0.875rem;
+        border-bottom: 1px solid var(--rule);
+        font-size: var(--step--1);
+    }
+    .facts dt {
+        color: var(--ink-3);
+    }
+    .facts dd {
+        margin: 0;
+        font-weight: 500;
+    }
+    .site {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: var(--green-ink);
+        text-decoration: none;
+    }
+    .site:hover {
+        text-decoration: underline;
+    }
+    .site svg:last-child {
+        width: 0.875rem;
+        height: 0.875rem;
+        flex: none;
+    }
+    @media (max-width: 480px) {
+        .facts dl div {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 0.125rem;
+        }
+    }
+
+    /* Each block opens on an ink rule, title left and content right. */
+    .block {
+        margin-top: clamp(4rem, 3rem + 4vw, 7rem);
+    }
+    .split {
+        display: grid;
+        gap: 1.5rem 4rem;
+        padding-top: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+        border-top: 1px solid var(--ink);
+    }
+    @media (min-width: 900px) {
+        .split {
+            grid-template-columns: 5fr 7fr;
+        }
+    }
+    h2 {
+        font-size: var(--step-3);
+        max-width: 16ch;
+    }
+    .text p {
+        font-size: var(--step-1);
+        color: var(--ink-2);
+        max-width: 58ch;
+    }
+    .text p + p {
+        margin-top: 1rem;
+    }
+    .checks {
+        list-style: none;
+        padding: 0;
+    }
+    .checks li:first-child,
+    .results div:first-child {
+        padding-top: 0;
+    }
+    .checks li {
+        display: flex;
+        gap: 0.75rem;
+        padding-block: 0.875rem;
+        border-bottom: 1px solid var(--rule);
+    }
+    .checks :global(.mark) {
+        margin-top: 0.3em;
+    }
+    .stack {
+        margin-top: 1.25rem;
+        font-size: var(--step--1);
+        color: var(--ink-3);
+    }
+
+    /* Flow: who does what, in order. Vertical on small screens, one row from 900px. */
+    .flow {
+        --node: 2.25rem;
+        list-style: none;
+        padding: 0;
+        margin-top: 2.5rem;
+        display: grid;
+    }
+    .step {
+        display: grid;
+        grid-template-columns: var(--node) minmax(0, 1fr);
+        column-gap: 1.25rem;
+        row-gap: 0.375rem;
+    }
+    .track {
+        grid-row: span 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .node {
+        display: grid;
+        place-items: center;
+        flex: none;
+        width: var(--node);
+        height: var(--node);
+        border: 1px solid var(--ink);
+        border-radius: 50%;
+        font-size: var(--step--1);
+        font-weight: 650;
+        font-variant-numeric: tabular-nums;
+    }
+    .link {
+        position: relative;
+        flex: 1;
+        width: 1px;
+        min-height: 1.5rem;
+        margin-block: 0.375rem;
+        background: var(--rule-strong);
+        color: var(--ink-3);
+    }
+    .link svg {
+        position: absolute;
+        left: 50%;
+        bottom: -1px;
+        width: 0.5rem;
+        height: 0.5rem;
+        max-width: none;
+        transform: translateX(-50%) rotate(90deg);
+    }
+    .step h3 {
+        font-size: var(--step-1);
+        font-weight: 650;
+        letter-spacing: -0.01em;
+        padding-top: 0.35rem;
+    }
+    .step p {
+        color: var(--ink-2);
+        font-size: var(--step--1);
+        max-width: 40ch;
+        padding-bottom: 2rem;
+    }
+    .step:last-child p {
+        padding-bottom: 0;
+    }
+    @media (min-width: 900px) {
+        .flow {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+        .step {
+            grid-template-columns: minmax(0, 1fr);
+            align-content: start;
+        }
+        .track {
+            grid-row: auto;
+            flex-direction: row;
+            margin-bottom: 1rem;
+        }
+        .link {
+            width: auto;
+            height: 1px;
+            min-height: 0;
+            margin-block: 0;
+            margin-inline: 0.5rem;
+        }
+        .link svg {
+            left: auto;
+            right: -1px;
+            bottom: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .step h3 {
+            padding-top: 0;
+            padding-right: 1.5rem;
+        }
+        .step p {
+            padding-bottom: 0;
+            padding-right: 1.5rem;
+        }
+    }
+
+    .results div {
+        padding-block: 1.125rem;
+        border-bottom: 1px solid var(--rule);
+    }
+    .results dt {
+        font-weight: 650;
+    }
+    .results dd {
+        margin: 0.25rem 0 0;
+        color: var(--ink-2);
+        max-width: 58ch;
+    }
+
+    .cta p {
+        font-size: var(--step-1);
+        color: var(--ink-2);
+        max-width: 46ch;
+        margin-bottom: 1.75rem;
+    }
+
+    .next {
+        border-top: 1px solid var(--ink);
+        border-bottom: 1px solid var(--rule);
+    }
+    .next h2 {
+        padding-block: 0.875rem;
+        font-size: var(--step-0);
+        font-weight: 650;
+        letter-spacing: 0;
+        max-width: none;
+        border-bottom: 1px solid var(--rule);
+    }
+    .next-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 0.25rem 1rem;
+        align-items: center;
+        padding: 1.25rem 0.75rem;
+        margin-inline: -0.75rem;
+        border-radius: var(--radius);
+        text-decoration: none;
+        transition: background-color 200ms var(--ease-out);
+    }
+    .next-row .name {
+        font-size: var(--step-2);
+        font-weight: 650;
+        letter-spacing: -0.02em;
+    }
+    .next-row .what {
+        grid-column: 1;
+        color: var(--ink-2);
+        font-size: var(--step--1);
+    }
+    .next-row svg {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        width: 1.25rem;
+        height: 1.25rem;
+        transition: transform 220ms var(--ease-out);
+    }
+    .next-row:hover,
+    .next-row:focus-visible {
+        background: var(--surface);
+    }
+    .next-row:hover svg,
+    .next-row:focus-visible svg {
+        transform: translateX(3px);
+    }
+</style>

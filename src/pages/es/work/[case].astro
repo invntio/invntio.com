@@ -1,0 +1,12 @@
+---
+import CasePage from "../../../components/CasePage.astro";
+import type { CaseSlug } from "../../../i18n/ui";
+
+export function getStaticPaths() {
+    return (["gmg", "bohio"] as const).map((slug) => ({ params: { case: slug } }));
+}
+
+const { case: slug } = Astro.params as { case: CaseSlug };
+---
+
+<CasePage slug={slug} />

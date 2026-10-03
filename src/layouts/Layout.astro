@@ -14,6 +14,8 @@ interface Props {
     noindex?: boolean;
     // Last content change, for structured data on inner pages.
     updated?: Date;
+    // What the page is about (a JSON-LD node), for structured data on inner pages.
+    subject?: Record<string, unknown>;
 }
 
 const lang = getLang(Astro.url);
@@ -103,7 +105,7 @@ const isHome = localizePath(Astro.url.pathname, "en") === "/";
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary" />
         <link rel="author" href="/humans.txt" />
         {site.googleSiteVerification && <meta name="google-site-verification" content={site.googleSiteVerification} />}
-        {!Astro.props.noindex && <StructuredData kind={isHome ? "home" : "page"} title={Astro.props.title} updated={Astro.props.updated} />}
+        {!Astro.props.noindex && <StructuredData kind={isHome ? "home" : "page"} title={Astro.props.title} updated={Astro.props.updated} subject={Astro.props.subject} />}
         <meta name="generator" content={Astro.generator} />
     </head>
     <body>

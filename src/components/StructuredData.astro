@@ -3,14 +3,15 @@ import { getLang, localizePath, useTranslations } from "../i18n/ui";
 import { site } from "../config/site";
 
 // JSON-LD for search engines: the business and its services on the home page,
-// breadcrumbs on inner pages.
+// breadcrumbs (and what the page is about, if given) on inner pages.
 interface Props {
     kind: "home" | "page";
     title?: string;
     updated?: Date;
+    subject?: Record<string, unknown>;
 }
 
-const { kind, title, updated } = Astro.props;
+const { kind, title, updated, subject } = Astro.props;
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
 const home = new URL(localizePath("/", lang), site.url).href;
@@ -104,7 +105,9 @@ const graph =
                   isPartOf: { "@id": `${site.url}/#website` },
                   publisher: { "@id": orgId },
                   ...(updated && { dateModified: updated.toISOString().slice(0, 10) }),
+                  ...(subject && { about: { "@id": subject["@id"] } }),
               },
+              ...(subject ? [subject] : []),
               {
                   "@type": "BreadcrumbList",
                   itemListElement: [

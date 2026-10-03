@@ -16,6 +16,36 @@ type RegisterItem = {
     kind: "own" | "client";
     // Hidden items are kept ready but not shown until the project is live.
     hidden?: boolean;
+    // Slug of the case study at /work/<case>, when there is one.
+    case?: CaseSlug;
+};
+
+export type CaseSlug = "gmg" | "bohio";
+
+// A case study page (/work/<slug>). Every statement must be verifiable: no metrics,
+// quotes or results that did not happen.
+type CaseStudy = {
+    slug: CaseSlug;
+    kind: "own" | "client";
+    name: string;
+    // <title> (before "— Invntio") and meta description.
+    title: string;
+    description: string;
+    outcome: string;
+    lede: string;
+    url: string;
+    domain: string;
+    industry: string;
+    built: string;
+    // Timeline for finished client work, status for a product still growing.
+    when: { label: "timeline" | "status"; text: string };
+    challenge: string[];
+    items: string[];
+    stack: string;
+    flow: { title: string; lede: string; steps: { name: string; body: string }[] };
+    results: { title: string; body: string }[];
+    // Last content change, for structured data.
+    updated: string;
 };
 
 const en = {
@@ -60,10 +90,11 @@ const en = {
                 url: "https://www.theglobalmerchantsgroup.com/en/default-channel",
                 domain: "theglobalmerchantsgroup.com",
                 kind: "client",
+                case: "gmg",
             },
             { name: "Beavo", what: "Private habit tracker for iPhone", url: "https://beavo.me", domain: "beavo.me", kind: "own" },
             { name: "Axen", what: "Training app for iOS", url: "https://getaxen.com", domain: "getaxen.com", kind: "own" },
-            { name: "Bohío", what: "Condominium management SaaS", url: "https://bohio.app", domain: "bohio.app", kind: "own" },
+            { name: "Bohío", what: "Condominium management SaaS", url: "https://bohio.app", domain: "bohio.app", kind: "own", case: "bohio" },
             // Client sites on the Invntio platform. Keep hidden until each has its own live domain
             // (see docs/tasks/launch-client-sites.md). url/domain are the planned values.
             { name: "OBJURI", what: "Legal-research observatory: congresses, news, articles and alliances", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
@@ -237,6 +268,111 @@ const en = {
         lede: "Everything we have built and still run: our own products, and work for clients.",
         own: "Our products",
         clients: "Client work",
+        cases: "Case studies",
+    },
+    cases: {
+        caseStudy: "Case study",
+        back: "Work",
+        industry: "Industry",
+        built: "What we built",
+        timeline: "Timeline",
+        status: "Status",
+        site: "Live site",
+        challenge: "The challenge",
+        stackLabel: "Stack",
+        result: "The result",
+        ctaTitle: "Want something similar?",
+        ctaBody: "Tell us what you need. We reply within 2 business days, and every project starts with a written proposal.",
+        cta: "Start a project",
+        other: "Another case study",
+        read: "Read the case study",
+        items: <CaseStudy[]>[
+            {
+                slug: "gmg",
+                kind: "client",
+                name: "Global Merchants Group",
+                title: "Global Merchants Group case study",
+                description:
+                    "How Invntio designed, built and launched a wholesale website and self-managed product catalog for Global Merchants Group, live on its own domain in one week.",
+                outcome: "A wholesale website and product catalog, live on its own domain in one week.",
+                lede: "Global Merchants Group (GMG) sells inspected lots of smartphones and mobile devices in bulk to retailers, distributors and enterprise buyers worldwide. We designed, built and launched the site it sells from.",
+                url: "https://theglobalmerchantsgroup.com",
+                domain: "theglobalmerchantsgroup.com",
+                industry: "B2B wholesale of mobile devices",
+                built: "Website and product catalog with a CMS",
+                when: { label: "timeline", text: "One week, July 21–27, 2026" },
+                challenge: [
+                    "GMG needed a website that makes its wholesale offer clear at a glance (inspected lots, bulk supply, worldwide shipping) and gives serious buyers a direct way to ask for a quote.",
+                    "The product list had to stay current, and the team needed to update it on its own, without calling a developer for every change.",
+                ],
+                items: [
+                    "A website built around the wholesale offer: inspected lots, bulk supply and worldwide shipping.",
+                    "An online product catalog the GMG team updates on its own through a CMS, with no developer needed.",
+                    "Clear paths for buyers to request a quote or contact sales.",
+                    "Privacy Policy and Terms pages.",
+                    "SEO basics in place from launch.",
+                ],
+                stack: "Next.js storefront · Sanity CMS · Vercel",
+                flow: {
+                    title: "How it works",
+                    lede: "From a catalog update to a sales conversation, with no developer in the loop.",
+                    steps: [
+                        { name: "The GMG team updates the catalog", body: "Adds or edits products in the CMS." },
+                        { name: "The site shows it", body: "Buyers see the current products and lots." },
+                        { name: "A buyer requests a quote", body: "Or contacts sales directly from the site." },
+                        { name: "GMG sales follows up", body: "The request reaches the sales team, who take it from there." },
+                    ],
+                },
+                results: [
+                    { title: "Live in one week", body: "Designed, built and launched between July 21 and July 27, 2026, on GMG's own domain." },
+                    { title: "A catalog the team runs", body: "GMG adds and edits products in the CMS on its own, without a developer." },
+                    { title: "A direct line to sales", body: "Buyers can request a quote or contact sales from the site." },
+                ],
+                updated: "2026-10-03",
+            },
+            {
+                slug: "bohio",
+                kind: "own",
+                name: "Bohío",
+                title: "Bohío case study",
+                description:
+                    "Bohío is Invntio's condominium management software: payments, maintenance issues and resident communication in one place. Now in early access.",
+                outcome: "Condominium payments, maintenance and notices in one place, instead of a WhatsApp group.",
+                lede: "Bohío is our own product, built for condominium administrators. It brings payments, maintenance issues and resident communication together, so administrators stop chasing people over WhatsApp.",
+                url: "https://bohio.app",
+                domain: "bohio.app",
+                industry: "Condominium and property management",
+                built: "Admin dashboard, resident app, payments backend and website",
+                when: { label: "status", text: "Early access with its first communities" },
+                challenge: [
+                    "Many condominiums are run from group chats, spreadsheets and screenshots of bank transfers. Administrators chase residents for dues, lose track of repair requests and repeat the same notice in several places.",
+                    "Residents, in turn, are not sure what they owe or whether anyone saw the problem they reported.",
+                ],
+                items: [
+                    "A web dashboard where administrators manage dues, payments, maintenance issues and announcements.",
+                    "A mobile app where residents see what they owe, pay by card, report issues and get notices.",
+                    "A billing and payments backend that ties every payment to the right invoice.",
+                    "The marketing website at bohio.app, where communities request early access.",
+                ],
+                stack: "Flutter · NestJS · Astro on Cloudflare",
+                flow: {
+                    title: "How it works",
+                    lede: "Administrators and residents work from the same record, not from a chat thread.",
+                    steps: [
+                        { name: "The administrator posts a charge or notice", body: "Once, from the web dashboard, for the whole community." },
+                        { name: "Residents get it in the app", body: "They see what they owe and what is new." },
+                        { name: "Residents pay or report an issue", body: "A card payment or a maintenance request, from their phone." },
+                        { name: "The administrator sees where things stand", body: "Payments and open issues update in the dashboard." },
+                    ],
+                },
+                results: [
+                    { title: "In early access", body: "Bohío is running with its first communities. New ones can request access at bohio.app." },
+                    { title: "Built and run end to end", body: "Dashboard, resident app, payments backend and website, all designed, built and operated by Invntio." },
+                    { title: "One shared record", body: "Payments, maintenance issues and notices live in one system that administrators and residents both use." },
+                ],
+                updated: "2026-10-03",
+            },
+        ],
     },
     notFound: {
         title: "Page not found",
@@ -291,10 +427,11 @@ const es: Dict = {
                 url: "https://www.theglobalmerchantsgroup.com/en/default-channel",
                 domain: "theglobalmerchantsgroup.com",
                 kind: "client",
+                case: "gmg",
             },
             { name: "Beavo", what: "Habit tracker privado para iPhone", url: "https://beavo.me", domain: "beavo.me", kind: "own" },
             { name: "Axen", what: "App de entrenamiento para iOS", url: "https://getaxen.com", domain: "getaxen.com", kind: "own" },
-            { name: "Bohío", what: "SaaS de administración de condominios", url: "https://bohio.app", domain: "bohio.app", kind: "own" },
+            { name: "Bohío", what: "SaaS de administración de condominios", url: "https://bohio.app", domain: "bohio.app", kind: "own", case: "bohio" },
             { name: "OBJURI", what: "Observatorio de ciencias jurídicas: congresos, noticias, artículos y alianzas", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
             { name: "AJMG", what: "Asociación de Jueces y Magistrados de Guatemala", url: "", domain: "", kind: "client", hidden: true },
         ],
@@ -466,6 +603,111 @@ const es: Dict = {
         lede: "Todo lo que hemos construido y seguimos operando: nuestros productos y el trabajo para clientes.",
         own: "Nuestros productos",
         clients: "Trabajo para clientes",
+        cases: "Casos de estudio",
+    },
+    cases: {
+        caseStudy: "Caso de estudio",
+        back: "Trabajo",
+        industry: "Sector",
+        built: "Qué construimos",
+        timeline: "Plazo",
+        status: "Estado",
+        site: "Sitio en línea",
+        challenge: "El reto",
+        stackLabel: "Tecnologías",
+        result: "El resultado",
+        ctaTitle: "¿Quieres algo similar?",
+        ctaBody: "Cuéntanos qué necesitas. Respondemos en 2 días hábiles, y todo proyecto empieza con una propuesta escrita.",
+        cta: "Empezar un proyecto",
+        other: "Otro caso de estudio",
+        read: "Leer el caso de estudio",
+        items: [
+            {
+                slug: "gmg",
+                kind: "client",
+                name: "Global Merchants Group",
+                title: "Caso de estudio: Global Merchants Group",
+                description:
+                    "Cómo Invntio diseñó, construyó y lanzó el sitio mayorista y el catálogo autogestionado de Global Merchants Group, en línea en su propio dominio en una semana.",
+                outcome: "Un sitio mayorista con catálogo de productos, en línea en su propio dominio en una semana.",
+                lede: "Global Merchants Group (GMG) vende lotes inspeccionados de smartphones y dispositivos móviles al por mayor a minoristas, distribuidores y compradores corporativos de todo el mundo. Diseñamos, construimos y lanzamos el sitio desde el que vende.",
+                url: "https://theglobalmerchantsgroup.com",
+                domain: "theglobalmerchantsgroup.com",
+                industry: "Venta mayorista B2B de dispositivos móviles",
+                built: "Sitio web y catálogo de productos con CMS",
+                when: { label: "timeline", text: "Una semana, del 21 al 27 de julio de 2026" },
+                challenge: [
+                    "GMG necesitaba un sitio que dejara clara su oferta mayorista de un vistazo (lotes inspeccionados, suministro por volumen, envíos a todo el mundo) y que diera a los compradores serios una forma directa de pedir una cotización.",
+                    "El catálogo tenía que mantenerse al día, y el equipo necesitaba actualizarlo por su cuenta, sin llamar a un programador para cada cambio.",
+                ],
+                items: [
+                    "Un sitio pensado para la oferta mayorista: lotes inspeccionados, suministro por volumen y envíos a todo el mundo.",
+                    "Un catálogo de productos en línea que el equipo de GMG actualiza por su cuenta desde un CMS, sin necesitar a un programador.",
+                    "Caminos claros para que los compradores pidan una cotización o contacten a ventas.",
+                    "Páginas de Política de Privacidad y Términos.",
+                    "SEO básico configurado desde el lanzamiento.",
+                ],
+                stack: "Tienda en Next.js · Sanity CMS · Vercel",
+                flow: {
+                    title: "Cómo funciona",
+                    lede: "De una actualización del catálogo a una conversación de ventas, sin un programador de por medio.",
+                    steps: [
+                        { name: "El equipo de GMG actualiza el catálogo", body: "Agrega o edita productos en el CMS." },
+                        { name: "El sitio lo muestra", body: "Los compradores ven los productos y lotes vigentes." },
+                        { name: "Un comprador pide una cotización", body: "O contacta a ventas directamente desde el sitio." },
+                        { name: "Ventas de GMG da seguimiento", body: "La solicitud llega al equipo de ventas, que la atiende desde ahí." },
+                    ],
+                },
+                results: [
+                    { title: "En línea en una semana", body: "Diseñado, construido y lanzado entre el 21 y el 27 de julio de 2026, en el dominio propio de GMG." },
+                    { title: "Un catálogo que maneja el equipo", body: "GMG agrega y edita productos en el CMS por su cuenta, sin un programador." },
+                    { title: "Una línea directa con ventas", body: "Los compradores pueden pedir una cotización o contactar a ventas desde el sitio." },
+                ],
+                updated: "2026-10-03",
+            },
+            {
+                slug: "bohio",
+                kind: "own",
+                name: "Bohío",
+                title: "Caso de estudio: Bohío",
+                description:
+                    "Bohío es el software de administración de condominios de Invntio: pagos, incidencias de mantenimiento y comunicación con residentes en un solo lugar. En acceso anticipado.",
+                outcome: "Pagos, mantenimiento y avisos del condominio en un solo lugar, en vez de un grupo de WhatsApp.",
+                lede: "Bohío es un producto propio, pensado para administradores de condominios. Reúne pagos, incidencias de mantenimiento y comunicación con los residentes, para que la administración deje de perseguir a la gente por WhatsApp.",
+                url: "https://bohio.app",
+                domain: "bohio.app",
+                industry: "Administración de condominios y propiedades",
+                built: "Panel de administración, app para residentes, backend de pagos y sitio web",
+                when: { label: "status", text: "Acceso anticipado con sus primeras comunidades" },
+                challenge: [
+                    "Muchos condominios se administran desde chats de grupo, hojas de cálculo y capturas de transferencias bancarias. La administración persigue a los residentes por las cuotas, pierde el hilo de las reparaciones y repite el mismo aviso en varios lugares.",
+                    "Los residentes, por su parte, no tienen claro cuánto deben ni si alguien vio el problema que reportaron.",
+                ],
+                items: [
+                    "Un panel web donde la administración gestiona cuotas, pagos, incidencias de mantenimiento y avisos.",
+                    "Una app móvil donde los residentes ven cuánto deben, pagan con tarjeta, reportan incidencias y reciben avisos.",
+                    "Un backend de facturación y pagos que vincula cada pago con su factura.",
+                    "El sitio web bohio.app, donde las comunidades solicitan acceso anticipado.",
+                ],
+                stack: "Flutter · NestJS · Astro en Cloudflare",
+                flow: {
+                    title: "Cómo funciona",
+                    lede: "Administración y residentes trabajan sobre el mismo registro, no sobre un hilo de chat.",
+                    steps: [
+                        { name: "La administración publica un cargo o aviso", body: "Una sola vez, desde el panel web, para toda la comunidad." },
+                        { name: "Los residentes lo reciben en la app", body: "Ven cuánto deben y qué hay de nuevo." },
+                        { name: "Los residentes pagan o reportan", body: "Un pago con tarjeta o una solicitud de mantenimiento, desde el teléfono." },
+                        { name: "La administración ve cómo va todo", body: "Los pagos y las incidencias abiertas se actualizan en el panel." },
+                    ],
+                },
+                results: [
+                    { title: "En acceso anticipado", body: "Bohío funciona con sus primeras comunidades. Otras pueden solicitar acceso en bohio.app." },
+                    { title: "Construido y operado de punta a punta", body: "Panel, app para residentes, backend de pagos y sitio web, todo diseñado, construido y operado por Invntio." },
+                    { title: "Un registro compartido", body: "Pagos, incidencias de mantenimiento y avisos viven en un solo sistema que usan tanto la administración como los residentes." },
+                ],
+                updated: "2026-10-03",
+            },
+        ],
     },
     notFound: {
         title: "Página no encontrada",
