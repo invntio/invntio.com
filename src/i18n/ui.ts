@@ -181,8 +181,8 @@ const en = {
         lede: "Four stages, the same for every project.",
         steps: [
             {
-                name: "Discovery call",
-                body: "We talk through the problem, who will use the result, and your timeline.",
+                name: "Project Diagnostic",
+                body: "A paid 30-minute session on the problem, who will use the result and your timeline, followed by a written plan. The fee is credited toward the project.",
             },
             {
                 name: "Proposal & upfront payment",
@@ -219,7 +219,7 @@ const en = {
             body: "30 minutes on your project, then a written plan with scope, risks, timeline and price range. USD\u00a095, credited if you hire us within 60 days.",
             cta: "Book a diagnostic",
             newTab: "(opens Cal.com in a new tab)",
-            guarantee: "Not useful? Ask for a refund.",
+            guarantee: "Not useful? Full refund within 7 days.",
             policy: "Refund terms",
             anchor: "#4-project-diagnostic",
         },
@@ -529,8 +529,8 @@ const es: Dict = {
         lede: "Cuatro etapas, iguales para cada proyecto.",
         steps: [
             {
-                name: "Llamada inicial",
-                body: "Conversamos sobre el problema, quién usará el resultado y tus plazos.",
+                name: "Diagnóstico del proyecto",
+                body: "Una sesión pagada de 30 minutos sobre el problema, quién usará el resultado y tus plazos, y después un plan escrito. El pago se descuenta del proyecto.",
             },
             {
                 name: "Propuesta y pago inicial",
@@ -567,7 +567,7 @@ const es: Dict = {
             body: "30 minutos sobre tu proyecto y, después, un plan escrito con alcance, riesgos, plazos y rango de precio. USD\u00a095, que se descuentan si nos contratas en los 60 días siguientes.",
             cta: "Reservar diagnóstico",
             newTab: "(abre Cal.com en una pestaña nueva)",
-            guarantee: "¿No te sirvió? Pide el reembolso.",
+            guarantee: "¿No te sirvió? Reembolso completo en 7 días.",
             policy: "Condiciones de reembolso",
             anchor: "#4-diagnóstico-del-proyecto",
         },

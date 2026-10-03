@@ -13,7 +13,7 @@ Our policy is simple: **payments are non-refundable once made**, except in the c
 | Fixed-price projects | Websites, landing pages, web apps, platforms and SaaS, mobile apps | Each payment is non-refundable once made. If you cancel, we deliver the work completed up to that point. |
 | Recurring plans | Hosting & maintenance, support, content management (monthly or annual) | Cancel any time before the next renewal. No refunds for past or partial periods. |
 | Hourly work | Consulting, support outside a plan | Prepaid blocks of hours are non-refundable and valid for 90 days unless the proposal says otherwise. |
-| Project Diagnostic | 30-minute video session and written summary, USD 95 | Cancel or reschedule up to 1 business day before for a full refund. Refund on request if the session isn't useful. Credited toward your project if you hire us within 60 days. |
+| Project Diagnostic | 30-minute video session and written summary, USD 95 | Cancel or reschedule up to 1 business day before for a full refund. Full refund if the session isn't useful and you tell us within 7 days. Credited toward your project if you hire us within 60 days. |
 | Third-party costs | Domains, app store fees, licenses, infrastructure | Never refundable by us. The provider's own policy applies. |
 
 ## 1. Fixed-price projects
@@ -44,7 +44,7 @@ Consulting and support outside a plan are billed hourly at the rate in the propo
 The Project Diagnostic is a 30-minute video session about your project, for USD 95, paid when you book it. Within 2 business days of the session we send you a written summary with the scope, main risks, timeline and price range. The summary is yours to keep, even if you don't continue with us.
 
 - **Rescheduling and cancelling.** You can reschedule or cancel up to 1 business day before the session for a full refund. Cancellations after that, and sessions you miss, are not refunded.
-- **If the session isn't useful.** Tell us, and you can ask for a refund of the fee.
+- **If the session isn't useful.** Tell us within 7 days of the session and we refund the full fee. No questions asked.
 - **Credit toward your project.** If you hire us within 60 days of the session, the full fee is credited toward the project. Hiring us means accepting a proposal and making the first payment. A proposal is valid for 30 days from the date we send it (see our [Terms of Service](/terms)), so accept it within the 60 days to keep the credit.
 
 To cancel or ask for a refund, follow section 8.

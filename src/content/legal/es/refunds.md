@@ -13,7 +13,7 @@ Nuestra política es simple: **los pagos no son reembolsables una vez realizados
 | Proyectos de precio fijo | Sitios web, landing pages, aplicaciones web, plataformas y SaaS, apps móviles | Cada pago deja de ser reembolsable al realizarse. Si cancelas, te entregamos el trabajo completado hasta ese momento. |
 | Planes recurrentes | Hosting y mantenimiento, soporte, gestión de contenido (mensual o anual) | Cancela cuando quieras antes de la próxima renovación. No se reembolsan periodos pasados ni parciales. |
 | Trabajo por horas | Consultoría, soporte fuera de un plan | Los bloques de horas prepagados no son reembolsables y valen 90 días, salvo que la propuesta diga otra cosa. |
-| Diagnóstico del proyecto | Videollamada de 30 minutos y resumen escrito, USD 95 | Cancela o cambia la fecha hasta 1 día hábil antes con reembolso completo. Reembolso a pedido si la sesión no te resulta útil. Se descuenta de tu proyecto si nos contratas en los 60 días siguientes. |
+| Diagnóstico del proyecto | Videollamada de 30 minutos y resumen escrito, USD 95 | Cancela o cambia la fecha hasta 1 día hábil antes con reembolso completo. Reembolso completo si la sesión no te resulta útil y nos avisas en 7 días. Se descuenta de tu proyecto si nos contratas en los 60 días siguientes. |
 | Costos de terceros | Dominios, tiendas de apps, licencias, infraestructura | Nunca los reembolsamos nosotros. Aplica la política del proveedor. |
 
 ## 1. Proyectos de precio fijo
@@ -44,7 +44,7 @@ La consultoría y el soporte fuera de un plan se facturan por horas, a la tarifa
 El Diagnóstico del proyecto es una videollamada de 30 minutos sobre tu proyecto, por USD 95, que se paga al reservarla. En los 2 días hábiles siguientes a la sesión te enviamos un resumen escrito con el alcance, los riesgos principales, los plazos y un rango de precio. El resumen es tuyo aunque no sigas con nosotros.
 
 - **Cambios de fecha y cancelaciones.** Puedes cambiar la fecha o cancelar hasta 1 día hábil antes de la sesión con reembolso completo. Las cancelaciones posteriores y las sesiones a las que no te presentes no se reembolsan.
-- **Si la sesión no te resulta útil.** Avísanos y puedes pedir el reembolso del pago.
+- **Si la sesión no te resulta útil.** Avísanos en los 7 días siguientes a la sesión y te reembolsamos el pago completo, sin preguntas.
 - **Descuento en tu proyecto.** Si nos contratas en los 60 días siguientes a la sesión, el pago completo se descuenta del proyecto. Contratarnos significa aceptar una propuesta y hacer el primer pago. Una propuesta vale 30 días desde que te la enviamos (ver nuestros [Términos del Servicio](/es/terms)), así que acéptala dentro de los 60 días para conservar el descuento.
 
 Para cancelar o pedir un reembolso, sigue la sección 8.

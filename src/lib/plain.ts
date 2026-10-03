@@ -78,7 +78,7 @@ Book online: ${site.diagnostic.url}
 
 - Within 2 business days the client receives a written summary: scope, main risks, timeline and price range. It is theirs to keep, even if they don't continue.
 - The full fee is credited toward the project if they hire Invntio within 60 days of the session.
-- If the session isn't useful, the client can ask for a refund.
+- If the session isn't useful, the client gets a full refund on request within 7 days of the session.
 - Reschedule or cancel up to 1 business day before for a full refund. Later cancellations and no-shows are not refunded.
 - Sessions in English or Spanish.
 

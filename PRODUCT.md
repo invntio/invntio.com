@@ -16,10 +16,10 @@ A secondary reader is the **payment-processor reviewer** (Stripe). They check th
 
 ## Product Purpose
 
-Invntio is a one-person software studio run by Víctor Velázquez Cid. The site exists to:
+Invntio is a small, independent software studio run by Víctor Velázquez Cid, who does the engineering himself with occasional help (directories list it as 2–10 people). The site presents the company as a brand, not as a person: Víctor is not the face of it. The site exists to:
 
 1. explain exactly what Invntio sells and how an engagement works;
-2. let a prospective client get in touch (email or the contact form);
+2. let a prospective client start: book the paid Project Diagnostic (the recommended way), or write first through the form, email or phone;
 3. publish the Terms of Service, the Refund & Cancellation Policy and the Privacy Policy in plain language.
 
 Success means a visitor understands the offer within seconds and contacts Invntio, and a Stripe reviewer finds every required disclosure without searching.
@@ -42,7 +42,9 @@ Services sold:
 6. Hosting & Maintenance: monthly or annual plans covering hosting, security, backups, updates, support and optional content management.
 7. Technical Consulting: architecture, DevOps and CI/CD, security review.
 
-Engagement flow: Discovery call → Proposal & upfront payment → Build & review → Launch, handoff & ongoing support.
+Engagement flow: Project Diagnostic → Proposal & upfront payment → Build & review → Launch, handoff & ongoing support.
+
+Project Diagnostic (live since October 2026): a paid 30-minute Cal Video session booked at https://cal.com/invntio/diagnostic, USD 95 via Stripe at booking. A written summary (scope, risks, timeline, price range) follows within 2 business days. Full refund if cancelled up to 1 business day before, or if the session isn't useful and the client says so within 7 days. The fee is credited toward the project if the client hires Invntio within 60 days. Follow-up email templates: docs/sales/project-diagnostic.md.
 
 Commercial terms (confirmed September 2026):
 - Fixed-price projects: the payment schedule is set in each written proposal, and small projects such as websites are paid 100% upfront. A payment is non-refundable once made.
@@ -50,12 +52,12 @@ Commercial terms (confirmed September 2026):
 - Hourly work is paid as a prepaid minimum block at the agreed rate. Overage requires the client's written approval and goes on the next invoice. Clients are notified when 80% of a block is used.
 - Late payment: invoices are due in 7 days. At 7 days late, work pauses. At 15 days, hosting is suspended. At 30 days, the agreement may be terminated. No late fee is charged. Nothing is handed over until paid in full.
 - Client delays: more than 10 business days without a response moves the timeline. After 60 days the project is closed and a restart needs a new proposal.
-- Legal entity: **none shown**. The brand is "Invntio". The operator's name appears only on the legal pages.
+- Legal entity: **none shown**. In the US, Invntio is Víctor's personal brand (a Dominican SRL with two partners exists but does not apply in the US). The operator's name appears only on the legal pages.
 - Location: Pennsylvania, United States. No street address is published.
-- Contact: hello@invntio.com (email only; no phone published).
+- Contact: hello@invntio.com and +1 (267) 800-7744 (published since October 2026, same format everywhere). WhatsApp Business exists but is deliberately not shown on the site; it is for active clients only.
 - Analytics: PostHog (project `invntio.com`), loaded only after cookie consent.
 - Languages: English (`/`) and Spanish (`/es/`).
-- Stack: Astro 5, static output, deployed on Cloudflare (wrangler). The contact form posts to Web3Forms.
+- Stack: Astro 7, prerendered, deployed on Cloudflare Workers (wrangler). The contact form posts to Web3Forms.
 
 ## Brand Commitments
 
@@ -66,17 +68,19 @@ Commercial terms (confirmed September 2026):
 ## Evidence on Hand
 
 - Own products: Beavo (iOS habit tracker, https://beavo.me), Axen (iOS training app, https://getaxen.com), Bohío (condominium management SaaS, https://bohio.app).
-- Client work: The Global Merchants Group (https://www.theglobalmerchantsgroup.com/en/default-channel).
+- Client work: Global Merchants Group (https://theglobalmerchantsgroup.com), with a case study at /work/gmg. Bohío also has a case study at /work/bohio (own product, early access).
+- Status of own products: Beavo is on the App Store; Axen and Bohío are in early access. Never describe Axen or Bohío as launched.
+- Proof strategy (docs/research/proof-and-trust.md): show specific cases, clear terms and verifiable facts; do not show small counts (clients, projects, years). Clutch profile exists; show its badge only after the first review is published.
 - OBJURI and AJMG (Asociación de Jueces y Magistrados de Guatemala) are client sites on the Invntio platform, not yet live on their own domains; show them only once they are (AJMG also needs the owner's OK). CGD was dropped. See docs/tasks/launch-client-sites.md.
 - There are **no testimonials, client logos, metrics or partner relationships**. Do not invent any. The technology logos are tools Invntio uses, not partners.
-- Social accounts (GitHub, LinkedIn, Instagram) exist but are inactive, so they are not linked for now.
+- LinkedIn (company/invntio) and GitHub (invntio) are listed as sameAs in the JSON-LD for search engines, but not linked visibly. Instagram is inactive.
 
 ## Product Principles
 
 1. Say exactly what is sold and what it costs to engage. Specific beats aspirational.
 2. Every claim must be verifiable, and nothing is shown that isn't real and live.
 3. Contact and policy information is always one click away.
-4. Keep it small: one person, a few pages, maintainable by one person.
+4. Keep it small: a few pages, maintainable by one person.
 
 ## Accessibility & Inclusion
 
