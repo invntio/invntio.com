@@ -70,6 +70,20 @@ ${t.services.items.map((s) => `- **${s.name}**: ${s.body} Typical stack: ${s.sta
 
 ${t.process.steps.map((s, i) => `${i + 1}. **${s.name}**: ${s.body}`).join("\n")}
 
+## Project Diagnostic (the recommended way to start)
+
+A paid 30-minute video session (Cal Video) about the client's project, for ${site.diagnostic.currency} ${site.diagnostic.price}, paid when booking (Stripe).
+
+Book online: ${site.diagnostic.url}
+
+- Within 2 business days the client receives a written summary: scope, main risks, timeline and price range. It is theirs to keep, even if they don't continue.
+- The full fee is credited toward the project if they hire Invntio within 60 days of the session.
+- If the session isn't useful, the client can ask for a refund.
+- Reschedule or cancel up to 1 business day before for a full refund. Later cancellations and no-shows are not refunded.
+- Sessions in English or Spanish.
+
+Prefer to write first? The contact form at ${site.url}/#contact and ${site.email} are free; we reply within 2 business days.
+
 ## Hosting & maintenance plans
 
 Included: ${t.plans.included.join("; ")}.
@@ -86,7 +100,7 @@ ${t.cases.items.map((c) => `- [${c.name}](${caseUrl(c.slug)}): ${c.outcome}`).jo
 ## Policies
 
 - [Terms of Service](${site.url}/terms/): scope, payments, late payment, intellectual property, confidentiality, AI use, liability, Pennsylvania law
-- [Refund & Cancellation Policy](${site.url}/refunds/): payments are non-refundable once made, with listed exceptions; plans cancel before renewal
+- [Refund & Cancellation Policy](${site.url}/refunds/): payments are non-refundable once made, with listed exceptions; Project Diagnostic refund and credit rules; plans cancel before renewal
 - [Privacy Policy](${site.url}/privacy/): data collected, cookies (analytics only with consent), rights and retention
 
 ## Optional
