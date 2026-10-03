@@ -1,11 +1,13 @@
 ---
 import Dotted from "./Dotted.astro";
+import Mark from "./Mark.astro";
 import { getLang, localizePath, useTranslations } from "../i18n/ui";
 import { site } from "../config/site";
 
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
 const f = t.contact.form;
+const d = t.contact.diagnostic;
 ---
 
 <section class="section" id="contact" aria-labelledby="contact-title">
@@ -15,7 +17,33 @@ const f = t.contact.form;
             <p>{t.contact.lede}</p>
         </div>
 
+        <div class="diagnostic" aria-labelledby="diagnostic-title" role="group" data-reveal>
+            <div class="diagnostic-intro">
+                <h3 id="diagnostic-title"><Dotted text={d.title} /></h3>
+                <p>{d.note}</p>
+            </div>
+            <div class="diagnostic-body">
+                <p class="value">{d.body}</p>
+                <ul class="terms">
+                    {d.terms.map((term) => <li><Mark kind="included" />{term}</li>)}
+                </ul>
+                <div class="book">
+                    <a class="btn btn-primary" href={site.diagnostic.url} target="_blank" rel="noopener" data-book-diagnostic>
+                        {d.cta}<span class="sr-only"> {d.newTab}</span>
+                        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5" /></svg>
+                    </a>
+                    <p class="guarantee">
+                        {d.guarantee} <a href={localizePath("/refunds", lang) + d.anchor}>{d.policy}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <div class="contact">
+            <div class="alt" data-reveal>
+                <h3>{t.contact.alt.title}</h3>
+                <p>{t.contact.alt.body}</p>
+            </div>
             <dl class="details" data-reveal>
                 <div>
                     <dt>{t.contact.email}</dt>
@@ -88,6 +116,10 @@ const f = t.contact.form;
 <script is:inline src="https://web3forms.com/client/script.js" async defer></script>
 
 <script>
+    document.querySelector("[data-book-diagnostic]")?.addEventListener("click", () => {
+        (window as unknown as { posthog?: { capture: (e: string) => void } }).posthog?.capture("diagnostic_booking_clicked");
+    });
+
     const form = document.querySelector<HTMLFormElement>("[data-contact-form]");
     if (form) {
         const status = form.querySelector<HTMLElement>("[data-status]")!;
@@ -149,16 +181,108 @@ const f = t.contact.form;
 </script>
 
 <style>
+    .diagnostic {
+        display: grid;
+        gap: 1.5rem;
+        padding-block: 2.5rem;
+        border-bottom: 1px solid var(--rule);
+    }
+    @media (min-width: 900px) {
+        .diagnostic {
+            grid-template-columns: 4fr 8fr;
+            column-gap: 4rem;
+        }
+    }
+    .diagnostic h3 {
+        font-size: var(--step-2);
+        font-weight: 600;
+    }
+    .diagnostic-intro p {
+        margin-top: 0.5rem;
+        font-size: var(--step--1);
+        color: var(--ink-3);
+    }
+    .value {
+        font-size: var(--step-1);
+        color: var(--ink-2);
+        max-width: 54ch;
+    }
+    .terms {
+        list-style: none;
+        padding: 0;
+        margin-top: 1.25rem;
+        display: grid;
+        gap: 0.5rem 1.5rem;
+        max-width: 40rem;
+        font-size: var(--step--1);
+        font-weight: 500;
+    }
+    @media (min-width: 640px) {
+        .terms {
+            grid-template-columns: 1fr 1fr;
+        }
+        /* The credit line is the longest term; it gets the full row. */
+        .terms li:last-child {
+            grid-column: 1 / -1;
+        }
+    }
+    .terms li {
+        display: flex;
+        gap: 0.5rem;
+        align-items: baseline;
+    }
+    .terms :global(.mark) {
+        position: relative;
+        top: 0.15em;
+    }
+    .book {
+        margin-top: 1.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem 1.5rem;
+    }
+    .guarantee {
+        flex: 1 1 18rem;
+        max-width: 46ch;
+        font-size: var(--step--1);
+        color: var(--ink-2);
+    }
+    .guarantee a {
+        color: var(--ink);
+        font-weight: 500;
+        text-decoration-color: var(--rule-strong);
+    }
+    .guarantee a:hover {
+        text-decoration-color: currentColor;
+    }
+
     .contact {
         display: grid;
-        gap: 3rem;
+        gap: 2rem;
         margin-top: 2.5rem;
     }
     @media (min-width: 900px) {
         .contact {
             grid-template-columns: 4fr 8fr;
+            grid-template-rows: auto 1fr;
             column-gap: 4rem;
         }
+        .contact .form {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+        }
+    }
+    .alt h3 {
+        font-size: var(--step-1);
+        font-weight: 650;
+        letter-spacing: -0.01em;
+    }
+    .alt p {
+        margin-top: 0.5rem;
+        font-size: var(--step--1);
+        color: var(--ink-2);
+        max-width: 36ch;
     }
     .details {
         display: grid;
