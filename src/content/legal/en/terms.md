@@ -1,7 +1,7 @@
 ---
 title: Terms of Service
 description: The terms that apply when you use invntio.com or hire Invntio for software, website, automation, hosting or consulting services.
-updated: 2026-09-25
+updated: 2026-10-03
 ---
 
 These terms explain how Invntio works with clients. We have kept them short and in plain language. If a written proposal we send you says something different, the proposal applies to that project.
@@ -38,6 +38,7 @@ If documents conflict, this order applies: first the accepted proposal, then the
 
 ## 5. Fees and payment
 
+- **Project Diagnostic.** A 30-minute paid session (USD 95), paid when you book it. Its cancellation, refund and credit rules are in section 4 of our [Refund & Cancellation Policy](/refunds).
 - **Fixed-price projects.** You pay according to the schedule in the proposal. Small projects, such as websites and landing pages, are paid in full upfront. When a payment is tied to a milestone, we invoice it once that milestone is accepted (see section 9). The final payment is due before launch or handover of the deliverables, whichever comes first.
 - **Hourly work.** You prepay a minimum block of hours at the rate agreed in the proposal. We tell you when 80% of the block has been used. Hours beyond the block need your written approval and are added to your next invoice. Unless the proposal says otherwise, a prepaid block is valid for 90 days from payment; hours not used within that period expire.
 - **Hosting and maintenance plans.** These are billed monthly or annually in advance and renew automatically until cancelled (see section 8).

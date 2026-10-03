@@ -1,7 +1,7 @@
 ---
 title: Términos del Servicio
 description: Los términos que aplican al usar invntio.com o contratar a Invntio para servicios de software, sitios web, automatización, hosting o consultoría.
-updated: 2026-09-25
+updated: 2026-10-03
 ---
 
 Estos términos explican cómo trabaja Invntio con sus clientes. Los mantenemos breves y en lenguaje claro. Si una propuesta escrita que te enviemos dice algo distinto, en ese proyecto manda la propuesta.
@@ -38,6 +38,7 @@ Si los documentos se contradicen, se aplica este orden: primero la propuesta ace
 
 ## 5. Precios y pagos
 
+- **Diagnóstico del proyecto.** Una sesión pagada de 30 minutos (USD 95), que se paga al reservarla. Sus reglas de cancelación, reembolso y descuento están en la sección 4 de nuestra [Política de Reembolsos y Cancelaciones](/es/refunds).
 - **Proyectos de precio fijo.** Pagas según el calendario de la propuesta. Los proyectos pequeños, como sitios web y landing pages, se pagan por completo por adelantado. Cuando un pago está ligado a un hito, lo facturamos una vez aceptado ese hito (ver sección 9). El pago final vence antes del lanzamiento o de la entrega de los entregables, lo que ocurra primero.
 - **Trabajo por horas.** Pagas por adelantado un bloque mínimo de horas a la tarifa acordada en la propuesta. Te avisamos cuando se ha usado el 80% del bloque. Las horas adicionales requieren tu aprobación por escrito y se suman a tu siguiente factura. Salvo que la propuesta diga otra cosa, un bloque prepagado es válido por 90 días desde el pago; las horas no usadas en ese plazo vencen.
 - **Planes de hosting y mantenimiento.** Se facturan por adelantado, cada mes o cada año, y se renuevan automáticamente hasta que los canceles (ver sección 8).
