@@ -19,8 +19,8 @@
     --on-accent: #ffffff;
     --accent-bg: var(--green-deep);
     --accent-bg-hover: #0f4a33;
-    /* Faint blueprint grid used on the dark theme only. */
-    --grid-line: transparent;
+    /* Blueprint grid: barely there by day, a little stronger at night. */
+    --grid-line: rgb(21 24 28 / 0.018);
 
     --font: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 

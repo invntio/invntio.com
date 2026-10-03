@@ -29,6 +29,7 @@ colors:
   on-accent-dark: "#07120d"
   danger-dark: "#ff8a80"
   danger-wash-dark: "#3a1614"
+  grid-line: "rgb(21 24 28 / 0.018)"
   grid-line-dark: "rgb(233 236 230 / 0.035)"
 typography:
   display:
@@ -178,7 +179,7 @@ Invntio reads like a changelog and a deploy status board, not a pitch. Every sur
 
 Density is moderate and the tone is matter-of-fact. Content is laid out as registers and ruled lists (live products, services, what a plan includes, the four engagement stages, contact details) so that a visitor can scan what is real without decoration getting in the way. The brand green is scarce because it is a signal. It is the dot of the wordmark, carried into the type as the tittle on every "i" in a heading and the period that closes a section title, and it is the live state: a product that answered at deploy time, progress along the process rail, the build that is running now.
 
-The record has two printings. By day it is a near-white technical sheet. At night ("technical sheet at night") it is the same sheet as a blueprint: a dark ground with a faint 24px grid, light ink, and the same rules, marks and layout. The theme follows the system preference until the visitor chooses, and the choice is remembered. On paper it is always black ink on white.
+The record has two printings. By day it is a near-white technical sheet with a barely visible 24px grid. At night ("technical sheet at night") it is the same sheet as a blueprint: a dark ground where the grid shows a little more, light ink, and the same rules, marks and layout. The theme follows the system preference until the visitor chooses, and the choice is remembered. On paper it is always black ink on white.
 
 The world rejects the centered gradient hero, blurred colour blobs and the icon-card grid. Depth, containers and emphasis come from rules and type, never from boxes or shadows.
 
@@ -202,7 +203,7 @@ A cool neutral palette with one green that stands for "live" and for the wordmar
 
 ### Neutral
 - **Ground** (ground / ground-dark): the page background everywhere, including behind every panel, the consent bar and the mobile menu. It is also the per-scheme theme colour and the translucent sticky header fill.
-- **Blueprint Grid** (grid-line-dark): 1px lines on a 24px square grid, drawn on the body background in the dark theme only. By day the grid token is transparent.
+- **Blueprint Grid** (grid-line / grid-line-dark): 1px lines on a 24px square grid, drawn on the body background. By day it is Ink at 1.8%, barely perceptible; at night it is light ink at 3.5%. It is off in print.
 - **Surface** (surface / surface-dark): used only as the fill of form inputs and quiet buttons, and as the hover fill of a register row.
 - **Ink** (ink / ink-dark): headings, primary text, the top rule of every panel, the included mark, service icons, and the fill of the status tooltip.
 - **Ink 2** (ink-2 / ink-2-dark): body copy under headings, ledes, nav links, the theme toggle icon, consent text and descriptions.
@@ -218,7 +219,7 @@ A cool neutral palette with one green that stands for "live" and for the wordmar
 
 **The Ink Icon Rule.** Pictograms, the included mark and list bullets are Ink or Ink 3. Green dots appear only where they mean live or current.
 
-**The Two Printings Rule.** Dark is the same sheet, not a different design. Every role has a night value; layout, rules, marks, type and motion do not change between themes. The blueprint grid is the only thing the night adds.
+**The Two Printings Rule.** Dark is the same sheet, not a different design. Every role has a night value; layout, rules, marks, type and motion do not change between themes. The blueprint grid is the only thing the night strengthens.
 
 ## Typography
 
@@ -259,7 +260,7 @@ The consent bar is fixed to the bottom edge, full width, with its content in the
 
 ## Elevation & Depth
 
-The system is flat in both themes. No surface is raised and there are no drop shadows. Depth and grouping come from rules: a 1px ink rule opens a panel and 1px hairlines divide its rows, all drawn directly on the ground. At night the blueprint grid sits on the ground behind everything; it is texture, not a layer. The only box-shadow values in the build are functional. One is the 3px Green Wash focus halo on form fields. The other is a 1px inset outline on process nodes before the rail lights them. The sticky header is ground at 92% opacity with a light backdrop blur, so content passes under it without a visible edge until the page scrolls and a hairline appears. The status tooltip is the one small filled box, an ink chip that rises 4px into place.
+The system is flat in both themes. No surface is raised and there are no drop shadows. Depth and grouping come from rules: a 1px ink rule opens a panel and 1px hairlines divide its rows, all drawn directly on the ground. The blueprint grid sits on the ground behind everything (faintest by day); it is texture, not a layer. The only box-shadow values in the build are functional. One is the 3px Green Wash focus halo on form fields. The other is a 1px inset outline on process nodes before the rail lights them. The sticky header is ground at 92% opacity with a light backdrop blur, so content passes under it without a visible edge until the page scrolls and a hairline appears. The status tooltip is the one small filled box, an ink chip that rises 4px into place.
 
 ### Named Rules
 **The Ruled Panel Rule.** There are no cards. A panel is an ink top rule and hairline row dividers on the page ground, with no fill, border box or shadow. Form inputs and quiet buttons are the one surface fill, because a field has to look like a field. The consent bar follows the same rule: ground fill, ink top rule.
@@ -357,6 +358,6 @@ A fixed bottom bar on the page ground with a 1px Ink top rule. Ink 2 text at lab
 - **Don't** use gradient text. The tittle's hard two-tone split is the one sanctioned text fill, and only for the "i" dot.
 - **Don't** substitute Unicode glyphs (●, ✓, ○, ↗) or icon-font characters for the authored state marks and arrows.
 - **Don't** animate the live mark, loop any animation, or tie motion to scroll position. Hover and focus transitions (150 to 220ms, ease-out) are state feedback, not motion design.
-- **Don't** show the blueprint grid by day or add other textures to the ground.
+- **Don't** make the daytime grid stronger than barely perceptible, or add other textures to the ground.
 - **Don't** build a centred gradient hero, blurred blob backgrounds or an icon-card grid.
 - **Don't** use uppercase tracked labels or small kicker text above headings.
