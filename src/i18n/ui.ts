@@ -350,7 +350,7 @@ const en = {
                 ],
                 items: [
                     "A web dashboard where administrators manage dues, payments, maintenance issues and announcements.",
-                    "A mobile app where residents see what they owe, pay by card, report issues and get notices.",
+                    "A mobile app where residents see what they owe, upload proof of their bank transfers, report issues and get notices.",
                     "A billing and payments backend that ties every payment to the right invoice.",
                     "The marketing website at bohio.app, where communities request early access.",
                 ],
@@ -361,7 +361,7 @@ const en = {
                     steps: [
                         { name: "The administrator posts a charge or notice", body: "Once, from the web dashboard, for the whole community." },
                         { name: "Residents get it in the app", body: "They see what they owe and what is new." },
-                        { name: "Residents pay or report an issue", body: "A card payment or a maintenance request, from their phone." },
+                        { name: "Residents pay or report an issue", body: "Proof of a bank transfer or a maintenance request, from their phone." },
                         { name: "The administrator sees where things stand", body: "Payments and open issues update in the dashboard." },
                     ],
                 },
@@ -685,7 +685,7 @@ const es: Dict = {
                 ],
                 items: [
                     "Un panel web donde la administración gestiona cuotas, pagos, incidencias de mantenimiento y avisos.",
-                    "Una app móvil donde los residentes ven cuánto deben, pagan con tarjeta, reportan incidencias y reciben avisos.",
+                    "Una app móvil donde los residentes ven cuánto deben, suben el comprobante de su transferencia, reportan incidencias y reciben avisos.",
                     "Un backend de facturación y pagos que vincula cada pago con su factura.",
                     "El sitio web bohio.app, donde las comunidades solicitan acceso anticipado.",
                 ],
@@ -696,7 +696,7 @@ const es: Dict = {
                     steps: [
                         { name: "La administración publica un cargo o aviso", body: "Una sola vez, desde el panel web, para toda la comunidad." },
                         { name: "Los residentes lo reciben en la app", body: "Ven cuánto deben y qué hay de nuevo." },
-                        { name: "Los residentes pagan o reportan", body: "Un pago con tarjeta o una solicitud de mantenimiento, desde el teléfono." },
+                        { name: "Los residentes pagan o reportan", body: "El comprobante de una transferencia o una solicitud de mantenimiento, desde el teléfono." },
                         { name: "La administración ve cómo va todo", body: "Los pagos y las incidencias abiertas se actualizan en el panel." },
                     ],
                 },
