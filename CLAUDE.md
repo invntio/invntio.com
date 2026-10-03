@@ -7,6 +7,7 @@ Business website for Invntio (Astro 7 on Cloudflare Workers). English at `/`, Sp
 - Business facts and contact details: `src/config/site.ts`. Product context: `PRODUCT.md`. Design system: `DESIGN.md`.
 - Contact form: Web3Forms (account tech@invntio.com, delivers to hello@invntio.com). Branch `feat/cloudflare-email`
   holds a parked Turnstile + Cloudflare Email Service version (needs Workers Paid).
+- Sales emails after a paid Project Diagnostic (summary and proposal templates, rules): `docs/sales/project-diagnostic.md`.
 - `llms.txt` and `llms-full.txt` are generated at build time from the site data (`src/lib/plain.ts`).
 
 ## Pending tasks
