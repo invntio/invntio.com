@@ -13,6 +13,44 @@ const fill = (text: string, lang: "en" | "es") =>
         .replaceAll("{{location}}", site.location[lang])
         .replace(/\]\((\/[^)]*)\)/g, `](${site.url}$1)`);
 
+const caseUrl = (slug: string) => `${site.url}/work/${slug}/`;
+
+// One case study as plain text (English).
+function caseStudy(c: (typeof ui.en.cases.items)[number]) {
+    const t = ui.en.cases;
+    return `---
+
+# Case study: ${c.name}
+
+URL: ${caseUrl(c.slug)}
+Live site: ${c.url}
+
+${c.outcome} ${c.lede}
+
+- ${t.industry}: ${c.industry}
+- ${t.built}: ${c.built}
+- ${t[c.when.label]}: ${c.when.text}
+
+## ${t.challenge}
+
+${c.challenge.join("\n\n")}
+
+## ${t.built}
+
+${c.items.map((item) => `- ${item}`).join("\n")}
+
+${t.stackLabel}: ${c.stack}.
+
+## ${c.flow.title}
+
+${c.flow.steps.map((s, i) => `${i + 1}. ${s.name}: ${s.body}`).join("\n")}
+
+## ${t.result}
+
+${c.results.map((r) => `- **${r.title}**: ${r.body}`).join("\n")}
+`;
+}
+
 export function summary() {
     const t = ui.en;
     const live = t.register.items.filter((i) => !i.hidden);
@@ -41,6 +79,10 @@ Not included (quoted separately): ${t.plans.excluded.join("; ")}.
 
 ${live.map((i) => `- [${i.name}](${i.url}): ${i.what} (${i.kind === "own" ? "own product" : "client"})`).join("\n")}
 
+## Case studies
+
+${t.cases.items.map((c) => `- [${c.name}](${caseUrl(c.slug)}): ${c.outcome}`).join("\n")}
+
 ## Policies
 
 - [Terms of Service](${site.url}/terms/): scope, payments, late payment, intellectual property, confidentiality, AI use, liability, Pennsylvania law
@@ -61,5 +103,5 @@ export async function full() {
         .filter((e) => e.id.startsWith("en/"))
         .sort((a, b) => order.indexOf(a.id.slice(3)) - order.indexOf(b.id.slice(3)))
         .map((e) => `---\n\n# ${e.data.title}\n\nURL: ${site.url}/${e.id.slice(3)}/\nLast updated: ${e.data.updated.toISOString().slice(0, 10)}\n\n${fill(e.body ?? "", "en").trim()}\n`);
-    return `${summary()}\n${docs.join("\n")}`;
+    return `${summary()}\n${ui.en.cases.items.map(caseStudy).join("\n")}\n${docs.join("\n")}`;
 }
