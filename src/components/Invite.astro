@@ -1,0 +1,76 @@
+---
+import Dotted from "./Dotted.astro";
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
+import { site } from "../config/site";
+
+// The home page closes on one invitation. Offers, prices and the form live on Work with us.
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+        <div class="invite" data-reveal>
+            <h2 id="contact-title"><Dotted text={t.invite.title} period /></h2>
+            <div class="next">
+                <p>{t.invite.body}</p>
+                <div class="actions">
+                    <a class="btn btn-primary" href={localizePath("/work-with-us", lang)}>
+                        {t.invite.cta}
+                        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+                    </a>
+                    <p class="or">
+                        {t.invite.orEmail} <a href={`mailto:${site.email}`}>{site.email}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .invite {
+        display: grid;
+        gap: 2rem 2.5rem;
+        padding-top: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+        border-top: 1px solid var(--ink);
+    }
+    @media (min-width: 900px) {
+        .invite {
+            grid-template-columns: 7fr 5fr;
+            align-items: end;
+        }
+    }
+    h2 {
+        font-size: var(--step-4);
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        line-height: 1.02;
+        max-width: 17ch;
+    }
+    .next > p {
+        font-size: var(--step-1);
+        color: var(--ink-2);
+        max-width: 38ch;
+    }
+    .actions {
+        margin-top: 1.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem 1.5rem;
+    }
+    .or {
+        color: var(--ink-3);
+        font-size: var(--step--1);
+    }
+    .or a {
+        color: var(--ink);
+        font-weight: 500;
+        overflow-wrap: anywhere;
+        text-decoration-color: var(--rule-strong);
+    }
+    .or a:hover {
+        text-decoration-color: currentColor;
+    }
+</style>
