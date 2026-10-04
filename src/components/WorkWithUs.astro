@@ -19,7 +19,7 @@ const subject = {
     "@type": "Service",
     "@id": `${pageUrl}#diagnostic`,
     name: h.ways.items[0].name,
-    description: h.diagnostic.facts.map((f) => f.text).join(" "),
+    description: [h.ways.items[0].body, h.diagnostic.facts[2].text, h.diagnostic.facts[3].text].join(" "),
     serviceType: "Software project consultation",
     provider: { "@id": `${site.url}/#organization` },
     areaServed: ["US", "Latin America"],
@@ -218,6 +218,15 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
         border-radius: 50%;
         background: var(--ink-3);
         vertical-align: middle;
+    }
+    /* On narrow screens the line wraps, so drop the dots rather than leave one hanging. */
+    @media (max-width: 560px) {
+        .facts {
+            column-gap: 1.25rem;
+        }
+        .facts li:not(:last-child)::after {
+            display: none;
+        }
     }
     .actions {
         margin-top: 2.25rem;
