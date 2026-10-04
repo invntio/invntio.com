@@ -38,7 +38,8 @@ const t = useTranslations(lang);
     @media (min-width: 900px) {
         .invite {
             grid-template-columns: 7fr 5fr;
-            align-items: end;
+            /* The reply line and button sit on the headline's optical center, as one block. */
+            align-items: center;
         }
     }
     h2 {
