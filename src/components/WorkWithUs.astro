@@ -300,6 +300,7 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
     .offer {
         border-top: 2px solid var(--ink);
     }
+    /* Dot, name and price share one baseline: a single row of the record. */
     .offer-head {
         display: flex;
         flex-wrap: wrap;
@@ -311,12 +312,16 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
     }
     .offer h2 {
         display: inline-flex;
-        align-items: center;
+        align-items: baseline;
         gap: 0.5rem;
         font-size: var(--step-1);
         font-weight: 650;
         letter-spacing: -0.01em;
         max-width: none;
+    }
+    .offer h2 :global(.mark) {
+        align-self: center;
+        transform: translateY(0.05em);
     }
     .offer-price {
         font-size: var(--step-3);
