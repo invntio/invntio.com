@@ -66,7 +66,7 @@ const organization = {
 const kinds: Record<string, { type: string; os?: string; category: string }> = {
     Beavo: { type: "MobileApplication", os: "iOS", category: "HealthApplication" },
     Axen: { type: "MobileApplication", os: "iOS", category: "HealthApplication" },
-    "Bohío": { type: "WebApplication", category: "BusinessApplication" },
+    "Bohio": { type: "WebApplication", category: "BusinessApplication" },
 };
 const products = t.register.items
     .filter((item) => item.kind === "own" && !item.hidden && kinds[item.name])

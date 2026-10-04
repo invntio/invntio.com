@@ -28,7 +28,7 @@ Success means a visitor understands the offer within seconds and contacts Invnti
 
 - **Direct line to the builder.** Clients talk to the engineer who does the work. There is no account manager in between.
 - **End to end.** Design, development, infrastructure, hosting and maintenance all come from one provider.
-- **Products of its own in production.** Invntio builds and runs its own products (Beavo, Axen, Bohío), not only client work.
+- **Products of its own in production.** Invntio builds and runs its own products (Beavo, Axen, Bohio), not only client work.
 - **Quality and security first.**
 
 ## Capabilities and Constraints
@@ -67,9 +67,9 @@ Commercial terms (confirmed September 2026):
 
 ## Evidence on Hand
 
-- Own products: Beavo (iOS habit tracker, https://beavo.me), Axen (iOS training app, https://getaxen.com), Bohío (condominium management SaaS, https://bohio.app).
-- Client work: Global Merchants Group (https://theglobalmerchantsgroup.com), with a case study at /work/gmg. Bohío also has a case study at /work/bohio (own product, early access).
-- Status of own products: Beavo is on the App Store; Axen and Bohío are in early access. Never describe Axen or Bohío as launched.
+- Own products: Beavo (iOS habit tracker, https://beavo.me), Axen (iOS training app, https://getaxen.com), Bohio (condominium management SaaS, https://bohio.app).
+- Client work: Global Merchants Group (https://theglobalmerchantsgroup.com), with a case study at /work/gmg. Bohio also has a case study at /work/bohio (own product, early access).
+- Status of own products: Beavo is on the App Store; Axen and Bohio are in early access. Never describe Axen or Bohio as launched.
 - Proof strategy (docs/research/proof-and-trust.md): show specific cases, clear terms and verifiable facts; do not show small counts (clients, projects, years). Clutch profile exists; show its badge only after the first review is published.
 - OBJURI and AJMG (Asociación de Jueces y Magistrados de Guatemala) are client sites on the Invntio platform, not yet live on their own domains; show them only once they are (AJMG also needs the owner's OK). CGD was dropped. See docs/tasks/launch-client-sites.md.
 - There are **no testimonials, client logos, metrics or partner relationships**. Do not invent any. The technology logos are tools Invntio uses, not partners.

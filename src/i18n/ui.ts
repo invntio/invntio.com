@@ -94,7 +94,7 @@ const en = {
             },
             { name: "Beavo", what: "Private habit tracker for iPhone", url: "https://beavo.me", domain: "beavo.me", kind: "own" },
             { name: "Axen", what: "Training app for iOS", url: "https://getaxen.com", domain: "getaxen.com", kind: "own" },
-            { name: "Bohío", what: "Condominium management SaaS", url: "https://bohio.app", domain: "bohio.app", kind: "own", case: "bohio" },
+            { name: "Bohio", what: "Condominium management SaaS", url: "https://bohio.app", domain: "bohio.app", kind: "own", case: "bohio" },
             // Client sites on the Invntio platform. Keep hidden until each has its own live domain
             // (see docs/tasks/launch-client-sites.md). url/domain are the planned values.
             { name: "OBJURI", what: "Legal-research observatory: congresses, news, articles and alliances", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
@@ -443,12 +443,12 @@ const en = {
             {
                 slug: "bohio",
                 kind: "own",
-                name: "Bohío",
-                title: "Bohío case study",
+                name: "Bohio",
+                title: "Bohio case study",
                 description:
-                    "Bohío is Invntio's condominium management software: payments, maintenance issues and resident communication in one place. Now in early access.",
+                    "Bohio is Invntio's condominium management software: payments, maintenance issues and resident communication in one place. Now in early access.",
                 outcome: "Condominium payments, maintenance and notices in one place, instead of a WhatsApp group.",
-                lede: "Bohío is our own product, built for condominium administrators. It brings payments, maintenance issues and resident communication together, so administrators stop chasing people over WhatsApp.",
+                lede: "Bohio is our own product, built for condominium administrators. It brings payments, maintenance issues and resident communication together, so administrators stop chasing people over WhatsApp.",
                 url: "https://bohio.app",
                 domain: "bohio.app",
                 industry: "Condominium and property management",
@@ -476,7 +476,7 @@ const en = {
                     ],
                 },
                 results: [
-                    { title: "In early access", body: "Bohío is running with its first communities. New ones can request access at bohio.app." },
+                    { title: "In early access", body: "Bohio is running with its first communities. New ones can request access at bohio.app." },
                     { title: "Built and run end to end", body: "Dashboard, resident app, payments backend and website, all designed, built and operated by Invntio." },
                     { title: "One shared record", body: "Payments, maintenance issues and notices live in one system that administrators and residents both use." },
                 ],
@@ -541,7 +541,7 @@ const es: Dict = {
             },
             { name: "Beavo", what: "Habit tracker privado para iPhone", url: "https://beavo.me", domain: "beavo.me", kind: "own" },
             { name: "Axen", what: "App de entrenamiento para iOS", url: "https://getaxen.com", domain: "getaxen.com", kind: "own" },
-            { name: "Bohío", what: "SaaS de administración de condominios", url: "https://bohio.app", domain: "bohio.app", kind: "own", case: "bohio" },
+            { name: "Bohio", what: "SaaS de administración de condominios", url: "https://bohio.app", domain: "bohio.app", kind: "own", case: "bohio" },
             { name: "OBJURI", what: "Observatorio de ciencias jurídicas: congresos, noticias, artículos y alianzas", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
             { name: "AJMG", what: "Asociación de Jueces y Magistrados de Guatemala", url: "", domain: "", kind: "client", hidden: true },
         ],
@@ -888,12 +888,12 @@ const es: Dict = {
             {
                 slug: "bohio",
                 kind: "own",
-                name: "Bohío",
-                title: "Caso de estudio: Bohío",
+                name: "Bohio",
+                title: "Caso de estudio: Bohio",
                 description:
-                    "Bohío es el software de administración de condominios de Invntio: pagos, incidencias de mantenimiento y comunicación con residentes en un solo lugar. En acceso anticipado.",
+                    "Bohio es el software de administración de condominios de Invntio: pagos, incidencias de mantenimiento y comunicación con residentes en un solo lugar. En acceso anticipado.",
                 outcome: "Pagos, mantenimiento y avisos del condominio en un solo lugar, en vez de un grupo de WhatsApp.",
-                lede: "Bohío es un producto propio, pensado para administradores de condominios. Reúne pagos, incidencias de mantenimiento y comunicación con los residentes, para que la administración deje de perseguir a la gente por WhatsApp.",
+                lede: "Bohio es un producto propio, pensado para administradores de condominios. Reúne pagos, incidencias de mantenimiento y comunicación con los residentes, para que la administración deje de perseguir a la gente por WhatsApp.",
                 url: "https://bohio.app",
                 domain: "bohio.app",
                 industry: "Administración de condominios y propiedades",
@@ -921,7 +921,7 @@ const es: Dict = {
                     ],
                 },
                 results: [
-                    { title: "En acceso anticipado", body: "Bohío funciona con sus primeras comunidades. Otras pueden solicitar acceso en bohio.app." },
+                    { title: "En acceso anticipado", body: "Bohio funciona con sus primeras comunidades. Otras pueden solicitar acceso en bohio.app." },
                     { title: "Construido y operado de punta a punta", body: "Panel, app para residentes, backend de pagos y sitio web, todo diseñado, construido y operado por Invntio." },
                     { title: "Un registro compartido", body: "Pagos, incidencias de mantenimiento y avisos viven en un solo sistema que usan tanto la administración como los residentes." },
                 ],

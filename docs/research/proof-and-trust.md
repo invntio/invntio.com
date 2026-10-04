@@ -95,10 +95,10 @@ Brand-forward and faceless is compatible with the research: NN/g wants authentic
 - Ask GMG to leave the pending Clutch review (or move the pending one through the analyst call). One verified Clutch review is worth more than any self-published text (NN/g). Until it's published, don't show a Clutch badge.
 - Also ask for a Google Business Profile review: that's where US small businesses search.
 
-**Own products (Beavo, Axen, Bohío)**
+**Own products (Beavo, Axen, Bohio)**
 - Present them as "Products we build and run", separate from client work, so it's clear they're not clients. This follows the Iconfactory and 37signals pattern.
 - Beavo: App Store badge and link. It shows the studio can ship and maintain an iOS app through Apple review.
-- Axen and Bohío: label them honestly as "in early access". Don't imply customers or traction you don't have. Bohío can support a "we understand condo associations" angle if that becomes a niche (Baker's vertical positioning).
+- Axen and Bohio: label them honestly as "in early access". Don't imply customers or traction you don't have. Bohio can support a "we understand condo associations" angle if that becomes a niche (Baker's vertical positioning).
 
 **Institutional client sites in progress**
 - Don't list them until they're live on their own domain and the client has agreed (already the plan in `docs/tasks/launch-client-sites.md`). "Coming soon" tiles for unnamed clients look like padding.
@@ -143,6 +143,6 @@ Brand-forward and faceless is compatible with the research: NN/g wants authentic
 
 1. Turn GMG into a full named case study with "live in one week" and a client quote, and get the Clutch review published. Show no counts until they're large.
 2. Put risk reversal next to every call to action: written fixed price, 30-day warranty, refund policy, reply-time promise, and publish starting prices.
-3. Show Beavo, Axen and Bohío as "Products we build and run" with honest status labels, linked to the App Store or the product site.
+3. Show Beavo, Axen and Bohio as "Products we build and run" with honest status labels, linked to the App Store or the product site.
 4. Add verifiable operational facts (Pennsylvania, founded 2024, EN/ES, US phone, live status page) as a quiet strip, linked where possible.
 5. Launch the paid "Project Diagnostic": fixed published price, written summary as the deliverable, 100% credited within 60 days, refund if not useful, short qualifying form before payment.
