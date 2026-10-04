@@ -182,7 +182,7 @@ const en = {
         steps: [
             {
                 name: "Project Diagnostic",
-                body: "A paid 30-minute session on the problem, who will use the result and your timeline, followed by a written plan. The fee is credited toward the project.",
+                body: "A paid 30-minute session on the problem, who will use the result and your timeline, followed by a one-page recommendation: the approach, the tools and a rough budget. The fee is credited toward the project.",
             },
             {
                 name: "Proposal & upfront payment",
@@ -235,10 +235,11 @@ const en = {
         diagnostic: {
             title: "Project Diagnostic",
             price: "USD\u00a095",
-            body: "30 minutes on your project. Within 2 business days you get a written plan: scope, risks, timeline and price range.",
+            body: "30 minutes on your project. Within 2 business days you get a one-page recommendation: the right approach, the tools it needs and a rough budget.",
             cta: "Book a diagnostic",
             checks: [
                 "Pick a time on our calendar, pay when you book",
+                "No technical knowledge needed",
                 "Credited toward your project within 60 days",
                 "Session not useful? Full refund within 7 days",
             ],
@@ -251,7 +252,7 @@ const en = {
             items: [
                 {
                     name: "Project Diagnostic",
-                    body: "A 30-minute session and a written plan. The best first step for a new project.",
+                    body: "A 30-minute session and a one-page recommendation: what your project needs and roughly what it costs.",
                     terms: "30 min · USD\u00a095",
                 },
                 {
@@ -324,7 +325,7 @@ const en = {
                 },
                 {
                     q: "What happens after the diagnostic?",
-                    a: "Within 2 business days you get the written plan. If you want to go ahead, we send a written proposal with scope, price, timeline and payment schedule.",
+                    a: "Within 2 business days you get a one-page recommendation: the approach, the tools and a rough budget. If you want to go ahead, we send a written proposal with a fixed scope, price, timeline and payment schedule.",
                 },
             ],
         },
@@ -635,7 +636,7 @@ const es: Dict = {
         steps: [
             {
                 name: "Diagnóstico del proyecto",
-                body: "Una sesión pagada de 30 minutos sobre el problema, quién usará el resultado y tus plazos, y después un plan escrito. El pago se descuenta del proyecto.",
+                body: "Una sesión pagada de 30 minutos sobre el problema, quién usará el resultado y tus plazos, y después una recomendación de una página: el enfoque, las herramientas y un presupuesto aproximado. El pago se descuenta del proyecto.",
             },
             {
                 name: "Propuesta y pago inicial",
@@ -688,10 +689,11 @@ const es: Dict = {
         diagnostic: {
             title: "Diagnóstico del proyecto",
             price: "USD\u00a095",
-            body: "30 minutos sobre tu proyecto. En 2 días hábiles recibes un plan escrito: alcance, riesgos, plazos y rango de precio.",
+            body: "30 minutos sobre tu proyecto. En 2 días hábiles recibes una recomendación de una página: el enfoque adecuado, las herramientas que necesita y un presupuesto aproximado.",
             cta: "Reservar diagnóstico",
             checks: [
                 "Eliges el horario en nuestro calendario y pagas al reservar",
+                "No necesitas conocimientos técnicos",
                 "Se descuenta de tu proyecto en los 60 días siguientes",
                 "¿La sesión no te sirvió? Reembolso completo en 7 días",
             ],
@@ -704,7 +706,7 @@ const es: Dict = {
             items: [
                 {
                     name: "Diagnóstico del proyecto",
-                    body: "Una sesión de 30 minutos y un plan escrito. El mejor primer paso para un proyecto nuevo.",
+                    body: "Una sesión de 30 minutos y una recomendación de una página: qué necesita tu proyecto y cuánto costaría, más o menos.",
                     terms: "30 min · USD\u00a095",
                 },
                 {
@@ -777,7 +779,7 @@ const es: Dict = {
                 },
                 {
                     q: "¿Qué pasa después del diagnóstico?",
-                    a: "En 2 días hábiles recibes el plan escrito. Si quieres seguir, te enviamos una propuesta escrita con alcance, precio, plazos y calendario de pagos.",
+                    a: "En 2 días hábiles recibes una recomendación de una página: el enfoque, las herramientas y un presupuesto aproximado. Si quieres seguir, te enviamos una propuesta escrita con alcance, precio fijo, plazos y calendario de pagos.",
                 },
             ],
         },

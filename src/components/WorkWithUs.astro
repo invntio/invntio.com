@@ -19,7 +19,8 @@ const subject = {
     "@type": "Service",
     "@id": `${pageUrl}#diagnostic`,
     name: h.ways.items[0].name,
-    description: [h.diagnostic.body, h.diagnostic.checks[1]].join(" "),
+    // The body and the 60-day credit.
+    description: [h.diagnostic.body, h.diagnostic.checks[2]].join(" "),
     serviceType: "Software project consultation",
     provider: { "@id": `${site.url}/#organization` },
     areaServed: ["US", "Latin America"],
