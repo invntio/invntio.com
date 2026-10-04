@@ -264,7 +264,7 @@ const en = {
                 {
                     name: "Custom project",
                     body: "Software, apps, websites, integrations or automation, built to a fixed scope.",
-                    terms: "Quoted in a written proposal",
+                    terms: "Fixed price, in writing",
                 },
                 {
                     name: "Hosting & maintenance",
@@ -732,7 +732,7 @@ const es: Dict = {
                 {
                     name: "Proyecto a medida",
                     body: "Software, apps, sitios web, integraciones o automatizaciones, con un alcance definido.",
-                    terms: "Cotizado en una propuesta escrita",
+                    terms: "Precio fijo, por escrito",
                 },
                 {
                     name: "Hosting y mantenimiento",
