@@ -19,7 +19,7 @@ A secondary reader is the **payment-processor reviewer** (Stripe). They check th
 Invntio is a small, independent software studio run by Víctor Velázquez Cid, who does the engineering himself with occasional help (directories list it as 2–10 people). The site presents the company as a brand, not as a person: Víctor is not the face of it. The site exists to:
 
 1. explain exactly what Invntio sells and how an engagement works;
-2. let a prospective client start: book the paid Project Diagnostic (the recommended way), or write first through the form, email or phone;
+2. let a prospective client start on the Work with us page (`/work-with-us`, Spanish `/es/trabaja-con-nosotros`), which holds the offers and prices, how an engagement runs, the guarantees, an FAQ and the contact form: book the paid Project Diagnostic (the recommended way), or write first through the form, email or phone. The home page shows no prices; it closes with an invitation to that page;
 3. publish the Terms of Service, the Refund & Cancellation Policy and the Privacy Policy in plain language.
 
 Success means a visitor understands the offer within seconds and contacts Invntio, and a Stripe reviewer finds every required disclosure without searching.

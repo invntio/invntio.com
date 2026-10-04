@@ -70,6 +70,12 @@ ${t.services.items.map((s) => `- **${s.name}**: ${s.body} Typical stack: ${s.sta
 
 ${t.process.steps.map((s, i) => `${i + 1}. **${s.name}**: ${s.body}`).join("\n")}
 
+## Work with us
+
+How to start a project, with prices, guarantees, common questions and the contact form: ${site.url}/work-with-us/ (Spanish: ${site.url}/es/trabaja-con-nosotros/)
+
+${t.hire.ways.items.map((w) => `- **${w.name}** (${w.terms.replace("\u00a0", " ")}): ${w.body}`).join("\n")}
+
 ## Project Diagnostic (the recommended way to start)
 
 A paid 30-minute video session (Cal Video) about the client's project, for ${site.diagnostic.currency} ${site.diagnostic.price}, paid when booking (Stripe).
@@ -82,7 +88,11 @@ Book online: ${site.diagnostic.url}
 - Reschedule or cancel up to 1 business day before for a full refund. Later cancellations and no-shows are not refunded.
 - Sessions in English or Spanish.
 
-Prefer to write first? The contact form at ${site.url}/#contact and ${site.email} are free; we reply within 2 business days.
+Prefer to write first? The contact form at ${site.url}/work-with-us/#write and ${site.email} are free; we reply within 1 business day, Monday to Friday.
+
+## Common questions
+
+${t.hire.faq.items.map((f) => `- **${f.q}** ${f.a}`).join("\n")}
 
 ## Hosting & maintenance plans
 
