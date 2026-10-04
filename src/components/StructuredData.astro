@@ -54,22 +54,11 @@ const organization = {
     hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: t.services.title,
-        itemListElement: [
-            // The paid entry offer, booked and paid on Cal.com.
-            {
-                "@type": "Offer",
-                name: t.contact.diagnostic.title,
-                url: site.diagnostic.url,
-                price: String(site.diagnostic.price),
-                priceCurrency: site.diagnostic.currency,
-                availability: "https://schema.org/InStock",
-                itemOffered: { "@type": "Service", name: t.contact.diagnostic.title, description: t.contact.diagnostic.body },
-            },
-            ...t.services.items.map((s) => ({
-                "@type": "Offer",
-                itemOffered: { "@type": "Service", name: s.name, description: s.body },
-            })),
-        ],
+        // The paid Project Diagnostic is described, with its price, on the Work with us page.
+        itemListElement: t.services.items.map((s) => ({
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: s.name, description: s.body },
+        })),
     },
 };
 

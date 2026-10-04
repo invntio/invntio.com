@@ -1,0 +1,318 @@
+---
+import Dotted from "./Dotted.astro";
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
+import { site } from "../config/site";
+
+// The contact form (Web3Forms + hCaptcha) with the direct contact details beside it.
+const lang = getLang(Astro.url);
+const t = useTranslations(lang);
+const c = t.hire.contact;
+const f = c.form;
+---
+
+<section class="wrap block" id="write" aria-labelledby="write-title">
+    <div class="contact">
+        <div class="intro" data-reveal>
+            <h2 id="write-title"><Dotted text={c.title} period /></h2>
+            <p>{c.body}</p>
+            <dl class="details">
+                <div>
+                    <dt>{c.email}</dt>
+                    <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
+                </div>
+                <div>
+                    <dt>{c.phone}</dt>
+                    <dd><a href={`tel:${site.phone.tel}`}>{site.phone.display}</a></dd>
+                </div>
+                <div>
+                    <dt>{c.location}</dt>
+                    <dd>{site.location[lang]}</dd>
+                </div>
+            </dl>
+        </div>
+
+        <form class="form" data-reveal style="--stagger:1" action="https://api.web3forms.com/submit" method="POST" data-contact-form novalidate>
+            <input type="hidden" name="access_key" value={site.formAccessKey} />
+            <input type="hidden" name="subject" value={f.subject} />
+            <input type="hidden" name="from_name" value="invntio.com" />
+            <input type="hidden" name="language" value={lang} />
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="field">
+                <label for="cf-name">{f.name}</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+                <label for="cf-email">{f.email}</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+                <label for="cf-company">{f.company} <span class="opt">({f.optional})</span></label>
+                <input id="cf-company" name="company" type="text" autocomplete="organization" />
+            </div>
+            <div class="field">
+                <label for="cf-service">{f.service}</label>
+                <div class="select">
+                    <select id="cf-service" name="service" required>
+                        <option value="" disabled selected>{f.servicePlaceholder}</option>
+                        {t.services.items.map((s) => <option value={s.name}>{s.name}</option>)}
+                        <option value={f.other}>{f.other}</option>
+                    </select>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg>
+                </div>
+            </div>
+            <div class="field full">
+                <label for="cf-message">{f.message}</label>
+                <textarea id="cf-message" name="message" rows="5" placeholder={f.messagePlaceholder} required></textarea>
+            </div>
+
+            <div class="captcha full">
+                <div class="h-captcha" data-captcha="true"></div>
+            </div>
+
+            <div class="submit full">
+                <p class="consent">
+                    {f.consentPre} <a href={localizePath("/privacy", lang)}>{f.consentLink}</a>.
+                </p>
+                <button class="btn btn-primary" type="submit" data-label={f.submit} data-sending={f.sending}>{f.submit}</button>
+            </div>
+            <p class="status full" role="status" aria-live="polite" data-status hidden></p>
+            <template data-success>{f.success}</template>
+            <template data-captcha-missing>{f.captcha}</template>
+            <template data-error>{f.error} <a href={`mailto:${site.email}`}>{site.email}</a>.</template>
+        </form>
+    </div>
+</section>
+
+<script is:inline src="https://web3forms.com/client/script.js" async defer></script>
+
+<script>
+    const form = document.querySelector<HTMLFormElement>("[data-contact-form]");
+    if (form) {
+        const status = form.querySelector<HTMLElement>("[data-status]")!;
+        const button = form.querySelector<HTMLButtonElement>("button[type=submit]")!;
+        const tpl = (name: string) => (form.querySelector(`template[data-${name}]`) as HTMLTemplateElement).innerHTML;
+
+        const show = (kind: "success" | "error" | "captcha-missing") => {
+            status.hidden = false;
+            status.dataset.kind = kind;
+            status.innerHTML = tpl(kind);
+        };
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            status.hidden = true;
+            if (!form.checkValidity()) {
+                form.classList.add("was-validated");
+                form.querySelector<HTMLElement>(":invalid")?.focus();
+                return;
+            }
+            const token = form.querySelector<HTMLTextAreaElement>("[name='h-captcha-response']")?.value;
+            if (!token) {
+                show("captcha-missing");
+                return;
+            }
+            // Subject line that tells inquiries apart in the inbox: "… — Name (Service)".
+            const data = new FormData(form);
+            const subject = form.querySelector<HTMLInputElement>("input[name=subject]");
+            if (subject) {
+                const base = subject.dataset.base ?? subject.value;
+                subject.dataset.base = base;
+                subject.value = `${base} — ${data.get("name")} (${data.get("service")})`;
+            }
+            button.disabled = true;
+            button.textContent = button.dataset.sending ?? "";
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    headers: { Accept: "application/json" },
+                    body: new FormData(form),
+                });
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || !result.success) throw new Error(result.message ?? "Request failed");
+                (window as unknown as { posthog?: { capture: (e: string, p?: object) => void } }).posthog?.capture("contact_form_submitted", {
+                    service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+                });
+                form.reset();
+                (window as unknown as { hcaptcha?: { reset: () => void } }).hcaptcha?.reset();
+                form.classList.remove("was-validated");
+                show("success");
+            } catch {
+                show("error");
+            } finally {
+                button.disabled = false;
+                button.textContent = button.dataset.label ?? "";
+            }
+        });
+    }
+</script>
+
+<style>
+    .block {
+        margin-top: clamp(4rem, 3rem + 4vw, 7rem);
+    }
+    /* Same ruled split as the other blocks on the page: intro and details left, form right. */
+    .contact {
+        display: grid;
+        gap: 2.5rem 4rem;
+        padding-top: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+        border-top: 1px solid var(--ink);
+    }
+    @media (min-width: 900px) {
+        .contact {
+            grid-template-columns: 5fr 7fr;
+        }
+    }
+    h2 {
+        font-size: var(--step-3);
+        max-width: 16ch;
+    }
+    .intro > p {
+        margin-top: 1rem;
+        font-size: var(--step-1);
+        color: var(--ink-2);
+        max-width: 38ch;
+    }
+    .details {
+        margin-top: 2rem;
+        border-top: 1px solid var(--rule);
+    }
+    .details div {
+        padding-block: 1rem;
+        border-bottom: 1px solid var(--rule);
+    }
+    dt {
+        font-size: var(--step--1);
+        color: var(--ink-3);
+    }
+    dd {
+        margin-top: 0.25rem;
+        font-size: var(--step-1);
+        font-weight: 500;
+        overflow-wrap: anywhere;
+    }
+    dd a:not(.btn) {
+        text-decoration-color: var(--rule-strong);
+    }
+    dd a:not(.btn):hover {
+        text-decoration-color: currentColor;
+    }
+
+    .form {
+        display: grid;
+        gap: 1.25rem 1.5rem;
+        padding-top: 0;
+    }
+    @media (min-width: 640px) {
+        .form {
+            grid-template-columns: 1fr 1fr;
+        }
+        .full {
+            grid-column: 1 / -1;
+        }
+    }
+    .hp {
+        position: absolute;
+        left: -9999px;
+    }
+    .field {
+        display: grid;
+        gap: 0.4rem;
+    }
+    label {
+        font-size: var(--step--1);
+        font-weight: 600;
+    }
+    .opt {
+        font-weight: 400;
+        color: var(--ink-3);
+    }
+    input,
+    select,
+    textarea {
+        width: 100%;
+        background-color: var(--surface);
+        min-height: 3rem;
+        padding: 0.7rem 0.875rem;
+        border: 1px solid var(--rule-strong);
+        border-radius: var(--radius);
+        font-size: var(--step-0);
+        transition:
+            border-color 150ms var(--ease-out),
+            background-color 150ms var(--ease-out);
+    }
+    textarea {
+        resize: vertical;
+        min-height: 8rem;
+    }
+    ::placeholder {
+        color: var(--ink-3);
+        opacity: 1;
+    }
+    input:hover,
+    select:hover,
+    textarea:hover {
+        border-color: var(--ink-3);
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: var(--green-ink);
+        background: var(--surface);
+        box-shadow: 0 0 0 3px var(--green-wash);
+    }
+    .was-validated :invalid {
+        border-color: var(--danger);
+    }
+    .select {
+        position: relative;
+    }
+    select {
+        appearance: none;
+        padding-right: 2.5rem;
+    }
+    select:invalid {
+        color: var(--ink-3);
+    }
+    .select svg {
+        position: absolute;
+        right: 0.875rem;
+        top: 50%;
+        width: 1rem;
+        height: 1rem;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: var(--ink-3);
+    }
+    .submit {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem 1.5rem;
+        padding-top: 0.5rem;
+    }
+    .consent {
+        font-size: var(--step--1);
+        color: var(--ink-3);
+        max-width: 40ch;
+    }
+    .status {
+        padding: 0.875rem 1rem;
+        border-radius: var(--radius);
+        font-size: var(--step--1);
+    }
+    .status[data-kind="success"] {
+        background: var(--green-wash);
+        color: var(--green-deep);
+    }
+    .captcha {
+        min-height: 78px;
+    }
+    .status[data-kind="error"],
+    .status[data-kind="captcha-missing"] {
+        background: var(--danger-wash);
+        color: var(--danger);
+    }
+</style>

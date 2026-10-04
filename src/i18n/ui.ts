@@ -250,6 +250,136 @@ const en = {
             subject: "New inquiry from invntio.com",
         },
     },
+    hire: {
+        title: "Work with us",
+        description:
+            "How to start a project with Invntio: a Project Diagnostic for USD 95, custom projects quoted in writing, hosting and maintenance plans, our guarantees, common questions and a contact form.",
+        heading: "Tell us what you need. We'll tell you the best way to build it.",
+        facts: ["Remote", "US and Latin America", "English or Spanish", "Reply within 1 business day"],
+        factsLabel: "How we work with clients",
+        cta: "Book a Project Diagnostic",
+        newTab: "(opens Cal.com in a new tab)",
+        write: "Prefer to write?",
+        diagnostic: {
+            title: "Start with a Project Diagnostic",
+            body: "The fastest way to know what your project needs and what it will cost. You talk to the engineer who would build it.",
+            facts: [
+                { label: "Session", text: "30 minutes, by video" },
+                { label: "Price", text: "USD\u00a095, paid when you book" },
+                { label: "You get", text: "A written plan within 2 business days: scope, risks, timeline and price range. It's yours to keep." },
+                { label: "Credit", text: "The full fee is credited toward the project if you hire us within 60 days." },
+            ],
+            cta: "Book a diagnostic",
+        },
+        ways: {
+            title: "Ways to work together",
+            items: [
+                {
+                    name: "Project Diagnostic",
+                    body: "A 30-minute session and a written plan. The best first step for a new project.",
+                    terms: "30 min · USD\u00a095",
+                },
+                {
+                    name: "Custom project",
+                    body: "Software, apps, websites, integrations or automation, built to a fixed scope.",
+                    terms: "Quoted in a written proposal",
+                },
+                {
+                    name: "Hosting & maintenance",
+                    body: "We keep your site or app online, backed up, secure and up to date.",
+                    terms: "Monthly or annual plan",
+                    link: "What a plan includes",
+                },
+            ],
+        },
+        steps: {
+            title: "How we work",
+            items: [
+                { name: "We talk", body: "Through the Project Diagnostic, or by message if you'd rather write first." },
+                { name: "You get a written proposal", body: "Scope, price, timeline and payment schedule, in writing, before any work starts." },
+                { name: "We build and launch", body: "You see progress along the way and can test it before launch. After launch, a 30-day warranty covers errors in the code we delivered." },
+            ],
+        },
+        guarantees: {
+            title: "Our guarantees",
+            groups: [
+                {
+                    name: "Project Diagnostic",
+                    items: [
+                        "Cancel or reschedule up to 1 business day before the session for a full refund.",
+                        "If the session isn't useful, tell us within 7 days and we refund the full fee.",
+                    ],
+                },
+                {
+                    name: "Projects",
+                    items: [
+                        "For 30 days after you accept the work, we fix errors in the code we delivered at no cost.",
+                        "Everything in writing: scope, price, timeline and payment schedule are set in the proposal you accept.",
+                    ],
+                },
+            ],
+            more: "The details are in our",
+            refunds: "Refund & Cancellation Policy",
+            refundsAnchor: "#4-project-diagnostic",
+            and: "and",
+            terms: "Terms of Service",
+        },
+        proof: {
+            title: "Work you can check",
+            lede: "Two projects we designed, built and still run, each with a live site you can open.",
+        },
+        faq: {
+            title: "Questions",
+            items: [
+                {
+                    q: "Do you work with companies in any country?",
+                    a: "Yes. We work remotely with companies in the US and Latin America, in English or Spanish.",
+                },
+                {
+                    q: "Do you sign an NDA?",
+                    a: "Yes, before you share any confidential information. Our Terms of Service also include a confidentiality clause.",
+                },
+                {
+                    q: "How do I pay?",
+                    a: "The Project Diagnostic is paid through Stripe when you book it. Projects are paid on the schedule in your proposal, through Stripe invoices.",
+                },
+                {
+                    q: "What if I already have something half-built?",
+                    a: "Bring it to the diagnostic. We review what you have and recommend whether to fix it, migrate it or rebuild it.",
+                },
+                {
+                    q: "What happens after the diagnostic?",
+                    a: "Within 2 business days you get the written plan. If you want to go ahead, we send a written proposal with scope, price, timeline and payment schedule.",
+                },
+            ],
+        },
+        contact: {
+            title: "Write to us",
+            body: "Free, for questions and first contact. We reply within 1 business day, Monday to Friday.",
+            email: "Email",
+            phone: "Phone",
+            location: "Location",
+            form: {
+                name: "Name",
+                email: "Email",
+                company: "Company",
+                optional: "optional",
+                service: "What do you need?",
+                servicePlaceholder: "Choose a service",
+                other: "Something else",
+                message: "Message",
+                messagePlaceholder: "What are you building, and by when?",
+                consentPre: "By sending this form you agree to our",
+                consentLink: "Privacy Policy",
+                captcha: "Please complete the captcha check before sending.",
+                submit: "Send message",
+                sending: "Sending…",
+                success: "Thanks — your message was sent. We'll reply within 1 business day.",
+                error: "Your message couldn't be sent. Please try again, or email us directly at",
+                subject: "New inquiry from invntio.com",
+            },
+        },
+    },
     footer: {
         tagline: "Unleash your business potential",
         legal: "Legal",
@@ -596,6 +726,136 @@ const es: Dict = {
             success: "Gracias, tu mensaje fue enviado. Te respondemos en 2 días hábiles.",
             error: "No se pudo enviar tu mensaje. Inténtalo de nuevo o escríbenos directamente a",
             subject: "Nueva consulta desde invntio.com",
+        },
+    },
+    hire: {
+        title: "Trabaja con nosotros",
+        description:
+            "Cómo empezar un proyecto con Invntio: un Diagnóstico del proyecto por USD 95, proyectos a medida cotizados por escrito, planes de hosting y mantenimiento, nuestras garantías, preguntas frecuentes y un formulario de contacto.",
+        heading: "Cuéntanos qué necesitas. Te decimos la mejor forma de construirlo.",
+        facts: ["En remoto", "EE. UU. y Latinoamérica", "En español o inglés", "Respuesta en 1 día hábil"],
+        factsLabel: "Cómo trabajamos con clientes",
+        cta: "Reservar un Diagnóstico del proyecto",
+        newTab: "(abre Cal.com en una pestaña nueva)",
+        write: "¿Prefieres escribir?",
+        diagnostic: {
+            title: "Empieza con un Diagnóstico del proyecto",
+            body: "La forma más rápida de saber qué necesita tu proyecto y cuánto costará. Hablas con el ingeniero que lo construiría.",
+            facts: [
+                { label: "Sesión", text: "30 minutos, por videollamada" },
+                { label: "Precio", text: "USD\u00a095, que pagas al reservar" },
+                { label: "Recibes", text: "Un plan escrito en 2 días hábiles: alcance, riesgos, plazos y rango de precio. Es tuyo." },
+                { label: "Crédito", text: "El pago completo se descuenta del proyecto si nos contratas en los 60 días siguientes." },
+            ],
+            cta: "Reservar diagnóstico",
+        },
+        ways: {
+            title: "Formas de trabajar juntos",
+            items: [
+                {
+                    name: "Diagnóstico del proyecto",
+                    body: "Una sesión de 30 minutos y un plan escrito. El mejor primer paso para un proyecto nuevo.",
+                    terms: "30 min · USD\u00a095",
+                },
+                {
+                    name: "Proyecto a medida",
+                    body: "Software, apps, sitios web, integraciones o automatizaciones, con un alcance definido.",
+                    terms: "Cotizado en una propuesta escrita",
+                },
+                {
+                    name: "Hosting y mantenimiento",
+                    body: "Mantenemos tu sitio o app en línea, respaldado, seguro y actualizado.",
+                    terms: "Plan mensual o anual",
+                    link: "Qué incluye un plan",
+                },
+            ],
+        },
+        steps: {
+            title: "Cómo trabajamos",
+            items: [
+                { name: "Hablamos", body: "En el Diagnóstico del proyecto, o por mensaje si prefieres escribir primero." },
+                { name: "Recibes una propuesta escrita", body: "Alcance, precio, plazos y calendario de pagos, por escrito, antes de empezar cualquier trabajo." },
+                { name: "Construimos y lanzamos", body: "Ves los avances durante el proyecto y puedes probarlo antes del lanzamiento. Después, una garantía de 30 días cubre los errores en el código que entregamos." },
+            ],
+        },
+        guarantees: {
+            title: "Nuestras garantías",
+            groups: [
+                {
+                    name: "Diagnóstico del proyecto",
+                    items: [
+                        "Cancela o cambia la fecha hasta 1 día hábil antes de la sesión y te devolvemos el pago completo.",
+                        "Si la sesión no te sirvió, avísanos en los 7 días siguientes y te devolvemos el pago completo.",
+                    ],
+                },
+                {
+                    name: "Proyectos",
+                    items: [
+                        "Durante 30 días después de que aceptas el trabajo, corregimos sin costo los errores en el código que entregamos.",
+                        "Todo por escrito: alcance, precio, plazos y calendario de pagos quedan en la propuesta que aceptas.",
+                    ],
+                },
+            ],
+            more: "Los detalles están en nuestra",
+            refunds: "Política de Reembolsos y Cancelaciones",
+            refundsAnchor: "#4-diagnóstico-del-proyecto",
+            and: "y en los",
+            terms: "Términos del Servicio",
+        },
+        proof: {
+            title: "Trabajo que puedes revisar",
+            lede: "Dos proyectos que diseñamos, construimos y seguimos operando, cada uno con un sitio en línea que puedes abrir.",
+        },
+        faq: {
+            title: "Preguntas",
+            items: [
+                {
+                    q: "¿Trabajan con empresas de cualquier país?",
+                    a: "Sí. Trabajamos en remoto con empresas de EE. UU. y Latinoamérica, en español o inglés.",
+                },
+                {
+                    q: "¿Firman un acuerdo de confidencialidad (NDA)?",
+                    a: "Sí, antes de que compartas cualquier información confidencial. Nuestros Términos del Servicio también incluyen una cláusula de confidencialidad.",
+                },
+                {
+                    q: "¿Cómo pago?",
+                    a: "El Diagnóstico del proyecto se paga con Stripe al reservarlo. Los proyectos se pagan según el calendario de tu propuesta, con facturas de Stripe.",
+                },
+                {
+                    q: "¿Y si ya tengo algo a medio construir?",
+                    a: "Tráelo al diagnóstico. Revisamos lo que tienes y te recomendamos si conviene arreglarlo, migrarlo o rehacerlo.",
+                },
+                {
+                    q: "¿Qué pasa después del diagnóstico?",
+                    a: "En 2 días hábiles recibes el plan escrito. Si quieres seguir, te enviamos una propuesta escrita con alcance, precio, plazos y calendario de pagos.",
+                },
+            ],
+        },
+        contact: {
+            title: "Escríbenos",
+            body: "Sin costo, para preguntas y un primer contacto. Respondemos en 1 día hábil, de lunes a viernes.",
+            email: "Correo",
+            phone: "Teléfono",
+            location: "Ubicación",
+            form: {
+                name: "Nombre",
+                email: "Correo",
+                company: "Empresa",
+                optional: "opcional",
+                service: "¿Qué necesitas?",
+                servicePlaceholder: "Elige un servicio",
+                other: "Otra cosa",
+                message: "Mensaje",
+                messagePlaceholder: "¿Qué quieres construir y para cuándo?",
+                consentPre: "Al enviar este formulario aceptas nuestra",
+                consentLink: "Política de Privacidad",
+                captcha: "Completa la verificación del captcha antes de enviar.",
+                submit: "Enviar mensaje",
+                sending: "Enviando…",
+                success: "Gracias, tu mensaje fue enviado. Te respondemos en 1 día hábil.",
+                error: "No se pudo enviar tu mensaje. Inténtalo de nuevo o escríbenos directamente a",
+                subject: "Nueva consulta desde invntio.com",
+            },
         },
     },
     footer: {
