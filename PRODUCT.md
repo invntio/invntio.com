@@ -19,7 +19,7 @@ A secondary reader is the **payment-processor reviewer** (Stripe). They check th
 Invntio is a small, independent software studio run by Víctor Velázquez Cid, who does the engineering himself with occasional help (directories list it as 2–10 people). The site presents the company as a brand, not as a person: Víctor is not the face of it. The site exists to:
 
 1. explain exactly what Invntio sells and how an engagement works;
-2. let a prospective client start on the Work with us page (`/work-with-us`, Spanish `/es/trabaja-con-nosotros`), which holds the offers and prices, how an engagement runs, the guarantees, an FAQ and the contact form: book the paid Project Diagnostic (the recommended way), or write first through the form, email or phone. The home page shows no prices; it closes with an invitation to that page;
+2. let a prospective client start on the Work with us page (`/work-with-us`, Spanish `/es/trabaja-con-nosotros`), which holds the offers and prices, how an engagement runs, the guarantees, an FAQ and the contact form: book the paid Project Diagnostic (the recommended way) or, for help with something that already exists, the paid Technical Session, or write first through the form, email or phone. The home page shows no prices; it closes with an invitation to that page;
 3. publish the Terms of Service, the Refund & Cancellation Policy and the Privacy Policy in plain language.
 
 Success means a visitor understands the offer within seconds and contacts Invntio, and a Stripe reviewer finds every required disclosure without searching.
@@ -44,7 +44,11 @@ Services sold:
 
 Engagement flow: Project Diagnostic → Proposal & upfront payment → Build & review → Launch, handoff & ongoing support.
 
-Project Diagnostic (live since October 2026): a paid 30-minute Cal Video session booked at https://cal.com/invntio/diagnostic, USD 95 via Stripe at booking. A written summary (scope, risks, timeline, price range) follows within 2 business days. Full refund if cancelled up to 1 business day before, or if the session isn't useful and the client says so within 7 days. The fee is credited toward the project if the client hires Invntio within 60 days. Follow-up email templates: docs/sales/project-diagnostic.md.
+Offer ladder (October 2026): the Project Diagnostic answers "what does my project need?"; the Technical Session answers "help me with what I already have"; then a fixed-price custom project and hosting & maintenance plans.
+
+Project Diagnostic (live since October 2026): a paid 30-minute Cal Video session booked at https://cal.com/invntio/diagnostic, USD 95 via Stripe at booking. For owners with a problem or an idea who are not technical. The deliverable is a one-page written recommendation within 2 business days: the right approach (custom software, an existing tool or automation), the technology or tools it needs and a rough budget range. It is a verdict, not a plan: no scope, risks or timeline (those come in the proposal). Full refund if cancelled up to 1 business day before, or if the session isn't useful and the client says so within 7 days. The fee is credited toward the project if the client hires Invntio within 60 days. Follow-up email templates: docs/sales/project-diagnostic.md.
+
+Technical Session (October 2026): a paid 60-minute hands-on video session with screen sharing, booked at https://cal.com/invntio/technical-session, USD 297 via Stripe at booking. Uses: review the architecture or code of an app or site, unblock an integration, a second opinion on another vendor's quote or proposal, choosing a stack before building. For founders with a team, businesses that already have a technical provider, or anyone stuck with something half-built. Sold on its own, not credited toward a project. Full refund if rescheduled or cancelled up to 1 business day before; later cancellations and no-shows are not refunded; no "not useful" refund. Listed in "Ways to work together", not in the hero (the hero stays the diagnostic).
 
 Commercial terms (confirmed September 2026):
 - Fixed-price projects: the payment schedule is set in each written proposal, and small projects such as websites are paid 100% upfront. A payment is non-refundable once made.
