@@ -220,7 +220,7 @@ const en = {
     hire: {
         title: "Work with us",
         description:
-            "How to start a project with Invntio: a Project Diagnostic for USD 95, custom projects quoted in writing, hosting and maintenance plans, our guarantees, common questions and a contact form.",
+            "How to start a project with Invntio: a Project Diagnostic for USD 95, a Technical Session for USD 297, fixed-price custom projects, hosting and maintenance plans, our guarantees, common questions and a contact form.",
         heading: "Tell us what you need. We'll tell you the best way to build it.",
         lede: "We build custom software, apps and websites for companies in the US and Latin America. You talk directly to the engineer who builds it.",
         facts: [
@@ -256,6 +256,12 @@ const en = {
                     terms: "30 min · USD\u00a095",
                 },
                 {
+                    name: "Technical Session",
+                    body: "Hands-on help with what you already have: a code or architecture review, a stuck integration, a second opinion on a quote, or choosing a stack.",
+                    terms: "60 min · USD\u00a0297",
+                    book: "Book a session",
+                },
+                {
                     name: "Custom project",
                     body: "Software, apps, websites, integrations or automation, built to a fixed scope.",
                     terms: "Quoted in a written proposal",
@@ -287,6 +293,10 @@ const en = {
                     ],
                 },
                 {
+                    name: "Technical Session",
+                    items: ["Cancel or reschedule up to 1 business day before the session for a full refund."],
+                },
+                {
                     name: "Projects",
                     items: [
                         "For 30 days after you accept the work, we fix errors in the code we delivered at no cost.",
@@ -308,6 +318,10 @@ const en = {
             title: "Questions",
             items: [
                 {
+                    q: "Which one should I book?",
+                    a: "The Project Diagnostic if you want to know what to build and roughly what it costs. The Technical Session if you already have something and need hands-on help.",
+                },
+                {
                     q: "Do you work with companies in any country?",
                     a: "Yes. We work remotely with companies in the US and Latin America, in English or Spanish.",
                 },
@@ -317,11 +331,11 @@ const en = {
                 },
                 {
                     q: "How do I pay?",
-                    a: "The Project Diagnostic is paid through Stripe when you book it. Projects are paid on the schedule in your proposal, through Stripe invoices.",
+                    a: "The Project Diagnostic and the Technical Session are paid through Stripe when you book them. Projects are paid on the schedule in your proposal, through Stripe invoices.",
                 },
                 {
                     q: "What if I already have something half-built?",
-                    a: "Bring it to the diagnostic. We review what you have and recommend whether to fix it, migrate it or rebuild it.",
+                    a: "Book a Technical Session. We go through it with you on a shared screen and tell you whether to fix it, migrate it or rebuild it.",
                 },
                 {
                     q: "What happens after the diagnostic?",
@@ -674,7 +688,7 @@ const es: Dict = {
     hire: {
         title: "Trabaja con nosotros",
         description:
-            "Cómo empezar un proyecto con Invntio: un Diagnóstico del proyecto por USD 95, proyectos a medida cotizados por escrito, planes de hosting y mantenimiento, nuestras garantías, preguntas frecuentes y un formulario de contacto.",
+            "Cómo empezar un proyecto con Invntio: un Diagnóstico del proyecto por USD 95, una Sesión técnica por USD 297, proyectos a medida a precio fijo, planes de hosting y mantenimiento, nuestras garantías, preguntas frecuentes y un formulario de contacto.",
         heading: "Cuéntanos qué necesitas. Te decimos la mejor forma de construirlo.",
         lede: "Construimos software a medida, apps y sitios web para empresas de EE. UU. y Latinoamérica. Hablas directo con el ingeniero que lo construye.",
         facts: [
@@ -710,6 +724,12 @@ const es: Dict = {
                     terms: "30 min · USD\u00a095",
                 },
                 {
+                    name: "Sesión técnica",
+                    body: "Ayuda práctica con lo que ya tienes: revisar código o arquitectura, destrabar una integración, una segunda opinión sobre una cotización o elegir tecnología.",
+                    terms: "60 min · USD\u00a0297",
+                    book: "Reservar sesión",
+                },
+                {
                     name: "Proyecto a medida",
                     body: "Software, apps, sitios web, integraciones o automatizaciones, con un alcance definido.",
                     terms: "Cotizado en una propuesta escrita",
@@ -741,6 +761,10 @@ const es: Dict = {
                     ],
                 },
                 {
+                    name: "Sesión técnica",
+                    items: ["Cancela o cambia la fecha hasta 1 día hábil antes de la sesión y te devolvemos el pago completo."],
+                },
+                {
                     name: "Proyectos",
                     items: [
                         "Durante 30 días después de que aceptas el trabajo, corregimos sin costo los errores en el código que entregamos.",
@@ -762,6 +786,10 @@ const es: Dict = {
             title: "Preguntas",
             items: [
                 {
+                    q: "¿Cuál debo reservar?",
+                    a: "El Diagnóstico del proyecto si quieres saber qué construir y cuánto costaría, más o menos. La Sesión técnica si ya tienes algo y necesitas ayuda práctica.",
+                },
+                {
                     q: "¿Trabajan con empresas de cualquier país?",
                     a: "Sí. Trabajamos en remoto con empresas de EE. UU. y Latinoamérica, en español o inglés.",
                 },
@@ -771,11 +799,11 @@ const es: Dict = {
                 },
                 {
                     q: "¿Cómo pago?",
-                    a: "El Diagnóstico del proyecto se paga con Stripe al reservarlo. Los proyectos se pagan según el calendario de tu propuesta, con facturas de Stripe.",
+                    a: "El Diagnóstico del proyecto y la Sesión técnica se pagan con Stripe al reservarlos. Los proyectos se pagan según el calendario de tu propuesta, con facturas de Stripe.",
                 },
                 {
                     q: "¿Y si ya tengo algo a medio construir?",
-                    a: "Tráelo al diagnóstico. Revisamos lo que tienes y te recomendamos si conviene arreglarlo, migrarlo o rehacerlo.",
+                    a: "Reserva una Sesión técnica. Lo revisamos contigo compartiendo pantalla y te decimos si conviene arreglarlo, migrarlo o rehacerlo.",
                 },
                 {
                     q: "¿Qué pasa después del diagnóstico?",

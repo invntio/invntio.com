@@ -22,6 +22,8 @@ export const site = {
     formAccessKey: "e5b00ac6-2ecf-4676-9f34-46349f17ee46",
     // Paid Project Diagnostic (30 min, USD 95), booked and paid on Cal.com.
     diagnostic: { url: "https://cal.com/invntio/diagnostic", price: 95, currency: "USD" },
+    // Paid Technical Session (60 min, USD 297), booked and paid on Cal.com. Not credited toward a project.
+    session: { url: "https://cal.com/invntio/technical-session", price: 297, currency: "USD" },
     legalUpdated: "2026-09-25",
 } as const;
 

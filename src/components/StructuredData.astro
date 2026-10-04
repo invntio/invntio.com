@@ -8,10 +8,12 @@ interface Props {
     kind: "home" | "page";
     title?: string;
     updated?: Date;
-    subject?: Record<string, unknown>;
+    // What the page is about: one entity or several.
+    subject?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const { kind, title, updated, subject } = Astro.props;
+const subjects = subject ? [subject].flat() : [];
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
 const home = new URL(localizePath("/", lang), site.url).href;
@@ -106,9 +108,11 @@ const graph =
                   isPartOf: { "@id": `${site.url}/#website` },
                   publisher: { "@id": orgId },
                   ...(updated && { dateModified: updated.toISOString().slice(0, 10) }),
-                  ...(subject && { about: { "@id": subject["@id"] } }),
+                  ...(subjects.length && {
+                      about: subjects.length === 1 ? { "@id": subjects[0]["@id"] } : subjects.map((s) => ({ "@id": s["@id"] })),
+                  }),
               },
-              ...(subject ? [subject] : []),
+              ...subjects,
               {
                   "@type": "BreadcrumbList",
                   itemListElement: [

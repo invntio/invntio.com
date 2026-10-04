@@ -15,7 +15,7 @@ interface Props {
     // Last content change, for structured data on inner pages.
     updated?: Date;
     // What the page is about (a JSON-LD node), for structured data on inner pages.
-    subject?: Record<string, unknown>;
+    subject?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const lang = getLang(Astro.url);

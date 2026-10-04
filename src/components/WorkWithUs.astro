@@ -34,10 +34,30 @@ const subject = {
     },
 };
 
+// The paid hands-on session, described the same way. Sold on its own, not credited toward a project.
+const session = h.ways.items.find((w) => w.book);
+const sessionSubject = {
+    "@type": "Service",
+    "@id": `${pageUrl}#session`,
+    name: session?.name,
+    description: session?.body,
+    serviceType: "Software technical consultation",
+    provider: { "@id": `${site.url}/#organization` },
+    areaServed: ["US", "Latin America"],
+    availableLanguage: ["English", "Spanish"],
+    offers: {
+        "@type": "Offer",
+        url: site.session.url,
+        price: String(site.session.price),
+        priceCurrency: site.session.currency,
+        availability: "https://schema.org/InStock",
+    },
+};
+
 const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
 ---
 
-<Layout title={h.title} description={h.description} subject={subject}>
+<Layout title={h.title} description={h.description} subject={[subject, sessionSubject]}>
     <header class="wrap intro">
         <div class="pitch">
             <h1><Dotted text={h.heading} period /></h1>
@@ -83,6 +103,15 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
                                 <>
                                     {" "}
                                     <a href={`${home}#plans`}>{w.link}</a>
+                                </>
+                            )}
+                            {w.book && (
+                                <>
+                                    {" "}
+                                    <a class="out" href={site.session.url} target="_blank" rel="noopener" data-book-session>
+                                        {w.book}<span class="sr-only"> {h.newTab}</span>
+                                        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={arrowOut} /></svg>
+                                    </a>
                                 </>
                             )}
                         </p>
@@ -193,6 +222,11 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
     document.querySelectorAll("[data-book-diagnostic]").forEach((link) =>
         link.addEventListener("click", () => {
             (window as unknown as { posthog?: { capture: (e: string) => void } }).posthog?.capture("diagnostic_booking_clicked");
+        }),
+    );
+    document.querySelectorAll("[data-book-session]").forEach((link) =>
+        link.addEventListener("click", () => {
+            (window as unknown as { posthog?: { capture: (e: string) => void } }).posthog?.capture("session_booking_clicked");
         }),
     );
 </script>
@@ -440,6 +474,17 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
     .ways .what a {
         color: var(--ink);
         font-weight: 500;
+    }
+    .ways .out {
+        white-space: nowrap;
+    }
+    .ways .out svg {
+        display: inline-block;
+        width: 0.875rem;
+        height: 0.875rem;
+        margin-left: 0.125rem;
+        vertical-align: -0.0625em;
+        color: var(--ink-3);
     }
     @media (max-width: 560px) {
         .ways li {
