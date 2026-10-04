@@ -13,6 +13,9 @@ const gitCommit = () => {
 };
 const commit = (process.env.WORKERS_CI_COMMIT_SHA || process.env.CF_PAGES_COMMIT_SHA || gitCommit()).slice(0, 7);
 
+// English and Spanish URLs of pages whose Spanish slug is translated (see localizePath in src/i18n/ui.ts).
+const translatedPairs = [["https://invntio.com/work-with-us/", "https://invntio.com/es/trabaja-con-nosotros/"]];
+
 // https://astro.build/config
 export default defineConfig({
     site: "https://invntio.com",
@@ -49,6 +52,12 @@ export default defineConfig({
             lastmod: new Date(),
             // Unlaunched pages and the Spanish 404 stay out of the sitemap.
             filter: (page) => !/\/(es\/)?(work|404)\/?$/.test(page),
+            // Pages with a translated Spanish slug can't be paired by path, so pair them here.
+            serialize(item) {
+                const pair = translatedPairs.find(([en, es]) => item.url === en || item.url === es);
+                if (pair) item.links = [{ url: pair[0], lang: "en-US" }, { url: pair[1], lang: "es" }];
+                return item;
+            },
         }),
     ],
 });

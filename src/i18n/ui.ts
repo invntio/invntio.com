@@ -750,11 +750,20 @@ export function useTranslations(lang: Lang) {
     return ui[lang] ?? ui[defaultLang];
 }
 
-/** Path to the same page in another language. `/terms` <-> `/es/terms`. */
+// Pages whose Spanish URL is translated instead of mirrored: English path -> Spanish path (without /es).
+const translatedPaths: Record<string, string> = {
+    "/work-with-us": "/trabaja-con-nosotros",
+};
+const englishPaths = Object.fromEntries(Object.entries(translatedPaths).map(([en, es]) => [es, en]));
+
+/** Path to the same page in another language. `/terms` <-> `/es/terms`, `/work-with-us` <-> `/es/trabaja-con-nosotros`. */
 export function localizePath(path: string, lang: Lang) {
     const clean = path.replace(/^\/es(?=\/|$)/, "") || "/";
-    if (lang === defaultLang) return clean;
-    return clean === "/" ? "/es/" : `/es${clean}`;
+    const slash = clean.length > 1 && clean.endsWith("/") ? "/" : "";
+    const base = slash ? clean.slice(0, -1) : clean;
+    const en = englishPaths[base] ?? base;
+    if (lang === defaultLang) return en + slash;
+    return en === "/" ? "/es/" : `/es${translatedPaths[en] ?? en}${slash}`;
 }
 
 export function getLang(url: URL): Lang {
