@@ -52,16 +52,18 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
         </div>
 
         <aside class="offer" id="diagnostic" aria-labelledby="diagnostic-title">
-            <h2 id="diagnostic-title"><Dotted text={h.diagnostic.title} /></h2>
-            <p class="offer-price">{h.diagnostic.price}</p>
+            <div class="offer-head">
+                <h2 id="diagnostic-title"><Mark kind="live" /><span><Dotted text={h.diagnostic.title} /></span></h2>
+                <p class="offer-price">{h.diagnostic.price}</p>
+            </div>
             <p class="offer-body">{h.diagnostic.body}</p>
+            <ul class="checks">
+                {h.diagnostic.checks.map((c) => <li><Mark kind="included" />{c}</li>)}
+            </ul>
             <a class="btn btn-primary book" href={site.diagnostic.url} target="_blank" rel="noopener" data-book-diagnostic>
                 {h.diagnostic.cta}<span class="sr-only"> {h.newTab}</span>
                 <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={arrowOut} /></svg>
             </a>
-            <ul class="checks">
-                {h.diagnostic.checks.map((c) => <li><Mark kind="included" />{c}</li>)}
-            </ul>
             <p class="direct">{h.diagnostic.direct} <a href="#write">{h.diagnostic.directLink}</a>.</p>
         </aside>
     </header>
@@ -258,54 +260,65 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
         }
     }
 
-    /* The offer panel: one bordered sheet, price set large, one action. */
+    /* The offer, set as an entry in the release record: an ink rule, name and price on one line,
+       then ruled terms and the one action. No box; it reads like the register on the home page. */
     .offer {
-        padding: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
-        background: var(--surface);
-        border: 1px solid var(--ink);
-        border-radius: var(--radius);
+        border-top: 2px solid var(--ink);
+    }
+    .offer-head {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 0.25rem 1rem;
+        padding-block: 1rem;
+        border-bottom: 1px solid var(--rule);
     }
     .offer h2 {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
         font-size: var(--step-1);
         font-weight: 650;
         letter-spacing: -0.01em;
         max-width: none;
     }
     .offer-price {
-        margin-top: 0.5rem;
-        font-size: var(--step-4);
+        font-size: var(--step-3);
         font-weight: 700;
-        letter-spacing: -0.035em;
+        letter-spacing: -0.03em;
         line-height: 1;
+        font-variant-numeric: tabular-nums;
     }
     .offer-body {
-        margin-top: 1rem;
+        margin-top: 1.25rem;
+        font-size: var(--step-1);
         color: var(--ink-2);
         max-width: 40ch;
     }
-    .book {
-        margin-top: 1.5rem;
-        width: 100%;
-        justify-content: center;
-    }
     .checks {
         list-style: none;
-        padding: 1.25rem 0 0;
+        padding: 0;
         margin: 1.5rem 0 0;
         border-top: 1px solid var(--rule);
-        display: grid;
-        gap: 0.625rem;
         font-size: var(--step--1);
     }
     .checks li {
         display: flex;
         gap: 0.5rem;
         align-items: baseline;
+        padding-block: 0.75rem;
+        border-bottom: 1px solid var(--rule);
     }
     .checks :global(.mark) {
         position: relative;
         top: 0.15em;
         flex: none;
+    }
+    .book {
+        margin-top: 1.5rem;
+        width: 100%;
+        justify-content: center;
     }
     .direct {
         margin-top: 1.25rem;
@@ -370,6 +383,8 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
     .ready {
         display: grid;
         gap: 1.5rem 4rem;
+        padding-top: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+        border-top: 1px solid var(--ink);
     }
     @media (min-width: 900px) {
         .ready {
