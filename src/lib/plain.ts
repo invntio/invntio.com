@@ -82,9 +82,21 @@ A paid 30-minute video session (Cal Video) about the client's project, for ${sit
 
 Book online: ${site.diagnostic.url}
 
-- Within 2 business days the client receives a written summary: scope, main risks, timeline and price range. It is theirs to keep, even if they don't continue.
+- It answers "what does my project need?", for owners with a problem or an idea who are not technical.
+- Within 2 business days the client receives a one-page written recommendation: the right approach (custom software, an existing tool or automation), the technology or tools it needs and a rough budget range. It is theirs to keep, even if they don't continue.
 - The full fee is credited toward the project if they hire Invntio within 60 days of the session.
 - If the session isn't useful, the client gets a full refund on request within 7 days of the session.
+- Reschedule or cancel up to 1 business day before for a full refund. Later cancellations and no-shows are not refunded.
+- Sessions in English or Spanish.
+
+## Technical Session (help with what you already have)
+
+A paid 60-minute hands-on video session with screen sharing, for ${site.session.currency} ${site.session.price}, paid when booking (Stripe). For founders with a team, businesses that already have a technical provider, or anyone stuck with something half-built.
+
+Book online: ${site.session.url}
+
+- Typical uses: reviewing the architecture or code of an app or site; unblocking an integration that isn't working; a second opinion on another vendor's quote or proposal; choosing a stack before building.
+- Sold on its own; not credited toward a project.
 - Reschedule or cancel up to 1 business day before for a full refund. Later cancellations and no-shows are not refunded.
 - Sessions in English or Spanish.
 
@@ -110,7 +122,7 @@ ${t.cases.items.map((c) => `- [${c.name}](${caseUrl(c.slug)}): ${c.outcome}`).jo
 ## Policies
 
 - [Terms of Service](${site.url}/terms/): scope, payments, late payment, intellectual property, confidentiality, AI use, liability, Pennsylvania law
-- [Refund & Cancellation Policy](${site.url}/refunds/): payments are non-refundable once made, with listed exceptions; Project Diagnostic refund and credit rules; plans cancel before renewal
+- [Refund & Cancellation Policy](${site.url}/refunds/): payments are non-refundable once made, with listed exceptions; Project Diagnostic refund and credit rules; Technical Session cancellation rules; plans cancel before renewal
 - [Privacy Policy](${site.url}/privacy/): data collected, cookies (analytics only with consent), rights and retention
 
 ## Optional
