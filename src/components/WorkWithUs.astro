@@ -59,10 +59,6 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
             <div>
                 <h2 id="diagnostic-title"><Dotted text={h.diagnostic.title} period /></h2>
                 <p class="text">{h.diagnostic.body}</p>
-                <a class="btn btn-primary book" href={site.diagnostic.url} target="_blank" rel="noopener" data-book-diagnostic>
-                    {h.diagnostic.cta}<span class="sr-only"> {h.newTab}</span>
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={arrowOut} /></svg>
-                </a>
             </div>
             <dl class="terms">
                 {h.diagnostic.facts.map((f) => (
@@ -176,6 +172,22 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
         </div>
     </section>
 
+    <section class="wrap block" aria-labelledby="ready-title">
+        <div class="ready" data-reveal>
+            <h2 id="ready-title"><Dotted text={h.ready.title} /></h2>
+            <div class="actions">
+                <a class="btn btn-primary" href={site.diagnostic.url} target="_blank" rel="noopener" data-book-diagnostic>
+                    {h.cta}<span class="sr-only"> {h.newTab}</span>
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={arrowOut} /></svg>
+                </a>
+                <a class="write" href="#write">
+                    {h.ready.write}
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" /></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <ContactForm />
 </Layout>
 
@@ -277,8 +289,19 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
         color: var(--ink-2);
         max-width: 38ch;
     }
-    .book {
-        margin-top: 1.75rem;
+    /* Closing call to action, right before the form: the one decision point after the whole case is made. */
+    .ready {
+        display: grid;
+        gap: 1.5rem 4rem;
+    }
+    @media (min-width: 900px) {
+        .ready {
+            grid-template-columns: 7fr 5fr;
+            align-items: center;
+        }
+    }
+    .ready .actions {
+        margin-top: 0;
     }
     a:not(.btn) {
         text-decoration-color: var(--rule-strong);

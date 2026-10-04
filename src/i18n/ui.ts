@@ -236,8 +236,8 @@ const en = {
                 { label: "You get", text: "A written plan within 2 business days: scope, risks, timeline and price range. It's yours to keep." },
                 { label: "Credit", text: "The full fee is credited toward the project if you hire us within 60 days." },
             ],
-            cta: "Book a diagnostic",
         },
+        ready: { title: "Ready to start?", write: "Or write to us below" },
         ways: {
             title: "Ways to work together",
             items: [
@@ -681,8 +681,8 @@ const es: Dict = {
                 { label: "Recibes", text: "Un plan escrito en 2 días hábiles: alcance, riesgos, plazos y rango de precio. Es tuyo." },
                 { label: "Crédito", text: "El pago completo se descuenta del proyecto si nos contratas en los 60 días siguientes." },
             ],
-            cta: "Reservar diagnóstico",
         },
+        ready: { title: "¿Listo para empezar?", write: "O escríbenos abajo" },
         ways: {
             title: "Formas de trabajar juntos",
             items: [
