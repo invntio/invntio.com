@@ -222,20 +222,28 @@ const en = {
         description:
             "How to start a project with Invntio: a Project Diagnostic for USD 95, custom projects quoted in writing, hosting and maintenance plans, our guarantees, common questions and a contact form.",
         heading: "Tell us what you need. We'll tell you the best way to build it.",
-        facts: ["Remote", "US and Latin America", "English or Spanish", "Reply within 1 business day"],
+        lede: "We build custom software, apps and websites for companies in the US and Latin America. You talk directly to the engineer who builds it.",
+        facts: [
+            { label: "Mode", text: "Remote" },
+            { label: "Reply", text: "Within 1 business day" },
+            { label: "Language", text: "English or Spanish" },
+        ],
         factsLabel: "How we work with clients",
         cta: "Book a Project Diagnostic",
         newTab: "(opens Cal.com in a new tab)",
         write: "Prefer to write?",
         diagnostic: {
-            title: "Start with a Project Diagnostic",
-            body: "The fastest way to know what your project needs and what it will cost. You talk to the engineer who would build it.",
-            facts: [
-                { label: "Session", text: "30 minutes, by video" },
-                { label: "Price", text: "USD\u00a095, paid when you book" },
-                { label: "You get", text: "A written plan within 2 business days: scope, risks, timeline and price range. It's yours to keep." },
-                { label: "Credit", text: "The full fee is credited toward the project if you hire us within 60 days." },
+            title: "Project Diagnostic",
+            price: "USD\u00a095",
+            body: "30 minutes on your project. Within 2 business days you get a written plan: scope, risks, timeline and price range.",
+            cta: "Book a diagnostic",
+            checks: [
+                "Pick a time on our calendar, pay when you book",
+                "Credited toward your project within 60 days",
+                "Session not useful? Full refund within 7 days",
             ],
+            direct: "Already know what you need?",
+            directLink: "Write to us",
         },
         ready: { title: "Ready to start?", write: "Or write to us below" },
         ways: {
@@ -667,20 +675,28 @@ const es: Dict = {
         description:
             "Cómo empezar un proyecto con Invntio: un Diagnóstico del proyecto por USD 95, proyectos a medida cotizados por escrito, planes de hosting y mantenimiento, nuestras garantías, preguntas frecuentes y un formulario de contacto.",
         heading: "Cuéntanos qué necesitas. Te decimos la mejor forma de construirlo.",
-        facts: ["En remoto", "EE. UU. y Latinoamérica", "En español o inglés", "Respuesta en 1 día hábil"],
+        lede: "Construimos software a medida, apps y sitios web para empresas de EE. UU. y Latinoamérica. Hablas directo con el ingeniero que lo construye.",
+        facts: [
+            { label: "Modalidad", text: "En remoto" },
+            { label: "Respuesta", text: "En 1 día hábil" },
+            { label: "Idioma", text: "Español o inglés" },
+        ],
         factsLabel: "Cómo trabajamos con clientes",
         cta: "Reservar un Diagnóstico del proyecto",
         newTab: "(abre Cal.com en una pestaña nueva)",
         write: "¿Prefieres escribir?",
         diagnostic: {
-            title: "Empieza con un Diagnóstico del proyecto",
-            body: "La forma más rápida de saber qué necesita tu proyecto y cuánto costará. Hablas con el ingeniero que lo construiría.",
-            facts: [
-                { label: "Sesión", text: "30 minutos, por videollamada" },
-                { label: "Precio", text: "USD\u00a095, que pagas al reservar" },
-                { label: "Recibes", text: "Un plan escrito en 2 días hábiles: alcance, riesgos, plazos y rango de precio. Es tuyo." },
-                { label: "Crédito", text: "El pago completo se descuenta del proyecto si nos contratas en los 60 días siguientes." },
+            title: "Diagnóstico del proyecto",
+            price: "USD\u00a095",
+            body: "30 minutos sobre tu proyecto. En 2 días hábiles recibes un plan escrito: alcance, riesgos, plazos y rango de precio.",
+            cta: "Reservar diagnóstico",
+            checks: [
+                "Eliges el horario en nuestro calendario y pagas al reservar",
+                "Se descuenta de tu proyecto en los 60 días siguientes",
+                "¿La sesión no te sirvió? Reembolso completo en 7 días",
             ],
+            direct: "¿Ya sabes lo que necesitas?",
+            directLink: "Escríbenos",
         },
         ready: { title: "¿Listo para empezar?", write: "O escríbenos abajo" },
         ways: {
