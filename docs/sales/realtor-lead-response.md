@@ -50,3 +50,20 @@ The same system can later be sold to residential contractors (the research sessi
 ## Competitors to know (fill in from research)
 
 Follow Up Boss, kvCORE/BoldTrail, Lofty, AI ISAs (e.g. Structurely), human ISA services. Our angle: done for you, WhatsApp and Spanish included, directly with the engineer, fixed price in writing.
+
+## Interview log
+
+### 1. Former agent, Florida (Alejandra), 2026-10-04
+
+- **Brokerage tools:** a website showing the company's listings as the agent's own, a CRM with email automation, flyer/postcard/banner templates, and a map app where clients can search listings. Paid as part of the annual brokerage package.
+- **Use:** the website gets used. The CRM decays because adding and updating contacts is slow and tedious, so most agents don't use it as intended. Templates go unused (Canva is better).
+- **Nights and weekends:** you answered "when you could", the next day or later. No automation of any kind.
+- **Where real leads came from:** mostly people who knew her, or who replied to her social media posts (personal Instagram/Facebook), **not** paid platforms. Lead generation was bundled in the brokerage fee, not bought separately.
+- **ISAs:** none she knew of; some part-time office secretaries. Every agent handled leads their own way.
+- **Referrals for interviews:** "maybe".
+
+**What it changes:**
+- Confirms the slow reply and the lack of automation.
+- Adds a second pain: **the CRM doesn't fill itself.** Offer idea: capture every lead from social DMs, WhatsApp and forms, reply instantly, and **log it automatically in the brokerage CRM** the agent already has.
+- Confirms that average agents whose leads are bundled are not the buyer; keep the focus on teams and agents who buy leads separately.
+- Social DMs (Instagram/Facebook) may matter as much as Zillow for many agents. Ask about it in every interview.
