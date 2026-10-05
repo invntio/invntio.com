@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Invntio story (ES)</title>
+<style>
+  @font-face {
+    font-family: "Schibsted Grotesk Variable";
+    src: url("schibsted-grotesk-latin-wght-normal.woff2") format("woff2");
+    font-weight: 400 900;
+  }
+  :root {
+    --green: #2cac7b;
+    --green-deep: #155c40;
+    --ground: #f6f7f5;
+    --ink: #15181c;
+    --ink-2: #4a4f57;
+    --ink-3: #686d75;
+    --rule: #e2e4e0;
+    /* Blueprint grid, scaled up from the site's 24px so it survives a phone screen. */
+    --grid-line: rgb(21 24 28 / 0.035);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; }
+  body {
+    background-color: var(--ground);
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 36px 36px;
+    color: var(--ink);
+    font-family: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Safe area: top 250px and bottom 300px stay free of key content. */
+  .sheet {
+    position: absolute;
+    top: 280px; left: 96px; right: 96px; bottom: 320px;
+    display: flex; flex-direction: column;
+  }
+  .wordmark { width: 240px; height: 53px; flex: none; display: block; color: var(--ink); }
+
+  h1 {
+    margin-top: 88px;
+    font-size: 116px; font-weight: 700; line-height: 1.02; letter-spacing: -0.035em;
+  }
+  /* Tittle rule, as on the site: hard two-tone fill, green above 33.5%. */
+  .i-dot {
+    color: transparent;
+    background: linear-gradient(to bottom, var(--green) 33.5%, var(--ink) 33.5%);
+    -webkit-background-clip: text; background-clip: text;
+  }
+  .end-dot { color: var(--green); }
+
+  /* Ruled panel: ink top rule, hairline rows, no boxes. */
+  .register { margin-top: 96px; list-style: none; border-top: 2px solid var(--ink); }
+  .register li {
+    display: grid; grid-template-columns: 76px 1fr; align-items: baseline;
+    padding: 28px 0; border-bottom: 2px solid var(--rule);
+    font-size: 46px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.15;
+  }
+  .register .n { font-size: 30px; font-weight: 500; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+  .trust { margin-top: 44px; font-size: 37px; line-height: 1.4; color: var(--ink-2); }
+
+  .cta { margin-top: auto; padding-top: 48px; }
+  .cta h2 { font-size: 56px; font-weight: 650; line-height: 1.08; letter-spacing: -0.025em; max-width: 860px; }
+  .actions { margin-top: 40px; display: flex; align-items: center; gap: 40px; }
+  .btn {
+    background: var(--green-deep); color: #fff; border-radius: 12px;
+    font-size: 40px; font-weight: 600; padding: 26px 46px; line-height: 1;
+  }
+  .domain { font-size: 44px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <svg class="wordmark" viewBox="0 0 1280 283.04" role="img" aria-label="Invntio">
+    <g fill="currentColor">
+        <path d="M41.42,27.25V279.77H0V27.25Z" />
+        <path d="M240.71,86.11q17.61,9.81,28,29.07T279,161.68V279.77H238V167.86q0-26.88-13.44-41.24t-36.7-14.35q-23.25,0-36.88,14.35t-13.62,41.24V279.77H95.92V79.57h41.42v31.61a66.24,66.24,0,0,1,26.34-26q16.53-8.9,37.6-8.9Q223.09,76.3,240.71,86.11Z" />
+        <path d="M409.11,242.71,465.79,79.57h44.69l-76.3,200.2H384L308.1,79.57h44.33Z" />
+        <path d="M685.78,86.11q17.63,9.81,28,29.07t10.35,46.5V279.77H683.06V167.86q0-26.88-13.45-41.24t-36.69-14.35q-23.26,0-36.88,14.35t-13.63,41.24V279.77H541V79.57h41.42v31.61a66.31,66.31,0,0,1,26.34-26q16.53-8.9,37.61-8.9Q668.16,76.3,685.78,86.11Z" />
+        <path d="M825.12,113.36V224.18q0,11.26,5.26,16.16t18,4.91H873.8v34.52H841.1q-28,0-42.87-13.08t-14.9-42.51V113.36H759.72V79.57h23.61V29.79h41.79V79.57H873.8v33.79Z" />
+        <path d="M953.37,79.57v200.2H912V79.57Z" />
+        <path d="M1148.48,89a93,93,0,0,1,36.7,36.33q13.42,23.63,13.44,54.14t-13.81,54.13a95.64,95.64,0,0,1-37.6,36.52Q1123.4,283,1094.7,283q-28.34,0-51.22-12.9a92.63,92.63,0,0,1-36-36.33q-13.08-23.44-13.08-54.32,0-30.53,13.45-54.14A92.83,92.83,0,0,1,1044.57,89q23.23-12.72,52-12.72T1148.48,89Zm-82.11,30q-13.45,7.82-21.62,23.26t-8.18,37.24q0,21.8,7.81,37.42t21.08,23.43a56.39,56.39,0,0,0,29.24,7.82,59.36,59.36,0,0,0,30-8q14-8,22.71-23.43t8.72-37.24q0-21.81-8.36-37.24T1125.59,119a59.62,59.62,0,0,0-29.8-7.81A57.54,57.54,0,0,0,1066.37,119Z" />
+    </g>
+    <g fill="#2cac7b">
+        <path d="M1237.31,237.26a23.58,23.58,0,0,1,17.62-7.27A24.83,24.83,0,0,1,1280,255.06a23.62,23.62,0,0,1-7.27,17.62,24.56,24.56,0,0,1-17.8,7.09,24.82,24.82,0,0,1-24.71-24.71A24.5,24.5,0,0,1,1237.31,237.26Z" />
+        <path d="M914.13,7.63A25.64,25.64,0,0,1,933,0a25.2,25.2,0,0,1,18.53,7.63,25.66,25.66,0,0,1,7.63,18.89,25.67,25.67,0,0,1-7.63,18.9A25.24,25.24,0,0,1,933,53.05,26.06,26.06,0,0,1,906.5,26.52,25.66,25.66,0,0,1,914.13,7.63Z" />
+    </g>
+</svg>
+
+  <h1>Tus <span class="i-dot">i</span>deas, hechas real<span class="i-dot">i</span>dad<span class="end-dot">.</span></h1>
+
+  <ol class="register">
+    <li><span class="n">01</span>Páginas web</li>
+    <li><span class="n">02</span>Apps móviles</li>
+    <li><span class="n">03</span>Integraciones y automatizaciones</li>
+    <li><span class="n">04</span>Hosting y mantenimiento</li>
+  </ol>
+
+  <p class="trust">Trato directo con el ingeniero que lo construye.</p>
+
+  <div class="cta">
+    <h2>¿Conoces a algu<span class="i-dot">i</span>en que lo neces<span class="i-dot">i</span>te?</h2>
+    <div class="actions">
+      <span class="btn">Escríbeme</span>
+      <span class="domain">invntio.com</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>
