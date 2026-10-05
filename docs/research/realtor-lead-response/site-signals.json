@@ -1,0 +1,731 @@
+{
+  "Crawford Lorenzo Home Selling Team": {
+    "status": "ok",
+    "url": "https://crawfordlorenzohomesellingteam.com/",
+    "final_url": "https://crawfordlorenzohomesellingteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "chat_widget": {
+        "detail": "chat widget (LeadConnector) in the page code",
+        "source": "https://crawfordlorenzohomesellingteam.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://crawfordlorenzohomesellingteam.com/"
+      }
+    }
+  },
+  "Jersey Property Group Realty": {
+    "status": "ok",
+    "url": "https://www.happyclientsnj.com/",
+    "final_url": "https://www.happyclientsnj.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "lead_platform": {
+        "detail": "Ylopo",
+        "source": "https://www.happyclientsnj.com/"
+      },
+      "zillow": {
+        "detail": "mentions Zillow",
+        "source": "https://www.happyclientsnj.com/"
+      }
+    }
+  },
+  "Michael Martinetti Group": {
+    "status": "ok",
+    "url": "https://michaelmartinettigroup.com/",
+    "final_url": "https://michaelmartinettigroup.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://michaelmartinettigroup.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://michaelmartinettigroup.com/"
+      }
+    }
+  },
+  "Oz Group (Joe Oz Real Estate Group)": {
+    "status": "ok",
+    "url": "https://www.ozgroupnj.com/",
+    "final_url": "https://www.ozgroupnj.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "lead_platform": {
+        "detail": "Ylopo",
+        "source": "https://www.ozgroupnj.com/"
+      },
+      "zillow": {
+        "detail": "mentions Zillow",
+        "source": "https://www.ozgroupnj.com/"
+      }
+    }
+  },
+  "The Nunez Group": {
+    "status": "ok",
+    "url": "https://www.thenunezgroup.com/",
+    "final_url": "https://www.thenunezgroup.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "lead_platform": {
+        "detail": "Ylopo",
+        "source": "https://www.thenunezgroup.com/"
+      },
+      "zillow": {
+        "detail": "mentions Zillow",
+        "source": "https://www.thenunezgroup.com/"
+      }
+    }
+  },
+  "Unify Real Estate Team": {
+    "status": "ok",
+    "url": "https://njtoprealestateteam.com/",
+    "final_url": "https://njtoprealestateteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://njtoprealestateteam.com/"
+      },
+      "spanish_content": {
+        "detail": "homepage mentions Spanish (\"Spanish\")",
+        "source": "https://njtoprealestateteam.com/"
+      },
+      "zillow": {
+        "detail": "mentions Zillow",
+        "source": "https://njtoprealestateteam.com/"
+      }
+    }
+  },
+  "Queens Home Team": {
+    "status": "ok",
+    "url": "https://www.queenshometeam.com/",
+    "final_url": "https://www.queenshometeam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://www.queenshometeam.com/"
+      },
+      "spanish_content": {
+        "detail": "homepage mentions Spanish (\"Spanish Speaking\")",
+        "source": "https://www.queenshometeam.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://www.queenshometeam.com/"
+      }
+    }
+  },
+  "Rafael Ching Real Estate Team": {
+    "status": "ok",
+    "url": "https://www.rafaelchingteam.com/",
+    "final_url": "https://www.rafaelchingteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "other_platform": {
+        "detail": "Brivity (PLACE)",
+        "source": "https://www.rafaelchingteam.com/"
+      }
+    }
+  },
+  "The Behfar Team": {
+    "status": "ok",
+    "url": "https://www.thebehfarteam.com/",
+    "final_url": "https://www.thebehfarteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "whatsapp": {
+        "detail": "WhatsApp contact link",
+        "source": "https://www.thebehfarteam.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://www.thebehfarteam.com/"
+      }
+    }
+  },
+  "The Expansion Team at RE/MAX Edge": {
+    "status": "ok",
+    "url": "https://expansionteamnyc.com/",
+    "final_url": "https://expansionteamnyc.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "sms": {
+        "detail": "\"call or text\" on the homepage",
+        "source": "https://expansionteamnyc.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://expansionteamnyc.com/"
+      }
+    }
+  },
+  "Gary Mercer Team": {
+    "status": "ok",
+    "url": "https://garymercer.lpthomesearch.com/",
+    "final_url": "https://garymercer.lpthomesearch.com/",
+    "checked_at": "2026-10-05",
+    "signals": {}
+  },
+  "Hammond Homes (Michael Hammond Jr.)": {
+    "status": "ok",
+    "url": "https://hammond-homes.com/",
+    "final_url": "https://hammond-homes.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "spanish_content": {
+        "detail": "homepage mentions Spanish (\"Spanish\")",
+        "source": "https://hammond-homes.com/"
+      },
+      "lead_platform": {
+        "detail": "Ylopo",
+        "source": "https://hammond-homes.com/"
+      }
+    }
+  },
+  "Premier Home Team": {
+    "status": "ok",
+    "url": "https://www.premierhometeam.com/",
+    "final_url": "https://www.premierhometeam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "other_platform": {
+        "detail": "Brivity (PLACE)",
+        "source": "https://www.premierhometeam.com/"
+      }
+    }
+  },
+  "Q&U Team (Eli Qarkaxhia Team)": {
+    "status": "ok",
+    "url": "https://qanduteam.com/",
+    "final_url": "https://qanduteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "chat_widget": {
+        "detail": "chat widget (LeadConnector) in the page code",
+        "source": "https://qanduteam.com/"
+      },
+      "office_hours": {
+        "detail": "\"Office Hours MON - SUN: ALL DAY Q & U Team, Eli Qarkaxhia Team Center City Office: 1430 Wa\"",
+        "source": "https://qanduteam.com/"
+      }
+    }
+  },
+  "The Chris Lawlor Team": {
+    "status": "ok",
+    "url": "https://chrislawlorteam.com/",
+    "final_url": "https://chrislawlorteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://chrislawlorteam.com/"
+      },
+      "zillow": {
+        "detail": "mentions Zillow",
+        "source": "https://chrislawlorteam.com/"
+      }
+    }
+  },
+  "The DiCicco Team (Anthony DiCicco)": {
+    "status": "ok",
+    "url": "https://diciccosells.com/",
+    "final_url": "https://diciccosells.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "zillow": {
+        "detail": "mentions Zillow Premier Agent",
+        "source": "https://diciccosells.com/"
+      }
+    }
+  },
+  "Betancurth Real Estate Group": {
+    "status": "ok",
+    "url": "https://bregrealty.com/",
+    "final_url": "https://bregrealty.com/",
+    "checked_at": "2026-10-05",
+    "signals": {}
+  },
+  "Gruosso Group": {
+    "status": "ok",
+    "url": "https://www.gruossogroup.com",
+    "final_url": "https://www.gruossogroup.com/",
+    "checked_at": "2026-10-05",
+    "signals": {}
+  },
+  "Holmquist Group powered by PLACE": {
+    "status": "ok",
+    "url": "https://www.holmquistgroup.com",
+    "final_url": "https://www.holmquistgroup.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "other_platform": {
+        "detail": "Brivity (PLACE)",
+        "source": "https://www.holmquistgroup.com/"
+      }
+    }
+  },
+  "Links Residential": {
+    "status": "ok",
+    "url": "https://linksnj.com/",
+    "final_url": "https://linksnj.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://linksnj.com/"
+      },
+      "other_platform": {
+        "detail": "Luxury Presence",
+        "source": "https://linksnj.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://linksnj.com/"
+      }
+    }
+  },
+  "Michael Tejada Real Estate Team (Tejada Team)": {
+    "status": "ok",
+    "url": "https://tejadateam.com/",
+    "final_url": "https://tejadateam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {}
+  },
+  "NJ Property Experts": {
+    "status": "skipped (brokerage portal or social site, not fetched)",
+    "url": "https://www.coldwellbankerhomes.com/nj/westfield/team/the-lisa-stafford-team/tid_1400/",
+    "checked_at": "2026-10-05"
+  },
+  "Rowack Real Estate Team": {
+    "status": "ok",
+    "url": "https://www.rowackrealestateteam.com/",
+    "final_url": "https://www.rowackrealestateteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "lead_platform": {
+        "detail": "BoomTown",
+        "source": "https://www.rowackrealestateteam.com/"
+      },
+      "zillow": {
+        "detail": "mentions Zillow",
+        "source": "https://www.rowackrealestateteam.com/"
+      }
+    }
+  },
+  "The Destination NJ Home Selling Team": {
+    "status": "ok",
+    "url": "https://www.destinationnj.com",
+    "final_url": "https://destinationnj.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "zillow": {
+        "detail": "mentions Zillow",
+        "source": "https://destinationnj.com/"
+      },
+      "chat_widget": {
+        "detail": "chat widget (LeadConnector) in the page code",
+        "source": "https://destinationnj.com/"
+      }
+    }
+  },
+  "The Parlay Group": {
+    "status": "ok",
+    "url": "https://theparlaygroupre.com/",
+    "final_url": "https://theparlaygroupre.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://theparlaygroupre.com/"
+      },
+      "other_platform": {
+        "detail": "Luxury Presence",
+        "source": "https://theparlaygroupre.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://theparlaygroupre.com/"
+      }
+    }
+  },
+  "Jamie Realty Group (Jamie Zheng Team)": {
+    "status": "ok",
+    "url": "https://www.jamierealtygroup.com/",
+    "final_url": "https://www.jamierealtygroup.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://www.jamierealtygroup.com/"
+      },
+      "spanish_content": {
+        "detail": "homepage mentions Spanish (\"Spanish\")",
+        "source": "https://www.jamierealtygroup.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://www.jamierealtygroup.com/"
+      }
+    }
+  },
+  "Melanie Kishk Century 21 Team": {
+    "status": "no website in CSV",
+    "checked_at": "2026-10-05"
+  },
+  "The Alliance Team (Vincent Koo Team)": {
+    "status": "ok",
+    "url": "https://www.allianceallin.com/",
+    "final_url": "https://www.allianceallin.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "other_platform": {
+        "detail": "Brivity (PLACE)",
+        "source": "https://www.allianceallin.com/"
+      }
+    }
+  },
+  "The Byrne Homes Team": {
+    "status": "ok",
+    "url": "https://www.westchestercountyresidences.com/",
+    "final_url": "https://www.westchestercountyresidences.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "office_hours": {
+        "detail": "\"Office Hours Monday - 9 am-8 pm Tuesday - 9 am-8 pm Wednesday - 9 am-8 pm Thursday - 9 am-\"",
+        "source": "https://www.westchestercountyresidences.com/"
+      },
+      "lead_platform": {
+        "detail": "Ylopo",
+        "source": "https://www.westchestercountyresidences.com/"
+      },
+      "zillow": {
+        "detail": "mentions Zillow",
+        "source": "https://www.westchestercountyresidences.com/"
+      }
+    }
+  },
+  "The Debbie Carpluk Team": {
+    "status": "ok",
+    "url": "https://www.carplukteam.com/",
+    "final_url": "https://www.carplukteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {}
+  },
+  "The Evans Llorens (Barriga) Team": {
+    "status": "skipped (brokerage portal or social site, not fetched)",
+    "url": "https://www.elliman.com/real-estate-agent/steven-llorens/22997",
+    "checked_at": "2026-10-05"
+  },
+  "The Galluzzo Team": {
+    "status": "ok",
+    "url": "https://galluzzoteam.com/",
+    "final_url": "https://galluzzoteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://galluzzoteam.com/"
+      },
+      "other_platform": {
+        "detail": "Luxury Presence",
+        "source": "https://galluzzoteam.com/"
+      }
+    }
+  },
+  "The Goldbar Team (Juan Barreneche)": {
+    "status": "ok",
+    "url": "https://www.goldbarteam.com/",
+    "final_url": "https://joingoldbar.com/",
+    "checked_at": "2026-10-05",
+    "signals": {}
+  },
+  "The Tony Murphy Sales Team": {
+    "status": "skipped (brokerage portal or social site, not fetched)",
+    "url": "https://www.houlihanlawrence.com/bio/thetonymurphysalesteam",
+    "checked_at": "2026-10-05"
+  },
+  "The Zappulla Team": {
+    "status": "no website in CSV",
+    "checked_at": "2026-10-05"
+  },
+  "Jason Rodriguez Realty Team": {
+    "status": "blocked (HTTP 403)",
+    "url": "https://www.jasonrodriguezteam.com/",
+    "final_url": "https://www.jasonrodriguezteam.com/",
+    "checked_at": "2026-10-05"
+  },
+  "Philly Home Girls": {
+    "status": "ok",
+    "url": "https://www.phillyhomegirls.com/",
+    "final_url": "https://www.phillyhomegirls.com/",
+    "checked_at": "2026-10-05",
+    "signals": {}
+  },
+  "The Cliff Lewis Experience": {
+    "status": "ok",
+    "url": "https://clifflewisrealtor.com/",
+    "final_url": "https://clifflewisrealtor.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://clifflewisrealtor.com/"
+      },
+      "other_platform": {
+        "detail": "Luxury Presence",
+        "source": "https://clifflewisrealtor.com/"
+      }
+    }
+  },
+  "The Eric Leadbetter Team": {
+    "status": "blocked (HTTP 403)",
+    "url": "https://theericleadbetterteam.com/",
+    "final_url": "https://theericleadbetterteam.com/",
+    "checked_at": "2026-10-05"
+  },
+  "The Mike McCann Team": {
+    "status": "ok",
+    "url": "https://www.mccannteam.com/",
+    "final_url": "https://mccannteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://mccannteam.com/"
+      },
+      "other_platform": {
+        "detail": "Luxury Presence",
+        "source": "https://mccannteam.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://mccannteam.com/"
+      }
+    }
+  },
+  "The Rosa Ylonka Perez Team": {
+    "status": "blocked (HTTP 403)",
+    "url": "https://rosaylonkaperez.ironvalleyrealestate.com/",
+    "final_url": "https://rosaylonkaperez.ironvalleyrealestate.com/",
+    "checked_at": "2026-10-05"
+  },
+  "Tom Toole Sales Group": {
+    "status": "ok",
+    "url": "https://www.tomtoole.com/",
+    "final_url": "https://www.tomtoole.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "lead_platform": {
+        "detail": "Sierra Interactive",
+        "source": "https://www.tomtoole.com/"
+      },
+      "zillow": {
+        "detail": "mentions Zillow",
+        "source": "https://www.tomtoole.com/"
+      }
+    }
+  },
+  "Venture Philly Group": {
+    "status": "ok",
+    "url": "https://www.venturephilly.com/",
+    "final_url": "https://www.venturephilly.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://www.venturephilly.com/"
+      },
+      "zillow": {
+        "detail": "mentions Zillow",
+        "source": "https://www.venturephilly.com/"
+      }
+    }
+  },
+  "LuxeLife Group powered by PLACE": {
+    "status": "ok",
+    "url": "https://luxeliferealestategroup.com",
+    "final_url": "https://www.luxeliferealestategroup.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "other_platform": {
+        "detail": "Brivity (PLACE)",
+        "source": "https://www.luxeliferealestategroup.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://www.luxeliferealestategroup.com/"
+      }
+    }
+  },
+  "Opulent Living Team": {
+    "status": "ok",
+    "url": "https://www.opulentlivingteam.com/",
+    "final_url": "https://www.opulentlivingteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "other_platform": {
+        "detail": "Brivity (PLACE)",
+        "source": "https://www.opulentlivingteam.com/"
+      }
+    }
+  },
+  "Premiere Home Group (Stefanie Prettyman)": {
+    "status": "ok",
+    "url": "https://blog.premierehomegroup.com/",
+    "final_url": "https://blog.premierehomegroup.com/",
+    "checked_at": "2026-10-05",
+    "signals": {}
+  },
+  "Radius Realty Group": {
+    "status": "ok",
+    "url": "https://www.radiusrealtynj.com/",
+    "final_url": "https://www.radiusrealtynj.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "other_platform": {
+        "detail": "Brivity (PLACE)",
+        "source": "https://www.radiusrealtynj.com/"
+      }
+    }
+  },
+  "Target Team": {
+    "status": "ok",
+    "url": "https://www.targetreteam.com/",
+    "final_url": "https://www.targetreteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "other_platform": {
+        "detail": "Brivity (PLACE)",
+        "source": "https://www.targetreteam.com/"
+      }
+    }
+  },
+  "Urban Coast Group": {
+    "status": "ok",
+    "url": "https://www.urbancoastgroup.com/",
+    "final_url": "https://www.urbancoastgroup.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "other_platform": {
+        "detail": "Brivity (PLACE)",
+        "source": "https://www.urbancoastgroup.com/"
+      }
+    }
+  },
+  "Jason Mitchell Group (oficina NY)": {
+    "status": "unreachable (ERR_TLS_CERT_ALTNAME_INVALID)",
+    "url": "https://www.mitchellgroupny.com/",
+    "checked_at": "2026-10-05"
+  },
+  "The Forray Team": {
+    "status": "no website in CSV",
+    "checked_at": "2026-10-05"
+  },
+  "The Gold Team": {
+    "status": "no website in CSV",
+    "checked_at": "2026-10-05"
+  },
+  "The Hackett Home Team at Compass": {
+    "status": "no website in CSV",
+    "checked_at": "2026-10-05"
+  },
+  "The Schiff Team": {
+    "status": "no website in CSV",
+    "checked_at": "2026-10-05"
+  },
+  "Totally Westchester Team at Compass": {
+    "status": "no website in CSV",
+    "checked_at": "2026-10-05"
+  },
+  "City Block Team (Jeff Block)": {
+    "status": "ok",
+    "url": "https://cityblockteam.com/",
+    "final_url": "https://cityblockteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://cityblockteam.com/"
+      }
+    }
+  },
+  "Jim Romano and the Suburbs2City Team": {
+    "status": "ok",
+    "url": "https://suburbs2city.com/",
+    "final_url": "https://suburbs2city.com/",
+    "checked_at": "2026-10-05",
+    "signals": {}
+  },
+  "Lehigh Valley Just Listed": {
+    "status": "ok",
+    "url": "https://www.lehighvalleyjustlisted.com/",
+    "final_url": "https://www.lehighvalleyjustlisted.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "spanish_content": {
+        "detail": "Spanish text on the homepage (\"Casas en venta\")",
+        "source": "https://www.lehighvalleyjustlisted.com/"
+      },
+      "lead_platform": {
+        "detail": "Real Geeks",
+        "source": "https://www.lehighvalleyjustlisted.com/"
+      }
+    }
+  },
+  "Solara": {
+    "status": "ok",
+    "url": "https://solarateam.com/",
+    "final_url": "https://solarateam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://solarateam.com/"
+      },
+      "other_platform": {
+        "detail": "Luxury Presence",
+        "source": "https://solarateam.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://solarateam.com/"
+      }
+    }
+  },
+  "South Philly Real Estate Team (Vinny Fracassi)": {
+    "status": "ok",
+    "url": "https://www.southphillyrealestateteam.com/",
+    "final_url": "https://www.southphillyrealestateteam.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "sms": {
+        "detail": "\"Call or Text\" on the homepage",
+        "source": "https://www.southphillyrealestateteam.com/"
+      }
+    }
+  },
+  "The Rarity Real Estate Team (Jim Roche)": {
+    "status": "ok",
+    "url": "https://rarityre.com/",
+    "final_url": "https://rarityre.com/",
+    "checked_at": "2026-10-05",
+    "signals": {
+      "contact_form_only": {
+        "detail": "contact form on the homepage; no chat, WhatsApp or text option in the page code",
+        "source": "https://rarityre.com/"
+      },
+      "other_platform": {
+        "detail": "Luxury Presence",
+        "source": "https://rarityre.com/"
+      },
+      "zillow": {
+        "detail": "links to a Zillow profile",
+        "source": "https://rarityre.com/"
+      }
+    }
+  }
+}
