@@ -69,6 +69,24 @@ Follow Up Boss, kvCORE/BoldTrail, Lofty, AI ISAs (e.g. Structurely), human ISA s
 - Confirms that average agents whose leads are bundled are not the buyer; keep the focus on teams and agents who buy leads separately.
 - Social DMs (Instagram/Facebook) may matter as much as Zillow for many agents. Ask about it in every interview.
 
+### 2. Michael Hammond Jr., Hammond Homes (Collegeville, PA), 2026-10-05
+
+Phone, about 3 minutes; he called back after the voicemail.
+
+- **Leads:** he pays **USD 500–700 per lead** (likely Zillow Flex referral leads; the team hires for Zillow Preferred).
+- **How they answer:** every lead goes into **Follow Up Boss** and is routed to about 10 agents who answer right away. He tracks speed to lead and sees every call and text.
+- **Before:** he copied leads and texted them to agents, with no idea whether they called. "That's when it cost me money." The CRM fixed it.
+- **WhatsApp:** "usually a scam" for them. Not a lead channel in his market.
+- **Instagram:** not asked; he didn't bring it up.
+
+**What it changes:**
+- He's the **pivot** case: pays for leads (well above $300/month) but already has a system that works. Not a buyer for instant reply.
+- The pain he paid to solve was **visibility and accountability** (did the agent call? how fast?), not the reply itself. FUB solved it.
+- Jersey Property Group also replies with FUB automatically. Two of two PA/NJ teams that buy leads already run FUB. The buyer may be teams that buy leads **without** a CRM set up like this, or leads that never reach FUB (Instagram/Facebook DMs, as Alejandra said).
+- Drop WhatsApp from the US pitch; keep it for Spanish-speaking markets only.
+
+**Interview notes:** good follow-ups. Next time, don't explain what you're building; ask instead: how many leads a month and from where, what happens with Instagram/Facebook messages, and what he still doesn't like about his setup.
+
 ## Call script (follow-up to a contact form)
 
 Use it for teams whose contact form we already sent. The goal is to book 15 minutes, not to sell. If they want to talk right away, go straight to the interview script (`docs/research/realtor-lead-response/guion-entrevista.md`).
