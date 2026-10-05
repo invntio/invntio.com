@@ -36,7 +36,7 @@ The same system can later be sold to residential contractors (the research sessi
 
 ## Validation plan (2 weeks, from home)
 
-1. **Lead list:** realtor teams and high-producing agents in PA/NJ/NY with signs they buy leads. Requested from the research session (`Research Hispanic SMB owners in PA (LinkedIn+Maps)`), output in its repo under `docs/research/realtor-lead-response/`.
+1. **Lead list:** realtor teams and high-producing agents in PA/NJ/NY with signs they buy leads. Requested from the research session (`Research Hispanic SMB owners in PA (LinkedIn+Maps)`), output in `docs/research/realtor-lead-response/` (report, 61-team CSV, interview script, competitors).
 2. **Referrals by message:** ask the warm network (family, church, current clients) "Do you know a realtor team or a busy agent?". Mortgage loan officers are good allies because each one works with dozens of agents.
 3. **10 video conversations** using the interview script, to listen, not to sell. Ask about how leads arrive, reply speed, after hours, **monthly spend on leads**, current tools (CRM, ISA) and the cost of a lost lead.
 4. **Demo:** a 30-second video of a lead answered in Spanish on WhatsApp (motion graphics session), for prospects and not for colleagues.
