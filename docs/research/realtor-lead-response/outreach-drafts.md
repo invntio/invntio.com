@@ -142,7 +142,7 @@ Generated 2026-10-05 by `node scripts/outreach/draft.mjs` from `lista-equipos.cs
   - zillow_hiring: job posts / recruiting for Zillow Flex leads. Source: https://www.glassdoor.com/job-listing/jv?jl=1010272147740 (research CSV)
 - **Opener based on:** zillow_hiring.
 
-> Hi [name], I saw your team is hiring agents to work Zillow Flex leads. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
+> Hi [name], I saw your job posts offer new agents leads supplied and appointments set. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
 
 ### 5. The Nunez Group (Alta)
 
@@ -171,9 +171,9 @@ Generated 2026-10-05 by `node scripts/outreach/draft.mjs` from `lista-equipos.cs
   - realtrends: listed in RealTrends 2026 team rankings. Source: https://www.realtrends.com/team-profile/queens-home-team-new-york-keller-williams/ (research CSV)
 - **Opener based on:** contact_form_only.
 
-> Hi [name], I noticed that, apart from the phone, the main way to reach you on your website is the contact form. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
+> Hi [name], I noticed your contact page asks people to fill out the form and promises you'll get back to them ASAP. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
 
-> Hola [nombre], vi que, aparte del teléfono, la forma principal de contactarlos en su web es el formulario. Tengo un pequeño estudio de software y estoy investigando cómo los equipos inmobiliarios manejan las consultas nuevas, sobre todo de noche, los fines de semana y por Instagram o WhatsApp. No le voy a vender nada: solo me serviría mucho su consejo durante 15 minutos. ¿Le queda bien el [mar 4pm] o el [jue 11am]?
+> Hola [nombre], vi que en su página de contacto le piden a la gente llenar el formulario y prometen responder lo antes posible. Tengo un pequeño estudio de software y estoy investigando cómo los equipos inmobiliarios manejan las consultas nuevas, sobre todo de noche, los fines de semana y por Instagram o WhatsApp. No le voy a vender nada: solo me serviría mucho su consejo durante 15 minutos. ¿Le queda bien el [mar 4pm] o el [jue 11am]?
 
 ### 7. Rafael Ching Real Estate Team (Alta)
 
@@ -221,7 +221,7 @@ Generated 2026-10-05 by `node scripts/outreach/draft.mjs` from `lista-equipos.cs
   - realtrends: listed in RealTrends 2026 team rankings. Source: https://www.realtrends.com/team-profile/the-expansion-team-new-york-remax-edge/ (research CSV)
 - **Opener based on:** zillow.
 
-> Hi [name], I saw your team presents itself as a Zillow Premier Agent. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
+> Hi [name], I noticed your homepage invites sellers to call or text you directly. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
 
 ### 10. Hammond Homes (Michael Hammond Jr.) (Alta)
 
@@ -280,7 +280,7 @@ Generated 2026-10-05 by `node scripts/outreach/draft.mjs` from `lista-equipos.cs
   - realtrends: listed in RealTrends 2026 team rankings. Source: https://www.realtrends.com/team-profile/dicicco-team-pennsylvania-keller-williams/ (research CSV)
 - **Opener based on:** zillow.
 
-> Hi [name], I saw your team presents itself as a Zillow Premier Agent. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
+> Hi [name], I saw on your homepage that the team is led by Zillow Premier Agent Anthony DiCicco. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
 
 ### 14. Betancurth Real Estate Group (Media)
 
@@ -292,7 +292,7 @@ Generated 2026-10-05 by `node scripts/outreach/draft.mjs` from `lista-equipos.cs
   - realtrends: listed in RealTrends 2026 team rankings. Source: https://www.realtrends.com/team-profile/betancurth-real-estate-group-new-jersey-the-real-brokerage-inc/ (research CSV)
 - **Opener based on:** no_spanish.
 
-> Hi [name], I noticed your homepage is English-only even though you work in Bayonne, and I'm curious how Spanish-speaking inquiries get handled. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
+> Hi [name], I noticed the form on your website says you typically respond within 1 business hour. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
 
 ### 15. Gruosso Group (Media)
 
@@ -304,7 +304,7 @@ Generated 2026-10-05 by `node scripts/outreach/draft.mjs` from `lista-equipos.cs
   - realtrends: listed in RealTrends 2026 team rankings. Source: https://www.realtrends.com/team-profile/gruosso-group-new-jersey-keller-williams/ (research CSV)
 - **Opener based on:** join_leads.
 
-> Hi [name], I saw on your join page that lead generation is a big part of how the team works. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
+> Hi [name], I saw on your join page that you offer agents more leads and less time chasing business. I run a small software studio and I'm researching how real estate teams handle new inquiries, especially nights, weekends and Instagram/WhatsApp messages. There's no pitch here; I'd just value your advice for 15 minutes. Would [Tue 4pm] or [Thu 11am] work?
 
 ### 16. Holmquist Group powered by PLACE (Media)
 
