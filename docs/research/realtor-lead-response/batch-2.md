@@ -21,6 +21,19 @@ Batch 1 showed that teams who buy leads **and** run Follow Up Boss with agent ro
 
 **Message rules used:** question first, no meeting ask, under 300 characters, an observation that is true and not flattering, no mention of the studio. WhatsApp is not mentioned. Spanish versions are only for the two Spanish-market teams, to use only if the account posts in Spanish.
 
+## Ready for 2026-10-06
+
+Reviewed 2026-10-05 evening: every Instagram account posted within the last three weeks (Telemundo last on Sept 18; all others since Sept 23). Openers that sounded like a pitch or like we'd studied their phone numbers were rewritten.
+
+**Morning (around 10–11am ET): send the 12 DMs from @invntio**, in the order of the ranked list. Use the English DM for everyone except **Rosa (Spanish: her account posts in Spanish)**. Jessica posts in both languages; English is fine.
+
+**Afternoon (2–4pm ET): call** the ones who haven't replied, with the phone opener under each team. Start with leaders' own cells: Jeff Block, Jessica Rojas, Anthony Zito, Marc Stein, Jim Romano, Josh Rubin. Then team lines: Philly Home Girls, REHUB, Debbie Carpluk.
+
+- **Debbie Carpluk:** the Instagram bio lists **631-352-3380**, different from the 631-335-0316 found on the web. Try the Instagram one first.
+- **Emilio (REHUB):** his bio says he coaches agents ("I help agents build freedom"). He may answer as a coach, not as a buyer; still useful.
+- **Philly Home Girls:** "#1 Large Team in PA", likely over 15 agents. Keep it; a large team is a valid data point.
+- Ask early on every call: **"How much do you spend a month on leads, and how many do you get?"**
+
 ## Ranked list
 
 | # | Team | Leader | Market | Instagram | Phone (whose) | Why it fits |
@@ -105,9 +118,9 @@ Batch 1 showed that teams who buy leads **and** run Follow Up Boss with agent ro
 
 > Hi Rosa, I noticed the team's only website is your Iron Valley agent page, while your Instagram has 16K followers. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
 
-**Instagram DM (Spanish, only if the account posts in Spanish)**
+**Instagram DM (Spanish — send this one; the account posts in Spanish)**
 
-> Hola Rosa, la única web del equipo es tu página de Iron Valley y tu Instagram tiene 16K seguidores. Pregunta rápida de alguien que investiga cómo trabajan los equipos de bienes raíces: cuando un comprador escribe al equipo por Instagram un sábado en la noche, ¿quién contesta? — Víctor, Invntio
+> Hola Rosa, vi que además de vender casas co-produces Tole Visión en YouTube. Pregunta rápida de alguien que investiga cómo trabajan los equipos de bienes raíces: cuando un comprador escribe al equipo por Instagram un sábado en la noche, ¿quién contesta? — Víctor, Invntio
 
 **Phone opener**
 
@@ -182,11 +195,11 @@ Batch 1 showed that teams who buy leads **and** run Follow Up Boss with agent ro
 
 **Instagram DM**
 
-> Hi Gladys, I noticed telemundorealty.com isn't loading right now. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
+> Hi Gladys, I saw Telemundo Realty handles both rentals and sales across Queens. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
 
-**Instagram DM (Spanish, only if the account posts in Spanish)**
+**Instagram DM (Spanish — don't send; the account posts in English)**
 
-> Hola Gladys, vi que telemundorealty.com no está cargando ahora mismo. Pregunta rápida de alguien que investiga cómo trabajan los equipos de bienes raíces: cuando un comprador escribe al equipo por Instagram un sábado en la noche, ¿quién contesta? — Víctor, Invntio
+> Hola Gladys, vi que Telemundo Realty maneja rentas y ventas en todo Queens. Pregunta rápida de alguien que investiga cómo trabajan los equipos de bienes raíces: cuando un comprador escribe al equipo por Instagram un sábado en la noche, ¿quién contesta? — Víctor, Invntio
 
 **Phone opener**
 
@@ -212,7 +225,7 @@ Batch 1 showed that teams who buy leads **and** run Follow Up Boss with agent ro
 
 **Instagram DM**
 
-> Hi Jeff, I saw your agent page lists your cell as the preferred number. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
+> Hi Jeff, I saw your weekly Around the Block posts about Philly. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
 
 **Phone opener**
 
@@ -238,7 +251,7 @@ Batch 1 showed that teams who buy leads **and** run Follow Up Boss with agent ro
 
 **Instagram DM**
 
-> Hi Jeanne, I saw your site sends buyers to one number to text or call an agent directly. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
+> Hi Jeanne, congrats on #1 Large Team in PA for the sixth year in a row. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
 
 **Phone opener**
 
@@ -264,7 +277,7 @@ Batch 1 showed that teams who buy leads **and** run Follow Up Boss with agent ro
 
 **Instagram DM**
 
-> Hi Anthony, I saw the number on your site is both the team line and your mobile. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
+> Hi Anthony, I saw you sell in NJ, NY, Florida and even the DR. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
 
 **Phone opener**
 
@@ -290,7 +303,7 @@ Batch 1 showed that teams who buy leads **and** run Follow Up Boss with agent ro
 
 **Instagram DM**
 
-> Hi Marc, I saw your site lists 15 agents behind one office line. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
+> Hi Marc, I saw Links Residential has 15 agents across Bergen County. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
 
 **Phone opener**
 
@@ -315,7 +328,7 @@ Batch 1 showed that teams who buy leads **and** run Follow Up Boss with agent ro
 
 **Instagram DM**
 
-> Hi Jim, I saw your site puts your cell right next to the office number. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
+> Hi Jim, I saw the team has its own podcast. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
 
 **Phone opener**
 
@@ -340,7 +353,7 @@ Batch 1 showed that teams who buy leads **and** run Follow Up Boss with agent ro
 
 **Instagram DM**
 
-> Hi Debbie, I saw your homepage says "Call a Name You Know and Trust" with your number right under it. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
+> Hi Debbie, I saw your post about 107 Headline in Deer Park. Quick question from someone researching how real estate teams work: when a buyer DMs your team on Instagram on a Saturday night, who actually answers it? — Víctor, Invntio
 
 **Phone opener**
 

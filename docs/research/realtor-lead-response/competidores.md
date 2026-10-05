@@ -122,3 +122,19 @@ Si la mayoría de compradores trabaja con el primer agente con el que habla (NAR
 4. **Autoservicio frente a servicio gestionado**: Structurely y similares se configuran solos. Los equipos de 3–15 agentes no tienen quien escriba guiones, conecte Zillow, Meta y WhatsApp, y ajuste cada semana.
 5. **Los humanos no cubren 24/7**, y los bilingües cuestan $900–2,500 por un solo turno.
 6. **Riesgo**: Zillow Pro y FUB pueden lanzar un agente de IA nativo en 2026–27. Lofty ya tiene un competidor bilingüe y barato ($60 por 200 leads, según Luxury Presence). La diferenciación tiene que estar en la implementación, la omnicanalidad (WhatsApp) y la calidad del español, no en la IA en sí.
+
+
+## CY Global Store (Lancaster, PA), found 2026-10-05
+
+Meta Ad Library, page id 61577271779748. Ads started **2026-10-03** (about 20 hours of delivery, under 100 impressions each when checked). The page name ("CY Global Store") doesn't match the business, so it's likely a repurposed page of a small, new agency.
+
+Two Spanish-language ads, each in several versions:
+
+- **Realtors:** "¿Cuántos compradores latinos te escribieron anoche mientras dormías… y le escribieron a otro agente esta mañana?" A WhatsApp bot that answers 24/7, asks area, budget and pre-approval, and books the showing on the agent's calendar, plus a bilingual website and Google Business setup. "Hecho en español, por una agencia de Lancaster." Founder pricing for the first 10 agents. CTA: message on WhatsApp for a demo with your name.
+- **Contractors:** "Si estás en el techo, no puedes contestar el teléfono." A WhatsApp bot that asks for photos, measurements and address and books the estimate visit, plus a website, Google Maps and a reviews system.
+
+**What it means for us:**
+- Someone else in PA reached the same thesis (Latino buyers, after hours, WhatsApp) and the same fallback (contractors). It confirms the idea is visible, not that it sells: they started two days ago and have no traction yet.
+- They sell to **individual Spanish-speaking agents**, the segment we ruled out (low, irregular income; used to cheap tools). Our target is teams and high producers who buy leads.
+- Their angle is WhatsApp-first. Our interviews so far say mainstream US teams see WhatsApp as spam; Instagram/Facebook DMs that never reach the CRM look more promising.
+- Watch their ads for a few weeks: if the same ads keep running past 30 days, they're getting replies. Search the Ad Library for "CY Global Store".
