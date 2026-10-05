@@ -86,3 +86,9 @@ Use it for teams whose contact form we already sent. The goal is to book 15 minu
 | Hammond Homes | Michael Hammond Jr. | (484) 429-3833 | Collegeville / Montgomery County |
 | The DiCicco Team | Anthony DiCicco | (215) 385-2006 | Newtown / Bucks County |
 | Betancurth Real Estate Group | Steven Betancurth | (201) 500-3008 direct · (201) 740-5204 main | Bayonne / North Jersey |
+
+### Calls, 2026-10-05
+
+- **Anthony DiCicco:** picked up, said he'd call back. The opening led with "I run a small software studio" and asked for a 15-minute meeting, which sounds like a sales call.
+- **Steven Betancurth:** iPhone call screening answered; the call ended after he heard the name.
+- **Change:** on the phone, open with one question they can answer right away ("when someone messages your team on a Saturday night, who actually answers it?") and ask for the 15 minutes only at the end, if they're talking. Don't mention the studio unless asked.
