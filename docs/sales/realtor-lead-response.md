@@ -68,3 +68,21 @@ Follow Up Boss, kvCORE/BoldTrail, Lofty, AI ISAs (e.g. Structurely), human ISA s
 - Adds a second pain: **the CRM doesn't fill itself.** Offer idea: capture every lead **from outside the brokerage site** (Instagram/Facebook DMs, WhatsApp, personal channels), reply instantly, and **log it automatically in the brokerage CRM** the agent already has. The brokerage site already covers its own inquiries.
 - Confirms that average agents whose leads are bundled are not the buyer; keep the focus on teams and agents who buy leads separately.
 - Social DMs (Instagram/Facebook) may matter as much as Zillow for many agents. Ask about it in every interview.
+
+## Call script (follow-up to a contact form)
+
+Use it for teams whose contact form we already sent. The goal is to book 15 minutes, not to sell. If they want to talk right away, go straight to the interview script (`docs/research/realtor-lead-response/guion-entrevista.md`).
+
+> Hi, is this {Name}? … Hi {Name}, this is Víctor from Invntio. I sent a note through your website today, so I wanted to put a voice to it. I run a small software studio and I'm talking to a few top teams around {area} about how they handle new inquiries, especially nights, weekends and Instagram or WhatsApp messages. No pitch, I'd just value 15 minutes of your advice. Would Wednesday at 4 or Thursday at 11 work, or is there a better time?
+
+- **"What are you selling?"** "Nothing yet, honestly. I'm deciding what to build, and I'd rather hear from people who do this every day before building anything."
+- **"Send me an email."** "Sure. What's the best address?" Then send the same message with the two times.
+- **"Not interested."** "No problem, thanks for picking up. Have a great week."
+
+**Voicemail (under 20 seconds):** "Hi {Name}, Víctor from Invntio. I sent a note through your website about how teams handle new inquiries after hours. I'd value 15 minutes of your advice, no pitch. You can reach me at (267) 800-7744, or reply to my note. Thanks."
+
+| Team | Person | Phone | Area |
+|---|---|---|---|
+| Hammond Homes | Michael Hammond Jr. | (484) 429-3833 | Collegeville / Montgomery County |
+| The DiCicco Team | Anthony DiCicco | (215) 385-2006 | Newtown / Bucks County |
+| Betancurth Real Estate Group | Steven Betancurth | (201) 500-3008 direct · (201) 740-5204 main | Bayonne / North Jersey |
