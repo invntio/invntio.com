@@ -56,6 +56,7 @@ Follow Up Boss, kvCORE/BoldTrail, Lofty, AI ISAs (e.g. Structurely), human ISA s
 ### 1. Former agent, Florida (Alejandra), 2026-10-04
 
 - **Brokerage tools:** a website showing the company's listings as the agent's own, a CRM with email automation, flyer/postcard/banner templates, and a map app where clients can search listings. Paid as part of the annual brokerage package.
+- **Clarification:** inquiries made on the brokerage-provided website do land in the CRM automatically. Leads from Instagram, WhatsApp or anywhere outside the brokerage site do **not**; the agent has to add them by hand. Building the initial contact list is also manual. A new agent's site gets little traffic.
 - **Use:** the website gets used. The CRM decays because adding and updating contacts is slow and tedious, so most agents don't use it as intended. Templates go unused (Canva is better).
 - **Nights and weekends:** you answered "when you could", the next day or later. No automation of any kind.
 - **Where real leads came from:** mostly people who knew her, or who replied to her social media posts (personal Instagram/Facebook), **not** paid platforms. Lead generation was bundled in the brokerage fee, not bought separately.
@@ -64,6 +65,6 @@ Follow Up Boss, kvCORE/BoldTrail, Lofty, AI ISAs (e.g. Structurely), human ISA s
 
 **What it changes:**
 - Confirms the slow reply and the lack of automation.
-- Adds a second pain: **the CRM doesn't fill itself.** Offer idea: capture every lead from social DMs, WhatsApp and forms, reply instantly, and **log it automatically in the brokerage CRM** the agent already has.
+- Adds a second pain: **the CRM doesn't fill itself.** Offer idea: capture every lead **from outside the brokerage site** (Instagram/Facebook DMs, WhatsApp, personal channels), reply instantly, and **log it automatically in the brokerage CRM** the agent already has. The brokerage site already covers its own inquiries.
 - Confirms that average agents whose leads are bundled are not the buyer; keep the focus on teams and agents who buy leads separately.
 - Social DMs (Instagram/Facebook) may matter as much as Zillow for many agents. Ask about it in every interview.
