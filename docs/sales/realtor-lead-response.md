@@ -87,6 +87,27 @@ Phone, about 3 minutes; he called back after the voicemail.
 
 **Interview notes:** good follow-ups. Next time, don't explain what you're building; ask instead: how many leads a month and from where, what happens with Instagram/Facebook messages, and what he still doesn't like about his setup.
 
+### 3. Juan Carlos, admin team, The Cabral Group (eXp, Miami + DR), 2026-10-06
+
+Video call with Alejandra, about 28 minutes (Otter transcript). Juan Carlos handles **agent recruiting** for the team, not buyer/seller clients. Stephanie Cabral passed Alejandra's message to him.
+
+- **Size and structure:** about 200 affiliated agents in the US and the DR. Agents are **independent partners**: each picks its own CRM (Lofty, Follow Up Boss…), and Stephanie has no control over how they answer. The admin team uses Zoho.
+- **Website forms:** go into the CRM, which sends an automatic campaign and splits people into "possible clients" and "possible agents".
+- **Social and WhatsApp:** a first automatic reply ("someone from the team will contact you"), then **manual follow-up on purpose**, to keep it human. They're working on that first auto-reply for every channel.
+- **AI:** strongly skeptical. "One error can cost you a client or an agent." Hates bots with no way to reach a person. He's said so in team meetings.
+- **What takes the most time:** phone calls (long, off-topic, but you have to listen).
+- **Lost leads:** couldn't say for clients. For agents, he calls social leads right away because otherwise "se me pierde".
+- **Alejandra's own story (the strongest data point of the call):** when she was an agent in Florida she wanted to join Cabral, but **joined another group because it answered faster**. A slow reply cost this team a recruit.
+- **Next steps:** Juan Carlos will mention the conversation in a team meeting before connecting us with an agent. Víctor offered a no-commitment demo of a conversational assistant (chat or voice), **Wednesday or Thursday the week of Oct 21, or else Oct 28**. Mondays (admin meeting), Tuesdays ("toque de queda inmobiliario", agent activities until ~2 pm) and Fridays (faith meeting) are out.
+
+**What it changes:**
+- In a large team of independent agents there's **no central buyer**: each agent decides. The team owner can recommend but not impose.
+- **Human in the loop is non-negotiable** for this kind of buyer. Position any product as "instant first reply + alert to a person + visibility", never "AI that closes".
+- **New hypothesis: lead response for agent recruiting.** Teams at eXp/Real earn revenue share from the agents they recruit, so a lost recruit has a direct dollar cost, and Alejandra's story is exactly that. Worth one or two questions in the next interviews.
+- Score so far: 3 conversations, none with a buyer who admits the pain for client leads today.
+
+**Interview notes:** good open start and good follow-ups. Two slips: explaining what modern AI can do (11:00) and the hypothetical "¿no te sería conveniente…?" (16:30) — both lead the answer. Also: a demo was promised for Oct 21–28 and nothing is built; decide by Oct 14 whether to build a small demo or turn it into a conversation.
+
 ## Call script (follow-up to a contact form)
 
 Use it for teams whose contact form we already sent. The goal is to book 15 minutes, not to sell. If they want to talk right away, go straight to the interview script (`docs/research/realtor-lead-response/guion-entrevista.md`).
