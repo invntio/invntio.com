@@ -176,7 +176,7 @@ const en = {
             "Ongoing SEO, content writing and marketing",
             "Extended training",
         ],
-        note: "Work outside a plan gets a written quote within 2 business days, with a delivery date, and is billed at USD 110 per hour.",
+        note: "Work outside a plan gets a written quote within 2 business days, with a delivery date, and is billed at USD 110 per hour in 30-minute increments.",
     },
     process: {
         title: "How it works",
@@ -650,7 +650,7 @@ const es: Dict = {
             "SEO continuo, redacción de contenido y marketing",
             "Capacitación extensa",
         ],
-        note: "El trabajo fuera del plan recibe una cotización escrita en 2 días hábiles, con fecha de entrega, y se factura a USD 110 por hora.",
+        note: "El trabajo fuera del plan recibe una cotización escrita en 2 días hábiles, con fecha de entrega, y se factura a USD 110 por hora, en bloques de 30 minutos.",
     },
     process: {
         title: "Cómo trabajamos",

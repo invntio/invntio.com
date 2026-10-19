@@ -41,7 +41,7 @@ Si los documentos se contradicen, se aplica este orden: primero la propuesta ace
 - **Diagnóstico del proyecto.** Una sesión pagada de 30 minutos (USD 95), que se paga al reservarla, seguida de una recomendación escrita de una página. Sus reglas de cancelación, reembolso y descuento están en la sección 4 de nuestra [Política de Reembolsos y Cancelaciones](/es/refunds).
 - **Sesión técnica.** Una sesión práctica pagada de 60 minutos (USD 297), que se paga al reservarla. No se descuenta de un proyecto. Sus reglas de cancelación y reembolso están en la sección 5 de nuestra [Política de Reembolsos y Cancelaciones](/es/refunds).
 - **Proyectos de precio fijo.** Pagas según el calendario de la propuesta. Los proyectos pequeños, como sitios web y landing pages, se pagan por completo por adelantado. Cuando un pago está ligado a un hito, lo facturamos una vez aceptado ese hito (ver sección 9). El pago final vence antes del lanzamiento o de la entrega de los entregables, lo que ocurra primero.
-- **Trabajo por horas.** El trabajo fuera de un plan o proyecto se factura a USD 110 por hora, con tu aprobación por escrito antes de empezar. Para necesidades continuas, tu propuesta puede incluir un bloque de horas prepagado; te avisamos cuando se ha usado el 80% y, salvo que la propuesta diga otra cosa, vale 90 días desde el pago.
+- **Trabajo por horas.** El trabajo fuera de un plan o proyecto se factura a USD 110 por hora en bloques de 30 minutos (mínimo 30 minutos), con tu aprobación por escrito antes de empezar. Para necesidades continuas, tu propuesta puede incluir un bloque de horas prepagado; te avisamos cuando se ha usado el 80% y, salvo que la propuesta diga otra cosa, vale 90 días desde el pago.
 - **Planes de hosting y mantenimiento.** Se facturan por adelantado, cada mes o cada año, y se renuevan automáticamente hasta que los canceles (ver sección 8).
 - **Costos de terceros.** Dominios, cuentas de desarrollador en tiendas de apps, licencias, plugins de pago, uso de modelos de IA e infraestructura se te facturan a ti o los pagas directamente al proveedor.
 
@@ -84,7 +84,7 @@ Para los sitios web que alojamos hay dos planes:
 
 Ambos planes se pueden pagar al año con dos meses gratis (USD 490 o USD 790). Las apps y plataformas llevan un plan descrito en su propuesta.
 
-**Tiempos de respuesta y entrega.** Si tu sitio se cae, empezamos a trabajar en él el mismo día hábil. El trabajo fuera del plan recibe una cotización escrita en 2 días hábiles, con fecha de entrega, y se factura a USD 110 por hora una vez que la apruebas. Los días hábiles son de lunes a viernes, hora del Este de EE. UU.
+**Tiempos de respuesta y entrega.** Si tu sitio se cae, empezamos a trabajar en él el mismo día hábil. El trabajo fuera del plan recibe una cotización escrita en 2 días hábiles, con fecha de entrega, y se factura a USD 110 por hora, en bloques de 30 minutos, una vez que la apruebas. Los días hábiles son de lunes a viernes, hora del Este de EE. UU.
 
 Un plan **no** incluye funcionalidades, páginas o integraciones nuevas, rediseños, problemas causados por terceros o por cambios hechos por otros, soporte fuera de horario o de emergencia, SEO continuo, redacción de contenido o marketing, ni capacitación extensa. Ese trabajo se cotiza aparte o se factura por horas.
 

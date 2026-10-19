@@ -41,7 +41,7 @@ If documents conflict, this order applies: first the accepted proposal, then the
 - **Project Diagnostic.** A 30-minute paid session (USD 95), paid when you book it, followed by a one-page written recommendation. Its cancellation, refund and credit rules are in section 4 of our [Refund & Cancellation Policy](/refunds).
 - **Technical Session.** A 60-minute paid hands-on session (USD 297), paid when you book it. It is not credited toward a project. Its cancellation and refund rules are in section 5 of our [Refund & Cancellation Policy](/refunds).
 - **Fixed-price projects.** You pay according to the schedule in the proposal. Small projects, such as websites and landing pages, are paid in full upfront. When a payment is tied to a milestone, we invoice it once that milestone is accepted (see section 9). The final payment is due before launch or handover of the deliverables, whichever comes first.
-- **Hourly work.** Work outside a plan or project is billed at USD 110 per hour, approved by you in writing before we start. For ongoing needs, your proposal can include a prepaid block of hours; we tell you when 80% of it has been used, and unless the proposal says otherwise it is valid for 90 days from payment.
+- **Hourly work.** Work outside a plan or project is billed at USD 110 per hour in 30-minute increments (minimum 30 minutes), approved by you in writing before we start. For ongoing needs, your proposal can include a prepaid block of hours; we tell you when 80% of it has been used, and unless the proposal says otherwise it is valid for 90 days from payment.
 - **Hosting and maintenance plans.** These are billed monthly or annually in advance and renew automatically until cancelled (see section 8).
 - **Third-party costs.** Domains, app store developer accounts, software licenses, paid plugins, AI model usage and infrastructure costs are billed to you, or paid by you directly to the provider.
 
@@ -84,7 +84,7 @@ For websites we host, there are two plans:
 
 Both plans can be paid yearly with two months free (USD 490 or USD 790). Apps and platforms get a plan described in their proposal.
 
-**Response and delivery times.** If your site goes down, we start working on it the same business day. Work outside a plan gets a written quote within 2 business days, with a delivery date, and is billed at USD 110 per hour once you approve it. Business days are Monday to Friday, US Eastern Time.
+**Response and delivery times.** If your site goes down, we start working on it the same business day. Work outside a plan gets a written quote within 2 business days, with a delivery date, and is billed at USD 110 per hour, in 30-minute increments, once you approve it. Business days are Monday to Friday, US Eastern Time.
 
 A plan does **not** include new features, pages or integrations, redesigns, issues caused by third parties or by changes someone else made, after-hours or emergency support, ongoing SEO, content writing or marketing, or extended training. We quote that work separately or bill it hourly.
 
