@@ -203,7 +203,7 @@ const t = useTranslations(lang);
     .compare thead th {
         text-align: left;
         vertical-align: bottom;
-        padding-bottom: 0.75rem;
+        padding: 0 0.75rem 0.75rem 0;
         border-bottom: 1px solid var(--ink);
         font-weight: 600;
     }
@@ -216,6 +216,18 @@ const t = useTranslations(lang);
         font-size: var(--step-1);
         font-weight: 600;
         font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+    }
+    @media (max-width: 520px) {
+        .tier-price {
+            font-size: var(--step-0);
+        }
+        .compare tbody th {
+            width: 36%;
+        }
+        .compare td {
+            width: 32%;
+        }
     }
     .tier-period {
         font-size: var(--step--1);
