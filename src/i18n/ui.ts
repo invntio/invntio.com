@@ -145,7 +145,7 @@ const en = {
             {
                 id: "hosting",
                 name: "Hosting & maintenance",
-                body: "Monthly or annual plans that keep your site online, backed up, secure and up to date, from USD 49 a month. Apps and platforms get their own plan.",
+                body: "We keep your site online, backed up, secure and up to date. Your domain stays in your name.",
                 stack: "Cloudflare · Vercel · AWS",
             },
         ],
@@ -155,8 +155,8 @@ const en = {
         lede: "For websites we host and maintain for you. Your site means your website: its pages, design and content. Apps and platforms get a plan in their proposal.",
         link: "Compare plans",
         tiers: [
-            { name: "Hosting & Care", price: "USD 49", period: "/month" },
-            { name: "Care Plus", price: "USD 79", period: "/month" },
+            { name: "Hosting & Care", price: "USD 49", period: "/month", yearly: "or USD 490/year" },
+            { name: "Care Plus", price: "USD 79", period: "/month", yearly: "or USD 790/year" },
         ],
         rows: [
             { label: "Hosting, SSL and daily backups", values: [true, true] },
@@ -166,7 +166,7 @@ const en = {
             { label: "Reply to requests", values: ["2 business days", "1 business day"] },
             { label: "Minor content changes", values: [false, "Up to 30 min a month, done in 3 business days"] },
         ],
-        billing: "Billed monthly, or yearly with two months free (USD 490 or USD 790). Cancel before your next billing date and your plan stays active until the end of the period you've paid for. Your domain stays in your name.",
+        billing: ["Your domain is always in your name.", "Pay yearly and get 2 months free.", "Cancel anytime before your next billing date. No fees."],
         excludedTitle: "Not included, quoted separately",
         excluded: [
             "New features, pages or integrations",
@@ -619,7 +619,7 @@ const es: Dict = {
             {
                 id: "hosting",
                 name: "Hosting y mantenimiento",
-                body: "Planes mensuales o anuales que mantienen tu sitio en línea, respaldado, seguro y actualizado, desde USD 49 al mes. Las apps y plataformas llevan su propio plan.",
+                body: "Mantenemos tu sitio en línea, respaldado, seguro y actualizado. Tu dominio queda a tu nombre.",
                 stack: "Cloudflare · Vercel · AWS",
             },
         ],
@@ -629,8 +629,8 @@ const es: Dict = {
         lede: "Para los sitios web que alojamos y mantenemos por ti. Tu sitio es tu página web: sus páginas, su diseño y su contenido. Las apps y plataformas llevan un plan en su propuesta.",
         link: "Comparar planes",
         tiers: [
-            { name: "Hosting & Care", price: "USD 49", period: "/mes" },
-            { name: "Care Plus", price: "USD 79", period: "/mes" },
+            { name: "Hosting & Care", price: "USD 49", period: "/mes", yearly: "o USD 490/año" },
+            { name: "Care Plus", price: "USD 79", period: "/mes", yearly: "o USD 790/año" },
         ],
         rows: [
             { label: "Hosting, SSL y copias de seguridad diarias", values: [true, true] },
@@ -640,7 +640,7 @@ const es: Dict = {
             { label: "Respuesta a solicitudes", values: ["2 días hábiles", "1 día hábil"] },
             { label: "Cambios menores de contenido", values: [false, "Hasta 30 min al mes, listos en 3 días hábiles"] },
         ],
-        billing: "Facturación mensual, o anual con dos meses gratis (USD 490 o USD 790). Cancela antes de tu próxima fecha de cobro y el plan sigue activo hasta el final del período que pagaste. Tu dominio queda a tu nombre.",
+        billing: ["Tu dominio siempre está a tu nombre.", "Paga al año y llévate 2 meses gratis.", "Cancela cuando quieras, antes de tu próxima fecha de cobro. Sin cargos."],
         excludedTitle: "No incluido, se cotiza aparte",
         excluded: [
             "Funcionalidades, páginas o integraciones nuevas",
