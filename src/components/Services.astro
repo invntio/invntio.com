@@ -33,11 +33,31 @@ const t = useTranslations(lang);
                 <p>{t.plans.lede}</p>
             </div>
             <div class="plan-cols">
-                <div>
-                    <h4>{t.plans.includedTitle}</h4>
-                    <ul class="checklist">
-                        {t.plans.included.map((item) => <li><Mark kind="included" />{item}</li>)}
-                    </ul>
+                <div class="compare-wrap">
+                    <table class="compare">
+                        <thead>
+                            <tr>
+                                <th scope="col"><span class="sr-only">{t.plans.link}</span></th>
+                                {t.plans.tiers.map((tier) => (
+                                    <th scope="col">
+                                        <span class="tier-name">{tier.name}</span>
+                                        <span class="tier-price">{tier.price}<span class="tier-period">{tier.period}</span></span>
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {t.plans.rows.map((row) => (
+                                <tr>
+                                    <th scope="row">{row.label}</th>
+                                    {row.values.map((v) => (
+                                        <td>{v === true ? <Mark kind="included" /> : v === false ? <span class="dash" aria-label="—">—</span> : v}</td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                    <p class="billing">{t.plans.billing}</p>
                 </div>
                 <div>
                     <h4>{t.plans.excludedTitle}</h4>
@@ -164,12 +184,71 @@ const t = useTranslations(lang);
     }
     .plan-cols {
         display: grid;
-        gap: 2rem;
+        gap: 2.5rem;
     }
     @media (min-width: 640px) {
-        .plan-cols {
-            grid-template-columns: 1fr 1fr;
+        .plan-cols .checklist {
+            columns: 2;
+            column-gap: 2rem;
         }
+        .plan-cols .checklist li {
+            break-inside: avoid;
+        }
+    }
+    .compare {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: var(--step--1);
+    }
+    .compare thead th {
+        text-align: left;
+        vertical-align: bottom;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--ink);
+        font-weight: 600;
+    }
+    .tier-name {
+        display: block;
+    }
+    .tier-price {
+        display: block;
+        margin-top: 0.25rem;
+        font-size: var(--step-1);
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+    }
+    .tier-period {
+        font-size: var(--step--1);
+        font-weight: 400;
+        color: var(--ink-2);
+    }
+    .compare tbody th,
+    .compare td {
+        padding: 0.625rem 0.75rem 0.625rem 0;
+        border-bottom: 1px solid var(--rule);
+        text-align: left;
+        vertical-align: top;
+    }
+    .compare tbody th {
+        font-weight: 400;
+        width: 40%;
+    }
+    .compare td {
+        color: var(--ink-2);
+        width: 30%;
+    }
+    .compare td :global(.mark) {
+        position: relative;
+        top: 0.15em;
+    }
+    .dash {
+        color: var(--ink-3);
+    }
+    .billing {
+        margin-top: 1rem;
+        font-size: var(--step--1);
+        color: var(--ink-2);
+        max-width: 62ch;
     }
     h4 {
         font-size: var(--step--1);

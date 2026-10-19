@@ -1,7 +1,7 @@
 ---
 title: Refund & Cancellation Policy
 description: When Invntio payments are refundable, how to cancel a Project Diagnostic, a Technical Session, a project or a hosting and maintenance plan, and how to request a refund.
-updated: 2026-10-04
+updated: 2026-10-19
 ---
 
 Our policy is simple: **payments are non-refundable once made**, except in the cases listed in section 7 and the Project Diagnostic rules in section 4. Apart from the Project Diagnostic and the Technical Session, which you pay when you book them, we ask for payment only after you have accepted a written proposal that sets out exactly what you are paying for.
@@ -11,8 +11,8 @@ Our policy is simple: **payments are non-refundable once made**, except in the c
 | Type of service | Examples | Refunds and cancellation |
 | --- | --- | --- |
 | Fixed-price projects | Websites, landing pages, web apps, platforms and SaaS, mobile apps | Each payment is non-refundable once made. If you cancel, we deliver the work completed up to that point. |
-| Recurring plans | Hosting & maintenance, support, content management (monthly or annual) | Cancel any time before the next renewal. No refunds for past or partial periods. |
-| Hourly work | Consulting, support outside a plan | Prepaid blocks of hours are non-refundable and valid for 90 days unless the proposal says otherwise. |
+| Recurring plans | Hosting & Care (USD 49/month), Care Plus (USD 79/month), or yearly with two months free | Cancel any time before the next renewal. No refunds for past or partial periods. |
+| Hourly work | Consulting, work outside a plan (USD 110/hour) | Billed after you approve each quote. Prepaid blocks of hours are non-refundable and valid for 90 days unless the proposal says otherwise. |
 | Project Diagnostic | 30-minute video session and a one-page written recommendation, USD 95 | Cancel or reschedule up to 1 business day before for a full refund. Full refund if the session isn't useful and you tell us within 7 days. Credited toward your project if you hire us within 60 days. |
 | Technical Session | 60-minute hands-on video session, USD 297 | Cancel or reschedule up to 1 business day before for a full refund. Later cancellations and no-shows are not refunded. Not credited toward a project. |
 | Third-party costs | Domains, app store fees, licenses, infrastructure | Never refundable by us. The provider's own policy applies. |
