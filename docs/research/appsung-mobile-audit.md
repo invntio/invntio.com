@@ -101,3 +101,7 @@ To be honest about what already works: his **social reach is strong, and better 
 - The GMG case study: https://invntio.com/work/gmg
 - A phone mockup of an "Appsung Harrisburg" price list with a WhatsApp button, in USD, organized by battery-health grade.
 - Note that `appsungmobiles.com` is free right now. Don't register it for him without his consent.
+
+## Status
+
+- 2026-10-19: discarded by Víctor. WhatsApp sent 2026-10-07 from his personal number, no follow-up planned.
