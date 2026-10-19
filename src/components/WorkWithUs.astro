@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Dotted from "./Dotted.astro";
 import Mark from "./Mark.astro";
 import ContactForm from "./ContactForm.astro";
+import Plans from "./Plans.astro";
 import { getLang, localizePath, useTranslations } from "../i18n/ui";
 import { site } from "../config/site";
 
@@ -102,7 +103,7 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
                             {w.link && (
                                 <>
                                     {" "}
-                                    <a href={`${home}#plans`}>{w.link}</a>
+                                    <a href="#plans">{w.link}</a>
                                 </>
                             )}
                             {w.book && (
@@ -120,6 +121,10 @@ const arrowOut = "M6 14L14 6M7.5 6H14v6.5";
             </ul>
         </div>
     </section>
+
+    <div class="wrap block">
+        <Plans />
+    </div>
 
     <section class="wrap block" aria-labelledby="steps-title">
         <div class="split" data-reveal>

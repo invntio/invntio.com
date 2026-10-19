@@ -1,8 +1,7 @@
 ---
 import Dotted from "./Dotted.astro";
-import Mark from "./Mark.astro";
 import ServiceIcon from "./ServiceIcon.astro";
-import { getLang, useTranslations } from "../i18n/ui";
+import { getLang, localizePath, useTranslations } from "../i18n/ui";
 
 const lang = getLang(Astro.url);
 const t = useTranslations(lang);
@@ -21,53 +20,12 @@ const t = useTranslations(lang);
                     <ServiceIcon id={s.id} />
                     <h3>{s.name}</h3>
                     <p class="body">{s.body}</p>
-                    {s.id === "hosting" && <a class="plan-link" href="#plans">{t.plans.link}<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" /></svg></a>}
+                    {s.id === "hosting" && <a class="plan-link" href={localizePath("/work-with-us", lang) + "#plans"}>{t.plans.link}<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></a>}
                     <p class="stack"><span class="sr-only">{t.services.stackLabel}: </span>{s.stack.split(" · ").map((item, i, all) => <>{i > 0 && " "}<span class="tech">{item}{i < all.length - 1 && <span aria-hidden="true"> ·</span>}</span></>)}</p>
                 </li>
             ))}
         </ul>
 
-        <div class="plans" id="plans" aria-labelledby="plans-title" data-reveal>
-            <div class="plans-intro">
-                <h3 id="plans-title"><Dotted text={t.plans.title} /></h3>
-                <p>{t.plans.lede}</p>
-            </div>
-            <div class="plan-cols">
-                <div class="compare-wrap">
-                    <table class="compare">
-                        <thead>
-                            <tr>
-                                <th scope="col"><span class="sr-only">{t.plans.link}</span></th>
-                                {t.plans.tiers.map((tier) => (
-                                    <th scope="col">
-                                        <span class="tier-name">{tier.name}</span>
-                                        <span class="tier-price">{tier.price}<span class="tier-period">{tier.period}</span></span>
-                                    </th>
-                                ))}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {t.plans.rows.map((row) => (
-                                <tr>
-                                    <th scope="row">{row.label}</th>
-                                    {row.values.map((v) => (
-                                        <td>{v === true ? <Mark kind="included" /> : v === false ? <span class="dash" aria-label="—">—</span> : v}</td>
-                                    ))}
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                    <p class="billing">{t.plans.billing}</p>
-                </div>
-                <div>
-                    <h4>{t.plans.excludedTitle}</h4>
-                    <ul class="checklist muted">
-                        {t.plans.excluded.map((item) => <li><Mark kind="excluded" />{item}</li>)}
-                    </ul>
-                </div>
-            </div>
-            <p class="note">{t.plans.note}</p>
-        </div>
     </div>
 </section>
 
@@ -116,10 +74,7 @@ const t = useTranslations(lang);
         transition: transform 200ms var(--ease-out);
     }
     .plan-link:hover svg {
-        transform: translateY(2px);
-    }
-    .plans {
-        scroll-margin-top: 6rem;
+        transform: translateX(2px);
     }
     .body {
         color: var(--ink-2);
@@ -157,139 +112,4 @@ const t = useTranslations(lang);
         }
     }
 
-    .plans {
-        margin-top: clamp(3.5rem, 2.5rem + 4vw, 6rem);
-        display: grid;
-        gap: 2.5rem;
-        padding-top: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
-        border-top: 1px solid var(--ink);
-    }
-    @media (min-width: 900px) {
-        .plans {
-            grid-template-columns: 5fr 7fr;
-            column-gap: 4rem;
-        }
-        .note {
-            grid-column: 2;
-        }
-    }
-    .plans-intro h3 {
-        font-size: var(--step-2);
-        font-weight: 600;
-    }
-    .plans-intro p {
-        margin-top: 0.875rem;
-        color: var(--ink-2);
-        max-width: 42ch;
-    }
-    .plan-cols {
-        display: grid;
-        gap: 2.5rem;
-    }
-    @media (min-width: 640px) {
-        .plan-cols .checklist {
-            columns: 2;
-            column-gap: 2rem;
-        }
-        .plan-cols .checklist li {
-            break-inside: avoid;
-        }
-    }
-    .compare {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: var(--step--1);
-    }
-    .compare thead th {
-        text-align: left;
-        vertical-align: bottom;
-        padding: 0 0.75rem 0.75rem 0;
-        border-bottom: 1px solid var(--ink);
-        font-weight: 600;
-    }
-    .tier-name {
-        display: block;
-    }
-    .tier-price {
-        display: block;
-        margin-top: 0.25rem;
-        font-size: var(--step-1);
-        font-weight: 600;
-        font-variant-numeric: tabular-nums;
-        white-space: nowrap;
-    }
-    @media (max-width: 520px) {
-        .tier-price {
-            font-size: var(--step-0);
-        }
-        .compare tbody th {
-            width: 36%;
-        }
-        .compare td {
-            width: 32%;
-        }
-    }
-    .tier-period {
-        font-size: var(--step--1);
-        font-weight: 400;
-        color: var(--ink-2);
-    }
-    .compare tbody th,
-    .compare td {
-        padding: 0.625rem 0.75rem 0.625rem 0;
-        border-bottom: 1px solid var(--rule);
-        text-align: left;
-        vertical-align: top;
-    }
-    .compare tbody th {
-        font-weight: 400;
-        width: 40%;
-    }
-    .compare td {
-        color: var(--ink-2);
-        width: 30%;
-    }
-    .compare td :global(.mark) {
-        position: relative;
-        top: 0.15em;
-    }
-    .dash {
-        color: var(--ink-3);
-    }
-    .billing {
-        margin-top: 1rem;
-        font-size: var(--step--1);
-        color: var(--ink-2);
-        max-width: 62ch;
-    }
-    h4 {
-        font-size: var(--step--1);
-        font-weight: 600;
-        padding-bottom: 0.75rem;
-        margin-bottom: 0.25rem;
-        border-bottom: 1px solid var(--ink);
-    }
-    .checklist {
-        list-style: none;
-        padding: 0;
-    }
-    .checklist li {
-        display: flex;
-        gap: 0.75rem;
-        align-items: baseline;
-        padding-block: 0.625rem;
-        border-bottom: 1px solid var(--rule);
-        font-size: var(--step--1);
-    }
-    .checklist :global(.mark) {
-        position: relative;
-        top: 0.15em;
-    }
-    .checklist.muted li {
-        color: var(--ink-2);
-    }
-    .note {
-        font-size: var(--step--1);
-        color: var(--ink-3);
-    }
 </style>
