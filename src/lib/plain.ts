@@ -108,7 +108,7 @@ ${t.hire.faq.items.map((f) => `- **${f.q}** ${f.a}`).join("\n")}
 
 ## Hosting & maintenance plans
 
-${t.plans.tiers.map((tier, i) => `${tier.name} (${tier.price}${tier.period}, ${tier.yearly}): ${t.plans.rows.filter((r) => r.values[i] !== false).map((r) => (r.values[i] === true ? r.label : `${r.label}: ${r.values[i]}`)).join("; ")}.`).join("\n")}
+${t.plans.tiers.map((tier) => `${tier.name} (${tier.price}${tier.period}, ${tier.yearly}): ${tier.lead} ${tier.items.join("; ")}.`).join("\n")}
 ${t.plans.billing.join(" ")}
 Not included (quoted separately): ${t.plans.excluded.join("; ")}.
 

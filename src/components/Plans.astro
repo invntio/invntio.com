@@ -7,206 +7,219 @@ const lang = getLang(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="plans" id="plans" aria-labelledby="plans-title" data-reveal>
-    <div class="plans-intro">
-        <h2 id="plans-title"><Dotted text={t.plans.title} /></h2>
+<section class="plans" id="plans" aria-labelledby="plans-title">
+    <div class="intro" data-reveal>
+        <h2 id="plans-title"><Dotted text={t.plans.title} period /></h2>
         <p>{t.plans.lede}</p>
     </div>
-    <div class="plan-cols">
-        <div class="compare-wrap">
-            <table class="compare">
-                <thead>
-                    <tr>
-                        <th scope="col"><span class="sr-only">{t.plans.link}</span></th>
-                        {t.plans.tiers.map((tier) => (
-                            <th scope="col">
-                                <span class="tier-name">{tier.name}</span>
-                                <span class="tier-price">{tier.price}<span class="tier-period">{tier.period}</span></span>
-                                <span class="tier-yearly">{tier.yearly}</span>
-                            </th>
-                        ))}
-                    </tr>
-                </thead>
-                <tbody>
-                    {t.plans.rows.map((row) => (
-                        <tr>
-                            <th scope="row">{row.label}</th>
-                            {row.values.map((v) => (
-                                <td>{v === true ? <Mark kind="included" /> : v === false ? <span class="dash" aria-label="—">—</span> : v}</td>
-                            ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            <ul class="billing">
-                {t.plans.billing.map((line) => <li><Mark kind="included" />{line}</li>)}
-            </ul>
-        </div>
-        <div>
-            <h4>{t.plans.excludedTitle}</h4>
-            <ul class="checklist muted">
+
+    <div class="body">
+        <ul class="tiers">
+            {t.plans.tiers.map((tier, i) => (
+                <li class="tier" data-reveal style={`--stagger:${i + 1}`}>
+                    <h3>{tier.name}</h3>
+                    <p class="price">{tier.price}<span class="period">{tier.period}</span></p>
+                    <p class="yearly">{tier.yearly}</p>
+                    <p class="lead">{tier.lead}</p>
+                    <ul class="items">
+                        {tier.items.map((item) => <li><Mark kind="included" />{item}</li>)}
+                    </ul>
+                </li>
+            ))}
+        </ul>
+
+        <ul class="points" data-reveal style="--stagger:3">
+            {t.plans.billing.map((line) => <li><Mark kind="included" />{line}</li>)}
+        </ul>
+
+        <details class="excluded" data-reveal style="--stagger:4">
+            <summary>
+                {t.plans.excludedTitle}
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path class="v" d="M8 3v10" /><path d="M3 8h10" /></svg>
+            </summary>
+            <ul>
                 {t.plans.excluded.map((item) => <li><Mark kind="excluded" />{item}</li>)}
             </ul>
-        </div>
+            <p class="note">{t.plans.note}</p>
+        </details>
     </div>
-    <p class="note">{t.plans.note}</p>
 </section>
 
 <style>
     .plans {
-        scroll-margin-top: 6rem;
-    }
-    .plans {
         display: grid;
-        gap: 2.5rem;
-        padding-top: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
+        gap: 1.75rem 4rem;
+        padding-top: clamp(2rem, 1.5rem + 2vw, 3.5rem);
         border-top: 1px solid var(--ink);
+        scroll-margin-top: 6rem;
     }
     @media (min-width: 900px) {
         .plans {
             grid-template-columns: 5fr 7fr;
-            column-gap: 4rem;
-        }
-        .note {
-            grid-column: 2;
         }
     }
-    .plans-intro h2 {
-        font-size: var(--step-2);
-        font-weight: 600;
+    h2 {
+        font-size: var(--step-3);
+        max-width: 16ch;
     }
-    .plans-intro p {
-        margin-top: 0.875rem;
+    .intro p {
+        margin-top: 1rem;
         color: var(--ink-2);
-        max-width: 42ch;
+        max-width: 38ch;
     }
-    .plan-cols {
-        display: grid;
-        gap: 2.5rem;
-    }
-    @media (min-width: 640px) {
-        .plan-cols .checklist {
-            columns: 2;
-            column-gap: 2rem;
-        }
-        .plan-cols .checklist li {
-            break-inside: avoid;
-        }
-    }
-    .compare {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: var(--step--1);
-    }
-    .compare thead th {
-        text-align: left;
-        vertical-align: bottom;
-        padding: 0 0.75rem 0.75rem 0;
-        border-bottom: 1px solid var(--ink);
-        font-weight: 600;
-    }
-    .tier-name {
-        display: block;
-    }
-    .tier-price {
-        display: block;
-        margin-top: 0.25rem;
-        font-size: var(--step-1);
-        font-weight: 600;
-        font-variant-numeric: tabular-nums;
-        white-space: nowrap;
-    }
-    @media (max-width: 520px) {
-        .tier-price {
-            font-size: var(--step-0);
-        }
-        .compare tbody th {
-            width: 36%;
-        }
-        .compare td {
-            width: 32%;
-        }
-    }
-    .tier-period {
-        font-size: var(--step--1);
-        font-weight: 400;
-        color: var(--ink-2);
-    }
-    .compare tbody th,
-    .compare td {
-        padding: 0.625rem 0.75rem 0.625rem 0;
-        border-bottom: 1px solid var(--rule);
-        text-align: left;
-        vertical-align: top;
-    }
-    .compare tbody th {
-        font-weight: 400;
-        width: 40%;
-    }
-    .compare td {
-        color: var(--ink-2);
-        width: 30%;
-    }
-    .compare td :global(.mark) {
-        position: relative;
-        top: 0.15em;
-    }
-    .dash {
-        color: var(--ink-3);
-    }
-    .tier-yearly {
-        display: block;
-        margin-top: 0.125rem;
-        font-size: var(--step--2, 0.75rem);
-        font-weight: 400;
-        color: var(--ink-3);
-    }
-    .billing {
+    .tiers,
+    .items,
+    .points,
+    .excluded ul {
         list-style: none;
         padding: 0;
-        margin-top: 1.25rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem 2rem;
-        font-size: var(--step--1);
     }
-    .billing li {
+
+    /* Two plans side by side, each a ruled card; the second only lists what it adds. */
+    .tiers {
+        display: grid;
+        gap: 1rem;
+    }
+    @media (min-width: 640px) {
+        .tiers {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .tier {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        border: 1px solid var(--rule);
+        border-radius: var(--radius, 12px);
+        transition:
+            border-color 200ms var(--ease-out),
+            transform 200ms var(--ease-out);
+    }
+    .tier:hover {
+        border-color: var(--rule-strong);
+        transform: translateY(-2px);
+    }
+    h3 {
+        font-size: var(--step-0);
+        font-weight: 600;
+    }
+    .price {
+        margin-top: 0.75rem;
+        font-size: var(--step-3);
+        font-weight: 600;
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: -0.02em;
+    }
+    .period {
+        font-size: var(--step-0);
+        font-weight: 400;
+        color: var(--ink-2);
+        letter-spacing: 0;
+    }
+    .yearly {
+        margin-top: 0.375rem;
+        font-size: var(--step--1);
+        color: var(--ink-3);
+    }
+    .lead {
+        margin-top: 1.25rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--rule);
+        font-size: var(--step--1);
+        font-weight: 600;
+    }
+    .items li,
+    .points li,
+    .excluded li {
         display: flex;
         gap: 0.625rem;
         align-items: baseline;
+        font-size: var(--step--1);
     }
-    .billing :global(.mark) {
+    .items li {
+        margin-top: 0.625rem;
+        color: var(--ink-2);
+    }
+    .items :global(.mark),
+    .points :global(.mark),
+    .excluded :global(.mark) {
         position: relative;
         top: 0.15em;
+        flex: none;
     }
-    h4 {
+
+    /* The three promises that matter most, on one line where it fits. */
+    .points {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.75rem;
+        margin-top: 1.5rem;
+    }
+
+    /* What plans leave out stays one click away, so the page doesn't read as fine print. */
+    .excluded {
+        margin-top: 1.5rem;
+        border-top: 1px solid var(--rule);
+    }
+    summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-block: 1rem;
         font-size: var(--step--1);
         font-weight: 600;
-        padding-bottom: 0.75rem;
-        margin-bottom: 0.25rem;
-        border-bottom: 1px solid var(--ink);
-    }
-    .checklist {
+        cursor: pointer;
         list-style: none;
-        padding: 0;
     }
-    .checklist li {
-        display: flex;
-        gap: 0.75rem;
-        align-items: baseline;
-        padding-block: 0.625rem;
-        border-bottom: 1px solid var(--rule);
-        font-size: var(--step--1);
+    summary::-webkit-details-marker {
+        display: none;
     }
-    .checklist :global(.mark) {
-        position: relative;
-        top: 0.15em;
+    summary svg {
+        flex: none;
+        width: 1rem;
+        height: 1rem;
+        color: var(--ink-3);
+        transition: color 150ms var(--ease-out);
     }
-    .checklist.muted li {
+    summary:hover svg {
+        color: var(--ink);
+    }
+    summary .v {
+        transform-box: fill-box;
+        transform-origin: center;
+        transition: transform 200ms var(--ease-out);
+    }
+    .excluded[open] summary .v {
+        transform: rotate(90deg);
+    }
+    .excluded ul {
+        display: grid;
+        gap: 0.5rem 2rem;
+    }
+    @media (min-width: 640px) {
+        .excluded ul {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .excluded li {
         color: var(--ink-2);
     }
     .note {
+        margin-top: 1rem;
+        padding-bottom: 1rem;
         font-size: var(--step--1);
         color: var(--ink-3);
+        max-width: 62ch;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .tier,
+        summary .v {
+            transition: none;
+        }
+        .tier:hover {
+            transform: none;
+        }
     }
 </style>
