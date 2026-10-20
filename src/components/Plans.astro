@@ -32,15 +32,17 @@ const t = useTranslations(lang);
             {t.plans.billing.map((line) => <li><Mark kind="included" />{line}</li>)}
         </ul>
 
-        <details class="excluded" data-reveal style="--stagger:4">
+        <details class="excluded" data-collapse data-reveal style="--stagger:4">
             <summary>
                 {t.plans.excludedTitle}
                 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path class="v" d="M8 3v10" /><path d="M3 8h10" /></svg>
             </summary>
-            <ul>
-                {t.plans.excluded.map((item) => <li><Mark kind="excluded" />{item}</li>)}
-            </ul>
-            <p class="note">{t.plans.note}</p>
+            <div data-panel>
+                <ul>
+                    {t.plans.excluded.map((item) => <li><Mark kind="excluded" />{item}</li>)}
+                </ul>
+                <p class="note">{t.plans.note}</p>
+            </div>
         </details>
     </div>
 </section>
@@ -191,7 +193,7 @@ const t = useTranslations(lang);
         transform-origin: center;
         transition: transform 200ms var(--ease-out);
     }
-    .excluded[open] summary .v {
+    .excluded[open]:not(.closing) summary .v {
         transform: rotate(90deg);
     }
     .excluded ul {
@@ -213,6 +215,7 @@ const t = useTranslations(lang);
         color: var(--ink-3);
         max-width: 62ch;
     }
+
     @media (prefers-reduced-motion: reduce) {
         .tier,
         summary .v {
