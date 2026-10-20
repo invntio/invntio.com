@@ -92,9 +92,9 @@ const en = {
                 kind: "client",
                 case: "gmg",
             },
+            { name: "Bohio", what: "Condominium management SaaS", url: "https://bohio.app", domain: "bohio.app", kind: "own", case: "bohio" },
             { name: "Beavo", what: "Private habit tracker for iPhone", url: "https://beavo.me", domain: "beavo.me", kind: "own" },
             { name: "Axen", what: "Training app for iOS", url: "https://getaxen.com", domain: "getaxen.com", kind: "own" },
-            { name: "Bohio", what: "Condominium management SaaS", url: "https://bohio.app", domain: "bohio.app", kind: "own", case: "bohio" },
             // Client sites on the Invntio platform. Keep hidden until each has its own live domain
             // (see docs/tasks/launch-client-sites.md). url/domain are the planned values.
             { name: "OBJURI", what: "Legal-research observatory: congresses, news, articles and alliances", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
@@ -583,9 +583,9 @@ const es: Dict = {
                 kind: "client",
                 case: "gmg",
             },
+            { name: "Bohio", what: "SaaS de administración de condominios", url: "https://bohio.app", domain: "bohio.app", kind: "own", case: "bohio" },
             { name: "Beavo", what: "Habit tracker privado para iPhone", url: "https://beavo.me", domain: "beavo.me", kind: "own" },
             { name: "Axen", what: "App de entrenamiento para iOS", url: "https://getaxen.com", domain: "getaxen.com", kind: "own" },
-            { name: "Bohio", what: "SaaS de administración de condominios", url: "https://bohio.app", domain: "bohio.app", kind: "own", case: "bohio" },
             { name: "OBJURI", what: "Observatorio de ciencias jurídicas: congresos, noticias, artículos y alianzas", url: "https://objuri.com", domain: "objuri.com", kind: "client", hidden: true },
             { name: "AJMG", what: "Asociación de Jueces y Magistrados de Guatemala", url: "", domain: "", kind: "client", hidden: true },
         ],
