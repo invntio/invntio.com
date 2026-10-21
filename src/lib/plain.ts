@@ -108,7 +108,8 @@ ${t.hire.faq.items.map((f) => `- **${f.q}** ${f.a}`).join("\n")}
 
 ## Hosting & maintenance plans
 
-Included: ${t.plans.included.join("; ")}.
+${t.plans.tiers.map((tier) => `${tier.name} (${tier.price}${tier.period}, ${tier.yearly}): ${tier.lead} ${tier.items.join("; ")}.`).join("\n")}
+${t.plans.billing.join(" ")}
 Not included (quoted separately): ${t.plans.excluded.join("; ")}.
 
 ## Products and client work (live)

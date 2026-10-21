@@ -1,12 +1,14 @@
 ---
 // Renders text with the wordmark's green dot on every "i" (the real tittle, recoloured).
 // With `period`, every full stop that ends a sentence is the green dot too, like "Invntio.".
+// A closing question mark gets its dot recoloured the same way.
 interface Props {
     text: string;
     period?: boolean;
 }
 const { text, period = false } = Astro.props;
-const parts = text.replace(/\.$/, "").split(period ? /(i|\.(?= ))/ : /(i)/);
+const question = text.endsWith("?");
+const parts = text.replace(/[.?]$/, "").split(period ? /(i|\.(?= ))/ : /(i)/);
 ---
 
-{parts.map((part) => (part === "i" ? <span class="i-dot">i</span> : part === "." ? <span class="end-dot">.</span> : part))}{period && <span class="end-dot">.</span>}
+{parts.map((part) => (part === "i" ? <span class="i-dot">i</span> : part === "." ? <span class="end-dot">.</span> : part))}{question ? <span class="q-dot">?</span> : period && <span class="end-dot">.</span>}

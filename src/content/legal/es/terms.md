@@ -1,7 +1,7 @@
 ---
 title: Términos del Servicio
 description: Los términos que aplican al usar invntio.com o contratar a Invntio para servicios de software, sitios web, automatización, hosting o consultoría.
-updated: 2026-10-04
+updated: 2026-10-19
 ---
 
 Estos términos explican cómo trabaja Invntio con sus clientes. Los mantenemos breves y en lenguaje claro. Si una propuesta escrita que te enviemos dice algo distinto, en ese proyecto manda la propuesta.
@@ -41,7 +41,7 @@ Si los documentos se contradicen, se aplica este orden: primero la propuesta ace
 - **Diagnóstico del proyecto.** Una sesión pagada de 30 minutos (USD 95), que se paga al reservarla, seguida de una recomendación escrita de una página. Sus reglas de cancelación, reembolso y descuento están en la sección 4 de nuestra [Política de Reembolsos y Cancelaciones](/es/refunds).
 - **Sesión técnica.** Una sesión práctica pagada de 60 minutos (USD 297), que se paga al reservarla. No se descuenta de un proyecto. Sus reglas de cancelación y reembolso están en la sección 5 de nuestra [Política de Reembolsos y Cancelaciones](/es/refunds).
 - **Proyectos de precio fijo.** Pagas según el calendario de la propuesta. Los proyectos pequeños, como sitios web y landing pages, se pagan por completo por adelantado. Cuando un pago está ligado a un hito, lo facturamos una vez aceptado ese hito (ver sección 9). El pago final vence antes del lanzamiento o de la entrega de los entregables, lo que ocurra primero.
-- **Trabajo por horas.** Pagas por adelantado un bloque mínimo de horas a la tarifa acordada en la propuesta. Te avisamos cuando se ha usado el 80% del bloque. Las horas adicionales requieren tu aprobación por escrito y se suman a tu siguiente factura. Salvo que la propuesta diga otra cosa, un bloque prepagado es válido por 90 días desde el pago; las horas no usadas en ese plazo vencen.
+- **Trabajo por horas.** El trabajo fuera de un plan o proyecto se factura a USD 110 por hora en bloques de 30 minutos (mínimo 30 minutos), con tu aprobación por escrito antes de empezar. Para necesidades continuas, tu propuesta puede incluir un bloque de horas prepagado; te avisamos cuando se ha usado el 80% y, salvo que la propuesta diga otra cosa, vale 90 días desde el pago.
 - **Planes de hosting y mantenimiento.** Se facturan por adelantado, cada mes o cada año, y se renuevan automáticamente hasta que los canceles (ver sección 8).
 - **Costos de terceros.** Dominios, cuentas de desarrollador en tiendas de apps, licencias, plugins de pago, uso de modelos de IA e infraestructura se te facturan a ti o los pagas directamente al proveedor.
 
@@ -75,15 +75,24 @@ Si esperamos una respuesta tuya por más de 10 días hábiles, el plazo se corre
 
 ## 8. Planes de hosting y mantenimiento
 
-Cada plan detalla lo que incluye. Normalmente es hosting y SSL, copias de seguridad, actualizaciones de seguridad y dependencias, monitoreo de disponibilidad, corrección de errores en el código que entregamos, una cantidad definida de cambios pequeños de contenido, ayuda puntual para que tu equipo use el sistema y respuesta en 2 días hábiles.
+En estos términos, **tu sitio** es tu página web: sus páginas, su diseño y su contenido.
+
+Para los sitios web que alojamos hay dos planes:
+
+- **Hosting & Care, USD 49 al mes:** hosting y SSL, copias de seguridad diarias, actualizaciones de seguridad y dependencias, monitoreo de disponibilidad 24/7, corrección de errores en el código que entregamos y respuesta a solicitudes en 2 días hábiles. No incluye cambios de contenido.
+- **Care Plus, USD 79 al mes:** todo lo de Hosting & Care, más hasta 30 minutos al mes de cambios menores de contenido (textos, imágenes, precios, eventos o avisos), hechos en 3 días hábiles, y respuesta a solicitudes en 1 día hábil. Los minutos no usados no se acumulan.
+
+Ambos planes se pueden pagar al año con dos meses gratis (USD 490 o USD 790). Las apps y plataformas llevan un plan descrito en su propuesta.
+
+**Tiempos de respuesta y entrega.** Si tu sitio se cae, empezamos a trabajar en él el mismo día hábil. El trabajo fuera del plan recibe una cotización escrita en 2 días hábiles, con fecha de entrega, y se factura a USD 110 por hora, en bloques de 30 minutos, una vez que la apruebas. Los días hábiles son de lunes a viernes, hora del Este de EE. UU.
 
 Un plan **no** incluye funcionalidades, páginas o integraciones nuevas, rediseños, problemas causados por terceros o por cambios hechos por otros, soporte fuera de horario o de emergencia, SEO continuo, redacción de contenido o marketing, ni capacitación extensa. Ese trabajo se cotiza aparte o se factura por horas.
 
-- **Disponibilidad.** Trabajamos para mantener tus servicios en línea, pero no garantizamos una disponibilidad ininterrumpida salvo que la propuesta incluya un nivel de servicio específico. Las caídas de los proveedores de hosting o nube están fuera de nuestro control.
+- **Disponibilidad.** Monitoreamos tu sitio 24/7 y trabajamos para mantenerlo en línea, pero no prometemos un porcentaje de disponibilidad salvo que la propuesta lo incluya. Las caídas de los proveedores de hosting o nube están fuera de nuestro control.
 - **Copias de seguridad.** Hacemos copias periódicas, pero conviene que guardes tu propia copia de los datos críticos para tu negocio.
 - **Uso aceptable.** Los servicios alojados no pueden usarse para contenido ilegal, spam, malware, phishing ni nada que infrinja derechos de terceros. Podemos suspender un servicio que incumpla esta regla y te diremos por qué.
 - **Renovación y cancelación.** Los planes se renuevan automáticamente al final de cada periodo. Puedes cancelar en cualquier momento antes de la siguiente renovación, y el plan sigue activo hasta el final del periodo pagado. Te avisaremos con al menos 30 días de anticipación antes de cambiar el precio de un plan.
-- **Al terminar un plan.** Con todas las facturas pagadas, te entregamos tus archivos y datos en un formato estándar. Los eliminamos de nuestros sistemas 30 días después de que termina el plan, salvo que nos pidas hacerlo antes o que la ley nos obligue a conservarlos.
+- **Al terminar un plan.** Con todas las facturas pagadas, te entregamos sin costo tu contenido, tus archivos y una copia funcional de tu sitio, y te ayudamos a llevar tu dominio a tu nuevo proveedor. Pasar tu sitio a otra plataforma se cotiza aparte. Eliminamos tus datos de nuestros sistemas 30 días después de que termina el plan, salvo que nos pidas hacerlo antes o que la ley nos obligue a conservarlos.
 
 ## 9. Revisiones, aceptación y garantía
 
@@ -95,7 +104,7 @@ Salvo que la propuesta diga otra cosa, durante los 30 días siguientes a la acep
 
 - **Tus materiales.** El contenido, los datos, las marcas y demás materiales que nos entregas siguen siendo tuyos.
 - **Tus entregables.** Una vez pagado todo, eres dueño de los entregables finales que creamos específicamente para ti, como el diseño, el contenido que producimos y el código propio del proyecto. Hasta entonces, solo puedes usarlos para revisarlos.
-- **Cuentas de terceros.** Los dominios, fichas en tiendas de apps, hosting externo y demás cuentas de terceros que configuramos para tu proyecto se registran a tu nombre cuando el proveedor lo permite. Si no, te las transferimos una vez pagado todo lo adeudado.
+- **Tu dominio y tus cuentas.** Tu dominio, tu correo profesional y las demás cuentas de terceros de tu proyecto (como fichas en tiendas de apps o hosting externo) se registran a tu nombre desde el primer día, y pagas sus renovaciones directamente al proveedor. Si un proveedor no lo permite, te transferimos la cuenta una vez pagado todo lo adeudado.
 - **Nuestro hosting.** Cuando alojamos tu proyecto en nuestra propia infraestructura con un plan de hosting, esa infraestructura sigue siendo nuestra. Recibes acceso de administrador a tu sitio o app (por ejemplo, a su gestor de contenido) y, al terminar el plan, te entregamos tus archivos y datos como indica la sección 8.
 - **Nuestras herramientas.** Conservamos la propiedad de nuestro código, componentes, librerías, plantillas, herramientas y conocimiento preexistentes o reutilizables. Recibes una licencia no exclusiva, perpetua y sin regalías para usarlos como parte de tus entregables.
 - **Recursos de terceros.** Tipografías, imágenes de stock, plugins y otros recursos con licencia siguen bajo sus propias licencias. Algunos pueden tener que comprarse a tu nombre.

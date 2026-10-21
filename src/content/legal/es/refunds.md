@@ -1,7 +1,7 @@
 ---
 title: Política de Reembolsos y Cancelaciones
 description: Cuándo son reembolsables los pagos a Invntio, cómo cancelar un Diagnóstico del proyecto, una Sesión técnica, un proyecto o un plan de hosting y mantenimiento, y cómo solicitar un reembolso.
-updated: 2026-10-04
+updated: 2026-10-19
 ---
 
 Nuestra política es simple: **los pagos no son reembolsables una vez realizados**, salvo en los casos de la sección 7 y según las reglas del Diagnóstico del proyecto de la sección 4. Aparte del Diagnóstico del proyecto y la Sesión técnica, que pagas al reservarlos, solo pedimos un pago después de que aceptas una propuesta escrita que detalla exactamente qué estás pagando.
@@ -11,8 +11,8 @@ Nuestra política es simple: **los pagos no son reembolsables una vez realizados
 | Tipo de servicio | Ejemplos | Reembolsos y cancelación |
 | --- | --- | --- |
 | Proyectos de precio fijo | Sitios web, landing pages, aplicaciones web, plataformas y SaaS, apps móviles | Cada pago deja de ser reembolsable al realizarse. Si cancelas, te entregamos el trabajo completado hasta ese momento. |
-| Planes recurrentes | Hosting y mantenimiento, soporte, gestión de contenido (mensual o anual) | Cancela cuando quieras antes de la próxima renovación. No se reembolsan periodos pasados ni parciales. |
-| Trabajo por horas | Consultoría, soporte fuera de un plan | Los bloques de horas prepagados no son reembolsables y valen 90 días, salvo que la propuesta diga otra cosa. |
+| Planes recurrentes | Hosting & Care (USD 49/mes), Care Plus (USD 79/mes), o anual con dos meses gratis | Cancela cuando quieras antes de la próxima renovación. No se reembolsan periodos pasados ni parciales. |
+| Trabajo por horas | Consultoría, trabajo fuera de un plan (USD 110/hora) | Se factura después de que apruebas cada cotización. Los bloques de horas prepagados no son reembolsables y valen 90 días, salvo que la propuesta diga otra cosa. |
 | Diagnóstico del proyecto | Videollamada de 30 minutos y una recomendación escrita de una página, USD 95 | Cancela o cambia la fecha hasta 1 día hábil antes con reembolso completo. Reembolso completo si la sesión no te resulta útil y nos avisas en 7 días. Se descuenta de tu proyecto si nos contratas en los 60 días siguientes. |
 | Sesión técnica | Videollamada práctica de 60 minutos, USD 297 | Cancela o cambia la fecha hasta 1 día hábil antes con reembolso completo. Las cancelaciones posteriores y las ausencias no se reembolsan. No se descuenta de un proyecto. |
 | Costos de terceros | Dominios, tiendas de apps, licencias, infraestructura | Nunca los reembolsamos nosotros. Aplica la política del proveedor. |

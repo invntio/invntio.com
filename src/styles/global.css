@@ -304,6 +304,14 @@ select {
     color: var(--green);
 }
 
+/* Same idea for a closing question mark: only the dot under the hook turns green. */
+.q-dot {
+    color: transparent;
+    background: linear-gradient(to bottom, var(--ink) 60%, var(--green) 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
 /* Scroll reveal: rows print in once, like entries in a log. Only active when
    JS adds html.reveal (motion allowed); otherwise everything is visible. */
 html.reveal [data-reveal] {

@@ -1,7 +1,7 @@
 ---
 title: Terms of Service
 description: The terms that apply when you use invntio.com or hire Invntio for software, website, automation, hosting or consulting services.
-updated: 2026-10-04
+updated: 2026-10-19
 ---
 
 These terms explain how Invntio works with clients. We have kept them short and in plain language. If a written proposal we send you says something different, the proposal applies to that project.
@@ -41,7 +41,7 @@ If documents conflict, this order applies: first the accepted proposal, then the
 - **Project Diagnostic.** A 30-minute paid session (USD 95), paid when you book it, followed by a one-page written recommendation. Its cancellation, refund and credit rules are in section 4 of our [Refund & Cancellation Policy](/refunds).
 - **Technical Session.** A 60-minute paid hands-on session (USD 297), paid when you book it. It is not credited toward a project. Its cancellation and refund rules are in section 5 of our [Refund & Cancellation Policy](/refunds).
 - **Fixed-price projects.** You pay according to the schedule in the proposal. Small projects, such as websites and landing pages, are paid in full upfront. When a payment is tied to a milestone, we invoice it once that milestone is accepted (see section 9). The final payment is due before launch or handover of the deliverables, whichever comes first.
-- **Hourly work.** You prepay a minimum block of hours at the rate agreed in the proposal. We tell you when 80% of the block has been used. Hours beyond the block need your written approval and are added to your next invoice. Unless the proposal says otherwise, a prepaid block is valid for 90 days from payment; hours not used within that period expire.
+- **Hourly work.** Work outside a plan or project is billed at USD 110 per hour in 30-minute increments (minimum 30 minutes), approved by you in writing before we start. For ongoing needs, your proposal can include a prepaid block of hours; we tell you when 80% of it has been used, and unless the proposal says otherwise it is valid for 90 days from payment.
 - **Hosting and maintenance plans.** These are billed monthly or annually in advance and renew automatically until cancelled (see section 8).
 - **Third-party costs.** Domains, app store developer accounts, software licenses, paid plugins, AI model usage and infrastructure costs are billed to you, or paid by you directly to the provider.
 
@@ -75,15 +75,24 @@ If we are waiting on you for more than 10 business days, the timeline moves by a
 
 ## 8. Hosting and maintenance plans
 
-Each plan lists what it includes. Typically that is hosting and SSL, backups, security and dependency updates, uptime monitoring, fixes for bugs in code we delivered, a set number of small content changes, quick how-to help for your team, and a response within 2 business days.
+In these terms, **your site** means your website: its pages, design and content.
+
+For websites we host, there are two plans:
+
+- **Hosting & Care, USD 49 per month:** hosting and SSL, daily backups, security and dependency updates, 24/7 uptime monitoring, fixes for bugs in code we delivered, and a reply to requests within 2 business days. Content changes are not included.
+- **Care Plus, USD 79 per month:** everything in Hosting & Care, plus up to 30 minutes of minor content changes a month (text, images, prices, events or notices), done within 3 business days, and a reply to requests within 1 business day. Unused minutes don't carry over.
+
+Both plans can be paid yearly with two months free (USD 490 or USD 790). Apps and platforms get a plan described in their proposal.
+
+**Response and delivery times.** If your site goes down, we start working on it the same business day. Work outside a plan gets a written quote within 2 business days, with a delivery date, and is billed at USD 110 per hour, in 30-minute increments, once you approve it. Business days are Monday to Friday, US Eastern Time.
 
 A plan does **not** include new features, pages or integrations, redesigns, issues caused by third parties or by changes someone else made, after-hours or emergency support, ongoing SEO, content writing or marketing, or extended training. We quote that work separately or bill it hourly.
 
-- **Availability.** We work to keep your services online, but we do not guarantee uninterrupted availability unless the proposal includes a specific service level. Outages at hosting or cloud providers are outside our control.
+- **Availability.** We monitor your site 24/7 and work to keep it online, but we do not promise a specific uptime percentage unless the proposal includes one. Outages at hosting or cloud providers are outside our control.
 - **Backups.** We make regular backups, but you should keep your own copy of any data that is critical to your business.
 - **Acceptable use.** Hosted services may not be used for illegal content, spam, malware, phishing, or anything that infringes the rights of others. We may suspend a service that breaks this rule and will tell you why.
 - **Renewal and cancellation.** Plans renew automatically at the end of each billing period. You can cancel at any time before the next renewal, and the plan stays active until the end of the period you have paid for. We will give you at least 30 days' notice before changing a plan's price.
-- **When a plan ends.** Once every invoice is paid, we hand over your files and data in a standard format. We delete them from our systems 30 days after the plan ends, unless you ask us to do so earlier or the law requires us to keep them.
+- **When a plan ends.** Once every invoice is paid, we give you your content, files and a working copy of your site at no cost, and help you move your domain to your new provider. Moving your site to another platform is quoted separately. We delete your data from our systems 30 days after the plan ends, unless you ask us to do so earlier or the law requires us to keep it.
 
 ## 9. Revisions, acceptance and warranty
 
@@ -95,7 +104,7 @@ Unless the proposal says otherwise, for 30 days after acceptance we fix, at no c
 
 - **Your materials.** The content, data, trademarks and other materials you give us remain yours.
 - **Your deliverables.** Once you have paid in full, you own the final deliverables we create specifically for you, such as the design, the content we produce and the project-specific code. Until then, you may use them only to review them.
-- **Third-party accounts.** Domains, app store listings, external hosting and other third-party accounts we set up for your project are registered in your name when the provider allows it. Otherwise we transfer them to you once every amount due has been paid.
+- **Your domain and accounts.** Your domain, business email and the other third-party accounts for your project (such as app store listings or external hosting) are registered in your name from day one, and you pay their renewals directly to the provider. When a provider doesn't allow that, we transfer the account to you once every amount due has been paid.
 - **Our hosting.** When we host your project on our own infrastructure under a hosting plan, that infrastructure remains ours. You get administrator access to your site or app (for example, its content manager), and when the plan ends we hand over your files and data as described in section 8.
 - **Our tools.** We keep ownership of our pre-existing and reusable code, components, libraries, templates, tools and know-how. You receive a non-exclusive, perpetual, royalty-free license to use them as part of your deliverables.
 - **Third-party assets.** Fonts, stock images, plugins and other licensed assets stay under their own licenses. Some may need to be purchased in your name.
